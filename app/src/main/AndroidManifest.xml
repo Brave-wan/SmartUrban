@@ -57,10 +57,7 @@
         </activity>
         <!--启动也-->
         <activity android:name=".ui.StartupPageActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
 
         <activity android:name=".ui.LocationActivity" />
@@ -71,12 +68,21 @@
         <activity android:name=".wxapi.WXEntryActivity" />
         <activity android:name=".ui.PersonInformationActivity" />
         <activity android:name=".ui.RegisterActivity" />
-        <activity android:name=".ui.MySourceActivity"/>
-        <activity android:name=".ui.AlterPwdActivity"/>
-        <activity android:name=".ui.LostActivity"/>
-        <activity android:name=".ui.GuideActivity"/>
-        <activity android:name=".ui.DynamicActivity"/>
-        <activity android:name=".ui.MyArticleActivity"/>
+        <activity android:name=".ui.MySourceActivity" />
+        <activity android:name=".ui.AlterPwdActivity" />
+        <activity android:name=".ui.LostActivity" />
+        <activity android:name=".ui.GuideActivity" />
+        <activity android:name=".ui.DynamicActivity" />
+        <activity android:name=".ui.MyArticleActivity" />
+        <activity android:name=".ui.MyNickActivity" />
+        <activity android:name=".ui.AboutUsActivity" />
+        <activity android:name=".ui.LostFoundActivity" />
+        <activity android:name=".ui.CommentListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <!-- tencent -->
         <activity

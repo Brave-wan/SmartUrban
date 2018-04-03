@@ -21,9 +21,9 @@
         android:id="@+id/ed_article_content"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_marginTop="1dp"
         android:background="@color/white"
         android:gravity="top|left"
-        android:layout_marginTop="1dp"
         android:hint="请输入文章内容"
         android:padding="15dp"
         android:textColor="@color/black"
@@ -38,9 +38,10 @@
         android:background="@color/white"
         android:horizontalSpacing="10dp"
         android:numColumns="4"
-        android:paddingBottom="10dp"
+        android:paddingBottom="15dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
+        android:paddingTop="15dp"
         android:scrollbars="none"
         android:verticalSpacing="10dp" />
 

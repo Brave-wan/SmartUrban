@@ -28,7 +28,7 @@ public class CameraListAdapter extends CommonAdapter<CameraPicBean> {
     protected void convert(BaseViewHolder baseViewHolder, CameraPicBean bean, int position) {
         ImageView item_camera = (ImageView) baseViewHolder.getViewByViewId(R.id.item_camera);
         Glide.with(context).
-                load(bean.getPic() == null ? R.mipmap.ic_launcher : bean.getPic()).error(R.mipmap.ic_launcher)
+                load(bean.getPic() == null ? R.drawable.icon_up_loading_photo_btn : bean.getPic()).error(R.drawable.icon_up_loading_photo_btn)
                 .into(item_camera);
     }
 }

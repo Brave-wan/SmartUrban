@@ -7,6 +7,7 @@ import android.view.View;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseFragment;
 import com.smart.urban.base.BasePresenter;
+import com.smart.urban.ui.AboutUsActivity;
 import com.smart.urban.ui.AlterPwdActivity;
 import com.smart.urban.ui.LostActivity;
 import com.smart.urban.ui.PersonInformationActivity;
@@ -33,7 +34,7 @@ public class CenterFragment extends BaseFragment {
         return null;
     }
 
-    @OnClick({R.id.img_center_head, R.id.tv_my_alter_pwd, R.id.tv_my_lost})
+    @OnClick({R.id.img_center_head, R.id.tv_my_alter_pwd, R.id.tv_my_lost, R.id.tv_about_us})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_my_alter_pwd:
@@ -43,7 +44,10 @@ public class CenterFragment extends BaseFragment {
                 startActivity(new Intent(getActivity(), PersonInformationActivity.class));
                 break;
             case R.id.tv_my_lost:
-                startActivity(new Intent(getActivity(),LostActivity.class));
+                startActivity(new Intent(getActivity(), LostActivity.class));
+                break;
+            case R.id.tv_about_us:
+                startActivity(new Intent(getActivity(), AboutUsActivity.class));
                 break;
         }
     }

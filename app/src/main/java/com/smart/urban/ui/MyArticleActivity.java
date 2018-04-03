@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import cn.addapp.pickers.widget.WheelListView;
 
 import static com.smart.urban.present.CameraPresent.REQUEST_CODE_CHOOSE;
 
@@ -59,7 +60,6 @@ public class MyArticleActivity extends BaseActivity<ICameraView, CameraPresent> 
     public CameraPresent initPresenter() {
         return new CameraPresent(this);
     }
-
     List<Uri> mSelected;
 
     @Override
@@ -85,6 +85,7 @@ public class MyArticleActivity extends BaseActivity<ICameraView, CameraPresent> 
         if (bean.getPic() == null) {
             presenter.getTakePhoto(this);
         }
-
     }
+
+
 }

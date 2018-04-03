@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:lineSpacingExtra="3dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp"
+        android:textSize="16sp"
+        android:text=" 声明:本文为博主原创文章,转载请注明出处:小嵩的博客 一、介绍 Android-PickerView是一款仿iOS的PickerView控件,并封装了时间选择和选项选择这两种选"
+        android:textColor="@color/black" />
+
+</LinearLayout>

@@ -1,5 +1,6 @@
 package com.smart.urban.fragment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.constraint.Guideline;
@@ -11,6 +12,8 @@ import com.smart.urban.base.BasePresenter;
 import com.smart.urban.ui.DynamicActivity;
 import com.smart.urban.ui.GuideActivity;
 import com.smart.urban.ui.LocationActivity;
+import com.smart.urban.ui.LostFoundActivity;
+import com.smart.urban.ui.MainActivity;
 import com.smart.urban.ui.adapter.InfoListAdapter;
 import com.smart.urban.utils.GlideImageLoader;
 import com.smart.urban.widget.MyListView;
@@ -32,9 +35,10 @@ public class HomeFragment extends BaseFragment {
     Banner banner;
     @BindView(R.id.lv_main_list)
     MyListView lv_main_list;
+    MainActivity mainActivity;
 
     private List<String> list = new ArrayList<>();
-    InfoListAdapter adapter;
+    private InfoListAdapter adapter;
 
     @Override
     protected int getLayoutId() {
@@ -62,7 +66,7 @@ public class HomeFragment extends BaseFragment {
         lv_main_list.setAdapter(adapter);
     }
 
-    @OnClick({R.id.tv_home_navigation, R.id.tv_home_guide, R.id.tv_home_dynamic})
+    @OnClick({R.id.tv_home_navigation, R.id.tv_home_guide, R.id.tv_home_lost_found, R.id.tv_home_dynamic, R.id.tv_home_camera})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_home_dynamic:
@@ -71,9 +75,27 @@ public class HomeFragment extends BaseFragment {
             case R.id.tv_home_navigation:
                 startActivity(new Intent(getActivity(), LocationActivity.class));
                 break;
+            //办事指南
             case R.id.tv_home_guide:
                 startActivity(new Intent(getActivity(), GuideActivity.class));
                 break;
+            //随手拍
+            case R.id.tv_home_camera:
+                mainActivity.getCamera();
+                break;
+            //失物招领
+            case R.id.tv_home_lost_found:
+                startActivity(new Intent(getActivity(), LostFoundActivity.class));
+                break;
+        }
+    }
+
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context != null) {
+            mainActivity = (MainActivity) context;
         }
     }
 

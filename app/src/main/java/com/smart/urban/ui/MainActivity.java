@@ -102,6 +102,17 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     }
 
 
+    public void getCamera() {
+        manager = getSupportFragmentManager();
+        transaction = manager.beginTransaction();
+        if (cameraFragment == null) {
+            cameraFragment = new CameraFragment();
+        }
+        transaction.replace(R.id.main_layout, cameraFragment);
+        transaction.commit();
+        rg_main_bottom.check(R.id.radio_main_camera);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

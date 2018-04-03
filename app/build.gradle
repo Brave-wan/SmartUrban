@@ -20,6 +20,11 @@ android {
             jniLibs.srcDirs = ['libs']
         }
     }
+    allprojects {
+        repositories {
+            maven { url "https://jitpack.io" }//必须添加这行
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -55,4 +60,6 @@ dependencies {
     compile 'com.zhihu.android:matisse:0.4.3'
     compile 'com.mylhyl:acp:1.1.7'
     compile 'com.youth.banner:banner:1.4.10'
+    compile 'com.github.addappcn:android-pickers:1.0.3'
+
 }
