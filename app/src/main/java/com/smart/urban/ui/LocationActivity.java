@@ -1,15 +1,10 @@
 package com.smart.urban.ui;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 
-import com.amap.api.maps.AMap;
 import com.amap.api.maps.MapView;
-import com.amap.api.maps.model.MarkerOptions;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseActivity;
-import com.smart.urban.base.BasePresenter;
 import com.smart.urban.present.LocationPresent;
 import com.smart.urban.view.ILocationView;
 
@@ -19,23 +14,30 @@ import butterknife.BindView;
  * Created by root on 18-3-28.
  */
 
-public class LocationActivity extends Activity {
+public class LocationActivity extends BaseActivity<ILocationView, LocationPresent> implements ILocationView {
+    @BindView(R.id.mapView)
     MapView mapView;
-    LocationPresent present;
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_location);
-        mapView = (MapView) findViewById(R.id.mapView);
-        present = new LocationPresent(this);
-        mapView.onCreate(savedInstanceState);// 此方法必须重写
-        initView();
 
+    @Override
+    protected int getContentViewId() {
+        return R.layout.activity_location;
     }
 
+    @Override
+    protected void initView(Bundle savedInstanceState) {
+        mapView.onCreate(savedInstanceState);// 此方法必须重写
+        presenter.initMap(mapView);
+    }
 
-    protected void initView() {
-        present.initMap(mapView);
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
+    @Override
+    public LocationPresent initPresenter() {
+        return new LocationPresent(this);
     }
 
     /**

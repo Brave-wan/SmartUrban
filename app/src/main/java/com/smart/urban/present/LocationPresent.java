@@ -24,7 +24,10 @@ import com.amap.api.maps.model.MarkerOptions;
 import com.amap.api.maps.model.MyLocationStyle;
 import com.blankj.utilcode.util.ToastUtils;
 import com.smart.urban.R;
+import com.smart.urban.base.BasePresenter;
 import com.smart.urban.config.Constants;
+import com.smart.urban.view.ILocationView;
+import com.smart.urban.view.ILoginView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -35,7 +38,7 @@ import java.util.List;
  * Created by root on 18-3-28.
  */
 
-public class LocationPresent implements GeoFenceListener,
+public class LocationPresent extends BasePresenter<ILocationView> implements GeoFenceListener,
         AMap.OnMapClickListener,
         LocationSource,
         AMapLocationListener,
@@ -93,6 +96,7 @@ public class LocationPresent implements GeoFenceListener,
 
 
     boolean isShow = true;
+
     @Override
     public void onLocationChanged(AMapLocation amapLocation) {
         if (mListener != null && amapLocation != null) {

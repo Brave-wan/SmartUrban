@@ -1,6 +1,7 @@
 package com.smart.urban.present;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.ActivityCompat;
@@ -26,9 +27,9 @@ import java.util.List;
 
 public class StartupPagePresent extends BasePresenter<IStartupPageView> {
 
-    private Context mContext;
+    private Activity mContext;
 
-    public StartupPagePresent(Context mContext) {
+    public StartupPagePresent(Activity mContext) {
         this.mContext = mContext;
         getCameraPermission();
     }
@@ -62,6 +63,7 @@ public class StartupPagePresent extends BasePresenter<IStartupPageView> {
             @Override
             public void onAnimationEnd(Animation arg0) {
                 mContext.startActivity(new Intent(mContext, LoginActivity.class));
+                mContext.finish();
             }
 
             @Override

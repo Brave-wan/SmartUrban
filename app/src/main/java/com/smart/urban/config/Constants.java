@@ -7,7 +7,7 @@ import com.amap.api.maps.model.LatLng;
  */
 
 public class Constants {
-    public static final String BASE_URL = "http://www.baidu.com/";
+    public static final String BASE_URL = "http://111.231.222.163:8080/";
     //是否开启打印日志信息
     public static final boolean DEBUG = true;
 

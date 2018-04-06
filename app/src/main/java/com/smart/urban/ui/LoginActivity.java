@@ -13,10 +13,14 @@ import android.widget.ImageView;
 
 import com.smart.urban.R;
 import com.smart.urban.base.BaseActivity;
+import com.smart.urban.bean.RegisterBean;
 import com.smart.urban.present.LoginPresent;
+import com.smart.urban.utils.SharedPreferencesUtils;
 import com.smart.urban.view.ILoginView;
 import com.umeng.socialize.UMShareAPI;
 import com.umeng.socialize.bean.SHARE_MEDIA;
+
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -25,7 +29,7 @@ import butterknife.OnClick;
  * Created by root on 18-3-30.
  */
 
-public class LoginActivity extends BaseActivity<ILoginView, LoginPresent> {
+public class LoginActivity extends BaseActivity<ILoginView, LoginPresent> implements ILoginView {
     @BindView(R.id.ed_login_user)
     EditText ed_login_user;
     @BindView(R.id.ed_login_pass)
@@ -69,13 +73,21 @@ public class LoginActivity extends BaseActivity<ILoginView, LoginPresent> {
         UMShareAPI.get(this).release();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ed_login_user.setText(SharedPreferencesUtils.init(this).getString("userName"));
+        ed_login_pass.setText(SharedPreferencesUtils.init(this).getString("userPass"));
+    }
+
     boolean isShow = true;
 
     @OnClick({R.id.img_login_wchat, R.id.img_login_qq, R.id.tv_login_in, R.id.img_pwd_open, R.id.tv_login_not_register})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_login_in:
-                startActivity(new Intent(this, MainActivity.class));
+//                startActivity(new Intent(this, MainActivity.class));
+                presenter.getLogin(ed_login_user, ed_login_pass);
                 break;
 
             case R.id.img_login_wchat:
@@ -105,5 +117,23 @@ public class LoginActivity extends BaseActivity<ILoginView, LoginPresent> {
                 }
                 break;
         }
+    }
+
+    @Override
+    public void showLoading() {
+        showProgressDialog();
+    }
+
+    @Override
+    public void hitLoading() {
+        dismissProgressDialog();
+    }
+
+    @Override
+    public void OnLoginSuccess(RegisterBean bean) {
+        //登陆成功
+        SharedPreferencesUtils.init(this).put("token", bean.getToken());
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 }

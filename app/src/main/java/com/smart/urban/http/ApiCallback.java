@@ -29,32 +29,32 @@ public abstract class ApiCallback<M> extends Subscriber<M> {
         if (e instanceof HttpException) {
             HttpException httpException = (HttpException) e;
             int code = httpException.code();
-            errorMessageInfo.error = httpException.getMessage();
-            errorMessageInfo.code = String.valueOf(code);
+            errorMessageInfo.setErrmsg(httpException.getMessage());
+            errorMessageInfo.setErrcode(String.valueOf(code));
         } else if (e instanceof SocketTimeoutException) {
             int code = 1000;
-            errorMessageInfo.error = "连接超时";
-            errorMessageInfo.code = String.valueOf(code);
+            errorMessageInfo.setErrmsg("连接超时");
+            errorMessageInfo.setErrcode(String.valueOf(code));
         }
         if (!NetWorkUtils.isNetworkAvailable(MyApplication.instance)) {
-            errorMessageInfo.error = "请检查网络连接";
+            errorMessageInfo.setErrmsg("请检查网络连接");
         }
-        if (!TextUtils.isEmpty(errorMessageInfo.error)) {
+        if (!TextUtils.isEmpty(errorMessageInfo.getErrmsg())) {
             onFailure(errorMessageInfo);
         }
     }
 
     @Override
     public void onNext(M model) {
-        String code = ((BaseResult) model).code;
+        String code = ((BaseResult) model).getErrcode();
         BaseResult baseResult = new BaseResult();
         switch (Integer.valueOf(code)) {
             case 200:
                 onSuccess(model);
                 break;
             default:
-                baseResult.code = code;
-                baseResult.error = ((BaseResult) model).error;
+                baseResult.setErrcode(code);
+                baseResult.setErrmsg(((BaseResult) model).getErrmsg());
                 onFailure(baseResult);
                 break;
         }
