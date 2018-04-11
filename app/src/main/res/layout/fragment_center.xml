@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:paddingLeft="20dp">
+
+        <ImageView
+            android:id="@+id/img_center_head"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_my_portraits" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/img_center_head"
+            android:text="请完善个人资料"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_center_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/img_center_head"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/img_center_head"
+            android:text="昵称:小薇"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_center_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_center_name"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/img_center_head"
+            android:text="性别:男"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_center_revolving"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/icon_my_photo"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/icon_arrow_back"
+        android:gravity="center|left"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp"
+        android:text="我的随手拍"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/icon_my_public"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/icon_arrow_back"
+        android:gravity="center|left"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp"
+        android:text="我的发表"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_my_lost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/icon_my_lost"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/icon_arrow_back"
+        android:gravity="center|left"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp"
+        android:text="我的失物招领"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_about_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/icon_my_aboutus"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/icon_arrow_back"
+        android:gravity="center|left"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp"
+        android:text="关于我们"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_my_alter_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/icon_my_pwd"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/icon_arrow_back"
+        android:gravity="center|left"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp"
+        android:text="修改密码"
+        android:textColor="@color/black" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@color/white"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:text="退出登陆"
+        android:textColor="#FF5D2D"
+        android:textSize="16sp" />
+</LinearLayout>

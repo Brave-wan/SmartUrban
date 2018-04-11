@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SmartUrban</string>
+    <string name="umeng_socialize_sharetosina">分享到新浪微博</string>
+    <string name="umeng_socialize_sharetodouban">分享到豆瓣</string>
+    <string name="umeng_socialize_sharetorenren">分享到人人网</string>
+
+    <string name="umeng_socialize_sharetotencent">分享到腾讯微博</string>
+    <string name="umeng_socialize_sharetotwitter">分享到twitter</string>
+    <string name="umeng_socialize_sharetolinkin">分享到领英</string>
+    <string name="camera_up_dynamic">您反应的问题已经提交成功,请等待反馈进度，查看返回进度请到我的随便拍进行查看</string>
+    <string name="camera_up_lost">提交成功,请等待反馈进度，查看返回进度请到我的失物招领进行查看</string>
+    <string name="activity_patrol_manage">点位管理</string>
+    <string name="patrol_manage_empty_hint">您所在的项目</string>
+    <string name="patrol_manage_empty_hint_1">还未添加点位</string>
+    <string name="net_error">网络连接失败，请检查您的网络!</string>
+    <string name="patrol_manage_add">添加</string>
+</resources>

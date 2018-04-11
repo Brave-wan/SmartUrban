@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.smart.urban">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Normal Permissions 不需要运行时注册 -->
+    <!--获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+    <!-- 请求网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 不是SDK需要的权限，是示例中的后台唤醒定位需要的权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 需要运行时注册的权限 -->
+    <!--用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--用于提高GPS定位速度-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!--写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--读取缓存数据-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!--用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 更改设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- 3.2.0版本增加 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 3.2.0版本增加-->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:name=".base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.MainActivity">
+
+        </activity>
+        <!--启动也-->
+        <activity android:name=".ui.StartupPageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.LocationActivity"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity android:name=".ui.GeoFence_Round_Activity" />
+        <activity android:name=".ui.LoginActivity" />
+        <activity android:name=".wxapi.WXEntryActivity" />
+        <activity android:name=".ui.PersonInformationActivity" />
+        <activity android:name=".ui.RegisterActivity" />
+        <activity android:name=".ui.MySourceActivity" />
+        <activity android:name=".ui.AlterPwdActivity" />
+        <activity
+            android:name=".ui.LostActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ui.GuideActivity" />
+        <activity android:name=".ui.DynamicActivity" />
+        <activity android:name=".ui.MyArticleActivity" />
+        <activity android:name=".ui.MyNickActivity" />
+        <activity android:name=".ui.AboutUsActivity" />
+        <activity android:name=".ui.LostFoundActivity" />
+        <activity android:name=".ui.CommentListActivity">
+
+        </activity>
+        <activity android:name=".ui.FindPwdActivity" />
+        <activity android:name=".ui.UrbanActivity" />
+        <activity android:name=".ui.GuideDetailsActivity" />
+        <activity android:name=".ui.RevolvingActivity" />
+        <activity android:name=".ui.DynamicDetailsActivity" />
+        <activity android:name=".ui.LostListActivity" />
+        <activity android:name=".ui.UrbanDetailsActivity"/>
+
+        <activity android:name=".ui.RevolvingDetailsActivity" />
+
+        <!-- tencent -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="d1a08bd1cda5721718b4c1b196ea6393" />
+        <!--  友盟的appkey -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5abd9a83f29d98682a00009c" />
+    </application>
+
+</manifest>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingLeft="15dp"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/img_lost_head"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/tv_lost_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@+id/img_lost_head"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:paddingLeft="10dp"
+        android:text="阿里妈妈MUX倾力打造的矢量图标管理、交流平台阿里妈妈MUX倾力打造的矢量图标管理、交流平台"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_lost_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img_lost_head"
+        android:layout_toRightOf="@+id/img_lost_head"
+        android:paddingLeft="10dp"
+        android:text="联系电话:17365220114"
+        android:textColor="#555555" />
+
+</RelativeLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:indicator_drawable_selected="@drawable/selected_welcome_radius"
+            app:indicator_drawable_unselected="@drawable/selected_welcome_radius_un"
+            app:indicator_height="8dp"
+            app:indicator_margin="6dp"
+            app:indicator_width="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="30dp">
+
+            <TextView
+                android:id="@+id/tv_home_navigation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/icon_home_navigation_btn"
+                android:gravity="center"
+                android:text="便民导航"
+                android:textColor="@color/home_txt" />
+
+            <TextView
+                android:id="@+id/tv_dynamic_list"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/icon_home_dynamic_btn"
+                android:gravity="center"
+                android:text="城管动态"
+                android:textColor="@color/home_txt" />
+
+            <TextView
+                android:id="@+id/tv_home_lost_found"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/icon_home_lost_btn"
+                android:gravity="center"
+                android:text="失物招领"
+                android:textColor="@color/home_txt" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="30dp"
+            android:paddingTop="30dp">
+
+            <TextView
+                android:id="@+id/tv_home_guide"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/icon_home_guideline_btn"
+                android:gravity="center"
+                android:text="办事指南"
+                android:textColor="@color/home_txt" />
+
+            <TextView
+                android:id="@+id/tv_home_dynamic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/icon_home_bbs_btn"
+                android:gravity="center"
+                android:text="社区论坛"
+                android:textColor="@color/home_txt" />
+
+            <TextView
+                android:id="@+id/tv_home_camera"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/icon_home_camera"
+                android:gravity="center"
+                android:text="随手拍"
+                android:textColor="@color/home_txt" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:paddingBottom="20dp"
+            android:paddingTop="15dp"
+            android:text="最新动态"
+            android:textSize="16sp" />
+
+        <com.smart.urban.widget.MyListView
+            android:id="@+id/lv_main_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/gray_line"
+            android:dividerHeight="1dp" />
+    </LinearLayout>
+</ScrollView>
