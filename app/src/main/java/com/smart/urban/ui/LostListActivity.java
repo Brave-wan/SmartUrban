@@ -3,6 +3,7 @@ package com.smart.urban.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.blankj.utilcode.util.ToastUtils;
@@ -33,7 +34,7 @@ import butterknife.OnClick;
  * Created by root on 18-4-11.
  */
 
-public class LostListActivity extends BaseActivity implements OnRefreshListener, OnLoadmoreListener {
+public class LostListActivity extends BaseActivity implements OnRefreshListener, OnLoadmoreListener, AdapterView.OnItemClickListener {
     List<LostBean> list = new ArrayList<>();
     @BindView(R.id.layout_root)
     LoadingLayout layout_root;
@@ -55,6 +56,7 @@ public class LostListActivity extends BaseActivity implements OnRefreshListener,
         lv_lost_list.setAdapter(adapter);
         smart_layout.setOnRefreshListener(this);
         smart_layout.setOnLoadmoreListener(this);
+        lv_lost_list.setOnItemClickListener(this);
         getLostList(page);
     }
 
@@ -118,5 +120,13 @@ public class LostListActivity extends BaseActivity implements OnRefreshListener,
         smart_layout.finishLoadmore(1000);
         page++;
         getLostList(page);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        LostBean bean = (LostBean) adapter.getItem(position);
+        Intent intent = new Intent(this, LostDetailsActivity.class);
+        intent.putExtra("bean", bean);
+        startActivity(intent);
     }
 }

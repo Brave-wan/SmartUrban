@@ -58,7 +58,6 @@ public class UrbanActivity extends BaseActivity implements OnRefreshListener, On
         lv_urban_list.setOnItemClickListener(this);
     }
 
-
     @Override
     protected void onBackward(View backwardView) {
         super.onBackward(backwardView);
@@ -102,13 +101,10 @@ public class UrbanActivity extends BaseActivity implements OnRefreshListener, On
     @Override
     public void onLoadmore(RefreshLayout refreshlayout) {
         smart_layout.finishLoadmore(1000);
-
-
     }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         startActivity(new Intent(this, UrbanDetailsActivity.class));
-
     }
 }

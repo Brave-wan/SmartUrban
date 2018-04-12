@@ -2,13 +2,14 @@ package com.smart.urban.bean;
 
 import com.smart.urban.config.Constants;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by root on 18-4-10.
  */
 
-public class LostBean {
+public class LostBean implements Serializable{
 
 
     /**
@@ -105,7 +106,7 @@ public class LostBean {
         this.images = images;
     }
 
-    public static class ImagesBean {
+    public static class ImagesBean implements Serializable{
         /**
          * belongId : 1523427100299
          * order : 0

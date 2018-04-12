@@ -19,6 +19,7 @@ import com.smart.urban.config.Constants;
 import com.smart.urban.present.CameraPresent;
 import com.smart.urban.present.LostFoundPresent;
 import com.smart.urban.ui.adapter.CameraListAdapter;
+import com.smart.urban.ui.widget.ShowImageWindow;
 import com.smart.urban.utils.PhotoUtils;
 import com.smart.urban.view.ICameraView;
 import com.smart.urban.view.ILostFoundView;
@@ -100,6 +101,9 @@ public class LostFoundActivity extends BaseActivity<ILostFoundView, LostFoundPre
         CameraPicBean bean = (CameraPicBean) adapter.getItem(position);
         if (bean.getPic() == null) {
             presenter.getTakePhoto(this);
+        } else {
+            ShowImageWindow window = new ShowImageWindow(this, bean.getPic());
+            window.showWindow(view);
         }
     }
 

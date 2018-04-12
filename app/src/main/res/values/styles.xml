@@ -20,7 +20,13 @@
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:backgroundDimAmount">0.6</item>
     </style>
+
     <style name="style_progressbar" parent="Widget.AppCompat.ProgressBar">
         <item name="android:indeterminateDrawable">@drawable/progressbar</item>
+    </style>
+
+    <style name="AnimationPreview">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
     </style>
 </resources>

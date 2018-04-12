@@ -27,6 +27,7 @@ import com.smart.urban.view.IHomeView;
 import com.smart.urban.widget.MyListView;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
+import com.youth.banner.listener.OnBannerListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,6 +62,7 @@ public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implement
 
     public void initBanner() {
         list.clear();
+
         list.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic21363tj30ci08ct96.jpg");
         list.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic259ohaj30ci08c74r.jpg");
         list.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic2b16zuj30ci08cwf4.jpg");
@@ -70,6 +72,7 @@ public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implement
                 .setImageLoader(new GlideImageLoader())
                 .setIndicatorGravity(BannerConfig.CENTER)
                 .start();
+
         adapter = new UrbanListAdapter(getActivity(), R.layout.item_info_list, listBeans);
         lv_main_list.setAdapter(adapter);
         presenter.getForumList();
@@ -121,6 +124,7 @@ public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implement
 
     @Override
     public void onDynamicList(List<UrbanListBean> data) {
+        listBeans.clear();
         listBeans.addAll(data);
         adapter.setDataList(listBeans);
     }

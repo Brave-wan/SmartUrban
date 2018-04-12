@@ -23,6 +23,7 @@ import com.smart.urban.present.CameraPresent;
 import com.smart.urban.ui.MainActivity;
 import com.smart.urban.ui.adapter.CameraListAdapter;
 import com.smart.urban.ui.dialog.UpDynamicDialog;
+import com.smart.urban.ui.widget.ShowImageWindow;
 import com.smart.urban.utils.PhotoUtils;
 import com.smart.urban.utils.SharedPreferencesUtils;
 import com.smart.urban.view.ICameraView;
@@ -134,13 +135,14 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
         CameraPicBean bean = (CameraPicBean) adapter.getItem(position);
         if (bean.getPic() == null) {
             mainActivity.getTakePhoto();
+        } else {
+            ShowImageWindow window = new ShowImageWindow(getActivity(), bean.getPic());
+            window.showWindow(view);
         }
     }
 
-
     @Override
     public void onUpSuccess() {
-
         list = adapter.dataList;
         list.clear();
         adapter.setDataList(list);
