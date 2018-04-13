@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_location_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp"
+        android:text="终点:维也纳酒店"
+        android:textColor="@color/home_txt"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_location_name"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:padding="5dp"
+        android:src="@drawable/icon_edit_room_delete" />
+
+    <TextView
+        android:id="@+id/tv_location_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_location_name"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:text="起点:我的位置" />
+
+    <TextView
+        android:id="@+id/tv_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_location_start"
+        android:background="@color/gray_line" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_line"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="10dp">
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_location_traffic_state"
+            android:button="@null"
+            android:gravity="center"
+            android:text="选择步行/或骑车"
+            android:textColor="@drawable/select_location_traffic_state_tx" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_location_traffic_state"
+            android:button="@null"
+            android:gravity="center"
+            android:text="选择开车"
+            android:textColor="@drawable/select_location_traffic_state_tx" />
+    </RadioGroup>
+</RelativeLayout>

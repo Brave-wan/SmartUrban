@@ -2,24 +2,46 @@ package com.smart.urban.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.amap.api.navi.AMapNavi;
 import com.amap.api.navi.AMapNaviView;
 import com.amap.api.navi.AMapNaviViewOptions;
 import com.amap.api.navi.enums.NaviType;
+import com.blankj.utilcode.util.ToastUtils;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseLocationActivity;
 import com.smart.urban.present.LocationPresent;
+import com.smart.urban.ui.adapter.LocationListAdapter;
+import com.smart.urban.utils.slidinguppanel.SlidingUpPanelLayout;
 import com.smart.urban.view.ILocationView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.http.GET;
+
 
 /**
  * Created by root on 18-3-28.
  */
 
-public class LocationActivity extends BaseLocationActivity implements ILocationView {
+public class LocationActivity extends BaseLocationActivity implements ILocationView, View.OnClickListener, AdapterView.OnItemClickListener {
     AMapNavi mAMapNavi;
     LocationPresent presenter;
-
+    ListView lv_location_list;
+    TextView tv_map_search;
+    LocationListAdapter adapter;
+    SlidingUpPanelLayout sliding_layout;
+    RelativeLayout rl_bottom, rl_transportation_state;
+    ImageView img_location_back;
+    private List<String> list = new ArrayList<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,6 +54,12 @@ public class LocationActivity extends BaseLocationActivity implements ILocationV
     }
 
     private void initView() {
+        img_location_back = (ImageView) findViewById(R.id.img_location_back);
+        rl_transportation_state = (RelativeLayout) findViewById(R.id.rl_transportation_state);
+        rl_bottom = (RelativeLayout) findViewById(R.id.rl_bottom);
+        sliding_layout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
+        tv_map_search = (TextView) findViewById(R.id.tv_map_search);
+        lv_location_list = (ListView) findViewById(R.id.lv_location_list);
         presenter = new LocationPresent(this, this);
         mAMapNavi = AMapNavi.getInstance(getApplicationContext());
         presenter.initMap(mAMapNaviView);
@@ -39,6 +67,18 @@ public class LocationActivity extends BaseLocationActivity implements ILocationV
         AMapNaviViewOptions options = new AMapNaviViewOptions();
         options.setTilt(0);
         mAMapNaviView.setViewOptions(options);
+        tv_map_search.setOnClickListener(this);
+        rl_transportation_state.setOnClickListener(this);
+        img_location_back.setOnClickListener(this);
+        initData();
+    }
+
+    private void initData() {
+        adapter = new LocationListAdapter(this, R.layout.item_location_list, list);
+        lv_location_list.setAdapter(adapter);
+        lv_location_list.setOnItemClickListener(this);
+
+
     }
 
     @Override
@@ -69,7 +109,7 @@ public class LocationActivity extends BaseLocationActivity implements ILocationV
         } catch (Exception e) {
             e.printStackTrace();
         }
-     mAMapNavi.calculateDriveRoute(sList, eList, mWayPointList, strategy);
+        mAMapNavi.calculateDriveRoute(sList, eList, mWayPointList, strategy);
     }
 
 
@@ -78,5 +118,36 @@ public class LocationActivity extends BaseLocationActivity implements ILocationV
         super.onCalculateRouteSuccess(ids);
 //        mAMapNavi.startNavi(NaviType.EMULATOR);
         mAMapNavi.startNavi(NaviType.GPS);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.tv_map_search:
+                for (int i = 0; i < 10; i++) {
+                    list.add("");
+                }
+                adapter.setDataList(list);
+                sliding_layout.setPanelHeight(600);
+                break;
+            case R.id.rl_transportation_state:
+                break;
+            case R.id.img_location_back:
+                rl_bottom.setVisibility(View.VISIBLE);
+                rl_transportation_state.setVisibility(View.GONE);
+                lv_location_list.setVisibility(View.VISIBLE);
+                sliding_layout.setPanelHeight(600);
+                sliding_layout.setTouchEnabled(true);
+                break;
+        }
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        rl_bottom.setVisibility(View.GONE);
+        rl_transportation_state.setVisibility(View.VISIBLE);
+        lv_location_list.setVisibility(View.GONE);
+        sliding_layout.setPanelHeight(rl_transportation_state.getLayoutParams().height);
+        sliding_layout.setTouchEnabled(false);
     }
 }
