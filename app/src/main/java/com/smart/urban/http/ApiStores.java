@@ -1,5 +1,6 @@
 package com.smart.urban.http;
 
+import com.smart.urban.bean.CommentListBean;
 import com.smart.urban.bean.DynamicListBean;
 import com.smart.urban.bean.GuideDetailsBean;
 import com.smart.urban.bean.GuideListBean;
@@ -16,9 +17,11 @@ import java.util.Map;
 import okhttp3.MultipartBody;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
+import retrofit2.http.QueryMap;
 import rx.Observable;
 
 /**
@@ -102,4 +105,18 @@ public interface ApiStores {
     @POST("cityApp/lost/add")
     Observable<BaseResult<List<RevolvingListBean>>> getLostAdd(@FieldMap Map<String, Object> map);
 
+    @GET("cityApp/dynamic/getCommentList")
+    Observable<BaseResult<List<CommentListBean>>> getDynamicCommentList(@QueryMap Map<String, Object> map);
+
+    @GET("cityApp/forum/getCommentList")
+    Observable<BaseResult<List<CommentListBean>>> getForumCommentList(@QueryMap Map<String, Object> map);
+
+    @FormUrlEncoded
+    @POST("cityApp/forum/addComment")
+    Observable<BaseResult<List<CommentListBean>>> getForumAddComment(@FieldMap Map<String, Object> map);
+
+
+    @FormUrlEncoded
+    @POST("cityApp/dynamic/addComment")
+    Observable<BaseResult<List<CommentListBean>>> getDynamicAddComment(@FieldMap Map<String, Object> map);
 }

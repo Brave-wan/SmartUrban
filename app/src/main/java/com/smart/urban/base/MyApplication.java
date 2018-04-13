@@ -58,7 +58,7 @@ public class MyApplication extends Application {
                 .setErrorText("抱歉，数据出错")
                 .setEmptyText("抱歉，暂无数据")
                 .setNoNetworkText("无网络连接，请检查您的网络···")
-                .setErrorImage(R.drawable.kong)
+                .setErrorImage(R.drawable.empty_wifi)
                 .setEmptyImage(R.drawable.empty)
                 .setNoNetworkImage(R.drawable.empty_wifi)
                 .setAllTipTextColor(R.color.gray)

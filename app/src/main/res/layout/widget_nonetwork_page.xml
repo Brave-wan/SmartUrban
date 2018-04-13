@@ -44,6 +44,7 @@
         android:paddingRight="@dimen/base_dimen_36"
         android:paddingTop="@dimen/base_dimen_14"
         android:text="刷     新"
+        android:visibility="gone"
         android:textColor="@color/frameblue" />
 
 

@@ -26,8 +26,7 @@
             android:padding="10dp"
             android:src="@drawable/icon_back" />
 
-
-        <com.amap.api.maps.MapView
+        <com.amap.api.navi.AMapNaviView
             android:id="@+id/mapView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

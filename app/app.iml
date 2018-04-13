@@ -149,6 +149,7 @@
     <orderEntry type="library" name="umeng_social_shareboard" level="project" />
     <orderEntry type="library" name="library-1.0.2" level="project" />
     <orderEntry type="library" name="library-1.0.4" level="project" />
+    <orderEntry type="library" name="Msc" level="project" />
     <orderEntry type="library" name="glide-3.7.0" level="project" />
     <orderEntry type="library" scope="TEST" name="jsr305-2.0.1" level="project" />
     <orderEntry type="library" name="support-core-utils-25.3.1" level="project" />

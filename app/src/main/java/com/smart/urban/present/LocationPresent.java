@@ -22,6 +22,8 @@ import com.amap.api.maps.model.LatLng;
 import com.amap.api.maps.model.Marker;
 import com.amap.api.maps.model.MarkerOptions;
 import com.amap.api.maps.model.MyLocationStyle;
+import com.amap.api.navi.AMapNaviView;
+import com.amap.api.navi.model.NaviLatLng;
 import com.blankj.utilcode.util.ToastUtils;
 import com.smart.urban.R;
 import com.smart.urban.base.BasePresenter;
@@ -38,12 +40,13 @@ import java.util.List;
  * Created by root on 18-3-28.
  */
 
-public class LocationPresent extends BasePresenter<ILocationView> implements GeoFenceListener,
+public class LocationPresent implements GeoFenceListener,
         AMap.OnMapClickListener,
         LocationSource,
         AMapLocationListener,
         CompoundButton.OnCheckedChangeListener
-        , AMap.OnMarkerClickListener, AMap.OnInfoWindowClickListener {
+        , AMap.OnMarkerClickListener,
+        AMap.OnInfoWindowClickListener {
     //声明mLocationClient对象
     public AMapLocationClient mLocationClient;
     //声明mLocationOption对象
@@ -60,13 +63,14 @@ public class LocationPresent extends BasePresenter<ILocationView> implements Geo
     private AMap aMap;
     private Marker marker2;// 有跳动效果的marker对象
     private Marker marker3;// 从地上生长的marker对象
-
-    public LocationPresent(Context mContext) {
+    ILocationView mView;
+    public LocationPresent(Context mContext, ILocationView mView) {
         this.mContext = mContext;
+        this.mView=mView;
         present = new DriveRoutePresent(mContext);
     }
 
-    public void initMap(MapView mMapView) {
+    public void initMap(AMapNaviView mMapView) {
 
         aMap = mMapView.getMap();
         aMap.setOnInfoWindowClickListener(this);
@@ -192,6 +196,9 @@ public class LocationPresent extends BasePresenter<ILocationView> implements Geo
     }
 
 
+    /**
+     * 地图上绘制marks
+     */
     private void addMarkersToMap() {
         //绘制地图上面的mark
         MarkerOptions markerOption1 = new MarkerOptions().anchor(0.5f, 0.5f)
@@ -211,5 +218,20 @@ public class LocationPresent extends BasePresenter<ILocationView> implements Geo
                 .setFlat(true);
         marker2 = aMap.addMarker(markerOption1);
         marker3 = aMap.addMarker(markerOption2);
+    }
+
+
+    //算路终点坐标
+    protected NaviLatLng mEndLatlng = new NaviLatLng(22.652, 113.966);
+    //算路起点坐标
+    protected NaviLatLng mStartLatlng = new NaviLatLng(22.540332, 113.939961);
+    //存储算路起点的列表
+    protected final List<NaviLatLng> sList = new ArrayList<NaviLatLng>();
+    //存储算路终点的列表
+    protected final List<NaviLatLng> eList = new ArrayList<NaviLatLng>();
+
+    public void daohang() {
+
+
     }
 }

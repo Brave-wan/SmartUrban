@@ -1,43 +1,42 @@
 package com.smart.urban.bean;
 
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * Created by root on 18-4-9.
  */
 
-public class UrbanListBean {
-
+public class UrbanListBean implements Serializable {
 
     /**
-     * title : 最新动态
      * subtitle :
      * isOnline : Y
+     * title : 最新动态
+     * commentCount : 2
+     * viewCount : 0
      * content : 最新动态的内容
-     * createTime : 1523193991000
      * createUserId : null
      * recordStatus : null
+     * createTime : 1523193991000
      * modifyUserId : null
      * modifyTime : 1523193991000
      * id : 1523193891931
      */
 
-    private String title;
     private String subtitle;
     private String isOnline;
+    private String title;
+    private int commentCount;
+    private int viewCount;
     private String content;
-    private long createTime;
     private Object createUserId;
     private Object recordStatus;
+    private long createTime;
     private Object modifyUserId;
     private long modifyTime;
     private long id;
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
     public String getSubtitle() {
         return subtitle;
@@ -55,20 +54,36 @@ public class UrbanListBean {
         this.isOnline = isOnline;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getCommentCount() {
+        return commentCount;
+    }
+
+    public void setCommentCount(int commentCount) {
+        this.commentCount = commentCount;
+    }
+
+    public int getViewCount() {
+        return viewCount;
+    }
+
+    public void setViewCount(int viewCount) {
+        this.viewCount = viewCount;
+    }
+
     public String getContent() {
         return content;
     }
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public long getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(long createTime) {
-        this.createTime = createTime;
     }
 
     public Object getCreateUserId() {
@@ -85,6 +100,16 @@ public class UrbanListBean {
 
     public void setRecordStatus(Object recordStatus) {
         this.recordStatus = recordStatus;
+    }
+
+    public String getCreateTime() {
+        Date date = new Date(createTime);
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        return format.format(date);
+    }
+
+    public void setCreateTime(long createTime) {
+        this.createTime = createTime;
     }
 
     public Object getModifyUserId() {

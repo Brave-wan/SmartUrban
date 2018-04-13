@@ -105,6 +105,9 @@ public class UrbanActivity extends BaseActivity implements OnRefreshListener, On
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        startActivity(new Intent(this, UrbanDetailsActivity.class));
+        UrbanListBean bean = (UrbanListBean) adapter.getItem(position);
+        Intent intent = new Intent(this, UrbanDetailsActivity.class);
+        intent.putExtra("bean", bean);
+        startActivity(intent);
     }
 }

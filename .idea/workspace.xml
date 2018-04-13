@@ -6,39 +6,70 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="okhttp" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="272097d7-2833-4029-a216-e7693ad8d4db" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostDetailsActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/LostDetailsAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/widget/ShowImageWindow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/ScaleView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/anim/fade_in.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/anim/fade_out.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_lost_details.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/window_show_imager.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/libs/Msc.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/libs/arm64-v8a/libAMapSDK_MAP_v6_1_0.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/libs/arm64-v8a/libmsc.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/libs/armeabi-v7a/libAMapSDK_MAP_v6_1_0.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/libs/armeabi-v7a/libmsc.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/libs/armeabi/libAMapSDK_MAP_v6_1_0.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/libs/armeabi/libmsc.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/libs/x86/libAMapSDK_MAP_v6_1_0.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/libs/x86/libmsc.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/libs/x86_64/libAMapSDK_MAP_v6_1_0.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/libs/x86_64/libmsc.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Msc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/base/BaseLocationActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/CommentListBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/CommentListPresent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/ALiTTS.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/AmapTTSController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/CheckPermissionsActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/DensityUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/ErrorInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/ICallBack.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/IFlyTTS.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/SystemTTS.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/TTS.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/TTSController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/view/ICommentListView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/jarAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/jarAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/LostBean.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/LostBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/CameraFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/CameraFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/HomeFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/HomeFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostFoundActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostFoundActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostListActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostListActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/MyArticleActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/MyArticleActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/RevolvingDetailsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/RevolvingDetailsActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/base/MyApplication.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/base/MyApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/DynamicListBean.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/DynamicListBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/UrbanListBean.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/UrbanListBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/http/ApiStores.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/http/ApiStores.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/LocationPresent.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/LocationPresent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/CommentListActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/CommentListActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/DynamicDetailsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/DynamicDetailsActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LocationActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LocationActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/UrbanActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/UrbanActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/UrbanDetailsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/UrbanDetailsActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/CommentListAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/CommentListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/UrbanListAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/UrbanListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_comment_list.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_comment_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_dynamic_details.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_dynamic_details.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_location.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_location.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_urban_details.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_urban_details.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_comment_list.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_comment_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/widget_error_page.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/widget_error_page.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/widget_nonetwork_page.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/widget_nonetwork_page.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,12 +109,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CameraFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/CameraFragment.java">
+      <file leaf-file-name="CommentListActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/CommentListActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="137" column="10" lean-forward="false" selection-start-line="137" selection-start-column="10" selection-end-line="140" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="470">
+              <caret line="161" column="35" lean-forward="false" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="35" />
+              <folding>
+                <element signature="e#2678#2679#0" expanded="true" />
+                <element signature="e#2729#2730#0" expanded="true" />
+                <element signature="e#5252#5253#0" expanded="true" />
+                <element signature="e#5288#5289#0" expanded="true" />
+                <element signature="e#5334#5335#0" expanded="true" />
+                <element signature="e#5373#5374#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,101 +129,46 @@
       <file leaf-file-name="HomeFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/HomeFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="85" column="66" lean-forward="false" selection-start-line="85" selection-start-column="66" selection-end-line="85" selection-end-column="66" />
-              <folding>
-                <element signature="e#1710#1711#0" expanded="true" />
-                <element signature="e#1755#1756#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DynamicActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/DynamicActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="68" column="55" lean-forward="false" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
+            <state relative-caret-position="637">
+              <caret line="75" column="31" lean-forward="false" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyArticleActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/MyArticleActivity.java">
+      <file leaf-file-name="UrbanListAdapter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/UrbanListAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="100" column="15" lean-forward="true" selection-start-line="100" selection-start-column="15" selection-end-line="100" selection-end-column="15" />
+            <state relative-caret-position="567">
+              <caret line="38" column="51" lean-forward="true" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LostDetailsActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostDetailsActivity.java">
+      <file leaf-file-name="item_info_list.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_info_list.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1197">
-              <caret line="61" column="39" lean-forward="false" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CenterFragment.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/CenterFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="271">
+              <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="41" />
               <folding />
             </state>
           </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="LostListActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostListActivity.java">
+      <file leaf-file-name="activity_comment_list.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_comment_list.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="96" column="56" lean-forward="false" selection-start-line="96" selection-start-column="56" selection-end-line="96" selection-end-column="56" />
+            <state relative-caret-position="-4">
+              <caret line="45" column="47" lean-forward="false" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LostFoundActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostFoundActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="104" column="12" lean-forward="false" selection-start-line="104" selection-start-column="12" selection-end-line="105" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RevolvingDetailsActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/RevolvingDetailsActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="41" column="56" lean-forward="false" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
-              <folding>
-                <element signature="e#896#897#0" expanded="true" />
-                <element signature="e#954#955#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RevolvingListBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/RevolvingListBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="80" column="26" lean-forward="false" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="26" />
-              <folding>
-                <element signature="e#1701#1702#0" expanded="true" />
-                <element signature="e#1730#1731#0" expanded="true" />
-              </folding>
-            </state>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
@@ -194,10 +177,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="layoutResourceFile" />
-        <option value="Class" />
         <option value="resourceFile" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -218,6 +201,13 @@
       <find>bg_default</find>
       <find>patrol_manage_empty_hint</find>
       <find>Lost</find>
+      <find>errorPage</find>
+      <find>setStatus</find>
+      <find>networkPage</find>
+      <find>sList</find>
+      <find>AMapNaviViewListener</find>
+      <find>UrbanDetailsActivity</find>
+      <find>CommentListActivity</find>
     </findStrings>
     <replaceStrings>
       <replace>String</replace>
@@ -2022,37 +2012,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/widget/MyLinearLayout.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/widget/MyListView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/UpFileBean.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/view/ICameraView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/config/Constants.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/PersonInformationPresent.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_dynamic_details_img.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_dynamic_details.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/DynamicDetailsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/ArticlePresent.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/view/IArticleView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/view/ILostFoundView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/CameraPresent.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/CameraListAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/LostFoundPresent.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_lost_found.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_my_lost.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_lost_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/LostListAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/CenterFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/PersonInformationActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/http/ApiStores.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_lost_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/view/IHomeView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/HomePresent.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/UrbanDetailsPresent.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_urban_details.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/UrbanDetailsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/UrbanActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/HomeFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/LostBean.java" />
@@ -2073,6 +2038,31 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostFoundActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/MyArticleActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostDetailsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/widget_nonetwork_page.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/base/MyApplication.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/widget_error_page.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_location.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/LocationPresent.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/IFlyTTS.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/base/BaseLocationActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LocationActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/UrbanActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/UrbanListBean.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_urban_details.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/DynamicListBean.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_dynamic_details.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/CommentListBean.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_comment_list.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/UrbanDetailsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/CommentListAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/http/ApiStores.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/DynamicDetailsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/http/AppClient.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/view/ICommentListView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_comment_list.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/CommentListPresent.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/CommentListActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/UrbanListAdapter.java" />
       </list>
     </option>
   </component>
@@ -2097,8 +2087,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2109,20 +2101,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Gradle Scripts" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartUrban-master" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2165,6 +2143,28 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="urban" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartUrban-master" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="urban" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2191,12 +2191,10 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../桌面/Android_Location_Demo-master/android_studio/AMapLocationDemo/build.gradle" />
     <property name="device.picker.selection" value="8101b900" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi" />
     <property name="DEBUGGABLE_DEVICE" value="samsung-sm_g5510-8101b900" />
@@ -2214,11 +2212,11 @@
       <recent name="com.smart.urban.ui" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/values" />
-      <recent name="$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/slidinguppanel" />
+      <recent name="$PROJECT_DIR$/app/libs/x86_64" />
+      <recent name="$PROJECT_DIR$/app/libs/x86" />
+      <recent name="$PROJECT_DIR$/app/libs/armeabi-v7a" />
+      <recent name="$PROJECT_DIR$/app/libs/armeabi" />
+      <recent name="$PROJECT_DIR$/app/libs/arm64-v8a" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -2304,7 +2302,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523528052899" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523606952051" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2352,7 +2350,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523528052899" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523606952051" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2535,7 +2533,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523528052899" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523606952053" />
       </method>
     </configuration>
     <list size="1">
@@ -2581,7 +2579,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522766866297</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="添加图片查看详情">
+      <created>1523528093188</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1523528093188</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2589,28 +2594,29 @@
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21186441" sideWeight="0.5042553" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12182204" sideWeight="0.49574468" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5148305" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20868644" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21186441" sideWeight="0.5042553" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3430851" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61758476" sideWeight="0.49574468" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15254237" sideWeight="0.49574468" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.49462366" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17978723" sideWeight="0.49462366" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33262712" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17978723" sideWeight="0.50537634" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2618,7 +2624,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -2626,7 +2631,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="完善页面绘制" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善页面绘制" />
+    <MESSAGE value="添加图片查看详情" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加图片查看详情" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2726,475 +2732,574 @@
           <properties />
           <option name="timeStamp" value="42" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/CommentListActivity.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="43" />
+      <option name="time" value="45" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_my_lost.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostDetailsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="32" />
-          <folding />
+        <state relative-caret-position="1197">
+          <caret line="61" column="39" lean-forward="false" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_lost_list.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/LoadingLayout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/LostListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="35" column="66" lean-forward="false" selection-start-line="35" selection-start-column="66" selection-end-line="35" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_personal_information.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="23" column="45" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/PersonInformationActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="103" column="58" lean-forward="false" selection-start-line="103" selection-start-column="58" selection-end-line="103" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dynamic_list.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/http/ApiStores.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="104" column="1" lean-forward="false" selection-start-line="104" selection-start-column="1" selection-end-line="104" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_lost_list.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="45" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/DynamicListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/view/IHomeView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/http/BaseResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/HomePresent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/view/IUrbanDetailsView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/UrbanDetailsPresent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="32" />
+        <state relative-caret-position="1974">
+          <caret line="111" column="79" lean-forward="false" selection-start-line="111" selection-start-column="79" selection-end-line="111" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#354#355#0" expanded="false" />
-            <element signature="e#394#395#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_urban_details.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/widget_nonetwork_page.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="42" />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/StartupPageActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/attrs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="36" column="51" lean-forward="false" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="15" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/base/MyApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="829">
-          <caret line="61" column="48" lean-forward="false" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1302">
-          <caret line="62" column="55" lean-forward="false" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/UrbanDetailsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
           <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1253#1254#0" expanded="false" />
+            <element signature="e#1298#1299#0" expanded="false" />
+            <element signature="e#1846#1847#0" expanded="false" />
+            <element signature="e#1873#1874#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="47" column="38" lean-forward="false" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-manifest">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/empty_wifi.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/define_loading_page.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="96" column="58" lean-forward="false" selection-start-line="96" selection-start-column="58" selection-end-line="96" selection-end-column="58" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/empty.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/kong.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/base/MyApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="61" column="48" lean-forward="false" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/widget_error_page.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_location.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="28" column="39" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/SystemTTS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/matisse-0.4.3.aar/f3f0206a712fcac0e3247c97e1dd5c82/res/values/values.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/TTS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+        <state relative-caret-position="231">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/ErrorInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/DensityUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/CheckPermissionsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/IFlyTTS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/AmapTTSController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding>
+            <element signature="e#4104#4459#0" expanded="false" />
+            <element signature="e#4458#4459#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/ICallBack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/ALiTTS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/location/TTSController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="51" column="22" lean-forward="false" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/LocationPresent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="72" column="16" lean-forward="false" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/base/BaseLocationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-103">
+          <caret line="62" column="13" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="13" />
+          <folding>
+            <element signature="e#1591#1603#0" expanded="false" />
+            <element signature="e#1665#1677#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LocationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="75" column="13" lean-forward="true" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="31" />
+        <state relative-caret-position="273">
+          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-25/android/view/LayoutInflater.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_urban_details.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="375" column="73" lean-forward="false" selection-start-line="375" selection-start-column="69" selection-end-line="375" selection-end-column="73" />
+        <state relative-caret-position="56">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="62" selection-end-column="21" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/DynamicActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="121" column="12" lean-forward="false" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="12" />
+        <state relative-caret-position="588">
+          <caret line="129" column="47" lean-forward="false" selection-start-line="129" selection-start-column="47" selection-end-line="129" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_camera_list.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/UrbanListBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="104" column="2" lean-forward="false" selection-start-line="104" selection-start-column="2" selection-end-line="108" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dynamic_details.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="44" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/LostDetailsAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/DynamicListBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="37" column="35" lean-forward="false" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+        <state relative-caret-position="441">
+          <caret line="108" column="35" lean-forward="false" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1301#1302#0" expanded="true" />
+            <element signature="e#1332#1333#0" expanded="true" />
+            <element signature="e#1380#1381#0" expanded="true" />
+            <element signature="e#1420#1421#0" expanded="true" />
+            <element signature="e#1454#1455#0" expanded="true" />
+            <element signature="e#1484#1485#0" expanded="true" />
+            <element signature="e#1530#1531#0" expanded="true" />
+            <element signature="e#1568#1569#0" expanded="true" />
+            <element signature="e#1600#1601#0" expanded="true" />
+            <element signature="e#1628#1629#0" expanded="true" />
+            <element signature="e#1670#1671#0" expanded="true" />
+            <element signature="e#1704#1705#0" expanded="true" />
+            <element signature="e#1740#1741#0" expanded="true" />
+            <element signature="e#1775#1776#0" expanded="true" />
+            <element signature="e#1828#1829#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#1909#1910#0" expanded="true" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1988#1989#0" expanded="true" />
+            <element signature="e#2030#2031#0" expanded="true" />
+            <element signature="e#2064#2065#0" expanded="true" />
+            <element signature="e#2094#2095#0" expanded="true" />
+            <element signature="e#2140#2141#0" expanded="true" />
+            <element signature="e#2178#2179#0" expanded="true" />
+            <element signature="e#2215#2216#0" expanded="true" />
+            <element signature="e#2250#2251#0" expanded="true" />
+            <element signature="e#2304#2305#0" expanded="true" />
+            <element signature="e#2352#2353#0" expanded="true" />
+            <element signature="e#2391#2392#0" expanded="true" />
+            <element signature="e#2426#2427#0" expanded="true" />
+            <element signature="e#2482#2483#0" expanded="true" />
+            <element signature="e#2530#2531#0" expanded="true" />
+            <element signature="e#2771#2772#0" expanded="true" />
+            <element signature="e#2815#2816#0" expanded="true" />
+            <element signature="e#2854#2855#0" expanded="true" />
+            <element signature="e#2889#2890#0" expanded="true" />
+            <element signature="e#2945#2946#0" expanded="true" />
+            <element signature="e#2993#2994#0" expanded="true" />
+            <element signature="e#3028#3029#0" expanded="true" />
+            <element signature="e#3061#3062#0" expanded="true" />
+            <element signature="e#3111#3112#0" expanded="true" />
+            <element signature="e#3155#3156#0" expanded="true" />
+            <element signature="e#3182#3183#0" expanded="true" />
+            <element signature="e#3207#3208#0" expanded="true" />
+            <element signature="e#3241#3242#0" expanded="true" />
+            <element signature="e#3269#3270#0" expanded="true" />
+            <element signature="e#3312#3313#0" expanded="true" />
+            <element signature="e#3341#3342#0" expanded="true" />
+            <element signature="e#3395#3396#0" expanded="true" />
+            <element signature="e#3431#3432#0" expanded="true" />
+            <element signature="e#3890#3891#0" expanded="true" />
+            <element signature="e#3929#3930#0" expanded="true" />
+            <element signature="e#3979#3980#0" expanded="true" />
+            <element signature="e#4027#4028#0" expanded="true" />
+            <element signature="e#4060#4061#0" expanded="true" />
+            <element signature="e#4096#4097#0" expanded="true" />
+            <element signature="e#4139#4140#0" expanded="true" />
+            <element signature="e#4181#4182#0" expanded="true" />
+            <element signature="e#4219#4220#0" expanded="true" />
+            <element signature="e#4257#4258#0" expanded="true" />
+            <element signature="e#4307#4308#0" expanded="true" />
+            <element signature="e#4353#4354#0" expanded="true" />
+            <element signature="e#4384#4385#0" expanded="true" />
+            <element signature="e#4417#4418#0" expanded="true" />
+            <element signature="e#4455#4456#0" expanded="true" />
+            <element signature="e#4491#4492#0" expanded="true" />
+            <element signature="e#4526#4527#0" expanded="true" />
+            <element signature="e#4561#4562#0" expanded="true" />
+            <element signature="e#4605#4606#0" expanded="true" />
+            <element signature="e#4645#4646#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/24a0b0e63af9530bcedd06ed1983a4f2f02155a3/glide-3.7.0-sources.jar!/com/bumptech/glide/DrawableTypeRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="70" column="28" lean-forward="false" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/24a0b0e63af9530bcedd06ed1983a4f2f02155a3/glide-3.7.0-sources.jar!/com/bumptech/glide/BitmapTypeRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-893">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/ZoomImageView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="262" column="9" lean-forward="false" selection-start-line="262" selection-start-column="9" selection-end-line="262" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/ScaleView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-66">
-          <caret line="237" column="34" lean-forward="false" selection-start-line="237" selection-start-column="34" selection-end-line="237" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1419#1420#0" expanded="true" />
-            <element signature="e#1458#1459#0" expanded="true" />
-            <element signature="e#1499#1500#0" expanded="true" />
-            <element signature="e#1534#1535#0" expanded="true" />
-            <element signature="e#1922#2951#0" expanded="true" />
-            <element signature="e#2950#2951#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/fade_in.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/window_show_imager.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/fade_out.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/CommentListBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
-          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding />
+          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="28" />
+          <folding>
+            <element signature="e#648#649#0" expanded="false" />
+            <element signature="e#679#680#0" expanded="false" />
+            <element signature="e#725#726#0" expanded="false" />
+            <element signature="e#765#766#0" expanded="false" />
+            <element signature="e#796#797#0" expanded="false" />
+            <element signature="e#823#824#0" expanded="false" />
+            <element signature="e#863#864#0" expanded="false" />
+            <element signature="e#895#896#0" expanded="false" />
+            <element signature="e#929#930#0" expanded="false" />
+            <element signature="e#959#960#0" expanded="false" />
+            <element signature="e#1005#1006#0" expanded="false" />
+            <element signature="e#1043#1044#0" expanded="false" />
+            <element signature="e#1080#1081#0" expanded="false" />
+            <element signature="e#1115#1116#0" expanded="false" />
+            <element signature="e#1169#1170#0" expanded="false" />
+            <element signature="e#1217#1218#0" expanded="false" />
+            <element signature="e#1256#1257#0" expanded="false" />
+            <element signature="e#1291#1292#0" expanded="false" />
+            <element signature="e#1347#1348#0" expanded="false" />
+            <element signature="e#1395#1396#0" expanded="false" />
+            <element signature="e#1432#1433#0" expanded="false" />
+            <element signature="e#1465#1466#0" expanded="false" />
+            <element signature="e#1517#1518#0" expanded="false" />
+            <element signature="e#1561#1562#0" expanded="false" />
+            <element signature="e#1600#1601#0" expanded="false" />
+            <element signature="e#1635#1636#0" expanded="false" />
+            <element signature="e#1691#1692#0" expanded="false" />
+            <element signature="e#1739#1740#0" expanded="false" />
+            <element signature="e#1776#1777#0" expanded="false" />
+            <element signature="e#1809#1810#0" expanded="false" />
+            <element signature="e#1861#1862#0" expanded="false" />
+            <element signature="e#1905#1906#0" expanded="false" />
+            <element signature="e#1932#1933#0" expanded="false" />
+            <element signature="e#1957#1958#0" expanded="false" />
+            <element signature="e#1991#1992#0" expanded="false" />
+            <element signature="e#2019#2020#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_lost_details.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_comment_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="34" column="47" lean-forward="false" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/LostBean.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/CommentListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="94" column="5" lean-forward="true" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
-          <folding>
-            <element signature="e#2489#2490#0" expanded="true" />
-            <element signature="e#2518#2519#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/widget/ShowImageWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="43" column="72" lean-forward="false" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/RevolvingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="104" column="50" lean-forward="false" selection-start-line="104" selection-start-column="50" selection-end-line="104" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/RevolvingListBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="80" column="26" lean-forward="false" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="26" />
-          <folding>
-            <element signature="e#1701#1702#0" expanded="true" />
-            <element signature="e#1730#1731#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/RevolvingDetailsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="41" column="56" lean-forward="false" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
-          <folding>
-            <element signature="e#896#897#0" expanded="true" />
-            <element signature="e#954#955#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="96" column="56" lean-forward="false" selection-start-line="96" selection-start-column="56" selection-end-line="96" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostFoundActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="104" column="12" lean-forward="false" selection-start-line="104" selection-start-column="12" selection-end-line="105" selection-end-column="36" />
+        <state relative-caret-position="354">
+          <caret line="27" column="105" lean-forward="false" selection-start-line="27" selection-start-column="105" selection-end-line="27" selection-end-column="105" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/UrbanActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="753">
-          <caret line="102" column="42" lean-forward="true" selection-start-line="102" selection-start-column="42" selection-end-line="102" selection-end-column="42" />
+        <state relative-caret-position="312">
+          <caret line="108" column="51" lean-forward="false" selection-start-line="108" selection-start-column="51" selection-end-line="108" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/UrbanDetailsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="64" column="37" lean-forward="false" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="37" />
           <folding>
-            <element signature="e#3193#3194#0" expanded="true" />
-            <element signature="e#3242#3243#0" expanded="true" />
+            <element signature="e#1535#1536#0" expanded="true" />
+            <element signature="e#1587#1588#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/DynamicDetailsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="81" column="44" lean-forward="false" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/CameraFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="137" column="10" lean-forward="false" selection-start-line="137" selection-start-column="10" selection-end-line="140" selection-end-column="9" />
+        <state relative-caret-position="168">
+          <caret line="48" column="69" lean-forward="false" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/HomeFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/http/ApiStores.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="85" column="66" lean-forward="false" selection-start-line="85" selection-start-column="66" selection-end-line="85" selection-end-column="66" />
+        <state relative-caret-position="489">
+          <caret line="114" column="11" lean-forward="true" selection-start-line="114" selection-start-column="11" selection-end-line="114" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/http/AppClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="33" column="20" lean-forward="false" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/CameraPresent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9">
+          <caret line="148" column="2" lean-forward="true" selection-start-line="148" selection-start-column="2" selection-end-line="171" selection-end-column="6" />
           <folding>
-            <element signature="e#1710#1711#0" expanded="true" />
-            <element signature="e#1755#1756#0" expanded="true" />
+            <element signature="e#5097#6148#0" expanded="true" />
+            <element signature="e#6147#6148#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/DynamicActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/view/ICommentListView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="68" column="55" lean-forward="false" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/MyArticleActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="100" column="15" lean-forward="true" selection-start-line="100" selection-start-column="15" selection-end-line="100" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostDetailsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="61" column="39" lean-forward="false" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="39" />
+        <state relative-caret-position="231">
+          <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/CenterFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_login_btn.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_comment_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="45" column="47" lean-forward="false" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/CommentListPresent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.scwang.smartrefresh/SmartRefreshLayout/1.0.3/fa4faa4a29f66afc0bc68d6a0fc5517137e4ec3e/SmartRefreshLayout-1.0.3-sources.jar!/com/scwang/smartrefresh/layout/SmartRefreshLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-844">
+          <caret line="2232" column="42" lean-forward="false" selection-start-line="2232" selection-start-column="35" selection-end-line="2232" selection-end-column="42" />
+          <folding>
+            <element signature="e#90996#90997#0" expanded="true" />
+            <element signature="e#91035#91036#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/CommentListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="161" column="35" lean-forward="false" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="35" />
+          <folding>
+            <element signature="e#2678#2679#0" expanded="true" />
+            <element signature="e#2729#2730#0" expanded="true" />
+            <element signature="e#5252#5253#0" expanded="true" />
+            <element signature="e#5288#5289#0" expanded="true" />
+            <element signature="e#5334#5335#0" expanded="true" />
+            <element signature="e#5373#5374#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="75" column="31" lean-forward="false" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_info_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/UrbanListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="38" column="51" lean-forward="true" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
           <folding />
         </state>
       </provider>

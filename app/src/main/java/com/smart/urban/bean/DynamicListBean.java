@@ -1,8 +1,8 @@
 package com.smart.urban.bean;
 
-import com.smart.urban.config.Constants;
-
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -15,42 +15,46 @@ public class DynamicListBean implements Serializable {
     /**
      * subtitle : null
      * isCheck : null
-     * images : [{"belongId":1523333240795,"order":1,"address":"/data/uploads/87e73c5e-017a-4487-a760-fafe11f5bd8d.png","id":1523333240796,"type":"6"},{"belongId":1523333240795,"order":3,"address":"/data/uploads/d93f30c4-4484-4e14-9766-48a19b043c58.jpg","id":1523333240797,"type":"6"}]
-     * title : 好纠结不不不
-     * content : 刚回家健康i不能
+     * images : [{"belongId":1523535828422,"order":0,"address":"/data/uploads/20180413/f07a1412-fbfa-40df-821a-77d74adff62d.png","id":1523535828423,"type":"6"},{"belongId":1523535828422,"order":1,"address":"/data/uploads/20180413/8e66fbe3-e9ae-408a-bfad-52db9a427bf3.png","id":1523535828424,"type":"6"}]
+     * title : too涂抹女兔兔www
+     * commentCount : 0
+     * viewCount : 0
+     * content : two魔图我女兔兔
      * createUserId : 1523007772370
      * recordStatus : null
-     * createTime : 1523347539000
+     * createTime : 1523592168000
      * modifyUserId : null
-     * modifyTime : null
-     * id : 1523333240795
+     * modifyTime : 1523592168000
+     * id : 1523535828422
      */
 
-    private String subtitle;
-    private String isCheck;
+    private Object subtitle;
+    private Object isCheck;
     private String title;
+    private int commentCount;
+    private int viewCount;
     private String content;
     private long createUserId;
-    private String recordStatus;
+    private Object recordStatus;
     private long createTime;
-    private String modifyUserId;
-    private String modifyTime;
+    private Object modifyUserId;
+    private long modifyTime;
     private long id;
     private List<ImagesBean> images;
 
-    public String getSubtitle() {
+    public Object getSubtitle() {
         return subtitle;
     }
 
-    public void setSubtitle(String subtitle) {
+    public void setSubtitle(Object subtitle) {
         this.subtitle = subtitle;
     }
 
-    public String getIsCheck() {
+    public Object getIsCheck() {
         return isCheck;
     }
 
-    public void setIsCheck(String isCheck) {
+    public void setIsCheck(Object isCheck) {
         this.isCheck = isCheck;
     }
 
@@ -60,6 +64,22 @@ public class DynamicListBean implements Serializable {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public int getCommentCount() {
+        return commentCount;
+    }
+
+    public void setCommentCount(int commentCount) {
+        this.commentCount = commentCount;
+    }
+
+    public int getViewCount() {
+        return viewCount;
+    }
+
+    public void setViewCount(int viewCount) {
+        this.viewCount = viewCount;
     }
 
     public String getContent() {
@@ -78,35 +98,37 @@ public class DynamicListBean implements Serializable {
         this.createUserId = createUserId;
     }
 
-    public String getRecordStatus() {
+    public Object getRecordStatus() {
         return recordStatus;
     }
 
-    public void setRecordStatus(String recordStatus) {
+    public void setRecordStatus(Object recordStatus) {
         this.recordStatus = recordStatus;
     }
 
-    public long getCreateTime() {
-        return createTime;
+    public String getCreateTime() {
+        Date date = new Date(createTime);
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        return format.format(date);
     }
 
     public void setCreateTime(long createTime) {
         this.createTime = createTime;
     }
 
-    public String getModifyUserId() {
+    public Object getModifyUserId() {
         return modifyUserId;
     }
 
-    public void setModifyUserId(String modifyUserId) {
+    public void setModifyUserId(Object modifyUserId) {
         this.modifyUserId = modifyUserId;
     }
 
-    public String getModifyTime() {
+    public long getModifyTime() {
         return modifyTime;
     }
 
-    public void setModifyTime(String modifyTime) {
+    public void setModifyTime(long modifyTime) {
         this.modifyTime = modifyTime;
     }
 
@@ -126,12 +148,12 @@ public class DynamicListBean implements Serializable {
         this.images = images;
     }
 
-    public static class ImagesBean implements Serializable {
+    public static class ImagesBean implements Serializable{
         /**
-         * belongId : 1523333240795
-         * order : 1
-         * address : /data/uploads/87e73c5e-017a-4487-a760-fafe11f5bd8d.png
-         * id : 1523333240796
+         * belongId : 1523535828422
+         * order : 0
+         * address : /data/uploads/20180413/f07a1412-fbfa-40df-821a-77d74adff62d.png
+         * id : 1523535828423
          * type : 6
          */
 
@@ -158,7 +180,7 @@ public class DynamicListBean implements Serializable {
         }
 
         public String getAddress() {
-            return Constants.BASE_URL + address;
+            return address;
         }
 
         public void setAddress(String address) {
