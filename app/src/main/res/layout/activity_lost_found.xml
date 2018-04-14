@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <EditText
+        android:id="@+id/ed_lost_content"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginTop="10dp"
@@ -32,6 +33,7 @@
         android:scrollbars="none" />
 
     <EditText
+        android:id="@+id/ed_lost_phone"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
@@ -39,12 +41,14 @@
         android:ellipsize="end"
         android:hint="请输入联系方式"
         android:maxLines="1"
+        android:inputType="number"
         android:paddingLeft="15sp"
         android:textColor="@color/black"
         android:textColorHint="#BCBABA"
         android:textSize="14sp" />
 
     <TextView
+        android:id="@+id/tx_lost_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"

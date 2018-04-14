@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_main_line" />
+
+    <TextView
+        android:id="@+id/tv_main_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/rl_bottom_root"
+        android:background="@color/gray_line" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom_root"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_create_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="2018-4-11"
+            android:textColor="@color/home_txt" />
+
+        <TextView
+            android:id="@+id/tv_comment_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_dynamic_title"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_dynamic_title"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/icon_home_comment"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="12"
+            android:textColor="@color/home_txt" />
+
+        <TextView
+            android:id="@+id/tv_see_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_comment_number"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@+id/tv_comment_number"
+            android:drawableLeft="@drawable/icon_home_views"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="12"
+            android:textColor="@color/home_txt" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

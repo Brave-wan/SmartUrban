@@ -82,7 +82,7 @@ public class LoginActivity extends BaseActivity<ILoginView, LoginPresent> implem
 
     boolean isShow = true;
 
-    @OnClick({R.id.img_login_wchat, R.id.img_login_qq, R.id.tv_login_in, R.id.img_pwd_open, R.id.tv_login_not_register})
+    @OnClick({R.id.img_login_wchat, R.id.img_login_qq, R.id.tv_login_in, R.id.img_pwd_open, R.id.tv_login_not_register, R.id.tv_login_find_pwd})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_login_in:
@@ -98,14 +98,16 @@ public class LoginActivity extends BaseActivity<ILoginView, LoginPresent> implem
                 presenter.AuthLogin(SHARE_MEDIA.QQ);
                 break;
 
+            case R.id.tv_login_find_pwd:
+                startActivity(new Intent(this, FindPwdActivity.class));
+                break;
+
             case R.id.tv_login_not_register:
                 startActivity(new Intent(this, RegisterActivity.class));
                 break;
 
             case R.id.img_pwd_open:
-                ed_login_pass.setTransformationMethod(isShow ?
-                        HideReturnsTransformationMethod.getInstance()
-                        : PasswordTransformationMethod.getInstance());
+                ed_login_pass.setTransformationMethod(isShow ? HideReturnsTransformationMethod.getInstance() : PasswordTransformationMethod.getInstance());
                 isShow = isShow ? false : true;
                 ed_login_pass.postInvalidate();
                 img_pwd_open.setBackground(getResources().getDrawable(isShow ? R.drawable.icon_login_pwd_open : R.drawable.icon_login_pwd_close));
@@ -131,8 +133,13 @@ public class LoginActivity extends BaseActivity<ILoginView, LoginPresent> implem
 
     @Override
     public void OnLoginSuccess(RegisterBean bean) {
-        //登陆成功
-        SharedPreferencesUtils.init(this).put("token", bean.getToken());
+        //登陆成功,保存用户token和用户id
+        SharedPreferencesUtils.init(this)
+                .put("token", bean.getToken())
+                .put("userId", bean.getUserId())
+                .put("userName", ed_login_user.getText().toString().trim())
+                .put("userPass", ed_login_pass.getText().toString().trim());
+
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }

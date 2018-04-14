@@ -7,6 +7,12 @@ import android.content.pm.ActivityInfo;
 import com.blankj.utilcode.util.ToastUtils;
 import com.smart.urban.R;
 import com.smart.urban.base.BasePresenter;
+import com.smart.urban.bean.PersonalBean;
+import com.smart.urban.bean.UpFileBean;
+import com.smart.urban.http.ApiCallback;
+import com.smart.urban.http.BaseResult;
+import com.smart.urban.http.HttpManager;
+import com.smart.urban.utils.SharedPreferencesUtils;
 import com.smart.urban.view.IPersonInformationView;
 import com.zhihu.matisse.Matisse;
 import com.zhihu.matisse.MimeType;
@@ -14,9 +20,13 @@ import com.zhihu.matisse.engine.impl.GlideEngine;
 import com.zhihu.matisse.internal.entity.CaptureStrategy;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import cn.addapp.pickers.listeners.OnItemPickListener;
 import cn.addapp.pickers.picker.SinglePicker;
+import okhttp3.MultipartBody;
 
 import static com.smart.urban.present.CameraPresent.REQUEST_CODE_CHOOSE;
 
@@ -25,7 +35,11 @@ import static com.smart.urban.present.CameraPresent.REQUEST_CODE_CHOOSE;
  */
 
 public class PersonInformationPresent extends BasePresenter<IPersonInformationView> {
+    Context mContext;
 
+    public PersonInformationPresent(Context mContext) {
+        this.mContext = mContext;
+    }
 
     public void getTakePhoto(Activity activity) {
         Matisse.from(activity)
@@ -42,7 +56,7 @@ public class PersonInformationPresent extends BasePresenter<IPersonInformationVi
     }
 
 
-    public void onOptionPicker(Activity mContext) {
+    public void onOptionPicker(final Activity mContext) {
         if (mView != null) {
             ArrayList<String> list = new ArrayList<>();
             list.add("男");
@@ -63,9 +77,70 @@ public class PersonInformationPresent extends BasePresenter<IPersonInformationVi
                 @Override
                 public void onItemPicked(int index, String item) {
                     mView.onSex(item);
+                    Map<String, Object> map = new HashMap<>();
+                    map.put("id", SharedPreferencesUtils.init(mContext).getString("userId"));
+                    map.put("token", SharedPreferencesUtils.init(mContext).getString("token"));
+                    map.put("sex", item);
+                    getEditInfo(map, 0, item);
                 }
             });
             picker.show();
         }
+    }
+
+
+    public void getEditInfo(Map<String, Object> map, final int item, final String sex) {
+        if (mView != null) {//编辑个人资料
+            HttpManager.get().addSubscription(HttpManager.get().getApiStores().getEditInfo(map), new ApiCallback<BaseResult<PersonalBean>>() {
+                @Override
+                public void onSuccess(BaseResult<PersonalBean> model) {
+                    switch (item) {
+                        case 0:
+                            //更新本地性别缓存
+                            SharedPreferencesUtils.init(mContext).put("center_sex", sex);
+                            break;
+                        //更新本地的图片缓存
+                        case 1:
+                            SharedPreferencesUtils.init(mContext).put("center_img", sex);
+                            break;
+                    }
+
+                }
+
+                @Override
+                public void onFailure(BaseResult result) {
+                    ToastUtils.showShort(result.errmsg);
+                }
+            });
+        }
+    }
+
+    public void getUpFile(MultipartBody.Part[] part) {
+        if (mView != null) {//上传文件
+            mView.showLoading();
+            HttpManager.get().addSubscription(HttpManager.get().getApiStores().getUpdateImage(part), new ApiCallback<BaseResult<List<UpFileBean>>>() {
+                @Override
+                public void onSuccess(BaseResult<List<UpFileBean>> model) {
+                    mView.hitLoading();
+                    List<UpFileBean> list = model.getData();
+                    if (list.size() > 0) {
+                        Map<String, Object> map = new HashMap<>();
+                        map.put("id", SharedPreferencesUtils.init(mContext).getString("userId"));
+                        map.put("token", SharedPreferencesUtils.init(mContext).getString("token"));
+                        map.put("imgAdress", model.data.get(0).getPath());
+                        getEditInfo(map, 1, model.data.get(0).getPath());
+                    }
+
+                }
+
+                @Override
+                public void onFailure(BaseResult result) {
+                    ToastUtils.showShort(result.errmsg);
+                    mView.hitLoading();
+                }
+            });
+
+        }
+
     }
 }

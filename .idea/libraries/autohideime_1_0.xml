@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="autohideime-1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/autohideime-1.0.aar/4059a3e638c7dc075b4dddf48f113940/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/autohideime-1.0.aar/4059a3e638c7dc075b4dddf48f113940/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.loader/autohideime/1.0/5af3bb431a3b67c9b3e69910b852b3202c11c569/autohideime-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

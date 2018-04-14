@@ -87,6 +87,16 @@
         <activity android:name=".ui.CommentListActivity">
 
         </activity>
+        <activity android:name=".ui.FindPwdActivity" />
+        <activity android:name=".ui.UrbanActivity" />
+        <activity android:name=".ui.GuideDetailsActivity" />
+        <activity android:name=".ui.RevolvingActivity" />
+        <activity android:name=".ui.DynamicDetailsActivity" />
+        <activity android:name=".ui.LostListActivity" />
+        <activity android:name=".ui.UrbanDetailsActivity"/>
+        <activity android:name=".ui.LostDetailsActivity"/>
+
+        <activity android:name=".ui.RevolvingDetailsActivity" />
 
         <!-- tencent -->
         <activity

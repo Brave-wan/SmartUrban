@@ -13,6 +13,7 @@ import com.smart.urban.bean.RegisterBean;
 import com.smart.urban.http.ApiCallback;
 import com.smart.urban.http.BaseResult;
 import com.smart.urban.http.HttpManager;
+import com.smart.urban.utils.SharedPreferencesUtils;
 import com.smart.urban.view.ILoginView;
 import com.umeng.socialize.UMAuthListener;
 import com.umeng.socialize.UMShareAPI;
@@ -95,7 +96,7 @@ public class LoginPresent extends BasePresenter<ILoginView> implements UMAuthLis
      */
     public void getLogin(EditText userName, EditText pass) {
         if (mView != null) {
-            mView.showLoading();
+
             Map<String, Object> map = new HashMap<>();
             if (userName.getText().toString().trim().length() != 11) {
                 ToastUtils.showShort("手机号输入不合法,请重新输入");
@@ -105,7 +106,7 @@ public class LoginPresent extends BasePresenter<ILoginView> implements UMAuthLis
                 ToastUtils.showShort("请输入登陆密码!");
                 return;
             }
-
+            mView.showLoading();
             map.put("loginAcct", userName.getText().toString().trim());
             map.put("password", pass.getText().toString().trim());
             HttpManager.get().addSubscription(HttpManager.get().getApiStores().getToLogin(map), new ApiCallback<BaseResult<RegisterBean>>() {
@@ -128,17 +129,23 @@ public class LoginPresent extends BasePresenter<ILoginView> implements UMAuthLis
 
     /**
      * 获取用户基本信息
-     * @param token　
+     *
+     * @param token
      * @param id
      */
     public void getMyDetails(String token, String id) {
         if (mView != null) {
-            Map<String, Object> map = new HashMap<>();
+            final Map<String, Object> map = new HashMap<>();
             map.put("id", id);
             map.put("token", token);
             HttpManager.get().addSubscription(HttpManager.get().getApiStores().getMyDetails(map), new ApiCallback<BaseResult<PersonalBean>>() {
                 @Override
                 public void onSuccess(BaseResult<PersonalBean> model) {
+                    PersonalBean bean = model.data;
+                    SharedPreferencesUtils.init(mContext).put("center_sex", bean.getSex())
+                            .put("center_name", bean.getNickName())
+                            .put("center_head", bean.getImgAdress());
+
                 }
 
                 @Override
@@ -147,8 +154,7 @@ public class LoginPresent extends BasePresenter<ILoginView> implements UMAuthLis
                 }
             });
         }
-
-
     }
+
 
 }

@@ -25,6 +25,7 @@
         android:textColor="@color/black" />
 
     <TextView
+        android:id="@+id/tv_lost_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/img_lost_head"

@@ -96,4 +96,23 @@ public class RegisterPresent extends BasePresenter<IRegisterView> {
         }
 
     }
+
+    public void getFindPwd(Map<String, Object> map) {
+        if (mView != null) {
+            mView.showLoading();
+            HttpManager.get().addSubscription(HttpManager.get().getApiStores().getFindPwd(map), new ApiCallback() {
+                @Override
+                public void onSuccess(Object model) {
+                    mView.onRegisterSuccess();
+                    mView.hitLoading();
+                }
+
+                @Override
+                public void onFailure(BaseResult result) {
+                    ToastUtils.showShort(result.getErrmsg());
+                    mView.hitLoading();
+                }
+            });
+        }
+    }
 }

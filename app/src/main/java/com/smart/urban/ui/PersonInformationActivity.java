@@ -1,20 +1,16 @@
 package com.smart.urban.ui;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.blankj.utilcode.util.ToastUtils;
 import com.bumptech.glide.Glide;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseActivity;
-import com.smart.urban.base.BasePresenter;
-import com.smart.urban.bean.CameraPicBean;
+import com.smart.urban.config.Constants;
 import com.smart.urban.present.PersonInformationPresent;
 import com.smart.urban.utils.GlideCircleTransform;
 import com.smart.urban.utils.PhotoUtils;
@@ -22,15 +18,11 @@ import com.smart.urban.utils.SharedPreferencesUtils;
 import com.smart.urban.view.IPersonInformationView;
 import com.zhihu.matisse.Matisse;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-import cn.addapp.pickers.listeners.OnItemPickListener;
-import cn.addapp.pickers.listeners.OnSingleWheelListener;
-import cn.addapp.pickers.picker.SinglePicker;
-import cn.addapp.pickers.widget.WheelListView;
+import okhttp3.MultipartBody;
 
 import static com.smart.urban.present.CameraPresent.REQUEST_CODE_CHOOSE;
 
@@ -64,7 +56,7 @@ public class PersonInformationActivity extends BaseActivity<IPersonInformationVi
 
     @Override
     public PersonInformationPresent initPresenter() {
-        return new PersonInformationPresent();
+        return new PersonInformationPresent(this);
     }
 
     @OnClick({R.id.rl_up_head, R.id.rl_info_sex, R.id.rl_info_nick,})
@@ -91,6 +83,11 @@ public class PersonInformationActivity extends BaseActivity<IPersonInformationVi
             if (mSelected != null && mSelected.size() > 0) {
                 String path = PhotoUtils.getRealPathFromUri(this, mSelected.get(0));
                 Glide.with(this).load(path).error(R.drawable.icon_my_portraits).bitmapTransform(new GlideCircleTransform(this)).into(img_my_info_head);
+                MultipartBody.Part[] parts = new MultipartBody.Part[1];
+                parts[0] = Constants.prepareFilePart("files", path);
+                presenter.getUpFile(parts);
+
+
             }
         }
     }
@@ -98,11 +95,29 @@ public class PersonInformationActivity extends BaseActivity<IPersonInformationVi
     @Override
     protected void onResume() {
         super.onResume();
-        tv_info_nick.setText(SharedPreferencesUtils.init(this).getString("my_nick"));
+        //加载本地缓存
+        tv_info_nick.setText(SharedPreferencesUtils.init(this).getString("center_name"));
+        tv_info_sex.setText(SharedPreferencesUtils.init(this).getString("center_sex"));
+        String img = SharedPreferencesUtils.init(this).getString("center_img");
+        Glide.with(this).load(Constants.BASE_URL + img)
+                .error(R.drawable.icon_my_portraits)
+                .placeholder(R.drawable.icon_my_portraits)
+                .bitmapTransform(new GlideCircleTransform(this))
+                .into(img_my_info_head);
     }
 
     @Override
     public void onSex(String sex) {
         tv_info_sex.setText(sex);
+    }
+
+    @Override
+    public void showLoading() {
+        showProgressDialog();
+    }
+
+    @Override
+    public void hitLoading() {
+        dismissProgressDialog();
     }
 }

@@ -6,12 +6,14 @@
 
 
     <EditText
+        android:id="@+id/ed_old_pwd"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="1dp"
         android:background="@color/white"
         android:ellipsize="end"
         android:hint="请输入原始密码"
+        android:inputType="textPassword"
         android:maxLines="1"
         android:paddingLeft="15dp"
         android:textColor="@color/black"
@@ -19,12 +21,14 @@
         android:textSize="14sp" />
 
     <EditText
+        android:id="@+id/ed_new_pwd"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="1dp"
         android:background="@color/white"
         android:ellipsize="end"
         android:hint="请输入新密码"
+        android:inputType="textPassword"
         android:maxLines="1"
         android:paddingLeft="15dp"
         android:textColor="@color/black"
@@ -32,12 +36,14 @@
         android:textSize="14sp" />
 
     <EditText
+        android:id="@+id/ed_sure_pwd"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="1dp"
         android:background="@color/white"
         android:ellipsize="end"
         android:hint="请再次输入密码"
+        android:inputType="textPassword"
         android:maxLines="1"
         android:paddingLeft="15dp"
         android:textColor="@color/black"
@@ -45,6 +51,7 @@
         android:textSize="14sp" />
 
     <TextView
+        android:id="@+id/tv_alter_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"

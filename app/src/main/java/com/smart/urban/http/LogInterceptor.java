@@ -17,6 +17,7 @@ public class LogInterceptor implements Interceptor {
         okhttp3.MediaType mediaType = response.body().contentType();
         String content = response.body().string();
         Log.i("wan", "response:" + content);
+        Log.i("wan", "back:" + response.headers().get("Content-Type"));
         return response.newBuilder()
                 .body(okhttp3.ResponseBody.create(mediaType, content))
                 .build();

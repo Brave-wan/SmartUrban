@@ -1,10 +1,16 @@
 package com.smart.urban.http;
 
 
+import android.util.Log;
+
 import com.smart.urban.config.Constants;
 
+import java.io.IOException;
+
+import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
@@ -44,6 +50,17 @@ public class AppClient {
 //                            .addHeader("appsecret", "yLUdxzgzBNiDCtrPPDoralkuSuoHRGPG").build();
 //                    return chain.proceed(request);
 //                });
+                builder.addInterceptor(new Interceptor() {
+                    @Override
+                    public Response intercept(Chain chain) throws IOException {
+                        Request request = chain.request()
+                                .newBuilder()
+                                .addHeader("Content-Type", "application/json;charset=UTF-8")
+                                .build();
+                        Log.i("wan", "Type:" + request.headers().get("Content-Type"));
+                        return chain.proceed(request);
+                    }
+                });
                 //设置 Debug Log 模式
                 builder.addInterceptor(loggingInterceptor);
                 builder.addInterceptor(new LogInterceptor());

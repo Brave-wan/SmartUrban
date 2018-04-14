@@ -6,6 +6,7 @@
 
 
     <EditText
+        android:id="@+id/ed_article_title"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@color/white"
@@ -46,6 +47,7 @@
         android:verticalSpacing="10dp" />
 
     <TextView
+        android:id="@+id/tv_article_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"

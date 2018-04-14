@@ -13,6 +13,7 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 import com.smart.urban.R;
+import com.smart.urban.utils.LoadingLayout;
 
 /**
  * Created by root on 18-3-28.
@@ -26,6 +27,7 @@ public class MyApplication extends Application {
         super.onCreate();
         instance = this;
         Utils.init(this);
+        initLayout();
     }
 
 
@@ -48,5 +50,24 @@ public class MyApplication extends Application {
                 return new ClassicsFooter(context);
             }
         });
+    }
+
+
+    private void initLayout() {
+        LoadingLayout.getConfig()
+                .setErrorText("抱歉，数据出错")
+                .setEmptyText("抱歉，暂无数据")
+                .setNoNetworkText("无网络连接，请检查您的网络···")
+                .setErrorImage(R.drawable.empty_wifi)
+                .setEmptyImage(R.drawable.empty)
+                .setNoNetworkImage(R.drawable.empty_wifi)
+                .setAllTipTextColor(R.color.gray)
+                .setAllTipTextSize(14)
+                .setReloadButtonText("点我重试哦")
+                .setReloadButtonTextSize(14)
+                .setReloadButtonTextColor(R.color.gray)
+                .setReloadButtonWidthAndHeight(150, 40)
+                .setAllPageBackgroundColor(R.color.background)
+                .setLoadingPageLayout(R.layout.define_loading_page);
     }
 }
