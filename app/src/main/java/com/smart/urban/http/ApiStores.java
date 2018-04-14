@@ -4,6 +4,7 @@ import com.smart.urban.bean.CommentListBean;
 import com.smart.urban.bean.DynamicListBean;
 import com.smart.urban.bean.GuideDetailsBean;
 import com.smart.urban.bean.GuideListBean;
+import com.smart.urban.bean.LocationListBean;
 import com.smart.urban.bean.LostBean;
 import com.smart.urban.bean.PersonalBean;
 import com.smart.urban.bean.RegisterBean;
@@ -110,6 +111,9 @@ public interface ApiStores {
 
     @GET("cityApp/forum/getCommentList")
     Observable<BaseResult<List<CommentListBean>>> getForumCommentList(@QueryMap Map<String, Object> map);
+
+    @GET("cityApp/position/search")
+    Observable<BaseResult<List<LocationListBean>>> getLocationSearch(@QueryMap Map<String, Object> map);
 
     @FormUrlEncoded
     @POST("cityApp/forum/addComment")

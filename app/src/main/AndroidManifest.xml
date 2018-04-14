@@ -95,6 +95,8 @@
         <activity android:name=".ui.LostListActivity" />
         <activity android:name=".ui.UrbanDetailsActivity"/>
         <activity android:name=".ui.LostDetailsActivity"/>
+        <activity android:name=".ui.WalkRouteCalculateActivity"/>
+        <activity android:name=".ui.SingleRouteCalculateActivity"/>
 
         <activity android:name=".ui.RevolvingDetailsActivity" />
 

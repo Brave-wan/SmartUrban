@@ -1,7 +1,5 @@
 package com.smart.urban.view;
 
-import android.widget.ImageView;
-
 import com.smart.urban.base.IBaseView;
 
 /**

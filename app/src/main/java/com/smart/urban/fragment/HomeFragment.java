@@ -18,6 +18,7 @@ import com.smart.urban.ui.LocationActivity;
 import com.smart.urban.ui.LostFoundActivity;
 import com.smart.urban.ui.LostListActivity;
 import com.smart.urban.ui.MainActivity;
+import com.smart.urban.ui.SingleRouteCalculateActivity;
 import com.smart.urban.ui.UrbanActivity;
 import com.smart.urban.ui.adapter.DynamicListAdapter;
 import com.smart.urban.ui.adapter.InfoListAdapter;
@@ -85,6 +86,7 @@ public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implement
             case R.id.tv_home_dynamic:
                 startActivity(new Intent(getActivity(), DynamicActivity.class));
                 break;
+                //便民导航
             case R.id.tv_home_navigation:
                 startActivity(new Intent(getActivity(), LocationActivity.class));
                 break;

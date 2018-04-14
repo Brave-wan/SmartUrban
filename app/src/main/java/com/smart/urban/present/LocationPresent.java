@@ -27,14 +27,21 @@ import com.amap.api.navi.model.NaviLatLng;
 import com.blankj.utilcode.util.ToastUtils;
 import com.smart.urban.R;
 import com.smart.urban.base.BasePresenter;
+import com.smart.urban.bean.LocationListBean;
 import com.smart.urban.config.Constants;
+import com.smart.urban.http.ApiCallback;
+import com.smart.urban.http.BaseResult;
+import com.smart.urban.http.HttpManager;
+import com.smart.urban.utils.SharedPreferencesUtils;
 import com.smart.urban.view.ILocationView;
 import com.smart.urban.view.ILoginView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by root on 18-3-28.
@@ -64,9 +71,10 @@ public class LocationPresent implements GeoFenceListener,
     private Marker marker2;// 有跳动效果的marker对象
     private Marker marker3;// 从地上生长的marker对象
     ILocationView mView;
+
     public LocationPresent(Context mContext, ILocationView mView) {
         this.mContext = mContext;
-        this.mView=mView;
+        this.mView = mView;
         present = new DriveRoutePresent(mContext);
     }
 
@@ -110,6 +118,11 @@ public class LocationPresent implements GeoFenceListener,
                 amapLocation.getLatitude();//获取纬度
                 amapLocation.getLongitude();//获取经度
                 amapLocation.getAccuracy();//获取精度信息
+                amapLocation.getAoiName();//
+                SharedPreferencesUtils.init(mContext)
+                        .put("start_lat", amapLocation.getLatitude() + "")
+                        .put("address", amapLocation.getAddress() + "")
+                        .put("start_lon", amapLocation.getLongitude() + "");
                 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 Date date = new Date(amapLocation.getTime());
                 df.format(date);//定位时间
@@ -157,7 +170,7 @@ public class LocationPresent implements GeoFenceListener,
             // 设置定位参数
             mLocationClient.setLocationOption(mLocationOption);
             mLocationClient.startLocation();
-            addMarkersToMap();
+//            addMarkersToMap();
         }
     }
 
@@ -199,39 +212,70 @@ public class LocationPresent implements GeoFenceListener,
     /**
      * 地图上绘制marks
      */
-    private void addMarkersToMap() {
+    private void addMarkersToMap(List<LocationListBean> model) {
         //绘制地图上面的mark
-        MarkerOptions markerOption1 = new MarkerOptions().anchor(0.5f, 0.5f)
-                .position(Constants.CHENGDU).title("成都市")
-                .snippet("成都市:30.679879, 104.064855")
-                .icon(BitmapDescriptorFactory.fromBitmap(BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.ic_launcher)))
-                .draggable(true)
-                .period(10)
-                .setFlat(true);
-
-        MarkerOptions markerOption2 = new MarkerOptions().anchor(0.5f, 0.5f)
-                .position(Constants.XIAN).title("成都市")
-                .snippet("成都市:30.679879, 104.064855")
-                .icon(BitmapDescriptorFactory.fromBitmap(BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.ic_launcher)))
-                .draggable(true)
-                .period(10)
-                .setFlat(true);
-        marker2 = aMap.addMarker(markerOption1);
-        marker3 = aMap.addMarker(markerOption2);
+//        MarkerOptions markerOption1 = new MarkerOptions().anchor(0.5f, 0.5f)
+//                .position(Constants.CHENGDU).title("成都市")
+//                .snippet("成都市:30.679879, 104.064855")
+//                .icon(BitmapDescriptorFactory.fromBitmap(BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.ic_launcher)))
+//                .draggable(true)
+//                .period(10)
+//                .setFlat(true);
+//
+//        MarkerOptions markerOption2 = new MarkerOptions().anchor(0.5f, 0.5f)
+//                .position(Constants.XIAN).title("成都市")
+//                .snippet("成都市:30.679879, 104.064855")
+//                .icon(BitmapDescriptorFactory.fromBitmap(BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.ic_launcher)))
+//                .draggable(true)
+//                .period(10)
+//                .setFlat(true);
+//        marker2 = aMap.addMarker(markerOption1);
+//        marker3 = aMap.addMarker(markerOption2);
+        for (LocationListBean bean : model) {
+            LatLng latLng = new LatLng(Double.valueOf(bean.getLatitude()), Double.valueOf(bean.getLongitude()));
+            MarkerOptions options = new MarkerOptions().anchor(0.5f, 0.5f)
+                    .position(latLng).title(bean.getName())
+                    .snippet("成都市:30.679879, 104.064855")
+                    .icon(BitmapDescriptorFactory.fromBitmap(BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.ic_launcher)))
+                    .draggable(true)
+                    .period(10)
+                    .setFlat(true);
+            Marker marker = aMap.addMarker(options);
+        }
     }
 
+    /**
+     * 根据关键字搜索地图坐标点
+     *
+     * @param tx
+     */
+    public void getLocationSearch(String tx, final boolean state) {
+        if (mView != null) {
+            Map<String, Object> map = new HashMap<>();
+            map.put("userId", SharedPreferencesUtils.init(mContext).getString("userId"));
+            map.put("token", SharedPreferencesUtils.init(mContext).getString("token"));
+            map.put("page", 1);
+            map.put("rows", 20);
+            map.put("keywords", tx);
+            HttpManager.get().addSubscription(HttpManager.get().getApiStores().getLocationSearch(map), new ApiCallback<BaseResult<List<LocationListBean>>>() {
+                @Override
+                public void onSuccess(BaseResult<List<LocationListBean>> model) {
+                    mView.onLocationList(model.data, state);
+                    addMarkersToMap(model.data);
+                }
 
-    //算路终点坐标
-    protected NaviLatLng mEndLatlng = new NaviLatLng(22.652, 113.966);
-    //算路起点坐标
-    protected NaviLatLng mStartLatlng = new NaviLatLng(22.540332, 113.939961);
-    //存储算路起点的列表
-    protected final List<NaviLatLng> sList = new ArrayList<NaviLatLng>();
-    //存储算路终点的列表
-    protected final List<NaviLatLng> eList = new ArrayList<NaviLatLng>();
+                @Override
+                public void onFailure(BaseResult result) {
+                    ToastUtils.showShort(result.errmsg);
+                }
+            });
 
-    public void daohang() {
+        }
+    }
 
-
+    public void onDestroy() {
+        if (aMap != null) {
+            aMap = null;
+        }
     }
 }

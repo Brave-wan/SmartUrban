@@ -7,8 +7,12 @@
         android:id="@+id/tx_location_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/icon_login_qq_btn"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/map_search_icon"
         android:drawablePadding="10dp"
-        android:padding="15dp" />
+        android:gravity="center|left"
+        android:padding="15dp"
+        android:text="金科大酒店"
+        android:textColor="@color/black" />
 
 </RelativeLayout>

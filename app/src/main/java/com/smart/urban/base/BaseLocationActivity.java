@@ -1,6 +1,7 @@
 package com.smart.urban.base;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
@@ -38,8 +39,8 @@ public class BaseLocationActivity extends Activity implements AMapNaviListener, 
     protected AMapNaviView mAMapNaviView;
     protected AMapNavi mAMapNavi;
     protected TTSController mTtsManager;
-    protected NaviLatLng mEndLatlng = new NaviLatLng(40.084894,116.603039);
-    protected NaviLatLng mStartLatlng = new NaviLatLng(39.825934,116.342972);
+    protected NaviLatLng mEndLatlng = new NaviLatLng(40.084894, 116.603039);
+    protected NaviLatLng mStartLatlng = new NaviLatLng(39.825934, 116.342972);
     protected final List<NaviLatLng> sList = new ArrayList<NaviLatLng>();
     protected final List<NaviLatLng> eList = new ArrayList<NaviLatLng>();
     protected List<NaviLatLng> mWayPointList;
@@ -333,5 +334,20 @@ public class BaseLocationActivity extends Activity implements AMapNaviListener, 
     @Override
     public void showLaneInfo(AMapLaneInfo aMapLaneInfo) {
 
+    }
+
+    public ProgressDialog progressDialog;
+
+    public ProgressDialog showProgressDialog() {
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("路径规划中请稍候...");
+        progressDialog.show();
+        return progressDialog;
+    }
+
+    public void dismissProgressDialog() {
+        if (progressDialog != null && progressDialog.isShowing()) {
+            progressDialog.dismiss();
+        }
     }
 }
