@@ -92,7 +92,7 @@ public class LocationPresent implements GeoFenceListener,
         // 自定义系统定位蓝点
         MyLocationStyle myLocationStyle = new MyLocationStyle();
         // 自定义定位蓝点图标
-        myLocationStyle.myLocationIcon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher));
+        myLocationStyle.myLocationIcon(BitmapDescriptorFactory.fromResource(R.drawable.navi_map_gps_locked));
         // 自定义精度范围的圆形边框颜色
         myLocationStyle.strokeColor(Color.argb(5, 5, 5, 5));
         // 自定义精度范围的圆形边框宽度
@@ -102,8 +102,8 @@ public class LocationPresent implements GeoFenceListener,
         // 将自定义的 myLocationStyle 对象添加到地图上
         aMap.setMyLocationStyle(myLocationStyle);
         aMap.setMyLocationEnabled(true);// 设置为true表示显示定位层并可触发定位，false表示隐藏定位层并不可触发定位，默认是false
-        LatLng latLng = new LatLng(106.572016, 29.539337);
-        addCenterMarker(latLng);
+//        LatLng latLng = new LatLng(106.572016, 29.539337);
+//        addCenterMarker(latLng);
     }
 
 
@@ -170,7 +170,6 @@ public class LocationPresent implements GeoFenceListener,
             // 设置定位参数
             mLocationClient.setLocationOption(mLocationOption);
             mLocationClient.startLocation();
-//            addMarkersToMap();
         }
     }
 
@@ -204,39 +203,27 @@ public class LocationPresent implements GeoFenceListener,
 
     @Override
     public void onInfoWindowClick(Marker marker) {
-        ToastUtils.showShort("你点击了infoWindow窗口" + marker.getTitle());
-        ToastUtils.showShort("当前地图可视区域内Marker数量:" + aMap.getMapScreenMarkers().size());
-    }
 
+        if (mView != null) {
+            LatLng latLng = marker.getOptions().getPosition();
+            SharedPreferencesUtils.init(mContext)
+                    .put("end_lat", latLng.latitude + "")
+                    .put("end_lon", latLng.longitude + "")
+                    .put("title", marker.getTitle());
+            mView.onLocationView();
+        }
+    }
 
     /**
      * 地图上绘制marks
      */
     private void addMarkersToMap(List<LocationListBean> model) {
         //绘制地图上面的mark
-//        MarkerOptions markerOption1 = new MarkerOptions().anchor(0.5f, 0.5f)
-//                .position(Constants.CHENGDU).title("成都市")
-//                .snippet("成都市:30.679879, 104.064855")
-//                .icon(BitmapDescriptorFactory.fromBitmap(BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.ic_launcher)))
-//                .draggable(true)
-//                .period(10)
-//                .setFlat(true);
-//
-//        MarkerOptions markerOption2 = new MarkerOptions().anchor(0.5f, 0.5f)
-//                .position(Constants.XIAN).title("成都市")
-//                .snippet("成都市:30.679879, 104.064855")
-//                .icon(BitmapDescriptorFactory.fromBitmap(BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.ic_launcher)))
-//                .draggable(true)
-//                .period(10)
-//                .setFlat(true);
-//        marker2 = aMap.addMarker(markerOption1);
-//        marker3 = aMap.addMarker(markerOption2);
         for (LocationListBean bean : model) {
             LatLng latLng = new LatLng(Double.valueOf(bean.getLatitude()), Double.valueOf(bean.getLongitude()));
             MarkerOptions options = new MarkerOptions().anchor(0.5f, 0.5f)
                     .position(latLng).title(bean.getName())
-                    .snippet("成都市:30.679879, 104.064855")
-                    .icon(BitmapDescriptorFactory.fromBitmap(BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.ic_launcher)))
+                    .icon(BitmapDescriptorFactory.fromBitmap(BitmapFactory.decodeResource(mContext.getResources(), setImageState(Integer.valueOf(bean.getType())))))
                     .draggable(true)
                     .period(10)
                     .setFlat(true);
@@ -260,8 +247,11 @@ public class LocationPresent implements GeoFenceListener,
             HttpManager.get().addSubscription(HttpManager.get().getApiStores().getLocationSearch(map), new ApiCallback<BaseResult<List<LocationListBean>>>() {
                 @Override
                 public void onSuccess(BaseResult<List<LocationListBean>> model) {
-                    mView.onLocationList(model.data, state);
-                    addMarkersToMap(model.data);
+                    if (!state) {
+                        addMarkersToMap(model.data);
+                    } else {
+                        mView.onLocationList(model.data, state);
+                    }
                 }
 
                 @Override
@@ -271,6 +261,43 @@ public class LocationPresent implements GeoFenceListener,
             });
 
         }
+    }
+
+
+    public int setImageState(int type) {
+        switch (type) {
+            //酒店
+            case 1:
+                return R.drawable.icon_jiu_dian;
+            //饭店
+            case 2:
+                return R.drawable.icon_fan_dian;
+            //超市
+            case 3:
+                return R.drawable.icon_chao_shi;
+            //厕所
+            case 4:
+                return R.drawable.icon_jiu_dian;
+            //菜市场
+            case 5:
+                return R.drawable.icon_cai_shi_chang;
+            //小区
+            case 6:
+                return R.drawable.icon_jiu_dian;
+            //派出所
+            case 7:
+                return R.drawable.icon_pai_chu_suo;
+            //政府
+            case 8:
+                return R.drawable.icon_zheng_fu;
+            //其他
+            case 12:
+                return R.drawable.icon_other;
+            //医院
+            case 13:
+                return R.drawable.icon_other;
+        }
+        return R.drawable.icon_other;
     }
 
     public void onDestroy() {

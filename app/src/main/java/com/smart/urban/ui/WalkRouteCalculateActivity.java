@@ -24,7 +24,6 @@ public class WalkRouteCalculateActivity extends BaseLocationActivity implements 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_basic_navi);
         mAMapNaviView = (AMapNaviView) findViewById(R.id.navi_view);
         mAMapNaviView.onCreate(savedInstanceState);
@@ -50,15 +49,13 @@ public class WalkRouteCalculateActivity extends BaseLocationActivity implements 
     @Override
     public void onCalculateRouteSuccess(int[] ids) {
         super.onCalculateRouteSuccess(ids);
-        ToastUtils.showShort("onCalculateRouteSuccess");
         mAMapNavi.startNavi(NaviType.GPS);
     }
 
     @Override
     public void onCalculateRouteFailure(int errorInfo) {
         super.onCalculateRouteFailure(errorInfo);
-        ToastUtils.showShort("onCalculateRouteFailure");
-        switch (errorInfo){
+        switch (errorInfo) {
             case 20:
                 ToastUtils.showShort("起点/终点/途经点的距离太长(距离＞6000km),建议驾车前往");
                 break;
@@ -67,6 +64,11 @@ public class WalkRouteCalculateActivity extends BaseLocationActivity implements 
 
     @Override
     public void onLocationList(List<LocationListBean> beans, boolean state) {
+
+    }
+
+    @Override
+    public void onLocationView() {
 
     }
 }

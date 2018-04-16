@@ -79,18 +79,22 @@ public class SingleRouteCalculateActivity extends BaseLocationActivity implement
     @Override
     public void onCalculateRouteSuccess(int[] ids) {
         super.onCalculateRouteSuccess(ids);
-        ToastUtils.showShort("onCalculateRouteSuccess");
         mAMapNavi.startNavi(NaviType.GPS);
     }
 
     @Override
     public void onCalculateRouteFailure(int errorInfo) {
         super.onCalculateRouteFailure(errorInfo);
-        ToastUtils.showShort("onCalculateRouteFailure");
+        ToastUtils.showShort("路径规划失败");
     }
 
     @Override
     public void onLocationList(List<LocationListBean> beans, boolean state) {
+
+    }
+
+    @Override
+    public void onLocationView() {
 
     }
 }

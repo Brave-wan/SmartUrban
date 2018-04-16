@@ -37,7 +37,13 @@ public class UrbanListAdapter extends CommonAdapter<UrbanListBean> {
         tv_dynamic_title.setText(bean.getTitle());
         tv_see_number.setText(bean.getViewCount() + "");
         tv_info_time.setText(bean.getCreateTime());
-        Glide.with(context).load("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3586898888,816047016&fm=27&gp=0.jpg").placeholder(R.drawable.icon_pic_empty).into(img_info);
+        if (bean.getImages().size() > 0) {
+            Glide.with(context)
+                    .load(bean.getImages().get(0).getAddress())
+                    .error(R.drawable.icon_pic_empty)
+                    .placeholder(R.drawable.icon_pic_empty)
+                    .into(img_info);
+        }
 
     }
 }

@@ -31,26 +31,6 @@ public class StartupPagePresent extends BasePresenter<IStartupPageView> {
 
     public StartupPagePresent(Activity mContext) {
         this.mContext = mContext;
-        getCameraPermission();
-    }
-
-    public void getCameraPermission() {
-        //获取相机权限
-        Acp.getInstance(mContext).request(new AcpOptions.Builder()
-                        .setPermissions(Manifest.permission.CAMERA,
-                                Manifest.permission.READ_EXTERNAL_STORAGE,
-                                Manifest.permission.ACCESS_FINE_LOCATION)
-                        .build(),
-                new AcpListener() {
-                    @Override
-                    public void onGranted() {
-                    }
-
-                    @Override
-                    public void onDenied(List<String> permissions) {
-                        ToastUtils.showShort(permissions.toString() + "权限拒绝");
-                    }
-                });
     }
 
 

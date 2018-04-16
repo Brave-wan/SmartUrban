@@ -126,7 +126,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/tv_location_start"
+                android:layout_marginRight="15dp"
                 android:layout_toRightOf="@+id/tv_location_start"
+                android:ellipsize="end"
+                android:maxLines="1"
                 android:paddingBottom="15dp"
                 android:paddingTop="10dp"
                 android:text="我的位置"
@@ -139,7 +142,7 @@
                 android:layout_below="@+id/tv_location_start"
                 android:background="@color/gray_line" />
 
-            <RadioGroup
+            <LinearLayout
                 android:id="@+id/gr_location_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -175,7 +178,7 @@
                     android:text="选择开车"
                     android:textColor="@drawable/select_location_traffic_state_tx"
                     android:textSize="16sp" />
-            </RadioGroup>
+            </LinearLayout>
         </RelativeLayout>
 
     </LinearLayout>

@@ -10,4 +10,6 @@ import java.util.List;
 
 public interface ILocationView {
     void onLocationList(List<LocationListBean> beans,boolean state);
+
+    void onLocationView();
 }

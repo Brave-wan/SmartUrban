@@ -1,5 +1,6 @@
 package com.smart.urban.present;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -7,6 +8,9 @@ import android.widget.EditText;
 
 import com.blankj.utilcode.util.StringUtils;
 import com.blankj.utilcode.util.ToastUtils;
+import com.mylhyl.acp.Acp;
+import com.mylhyl.acp.AcpListener;
+import com.mylhyl.acp.AcpOptions;
 import com.smart.urban.base.BasePresenter;
 import com.smart.urban.bean.PersonalBean;
 import com.smart.urban.bean.RegisterBean;
@@ -21,6 +25,7 @@ import com.umeng.socialize.bean.SHARE_MEDIA;
 import com.umeng.socialize.utils.SocializeUtils;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -34,6 +39,27 @@ public class LoginPresent extends BasePresenter<ILoginView> implements UMAuthLis
     public LoginPresent(Activity mContext) {
         this.mContext = mContext;
         dialog = new ProgressDialog(mContext);
+        getCameraPermission();
+    }
+
+
+    public void getCameraPermission() {
+        //获取相机权限
+        Acp.getInstance(mContext).request(new AcpOptions.Builder()
+                        .setPermissions(Manifest.permission.CAMERA,
+                                Manifest.permission.READ_EXTERNAL_STORAGE,
+                                Manifest.permission.ACCESS_FINE_LOCATION)
+                        .build(),
+                new AcpListener() {
+                    @Override
+                    public void onGranted() {
+                    }
+
+                    @Override
+                    public void onDenied(List<String> permissions) {
+                        ToastUtils.showShort(permissions.toString() + "权限拒绝");
+                    }
+                });
     }
 
     public void AuthLogin(SHARE_MEDIA e) {

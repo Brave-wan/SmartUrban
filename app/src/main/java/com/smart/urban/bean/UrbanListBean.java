@@ -3,6 +3,7 @@ package com.smart.urban.bean;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by root on 18-4-9.
@@ -10,12 +11,14 @@ import java.util.Date;
 
 public class UrbanListBean implements Serializable {
 
+
     /**
+     * title : 最新动态
      * subtitle :
      * isOnline : Y
-     * title : 最新动态
-     * commentCount : 2
      * viewCount : 0
+     * images : [{"belongId":1523193891931,"order":0,"address":"http://img.baidu.com/hi/jx2/j_0034.gif","id":1523193891975,"type":"3"},{"belongId":1523193891931,"order":0,"address":"http://tpc.googlesyndication.com/daca_images/simgad/1138649454590774938","id":1523631146676,"type":"3"}]
+     * commentCount : 16
      * content : 最新动态的内容
      * createUserId : null
      * recordStatus : null
@@ -25,18 +28,27 @@ public class UrbanListBean implements Serializable {
      * id : 1523193891931
      */
 
+    private String title;
     private String subtitle;
     private String isOnline;
-    private String title;
-    private int commentCount;
     private int viewCount;
+    private int commentCount;
     private String content;
-    private Object createUserId;
-    private Object recordStatus;
+    private String createUserId;
+    private String recordStatus;
     private long createTime;
-    private Object modifyUserId;
+    private String modifyUserId;
     private long modifyTime;
     private long id;
+    private List<ImagesBean> images;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     public String getSubtitle() {
         return subtitle;
@@ -54,12 +66,12 @@ public class UrbanListBean implements Serializable {
         this.isOnline = isOnline;
     }
 
-    public String getTitle() {
-        return title;
+    public int getViewCount() {
+        return viewCount;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setViewCount(int viewCount) {
+        this.viewCount = viewCount;
     }
 
     public int getCommentCount() {
@@ -68,14 +80,6 @@ public class UrbanListBean implements Serializable {
 
     public void setCommentCount(int commentCount) {
         this.commentCount = commentCount;
-    }
-
-    public int getViewCount() {
-        return viewCount;
-    }
-
-    public void setViewCount(int viewCount) {
-        this.viewCount = viewCount;
     }
 
     public String getContent() {
@@ -90,7 +94,7 @@ public class UrbanListBean implements Serializable {
         return createUserId;
     }
 
-    public void setCreateUserId(Object createUserId) {
+    public void setCreateUserId(String createUserId) {
         this.createUserId = createUserId;
     }
 
@@ -98,7 +102,7 @@ public class UrbanListBean implements Serializable {
         return recordStatus;
     }
 
-    public void setRecordStatus(Object recordStatus) {
+    public void setRecordStatus(String recordStatus) {
         this.recordStatus = recordStatus;
     }
 
@@ -116,7 +120,7 @@ public class UrbanListBean implements Serializable {
         return modifyUserId;
     }
 
-    public void setModifyUserId(Object modifyUserId) {
+    public void setModifyUserId(String modifyUserId) {
         this.modifyUserId = modifyUserId;
     }
 
@@ -134,5 +138,69 @@ public class UrbanListBean implements Serializable {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public List<ImagesBean> getImages() {
+        return images;
+    }
+
+    public void setImages(List<ImagesBean> images) {
+        this.images = images;
+    }
+
+    public static class ImagesBean  implements Serializable{
+        /**
+         * belongId : 1523193891931
+         * order : 0
+         * address : http://img.baidu.com/hi/jx2/j_0034.gif
+         * id : 1523193891975
+         * type : 3
+         */
+
+        private long belongId;
+        private int order;
+        private String address;
+        private long id;
+        private String type;
+
+        public long getBelongId() {
+            return belongId;
+        }
+
+        public void setBelongId(long belongId) {
+            this.belongId = belongId;
+        }
+
+        public int getOrder() {
+            return order;
+        }
+
+        public void setOrder(int order) {
+            this.order = order;
+        }
+
+        public String getAddress() {
+            return address;
+        }
+
+        public void setAddress(String address) {
+            this.address = address;
+        }
+
+        public long getId() {
+            return id;
+        }
+
+        public void setId(long id) {
+            this.id = id;
+        }
+
+        public String getType() {
+            return type;
+        }
+
+        public void setType(String type) {
+            this.type = type;
+        }
     }
 }
