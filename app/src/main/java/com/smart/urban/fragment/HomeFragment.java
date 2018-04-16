@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.constraint.Guideline;
 import android.view.View;
+import android.widget.AdapterView;
 
 import com.smart.urban.R;
 import com.smart.urban.base.BaseFragment;
@@ -20,6 +21,7 @@ import com.smart.urban.ui.LostListActivity;
 import com.smart.urban.ui.MainActivity;
 import com.smart.urban.ui.SingleRouteCalculateActivity;
 import com.smart.urban.ui.UrbanActivity;
+import com.smart.urban.ui.UrbanDetailsActivity;
 import com.smart.urban.ui.adapter.DynamicListAdapter;
 import com.smart.urban.ui.adapter.InfoListAdapter;
 import com.smart.urban.ui.adapter.UrbanListAdapter;
@@ -40,7 +42,7 @@ import butterknife.OnClick;
  * Created by root on 18-3-29.
  */
 
-public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implements IHomeView {
+public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implements IHomeView, AdapterView.OnItemClickListener {
     @BindView(R.id.banner)
     Banner banner;
     @BindView(R.id.lv_main_list)
@@ -77,6 +79,7 @@ public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implement
         adapter = new UrbanListAdapter(getActivity(), R.layout.item_info_list, listBeans);
         lv_main_list.setAdapter(adapter);
         presenter.getForumList();
+        lv_main_list.setOnItemClickListener(this);
     }
 
     @OnClick({R.id.tv_home_navigation, R.id.tv_home_guide, R.id.tv_home_lost_found,
@@ -86,7 +89,7 @@ public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implement
             case R.id.tv_home_dynamic:
                 startActivity(new Intent(getActivity(), DynamicActivity.class));
                 break;
-                //便民导航
+            //便民导航
             case R.id.tv_home_navigation:
                 startActivity(new Intent(getActivity(), LocationActivity.class));
                 break;
@@ -129,5 +132,13 @@ public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implement
         listBeans.clear();
         listBeans.addAll(data);
         adapter.setDataList(listBeans);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        UrbanListBean bean = (UrbanListBean) adapter.getItem(position);
+        Intent intent = new Intent(getActivity(), UrbanDetailsActivity.class);
+        intent.putExtra("bean", bean);
+        startActivity(intent);
     }
 }

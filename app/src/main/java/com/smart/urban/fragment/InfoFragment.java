@@ -51,7 +51,7 @@ public class InfoFragment extends BaseFragment implements OnLoadmoreListener, On
         list.clear();
         smart_layout.setOnLoadmoreListener(this);
         smart_layout.setOnRefreshListener(this);
-        adapter = new InfoListAdapter(getActivity(), R.layout.item_info_list, list);
+        adapter = new InfoListAdapter(getActivity(), R.layout.item_info_list_two, list);
         lv_info_list.setAdapter(adapter);
         getMessageList(page);
     }

@@ -2,7 +2,9 @@ package com.smart.urban.ui.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.smart.urban.R;
@@ -28,7 +30,15 @@ public class InfoListAdapter extends CommonAdapter<UrbanListBean> {
     @Override
     protected void convert(BaseViewHolder baseViewHolder, UrbanListBean bean, int position) {
         ImageView img_info = (ImageView) baseViewHolder.getViewByViewId(R.id.img_info);
-        Glide.with(context).load("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3586898888,816047016&fm=27&gp=0.jpg").placeholder(R.drawable.icon_pic_empty).into(img_info);
+        TextView tv_dynamic_title = (TextView) baseViewHolder.getViewByViewId(R.id.tv_dynamic_title);
+        TextView tv_comment_number = (TextView) baseViewHolder.getViewByViewId(R.id.tv_comment_number);
+        TextView tv_info_time = (TextView) baseViewHolder.getViewByViewId(R.id.tv_info_time);
+        tv_info_time.setText(bean.getCreateTime());
+        tv_comment_number.setText(bean.getViewCount() + "");
+        tv_dynamic_title.setText(bean.getTitle());
+        if (bean.getImages().size() > 0) {
+            Glide.with(context).load(bean.getImages().get(0).getAddress()).error(R.drawable.icon_pic_empty).placeholder(R.drawable.icon_pic_empty).into(img_info);
+        }
 
     }
 }

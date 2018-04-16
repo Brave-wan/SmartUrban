@@ -24,7 +24,8 @@
             android:id="@+id/layout_title_bar_line"
             android:layout_width="match_parent"
             android:layout_height="@dimen/base_dimen_2"
-            android:layout_alignParentBottom="true" />
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_line" />
     </RelativeLayout>
 
 
