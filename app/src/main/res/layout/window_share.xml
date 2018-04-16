@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_window_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5c000000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_window_cancel"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_share_window_bg"
+        android:gravity="center"
+        android:paddingBottom="23dp"
+        android:paddingTop="23dp">
+
+        <TextView
+            android:id="@+id/tv_share_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="110dp"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/share_qq_btn"
+            android:gravity="center"
+            android:text="QQ"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_share_wechat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/share_wechat_btn"
+            android:gravity="center"
+            android:text="微信"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_window_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_share_window_cancel_btn"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="取消"
+        android:textColor="#007AFF"
+        android:textSize="16sp" />
+
+</RelativeLayout>

@@ -4,6 +4,7 @@ import com.smart.urban.bean.CommentListBean;
 import com.smart.urban.bean.DynamicListBean;
 import com.smart.urban.bean.GuideDetailsBean;
 import com.smart.urban.bean.GuideListBean;
+import com.smart.urban.bean.InfoDetailsBean;
 import com.smart.urban.bean.LocationListBean;
 import com.smart.urban.bean.LostBean;
 import com.smart.urban.bean.PersonalBean;
@@ -116,11 +117,12 @@ public interface ApiStores {
     Observable<BaseResult<List<LocationListBean>>> getLocationSearch(@QueryMap Map<String, Object> map);
 
     @FormUrlEncoded
-    @POST("cityApp/forum/addComment")
-    Observable<BaseResult<List<CommentListBean>>> getForumAddComment(@FieldMap Map<String, Object> map);
+    @POST("cityApp/dynamic/getById")
+    Observable<BaseResult<UrbanListBean>> getDynamicById(@FieldMap Map<String, Object> map);
 
 
     @FormUrlEncoded
-    @POST("cityApp/dynamic/addComment")
-    Observable<BaseResult<List<CommentListBean>>> getDynamicAddComment(@FieldMap Map<String, Object> map);
+    @POST("cityApp/message/getById")
+    Observable<BaseResult<InfoDetailsBean>> getMessageById(@FieldMap Map<String, Object> map);
+
 }

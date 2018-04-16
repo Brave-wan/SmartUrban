@@ -139,9 +139,12 @@ public class CommentListActivity extends BaseActivity<ICommentListView, CommentL
         map.put("createUserId", SharedPreferencesUtils.init(this).getString("userId"));
         map.put("belongId", belongId);
         map.put("content", content);
+
         if (urban.equals("urban")) {
+            //动态评论
             presenter.getDynamicAddComment(map);
         } else {
+            //文章评论
             presenter.getForumAddComment(map);
         }
     }
@@ -156,11 +159,11 @@ public class CommentListActivity extends BaseActivity<ICommentListView, CommentL
     @Override
     public void onCommentSuccess() {
         list.clear();
-        page=1;
+        page = 1;
         getUrBanMap(page);
         dismissProgressDialog();
         smart_layout.autoRefresh();
-
+        ed_comment.setText("");
     }
 
     @Override

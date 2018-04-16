@@ -61,10 +61,12 @@ public class Constants {
         return pars;
     }
 
-    public static <T> T jsonToBean(String json, Class<T> tClass) throws IllegalAccessException, InstantiationException {
-        Gson gson = new Gson();
-        T t = tClass.newInstance();
-        t = gson.fromJson(json, tClass);
-        return t;
+
+    public static String getHtmlData(String bodyHTML) {
+        String head = "<head>" +
+                "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\"> " +
+                "<style>html{padding:15px;} body{word-wrap:break-word;font-size:13px;padding:0px;margin:0px} p{padding:0px;margin:0px;font-size:13px;color:#222222;line-height:1.3;} img{padding:0px,margin:0px;max-width:100%; width:auto; height:auto;}</style>" +
+                "</head>";
+        return "<html>" + head + "<body>" + bodyHTML + "</body></html>";
     }
 }

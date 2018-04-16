@@ -49,9 +49,9 @@
             android:layout_marginLeft="15dp"
             android:layout_toLeftOf="@+id/tv_comment_send"
             android:background="@drawable/shape_comment_add"
+            android:hint="添加评论"
             android:maxLines="1"
             android:paddingLeft="10dp"
-            android:text="添加评论"
             android:textColor="@color/black"
             android:textColorHint="#BCBABA"
             android:textSize="14sp" />

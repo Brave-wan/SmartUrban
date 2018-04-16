@@ -3,11 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <WebView
-        android:id="@+id/webView"
+    <com.smart.urban.utils.LoadingLayout
         android:layout_width="match_parent"
+        android:id="@+id/layout_root"
         android:layout_height="match_parent"
-        android:layout_above="@+id/tv_main_line" />
+        android:layout_above="@+id/tv_main_line">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.smart.urban.utils.LoadingLayout>
 
     <TextView
         android:id="@+id/tv_main_line"

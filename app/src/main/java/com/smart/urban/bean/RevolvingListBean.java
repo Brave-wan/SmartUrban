@@ -9,7 +9,7 @@ import java.util.List;
  * Created by root on 18-4-10.
  */
 
-public class RevolvingListBean implements Serializable{
+public class RevolvingListBean implements Serializable {
 
 
     /**
@@ -28,6 +28,16 @@ public class RevolvingListBean implements Serializable{
     private long createUserId;
     private long modifyTime;
     private long id;
+    private int type = 1;
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
+    public int getType() {
+        return type;
+    }
+
     private List<ImagesBean> images;
 
     public String getState() {
@@ -86,7 +96,7 @@ public class RevolvingListBean implements Serializable{
         this.images = images;
     }
 
-    public static class ImagesBean implements Serializable{
+    public static class ImagesBean implements Serializable {
         /**
          * belongId : 1523323595982
          * order : 0
@@ -118,7 +128,7 @@ public class RevolvingListBean implements Serializable{
         }
 
         public String getAddress() {
-            return Constants.BASE_URL+address;
+            return Constants.BASE_URL + address;
         }
 
         public void setAddress(String address) {

@@ -1,7 +1,9 @@
 package com.smart.urban.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.autonavi.rtbt.IFrameForRTBT;
@@ -17,6 +19,7 @@ import com.smart.urban.bean.UrbanListBean;
 import com.smart.urban.http.ApiCallback;
 import com.smart.urban.http.BaseResult;
 import com.smart.urban.http.HttpManager;
+import com.smart.urban.ui.InfoDetailsActivity;
 import com.smart.urban.ui.adapter.InfoListAdapter;
 import com.smart.urban.utils.SharedPreferencesUtils;
 
@@ -31,7 +34,7 @@ import butterknife.BindView;
  * Created by root on 18-3-29.
  */
 
-public class InfoFragment extends BaseFragment implements OnLoadmoreListener, OnRefreshListener {
+public class InfoFragment extends BaseFragment implements OnLoadmoreListener, OnRefreshListener, AdapterView.OnItemClickListener {
     @BindView(R.id.lv_info_list)
     ListView lv_info_list;
     @BindView(R.id.smart_layout)
@@ -53,6 +56,7 @@ public class InfoFragment extends BaseFragment implements OnLoadmoreListener, On
         smart_layout.setOnRefreshListener(this);
         adapter = new InfoListAdapter(getActivity(), R.layout.item_info_list_two, list);
         lv_info_list.setAdapter(adapter);
+        lv_info_list.setOnItemClickListener(this);
         getMessageList(page);
     }
 
@@ -96,5 +100,14 @@ public class InfoFragment extends BaseFragment implements OnLoadmoreListener, On
                 ToastUtils.showShort(result.errmsg);
             }
         });
+    }
+
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        UrbanListBean bean = (UrbanListBean) adapter.getItem(position);
+        Intent intent = new Intent(getActivity(), InfoDetailsActivity.class);
+        intent.putExtra("id", bean.getId() + "");
+        startActivity(intent);
     }
 }
