@@ -24,7 +24,7 @@ public class GuideListAdapter extends CommonAdapter<GuideListBean> {
     protected void convert(BaseViewHolder baseViewHolder, GuideListBean bean, int position) {
         TextView tv_guide_title = (TextView) baseViewHolder.getViewByViewId(R.id.tv_guide_title);
         TextView tv_guide_content = (TextView) baseViewHolder.getViewByViewId(R.id.tv_guide_content);
-        tv_guide_content.setText(bean.getContent());
+        tv_guide_content.setText(bean.getSubtitle());
         tv_guide_title.setText(bean.getTitle());
     }
 }

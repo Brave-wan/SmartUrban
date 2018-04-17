@@ -49,7 +49,7 @@
             android:button="@null"
             android:drawableTop="@drawable/main_radio_info"
             android:gravity="center"
-            android:text="咨询"
+            android:text="资讯"
             android:textColor="@drawable/select_home_tx_color"
             android:textSize="12sp" />
 

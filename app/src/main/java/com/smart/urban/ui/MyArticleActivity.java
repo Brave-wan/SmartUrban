@@ -97,8 +97,13 @@ public class MyArticleActivity extends BaseActivity<IArticleView, ArticlePresent
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         CameraPicBean bean = (CameraPicBean) adapter.getItem(position);
         if (bean.getPic() == null) {
-            presenter.getTakePhoto(this);
-        }else {
+            if (list.size() >= 4) {
+                ToastUtils.showShort("最多只能上传三张图片!");
+                return;
+            } else {
+                presenter.getTakePhoto(this, 4 - list.size());
+            }
+        } else {
             ShowImageWindow window = new ShowImageWindow(this, bean.getPic());
             window.showWindow(view);
         }

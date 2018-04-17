@@ -23,7 +23,7 @@ public class GuideListBean implements Serializable{
      */
 
     private String title;
-    private Object subtitle;
+    private String subtitle;
     private String isOnline;
     private String content;
     private long createTime;
@@ -41,11 +41,11 @@ public class GuideListBean implements Serializable{
         this.title = title;
     }
 
-    public Object getSubtitle() {
+    public String getSubtitle() {
         return subtitle;
     }
 
-    public void setSubtitle(Object subtitle) {
+    public void setSubtitle(String subtitle) {
         this.subtitle = subtitle;
     }
 

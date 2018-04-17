@@ -53,7 +53,7 @@ public class ShowImageWindow extends PopupWindow {
 
     public void showWindow(View view) {
         if (window != null) {
-            window.showAsDropDown(view);
+            window.showAsDropDown(view, 0, 0);
         }
 
     }

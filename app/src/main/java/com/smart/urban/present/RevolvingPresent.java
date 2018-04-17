@@ -23,6 +23,7 @@ public class RevolvingPresent extends BasePresenter<IRevolvingView> {
     private Context mContext;
 
     public RevolvingPresent(Context mContext) {
+        this.mContext = mContext;
 
     }
 
@@ -44,6 +45,7 @@ public class RevolvingPresent extends BasePresenter<IRevolvingView> {
                 @Override
                 public void onFailure(BaseResult result) {
                     ToastUtils.showShort(result.errmsg);
+
                     mView.onFiled();
                 }
             });

@@ -34,7 +34,7 @@ import butterknife.OnClick;
  * Created by root on 18-4-11.
  */
 
-public class LostListActivity extends BaseActivity implements OnRefreshListener, OnLoadmoreListener, AdapterView.OnItemClickListener {
+public class LostListActivity extends BaseActivity implements OnRefreshListener, OnLoadmoreListener {
     List<LostBean> list = new ArrayList<>();
     @BindView(R.id.layout_root)
     LoadingLayout layout_root;
@@ -52,11 +52,11 @@ public class LostListActivity extends BaseActivity implements OnRefreshListener,
     @Override
     protected void initView(Bundle savedInstanceState) {
         setTitle("失物招领");
+        layout_root.setStatus(LoadingLayout.Loading);
         adapter = new LostListAdapter(this, R.layout.item_lost_list, list);
         lv_lost_list.setAdapter(adapter);
         smart_layout.setOnRefreshListener(this);
         smart_layout.setOnLoadmoreListener(this);
-        lv_lost_list.setOnItemClickListener(this);
         getLostList(page);
     }
 
@@ -122,11 +122,4 @@ public class LostListActivity extends BaseActivity implements OnRefreshListener,
         getLostList(page);
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        LostBean bean = (LostBean) adapter.getItem(position);
-        Intent intent = new Intent(this, LostDetailsActivity.class);
-        intent.putExtra("bean", bean);
-        startActivity(intent);
-    }
 }

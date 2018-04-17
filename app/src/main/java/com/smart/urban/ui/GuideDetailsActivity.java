@@ -46,19 +46,18 @@ public class GuideDetailsActivity extends BaseActivity {
     protected void initView(Bundle savedInstanceState) {
         setTitle("报事详情");
         bean = (GuideListBean) getIntent().getSerializableExtra("bean");
+
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
         settings.setDomStorageEnabled(true);
         settings.setUseWideViewPort(true);
         settings.setLoadWithOverviewMode(true);
-
         webView.setWebViewClient(new MyWebViewClient(this));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             settings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.TEXT_AUTOSIZING);
         } else {
             settings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NORMAL);
         }
-
         getGuideById();
     }
 
@@ -68,8 +67,6 @@ public class GuideDetailsActivity extends BaseActivity {
         super.onBackward(backwardView);
         finish();
     }
-
-
 
     @Override
     public BasePresenter initPresenter() {

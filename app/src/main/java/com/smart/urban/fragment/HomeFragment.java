@@ -106,6 +106,7 @@ public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implement
             case R.id.tv_home_lost_found:
                 startActivity(new Intent(getActivity(), LostListActivity.class));
                 break;
+
             //城管动态
             case R.id.tv_dynamic_list:
                 startActivity(new Intent(getActivity(), UrbanActivity.class));

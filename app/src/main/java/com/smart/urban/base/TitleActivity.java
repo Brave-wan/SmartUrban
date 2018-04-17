@@ -18,7 +18,7 @@ public class TitleActivity extends FragmentActivity {
     private TextView buttonBackward;
     private TextView buttonForward;
     private TextView titleLine;
-    private RelativeLayout layout_titleBar;
+    public RelativeLayout layout_titleBar;
     private FrameLayout layoutContent;
 
     @Override

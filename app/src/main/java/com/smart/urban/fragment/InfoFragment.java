@@ -21,6 +21,7 @@ import com.smart.urban.http.BaseResult;
 import com.smart.urban.http.HttpManager;
 import com.smart.urban.ui.InfoDetailsActivity;
 import com.smart.urban.ui.adapter.InfoListAdapter;
+import com.smart.urban.utils.LoadingLayout;
 import com.smart.urban.utils.SharedPreferencesUtils;
 
 import java.util.ArrayList;
@@ -39,6 +40,8 @@ public class InfoFragment extends BaseFragment implements OnLoadmoreListener, On
     ListView lv_info_list;
     @BindView(R.id.smart_layout)
     SmartRefreshLayout smart_layout;
+    @BindView(R.id.layout_root)
+    LoadingLayout layout_root;
     InfoListAdapter adapter;
     private List<UrbanListBean> list = new ArrayList<>();
     private int page = 1;
@@ -52,6 +55,7 @@ public class InfoFragment extends BaseFragment implements OnLoadmoreListener, On
     protected void initView(View view, Bundle savedInstanceState) {
         setTitle("政策资讯");
         list.clear();
+        layout_root.setStatus(LoadingLayout.Loading);
         smart_layout.setOnLoadmoreListener(this);
         smart_layout.setOnRefreshListener(this);
         adapter = new InfoListAdapter(getActivity(), R.layout.item_info_list_two, list);
@@ -82,6 +86,15 @@ public class InfoFragment extends BaseFragment implements OnLoadmoreListener, On
     }
 
 
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        UrbanListBean bean = (UrbanListBean) adapter.getItem(position);
+        Intent intent = new Intent(getActivity(), InfoDetailsActivity.class);
+        intent.putExtra("id", bean.getId() + "");
+        startActivity(intent);
+    }
+
+
     public void getMessageList(int page) {
         Map<String, Object> map = new HashMap<>();
         map.put("userId", SharedPreferencesUtils.init(getActivity()).getString("userId"));
@@ -93,21 +106,14 @@ public class InfoFragment extends BaseFragment implements OnLoadmoreListener, On
             public void onSuccess(BaseResult<List<UrbanListBean>> model) {
                 list.addAll(model.getData());
                 adapter.setDataList(list);
+                layout_root.setStatus(list.size() > 0 ? LoadingLayout.Success : LoadingLayout.Empty);
             }
 
             @Override
             public void onFailure(BaseResult result) {
                 ToastUtils.showShort(result.errmsg);
+                layout_root.setStatus(LoadingLayout.Error);
             }
         });
-    }
-
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        UrbanListBean bean = (UrbanListBean) adapter.getItem(position);
-        Intent intent = new Intent(getActivity(), InfoDetailsActivity.class);
-        intent.putExtra("id", bean.getId() + "");
-        startActivity(intent);
     }
 }

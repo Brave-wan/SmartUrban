@@ -28,6 +28,7 @@ public class HomePresent extends BasePresenter<IHomeView> {
 
     public HomePresent(Context mContext) {
         this.mContext = mContext;
+        getBannerList();
     }
 
 
@@ -49,5 +50,23 @@ public class HomePresent extends BasePresenter<IHomeView> {
 
             }
         });
+    }
+
+    public void getBannerList() {
+        Map<String, Object> map = new HashMap<>();
+        map.put("userId", SharedPreferencesUtils.init(mContext).getString("userId"));
+        map.put("token", SharedPreferencesUtils.init(mContext).getString("token"));
+        HttpManager.get().addSubscription(HttpManager.get().getApiStores().getBannerList(map), new ApiCallback() {
+            @Override
+            public void onSuccess(Object model) {
+
+            }
+
+            @Override
+            public void onFailure(BaseResult result) {
+
+            }
+        });
+
     }
 }

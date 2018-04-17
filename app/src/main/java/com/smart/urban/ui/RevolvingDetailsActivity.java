@@ -42,6 +42,7 @@ public class RevolvingDetailsActivity extends BaseActivity implements AdapterVie
         gv_revolving_details.setOnItemClickListener(this);
     }
 
+
     @Override
     protected void onBackward(View backwardView) {
         super.onBackward(backwardView);
@@ -57,6 +58,6 @@ public class RevolvingDetailsActivity extends BaseActivity implements AdapterVie
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         RevolvingListBean.ImagesBean bean = (RevolvingListBean.ImagesBean) adapter.getItem(position);
         ShowImageWindow window = new ShowImageWindow(this, bean.getAddress());
-        window.showWindow(view);
+        window.showWindow(layout_titleBar);
     }
 }

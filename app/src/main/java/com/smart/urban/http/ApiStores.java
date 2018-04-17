@@ -125,4 +125,6 @@ public interface ApiStores {
     @POST("cityApp/message/getById")
     Observable<BaseResult<InfoDetailsBean>> getMessageById(@FieldMap Map<String, Object> map);
 
+    @GET("cityApp/banner/getList")
+    Observable<BaseResult<List<CommentListBean>>> getBannerList(@QueryMap Map<String, Object> map);
 }

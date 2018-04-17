@@ -2,6 +2,8 @@ package com.smart.urban.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.BaseViewHolder;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseActivity;
 import com.smart.urban.base.BasePresenter;
@@ -28,18 +32,19 @@ import butterknife.OnClick;
 
 public class DynamicDetailsActivity extends BaseActivity {
     @BindView(R.id.lv_dynamic_list)
-    ListView lv_dynamic_list;
+    RecyclerView lv_dynamic_list;
     @BindView(R.id.tv_dynamic_details_title)
     TextView tv_dynamic_details_title;
     @BindView(R.id.tv_dynamic_details_content)
     TextView tv_dynamic_details_content;
-    DynamicImgListAdapter adapter;
     @BindView(R.id.tv_see_number)
     TextView tv_see_number;
     @BindView(R.id.tv_comment_number)
     TextView tv_comment_number;
     @BindView(R.id.tv_create_time)
     TextView tv_create_time;
+
+    BaseQuickAdapter<DynamicListBean.ImagesBean, BaseViewHolder> adapter;
 
     @Override
     protected int getContentViewId() {
@@ -54,12 +59,25 @@ public class DynamicDetailsActivity extends BaseActivity {
         bean = (DynamicListBean) getIntent().getSerializableExtra("bean");
         tv_dynamic_details_title.setText(bean.getTitle());
         tv_dynamic_details_content.setText(bean.getContent());
-        adapter = new DynamicImgListAdapter(this, R.layout.item_dynamic_details_img, bean.getImages());
-        lv_dynamic_list.setAdapter(adapter);
+
         tv_comment_number.setText(bean.getCommentCount() + "");
         tv_see_number.setText(bean.getViewCount() + "");
         tv_create_time.setText(bean.getCreateTime());
+        lv_dynamic_list.setNestedScrollingEnabled(false);
+        lv_dynamic_list.setLayoutManager(new LinearLayoutManager(this));
 
+        adapter = new BaseQuickAdapter<DynamicListBean.ImagesBean, BaseViewHolder>(R.layout.item_dynamic_details_img, bean.getImages()) {
+            @Override
+            protected void convert(BaseViewHolder helper, DynamicListBean.ImagesBean item) {
+                ImageView img_dynamic = (ImageView) helper.itemView.findViewById(R.id.img_dynamic);
+                Glide.with(DynamicDetailsActivity.this)
+                        .load(item.getAddress())
+                        .error(R.drawable.icon_pic_empty)
+                        .placeholder(R.drawable.icon_pic_empty)
+                        .into(img_dynamic);
+            }
+        };
+        lv_dynamic_list.setAdapter(adapter);
     }
 
     @Override

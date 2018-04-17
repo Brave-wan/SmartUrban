@@ -24,6 +24,7 @@
         android:background="@color/white"
         android:horizontalSpacing="10dp"
         android:listSelector="@android:color/transparent"
+        android:numColumns="3"
         android:padding="15dp"
         android:scrollbars="none" />
 

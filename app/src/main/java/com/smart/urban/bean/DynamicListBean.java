@@ -1,5 +1,7 @@
 package com.smart.urban.bean;
 
+import com.smart.urban.config.Constants;
+
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -148,7 +150,7 @@ public class DynamicListBean implements Serializable {
         this.images = images;
     }
 
-    public static class ImagesBean implements Serializable{
+    public static class ImagesBean implements Serializable {
         /**
          * belongId : 1523535828422
          * order : 0
@@ -180,7 +182,7 @@ public class DynamicListBean implements Serializable {
         }
 
         public String getAddress() {
-            return address;
+            return Constants.BASE_URL + address;
         }
 
         public void setAddress(String address) {

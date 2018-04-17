@@ -54,7 +54,7 @@ public class LostDetailsActivity extends BaseActivity implements AdapterView.OnI
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         LostBean.ImagesBean bean = (LostBean.ImagesBean) adapter.getItem(position);
         ShowImageWindow window = new ShowImageWindow(this, bean.getAddress());
-        window.showWindow(view);
+        window.showWindow(layout_titleBar);
     }
 
     @Override

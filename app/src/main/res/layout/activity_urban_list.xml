@@ -9,12 +9,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ListView
-            android:id="@+id/lv_urban_list"
+        <com.smart.urban.utils.LoadingLayout
+            android:id="@+id/layout_root"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:divider="@color/gray_line"
-            android:dividerHeight="1dp" />
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/lv_urban_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/gray_line"
+                android:dividerHeight="1dp" />
+        </com.smart.urban.utils.LoadingLayout>
+
+
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
 </LinearLayout>

@@ -20,6 +20,7 @@ import com.smart.urban.http.BaseResult;
 import com.smart.urban.http.HttpManager;
 import com.smart.urban.ui.adapter.InfoListAdapter;
 import com.smart.urban.ui.adapter.UrbanListAdapter;
+import com.smart.urban.utils.LoadingLayout;
 import com.smart.urban.utils.SharedPreferencesUtils;
 
 import java.util.ArrayList;
@@ -38,8 +39,10 @@ public class UrbanActivity extends BaseActivity implements OnRefreshListener, On
     SmartRefreshLayout smart_layout;
     @BindView(R.id.lv_urban_list)
     ListView lv_urban_list;
-    UrbanListAdapter adapter;
-    List<UrbanListBean> list = new ArrayList<>();
+    @BindView(R.id.layout_root)
+    LoadingLayout layout_root;
+    private UrbanListAdapter adapter;
+    private List<UrbanListBean> list = new ArrayList<>();
 
     @Override
     protected int getContentViewId() {
@@ -49,13 +52,13 @@ public class UrbanActivity extends BaseActivity implements OnRefreshListener, On
     @Override
     protected void initView(Bundle savedInstanceState) {
         setTitle("城管动态");
-        getDynamicList(start);
         adapter = new UrbanListAdapter(this, R.layout.item_info_list, list);
         lv_urban_list.setAdapter(adapter);
-
+        layout_root.setStatus(LoadingLayout.Loading);
         smart_layout.setOnRefreshListener(this);
         smart_layout.setOnLoadmoreListener(this);
         lv_urban_list.setOnItemClickListener(this);
+        getDynamicList(start);
     }
 
     @Override
@@ -82,25 +85,32 @@ public class UrbanActivity extends BaseActivity implements OnRefreshListener, On
             public void onSuccess(BaseResult<List<UrbanListBean>> model) {
                 list.addAll(model.data);
                 adapter.setDataList(list);
+                layout_root.setStatus(list.size() > 0 ? LoadingLayout.Success : LoadingLayout.Empty);
             }
 
             @Override
             public void onFailure(BaseResult result) {
                 ToastUtils.showShort(result.errmsg);
+                layout_root.setStatus(LoadingLayout.Error);
 
             }
         });
     }
 
+
     @Override
     public void onRefresh(RefreshLayout refreshlayout) {
         smart_layout.finishRefresh(1000);
-
+        list.clear();
+        start = 1;
+        getDynamicList(start);
     }
 
     @Override
     public void onLoadmore(RefreshLayout refreshlayout) {
         smart_layout.finishLoadmore(1000);
+        start++;
+        getDynamicList(start);
     }
 
     @Override

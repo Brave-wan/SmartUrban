@@ -98,9 +98,14 @@
         <activity android:name=".ui.WalkRouteCalculateActivity" />
         <activity android:name=".ui.SingleRouteCalculateActivity" />
         <activity android:name=".ui.InfoDetailsActivity" />
+        <activity android:name=".ui.ArticlesPublishedActivity" />
 
         <activity android:name=".ui.RevolvingDetailsActivity" />
 
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
         <!-- tencent -->
         <activity
             android:name="com.tencent.tauth.AuthActivity"
@@ -124,6 +129,16 @@
 
         <service android:name="com.amap.api.location.APSService" />
 
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="d1a08bd1cda5721718b4c1b196ea6393" />
@@ -131,6 +146,15 @@
         <meta-data
             android:name="UMENG_APPKEY"
             android:value="5abd9a83f29d98682a00009c" />
+
+        <!-- 配置APP ID -->
+        <meta-data
+            android:name="BUGLY_APPID"
+            android:value="38c0267351" />
+        <!-- 配置APP版本号 -->
+        <meta-data
+            android:name="BUGLY_APP_VERSION"
+            android:value="1" />
     </application>
 
 </manifest>

@@ -58,12 +58,12 @@ public class LostFoundPresent extends BasePresenter<ILostFoundView> {
         this.mContext = mContext;
     }
 
-    public void getTakePhoto(Activity activity) {
+    public void getTakePhoto(Activity activity,int number) {
         Matisse.from(activity)
                 .choose(MimeType.allOf()) // 选择 mime 的类型
                 .capture(true)
                 .countable(true)//自动增长的数目
-                .maxSelectable(6) // 图片选择的最多数量
+                .maxSelectable(number) // 图片选择的最多数量
                 .captureStrategy(new CaptureStrategy(true, "com.szt.myapplicationee.fileprovider"))
                 .gridExpectedSize(activity.getResources().getDimensionPixelSize(R.dimen.base_dimen_240))
                 .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)

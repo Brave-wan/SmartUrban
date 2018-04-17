@@ -79,7 +79,7 @@ public class RevolvingActivity extends BaseActivity<IRevolvingView, RevolvingPre
 
     @Override
     public void onFiled() {
-        layout_content.setStatus(LoadingLayout.Success);
+        layout_content.setStatus(LoadingLayout.Empty);
     }
 
     @Override
@@ -95,9 +95,7 @@ public class RevolvingActivity extends BaseActivity<IRevolvingView, RevolvingPre
         list.clear();
         page = 1;
         presenter.getPhotoList(page);
-
     }
-
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -105,7 +103,6 @@ public class RevolvingActivity extends BaseActivity<IRevolvingView, RevolvingPre
         Intent intent = new Intent(this, RevolvingDetailsActivity.class);
         intent.putExtra("bean", bean);
         startActivity(intent);
-
     }
 
 }

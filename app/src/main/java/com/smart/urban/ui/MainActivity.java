@@ -6,8 +6,11 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.view.KeyEvent;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseActivity;
 import com.smart.urban.base.BasePresenter;
@@ -49,8 +52,10 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     }
 
     public void setDefaultFragment() {
-        homeFragment = new HomeFragment();
-        transaction.add(R.id.main_layout, homeFragment);
+        if (homeFragment == null) {
+            homeFragment = new HomeFragment();
+        }
+        transaction.replace(R.id.main_layout, homeFragment);
         transaction.commit();
         rg_main_bottom.check(R.id.radio_main_home);
     }
@@ -119,12 +124,12 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         cameraFragment.onActivityResult(requestCode, resultCode, data);
     }
 
-    public void getTakePhoto() {
+    public void getTakePhoto(int number) {
         Matisse.from(this)
                 .choose(MimeType.allOf()) // 选择 mime 的类型
                 .capture(true)
                 .countable(true)//自动增长的数目
-                .maxSelectable(3) // 图片选择的最多数量
+                .maxSelectable(number) // 图片选择的最多数量
                 .captureStrategy(new CaptureStrategy(true, "com.szt.myapplicationee.fileprovider"))
                 .gridExpectedSize(getResources().getDimensionPixelSize(R.dimen.base_dimen_240))
                 .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)
@@ -133,5 +138,20 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                 .forResult(REQUEST_CODE_CHOOSE); // 设置作为标记的请求码
     }
 
+    private long mExitTime;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if ((System.currentTimeMillis() - mExitTime) > 2000) {
+                ToastUtils.showShort("连续点击两次,退出应用");
+                mExitTime = System.currentTimeMillis();
+            } else {
+                finish();
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
 }

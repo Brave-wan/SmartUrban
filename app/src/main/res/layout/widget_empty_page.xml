@@ -5,14 +5,14 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-<!--加载失败-->
+    <!--加载失败-->
 
     <ImageView
         android:id="@+id/empty_img"
         android:layout_width="wrap_content"
-        android:background="@drawable/empty"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/base_dimen_140"
-        android:layout_height="wrap_content" />
+        android:background="@drawable/empty" />
 
     <TextView
         android:id="@+id/empty_text"
@@ -38,6 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/base_dimen_40"
+        android:background="@drawable/shape_blue_background"
         android:clickable="true"
         android:gravity="center"
         android:paddingBottom="@dimen/base_dimen_14"
@@ -45,6 +46,6 @@
         android:paddingRight="@dimen/base_dimen_36"
         android:paddingTop="@dimen/base_dimen_14"
         android:text="刷     新"
-        android:background="@drawable/shape_blue_background"
-        android:textColor="#37AEFF" />
+        android:textColor="#37AEFF"
+        android:visibility="gone" />
 </LinearLayout>

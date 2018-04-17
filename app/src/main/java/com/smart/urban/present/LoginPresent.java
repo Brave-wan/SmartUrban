@@ -168,10 +168,11 @@ public class LoginPresent extends BasePresenter<ILoginView> implements UMAuthLis
                 @Override
                 public void onSuccess(BaseResult<PersonalBean> model) {
                     PersonalBean bean = model.data;
-                    SharedPreferencesUtils.init(mContext).put("center_sex", bean.getSex())
+                    SharedPreferencesUtils.init(mContext)
+                            .put("center_sex", bean.getSex())
                             .put("center_name", bean.getNickName())
-                            .put("center_head", bean.getImgAdress());
-
+                            .put("center_head", bean.getImgAdress())
+                            .put("center_img", bean.getImgAdress());
                 }
 
                 @Override
