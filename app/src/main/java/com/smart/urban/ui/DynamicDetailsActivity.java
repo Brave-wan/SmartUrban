@@ -2,26 +2,17 @@ package com.smart.urban.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
+import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.chad.library.adapter.base.BaseViewHolder;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseActivity;
 import com.smart.urban.base.BasePresenter;
 import com.smart.urban.bean.DynamicListBean;
-import com.smart.urban.config.Constants;
 import com.smart.urban.ui.adapter.DynamicImgListAdapter;
-import com.smart.urban.widget.MyListView;
+import com.smart.urban.ui.widget.ShowImageWindow;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -30,9 +21,9 @@ import butterknife.OnClick;
  * Created by root on 18-4-10.
  */
 
-public class DynamicDetailsActivity extends BaseActivity {
+public class DynamicDetailsActivity extends BaseActivity implements AdapterView.OnItemClickListener {
     @BindView(R.id.lv_dynamic_list)
-    RecyclerView lv_dynamic_list;
+    GridView lv_dynamic_list;
     @BindView(R.id.tv_dynamic_details_title)
     TextView tv_dynamic_details_title;
     @BindView(R.id.tv_dynamic_details_content)
@@ -43,8 +34,7 @@ public class DynamicDetailsActivity extends BaseActivity {
     TextView tv_comment_number;
     @BindView(R.id.tv_create_time)
     TextView tv_create_time;
-
-    BaseQuickAdapter<DynamicListBean.ImagesBean, BaseViewHolder> adapter;
+    DynamicImgListAdapter adapter;
 
     @Override
     protected int getContentViewId() {
@@ -63,21 +53,9 @@ public class DynamicDetailsActivity extends BaseActivity {
         tv_comment_number.setText(bean.getCommentCount() + "");
         tv_see_number.setText(bean.getViewCount() + "");
         tv_create_time.setText(bean.getCreateTime());
-        lv_dynamic_list.setNestedScrollingEnabled(false);
-        lv_dynamic_list.setLayoutManager(new LinearLayoutManager(this));
-
-        adapter = new BaseQuickAdapter<DynamicListBean.ImagesBean, BaseViewHolder>(R.layout.item_dynamic_details_img, bean.getImages()) {
-            @Override
-            protected void convert(BaseViewHolder helper, DynamicListBean.ImagesBean item) {
-                ImageView img_dynamic = (ImageView) helper.itemView.findViewById(R.id.img_dynamic);
-                Glide.with(DynamicDetailsActivity.this)
-                        .load(item.getAddress())
-                        .error(R.drawable.icon_pic_empty)
-                        .placeholder(R.drawable.icon_pic_empty)
-                        .into(img_dynamic);
-            }
-        };
+        adapter = new DynamicImgListAdapter(this, R.layout.item_dynamic_details_img, bean.getImages());
         lv_dynamic_list.setAdapter(adapter);
+        lv_dynamic_list.setOnItemClickListener(this);
     }
 
     @Override
@@ -101,5 +79,12 @@ public class DynamicDetailsActivity extends BaseActivity {
                 startActivity(intent);
                 break;
         }
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        DynamicListBean.ImagesBean bean = (DynamicListBean.ImagesBean) adapter.getItem(i);
+        ShowImageWindow window = new ShowImageWindow(this, bean.getAddress());
+        window.showWindow(view);
     }
 }

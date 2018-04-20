@@ -2,6 +2,7 @@ package com.smart.urban.ui.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -35,25 +36,25 @@ public class RevolvingListAdapter extends CommonAdapter<RevolvingListBean> {
         tv_revolving_title.setText(bean.getContent());
         tv_revolving_content.setText(bean.getContent());
 
+        Log.i("wan", "type:" + bean.getState());
         if (bean.getImages() != null && bean.getImages().size() > 0) {
             Glide.with(context).load(bean.getImages().get(0).getAddress()).placeholder(R.drawable.icon_pic_empty).error(R.drawable.icon_pic_empty).into(img_revolving_head);
         }
-        switch (bean.getType()) {
-            case 1:
+        switch (bean.getState()) {
+            case "1":
                 tv_revolving_state.setText("待审核");
                 tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.shape_my_revolving_review));
                 break;
 
-            case 2:
+            case "2":
                 tv_revolving_state.setText("跟进中");
                 tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.shape_my_revolving_following_up));
                 break;
 
-            case 3:
+            case "3":
                 tv_revolving_state.setText("处理完成");
                 tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.shape_my_revolving_finish));
                 break;
-
         }
 
     }

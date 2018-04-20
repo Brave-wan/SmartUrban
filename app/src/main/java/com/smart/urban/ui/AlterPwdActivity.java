@@ -95,11 +95,11 @@ public class AlterPwdActivity extends BaseActivity<IAlterPwdView, AlterPwdPresen
     @Override
     public void hitLoading() {
         dismissProgressDialog();
-
     }
 
     @Override
     public void onSuccess() {
+        SharedPreferencesUtils.init(this).put("userPass", ed_sure_pwd.getText().toString());
         finish();
     }
 }

@@ -7,12 +7,16 @@ import android.support.constraint.Guideline;
 import android.view.View;
 import android.widget.AdapterView;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseFragment;
 import com.smart.urban.base.BasePresenter;
+import com.smart.urban.bean.BannerBean;
 import com.smart.urban.bean.DynamicListBean;
 import com.smart.urban.bean.UrbanListBean;
 import com.smart.urban.present.HomePresent;
+import com.smart.urban.ui.BannerDetailActivity;
+import com.smart.urban.ui.BannerDynamicDetailsActivity;
 import com.smart.urban.ui.DynamicActivity;
 import com.smart.urban.ui.GuideActivity;
 import com.smart.urban.ui.LocationActivity;
@@ -64,17 +68,7 @@ public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implement
     }
 
     public void initBanner() {
-        list.clear();
 
-        list.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic21363tj30ci08ct96.jpg");
-        list.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic259ohaj30ci08c74r.jpg");
-        list.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic2b16zuj30ci08cwf4.jpg");
-        list.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic2e7vsaj30ci08cglz.jpg");
-        banner.setImages(list)
-                .setDelayTime(3000)
-                .setImageLoader(new GlideImageLoader())
-                .setIndicatorGravity(BannerConfig.CENTER)
-                .start();
 
         adapter = new UrbanListAdapter(getActivity(), R.layout.item_info_list, listBeans);
         lv_main_list.setAdapter(adapter);
@@ -133,6 +127,37 @@ public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implement
         listBeans.clear();
         listBeans.addAll(data);
         adapter.setDataList(listBeans);
+    }
+
+    @Override
+    public void onBannerList(final List<BannerBean> data) {
+        list.clear();
+
+        for (BannerBean bean : data) {
+            list.add(bean.getImage().getAddress());
+        }
+        banner.setImages(list)
+                .setDelayTime(3000)
+                .setImageLoader(new GlideImageLoader())
+                .setIndicatorGravity(BannerConfig.CENTER)
+                .start();
+
+        banner.setOnBannerListener(new OnBannerListener() {
+            @Override
+            public void OnBannerClick(int position) {
+                BannerBean bean = data.get(position);
+                if (bean.getIsUrl().equals("Y")) {
+                    Intent intent = new Intent(getActivity(), BannerDetailActivity.class);
+                    intent.putExtra("url", bean.getUrlAddress());
+                    startActivity(intent);
+                } else {
+                    Intent intent = new Intent(getActivity(), BannerDynamicDetailsActivity.class);
+                    intent.putExtra("id", bean.getArticleId() + "");
+                    startActivity(intent);
+
+                }
+            }
+        });
     }
 
     @Override

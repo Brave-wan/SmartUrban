@@ -1,5 +1,6 @@
 package com.smart.urban.view;
 
+import com.smart.urban.bean.BannerBean;
 import com.smart.urban.bean.DynamicListBean;
 import com.smart.urban.bean.UrbanListBean;
 
@@ -11,4 +12,6 @@ import java.util.List;
 
 public interface IHomeView {
     void onDynamicList(List<UrbanListBean> data);
+
+    void onBannerList(List<BannerBean> data);
 }

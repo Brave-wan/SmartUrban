@@ -3,54 +3,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v4.widget.NestedScrollView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/tv_main_line"
-        android:fillViewport="true"
+        android:descendantFocusability="blocksDescendants"
         android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/tv_dynamic_details_title"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:descendantFocusability="blocksDescendants"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="15dp"
+            android:text="如果你还不了解loadingView"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/tv_dynamic_details_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@color/white"
-                android:paddingBottom="15dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:paddingTop="15dp"
-                android:text="如果你还不了解loadingView"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+        <TextView
+            android:id="@+id/tv_dynamic_details_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:lineSpacingExtra="3dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="可以简单的看一下上一篇博文:Android 自定义通用的loadingview,实现原理很简单,就是LoadingLayout在包裹内容层的基础上"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/tv_dynamic_details_content"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:lineSpacingExtra="3dp"
-                android:paddingBottom="15dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:text="可以简单的看一下上一篇博文:Android 自定义通用的loadingview,实现原理很简单,就是LoadingLayout在包裹内容层的基础上"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/lv_dynamic_list"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingTop="10dp" />
-        </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
+        <GridView
+            android:id="@+id/lv_dynamic_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:horizontalSpacing="10dp"
+            android:numColumns="3"
+            android:orientation="vertical"
+            android:verticalSpacing="10dp" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tv_main_line"

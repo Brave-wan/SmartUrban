@@ -99,6 +99,8 @@
         <activity android:name=".ui.SingleRouteCalculateActivity" />
         <activity android:name=".ui.InfoDetailsActivity" />
         <activity android:name=".ui.ArticlesPublishedActivity" />
+        <activity android:name=".ui.BannerDetailActivity" />
+        <activity android:name=".ui.BannerDynamicDetailsActivity" />
 
         <activity android:name=".ui.RevolvingDetailsActivity" />
 

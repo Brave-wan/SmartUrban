@@ -1,5 +1,6 @@
 package com.smart.urban.http;
 
+import com.smart.urban.bean.BannerBean;
 import com.smart.urban.bean.CommentListBean;
 import com.smart.urban.bean.DynamicListBean;
 import com.smart.urban.bean.GuideDetailsBean;
@@ -80,7 +81,6 @@ public interface ApiStores {
     @POST("cityApp/guide/getById")
     Observable<BaseResult<GuideDetailsBean>> getGuideById(@FieldMap Map<String, Object> map);
 
-
     @FormUrlEncoded
     @POST("cityApp/photo/add")
     Observable<BaseResult<GuideDetailsBean>> getPhotoAdd(@FieldMap Map<String, Object> map);
@@ -120,11 +120,13 @@ public interface ApiStores {
     @POST("cityApp/dynamic/getById")
     Observable<BaseResult<UrbanListBean>> getDynamicById(@FieldMap Map<String, Object> map);
 
-
     @FormUrlEncoded
     @POST("cityApp/message/getById")
     Observable<BaseResult<InfoDetailsBean>> getMessageById(@FieldMap Map<String, Object> map);
 
     @GET("cityApp/banner/getList")
-    Observable<BaseResult<List<CommentListBean>>> getBannerList(@QueryMap Map<String, Object> map);
+    Observable<BaseResult<List<BannerBean>>> getBannerList(@QueryMap Map<String, Object> map);
+
+    @GET("cityApp/photo/getById")
+    Observable<BaseResult<List<BannerBean>>> getForumById(@QueryMap Map<String, Object> map);
 }

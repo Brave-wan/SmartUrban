@@ -1,7 +1,5 @@
 package com.smart.urban.bean;
 
-import com.smart.urban.config.Constants;
-
 import java.io.Serializable;
 import java.util.List;
 
@@ -13,32 +11,46 @@ public class RevolvingListBean implements Serializable {
 
 
     /**
-     * images : [{"belongId":1523323595982,"order":0,"address":"/static/upload/de33663b-c038-48e5-89ab-55619e84296c.jpg","id":1523323595983,"type":"2"}]
+     * createUserName : null
+     * images : [{"belongId":1524149457122,"order":1,"address":"/data/uploads/20180420/ed1cad65-1490-4921-b26b-7d5f3c788fe8.jpg","id":1524149457126,"type":"2"},{"belongId":1524149457122,"order":2,"address":"/data/uploads/20180420/f47ceaeb-0c20-43ff-96b2-7cc5b297b636.jpg","id":1524149457125,"type":"2"},{"belongId":1524149457122,"order":0,"address":"/data/uploads/20180420/4f9b759d-cf0a-40d5-9638-7500b6345f99.jpg","id":1524149457124,"type":"2"}]
+     * allState : null
      * state : 1
-     * content : 顾家家居
-     * createTime : 1523331163000
-     * createUserId : 1523007772370
-     * modifyTime : 1523331163000
-     * id : 1523323595982
+     * content : 测试版本测试
+     * createUserId : 1523963132993
+     * recordStatus : Y
+     * createTime : 1524160042000
+     * modifyUserId : null
+     * modifyTime : 1524160042000
+     * id : 1524149457122
      */
 
+    private Object createUserName;
+    private Object allState;
     private String state;
     private String content;
-    private long createTime;
     private long createUserId;
+    private String recordStatus;
+    private long createTime;
+    private Object modifyUserId;
     private long modifyTime;
     private long id;
-    private int type = 1;
-
-    public void setType(int type) {
-        this.type = type;
-    }
-
-    public int getType() {
-        return type;
-    }
-
     private List<ImagesBean> images;
+
+    public Object getCreateUserName() {
+        return createUserName;
+    }
+
+    public void setCreateUserName(Object createUserName) {
+        this.createUserName = createUserName;
+    }
+
+    public Object getAllState() {
+        return allState;
+    }
+
+    public void setAllState(Object allState) {
+        this.allState = allState;
+    }
 
     public String getState() {
         return state;
@@ -56,6 +68,22 @@ public class RevolvingListBean implements Serializable {
         this.content = content;
     }
 
+    public long getCreateUserId() {
+        return createUserId;
+    }
+
+    public void setCreateUserId(long createUserId) {
+        this.createUserId = createUserId;
+    }
+
+    public String getRecordStatus() {
+        return recordStatus;
+    }
+
+    public void setRecordStatus(String recordStatus) {
+        this.recordStatus = recordStatus;
+    }
+
     public long getCreateTime() {
         return createTime;
     }
@@ -64,12 +92,12 @@ public class RevolvingListBean implements Serializable {
         this.createTime = createTime;
     }
 
-    public long getCreateUserId() {
-        return createUserId;
+    public Object getModifyUserId() {
+        return modifyUserId;
     }
 
-    public void setCreateUserId(long createUserId) {
-        this.createUserId = createUserId;
+    public void setModifyUserId(Object modifyUserId) {
+        this.modifyUserId = modifyUserId;
     }
 
     public long getModifyTime() {
@@ -96,12 +124,12 @@ public class RevolvingListBean implements Serializable {
         this.images = images;
     }
 
-    public static class ImagesBean implements Serializable {
+    public static class ImagesBean implements Serializable{
         /**
-         * belongId : 1523323595982
-         * order : 0
-         * address : /static/upload/de33663b-c038-48e5-89ab-55619e84296c.jpg
-         * id : 1523323595983
+         * belongId : 1524149457122
+         * order : 1
+         * address : /data/uploads/20180420/ed1cad65-1490-4921-b26b-7d5f3c788fe8.jpg
+         * id : 1524149457126
          * type : 2
          */
 
@@ -128,7 +156,7 @@ public class RevolvingListBean implements Serializable {
         }
 
         public String getAddress() {
-            return Constants.BASE_URL + address;
+            return address;
         }
 
         public void setAddress(String address) {

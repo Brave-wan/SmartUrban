@@ -12,11 +12,11 @@
         android:background="@color/white"
         android:lineSpacingExtra="3dp"
         android:paddingBottom="20dp"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:paddingTop="10dp"
-        android:textSize="16sp"
-        android:text=" 声明:本文为博主原创文章,转载请注明出处:小嵩的博客 一、介绍 Android-PickerView是一款仿iOS的PickerView控件,并封装了时间选择和选项选择这两种选"
-        android:textColor="@color/black" />
+        android:text="      本项目为河北省石家庄市桥西区城市管理局打造的智慧城管项目，智慧城管的建设将打破现有传统的城市管理模式，形成大城管格局，有效的改善投资环境和市民生活环境，使城市管理走向数字化。移动端涉及的功能有便民导航、随手拍等方便市民的功能，市民可以通过随手拍功能来上报城市里面出现的问题，通过个人中心可以查询上报的问题和问题处理的结果；也有像政策法规、城管动态等展现城管形象的功能，一方面拉近了政府和人民的关系，另一方面也使市民更好的了解和管理城市，从而实现了人人都可以为城市管理和改善做贡献。"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
 
 </LinearLayout>
