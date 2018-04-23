@@ -153,6 +153,7 @@
         <meta-data
             android:name="BUGLY_APPID"
             android:value="38c0267351" />
+
         <!-- 配置APP版本号 -->
         <meta-data
             android:name="BUGLY_APP_VERSION"

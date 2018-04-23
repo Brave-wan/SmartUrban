@@ -19,6 +19,7 @@ import com.smart.urban.ui.BannerDetailActivity;
 import com.smart.urban.ui.BannerDynamicDetailsActivity;
 import com.smart.urban.ui.DynamicActivity;
 import com.smart.urban.ui.GuideActivity;
+import com.smart.urban.ui.InfoDetailsActivity;
 import com.smart.urban.ui.LocationActivity;
 import com.smart.urban.ui.LostFoundActivity;
 import com.smart.urban.ui.LostListActivity;
@@ -100,7 +101,6 @@ public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implement
             case R.id.tv_home_lost_found:
                 startActivity(new Intent(getActivity(), LostListActivity.class));
                 break;
-
             //城管动态
             case R.id.tv_dynamic_list:
                 startActivity(new Intent(getActivity(), UrbanActivity.class));
@@ -151,11 +151,10 @@ public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implement
                     intent.putExtra("url", bean.getUrlAddress());
                     startActivity(intent);
                 } else {
-                    Intent intent = new Intent(getActivity(), BannerDynamicDetailsActivity.class);
+                    //type=1 动态2是咨询
+                    Intent intent = new Intent(getActivity(), bean.getArticleType().equals("1") ? UrbanDetailsActivity.class : InfoDetailsActivity.class);
                     intent.putExtra("id", bean.getArticleId() + "");
                     startActivity(intent);
-
-
                 }
             }
         });
@@ -165,7 +164,7 @@ public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implement
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         UrbanListBean bean = (UrbanListBean) adapter.getItem(position);
         Intent intent = new Intent(getActivity(), UrbanDetailsActivity.class);
-        intent.putExtra("bean", bean);
+        intent.putExtra("id", bean.getId() + "");
         startActivity(intent);
     }
 }

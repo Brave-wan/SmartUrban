@@ -14,6 +14,7 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseActivity;
 import com.smart.urban.base.BasePresenter;
+import com.smart.urban.bean.UrbanDetailsBean;
 import com.smart.urban.bean.UrbanListBean;
 import com.smart.urban.http.ApiCallback;
 import com.smart.urban.http.BaseResult;
@@ -117,7 +118,7 @@ public class UrbanActivity extends BaseActivity implements OnRefreshListener, On
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         UrbanListBean bean = (UrbanListBean) adapter.getItem(position);
         Intent intent = new Intent(this, UrbanDetailsActivity.class);
-        intent.putExtra("bean", bean);
+        intent.putExtra("id", bean.getId() + "");
         startActivity(intent);
     }
 }

@@ -1,5 +1,7 @@
 package com.smart.urban.bean;
 
+import com.smart.urban.config.Constants;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -156,7 +158,7 @@ public class RevolvingListBean implements Serializable {
         }
 
         public String getAddress() {
-            return address;
+            return Constants.BASE_URL+address;
         }
 
         public void setAddress(String address) {

@@ -44,7 +44,7 @@ public class UrbanDetailsActivity extends BaseActivity<IUrbanDetailsView, UrbanD
     TextView tv_create_time;
     @BindView(R.id.layout_root)
     LoadingLayout layout_root;
-    UrbanListBean bean;
+    String id;
 
     @Override
     protected int getContentViewId() {
@@ -55,10 +55,8 @@ public class UrbanDetailsActivity extends BaseActivity<IUrbanDetailsView, UrbanD
     protected void initView(Bundle savedInstanceState) {
         setTitle("详情");
         layout_root.setStatus(LoadingLayout.Loading);
-        bean = (UrbanListBean) getIntent().getSerializableExtra("bean");
-        tv_comment_number.setText(bean.getCommentCount() + "");
-        tv_see_number.setText(bean.getViewCount() + "");
-        tv_create_time.setText(bean.getCreateTime() + "");
+        id =getIntent().getStringExtra("id");
+
         initData();
         getDynamicById();
     }
@@ -102,11 +100,14 @@ public class UrbanDetailsActivity extends BaseActivity<IUrbanDetailsView, UrbanD
         Map<String, Object> map = new HashMap<>();
         map.put("userId", SharedPreferencesUtils.init(this).getString("userId"));
         map.put("token", SharedPreferencesUtils.init(this).getString("token"));
-        map.put("id", bean.getId());
+        map.put("id", id);
         HttpManager.get().addSubscription(HttpManager.get().getApiStores().getDynamicById(map), new ApiCallback<BaseResult<UrbanListBean>>() {
             @Override
             public void onSuccess(BaseResult<UrbanListBean> model) {
                 layout_root.setStatus(LoadingLayout.Success);
+                tv_comment_number.setText(model.getData().getCommentCount() + "");
+                tv_see_number.setText(model.getData().getViewCount() + "");
+                tv_create_time.setText(model.getData().getCreateTime() + "");
                 webView.loadData(Constants.getHtmlData(model.getData().getContent()), "text/html;charset=utf-8", "utf-8");
             }
 
@@ -124,7 +125,7 @@ public class UrbanDetailsActivity extends BaseActivity<IUrbanDetailsView, UrbanD
         switch (view.getId()) {
             case R.id.rl_bottom_root:
                 Intent intent = new Intent(this, CommentListActivity.class);
-                intent.putExtra("id", bean.getId() + "");
+                intent.putExtra("id", id + "");
                 intent.putExtra("type", "urban");
                 startActivity(intent);
                 break;

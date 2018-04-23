@@ -12,6 +12,7 @@ import com.smart.urban.bean.PersonalBean;
 import com.smart.urban.bean.RegisterBean;
 import com.smart.urban.bean.RevolvingListBean;
 import com.smart.urban.bean.UpFileBean;
+import com.smart.urban.bean.UrbanDetailsBean;
 import com.smart.urban.bean.UrbanListBean;
 
 import java.util.List;

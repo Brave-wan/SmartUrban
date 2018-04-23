@@ -85,6 +85,6 @@ public class DynamicDetailsActivity extends BaseActivity implements AdapterView.
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         DynamicListBean.ImagesBean bean = (DynamicListBean.ImagesBean) adapter.getItem(i);
         ShowImageWindow window = new ShowImageWindow(this, bean.getAddress());
-        window.showWindow(view);
+        window.showWindow(layout_titleBar);
     }
 }
