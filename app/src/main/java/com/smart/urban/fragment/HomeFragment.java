@@ -155,6 +155,7 @@ public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implement
                     intent.putExtra("id", bean.getArticleId() + "");
                     startActivity(intent);
 
+
                 }
             }
         });
