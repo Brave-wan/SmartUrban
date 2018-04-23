@@ -17,6 +17,7 @@ import com.smart.urban.config.Constants;
 import com.smart.urban.ui.AboutUsActivity;
 import com.smart.urban.ui.AlterPwdActivity;
 import com.smart.urban.ui.ArticlesPublishedActivity;
+import com.smart.urban.ui.LoginActivity;
 import com.smart.urban.ui.LostActivity;
 import com.smart.urban.ui.PersonInformationActivity;
 import com.smart.urban.ui.RevolvingActivity;
@@ -89,7 +90,6 @@ public class CenterFragment extends BaseFragment {
             case R.id.tv_my_lost:
                 startActivity(new Intent(getActivity(), LostActivity.class));
                 break;
-
             case R.id.tv_about_us:
                 startActivity(new Intent(getActivity(), AboutUsActivity.class));
                 break;
@@ -110,6 +110,8 @@ public class CenterFragment extends BaseFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         SharedPreferencesUtils.init(getActivity()).clear();
+                        Intent intent = new Intent(getActivity(), LoginActivity.class);
+                        startActivity(intent);
                         getActivity().finish();
                     }
                 })

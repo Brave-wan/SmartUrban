@@ -1,123 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AndroidLayouts">
-    <shared>
-      <config />
-    </shared>
-  </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="okhttp" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="272097d7-2833-4029-a216-e7693ad8d4db" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_AMap3DMap_6_0_1_AMapNavi_6_0_1_AMapLocation_3_8_0_20180309_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_AMap_Search_V6_1_0_20180330_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_Msc_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_SocialSDK_QQ_Simplify_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_SocialSDK_WeChat_Simplify_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_json_simple_1_1_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_libapshare20161108_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_libddshare_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_umeng_common_1_4_1_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_umeng_shareboard_widget_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_umeng_social_api_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_umeng_social_net_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_umeng_social_shareboard_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_umeng_social_shareview_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_umeng_social_tool_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_volley_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_wechat_sdk_android_with_mta_1_1_6_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_25_3_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_25_3_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_0_2_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_multidex_1_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_multidex_1_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_multidex_instrumentation_1_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_25_3_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_25_3_1_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_25_3_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_25_3_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_25_3_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_25_3_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_25_3_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_25_3_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_25_3_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_rules_1_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_blankj_utilcode_1_9_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_CymChad_BaseRecyclerViewAdapterHelper_2_9_34.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_addappcn_android_pickers_1_0_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_glide_3_7_0_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_6_2_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_8_5_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_annotations_8_5_1_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mylhyl_acp_1_1_7.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_scwang_smartrefresh_SmartRefreshLayout_1_0_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_logging_interceptor_3_1_2_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_2_0_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_6_0_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_adapter_rxjava_2_0_2_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_converter_gson_2_0_2_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_retrofit_2_0_2_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_tencent_bugly_crashreport_upgrade_1_3_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_tencent_bugly_nativecrashreport_3_3_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_youth_banner_banner_1_4_10.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_zhihu_android_matisse_0_4_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxandroid_1_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxjava_1_1_1_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__it_sephiroth_android_library_easing_library_1_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__it_sephiroth_android_library_imagezoom_library_1_0_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_loader_autohideime_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SmartUrban.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/BannerBean.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/BannerDetailActivity.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/BannerDynamicDetailsActivity.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_banner_details.xml" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/built.bin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties.lock" afterPath="" />
+    <list default="true" id="8d2d5234-bcbe-467c-9fa0-6b7929a756f3" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/AMap3DMap_6_0_1_AMapNavi_6_0_1_AMapLocation_3_8_0_20180309.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/AMap_Search_V6_1_0_20180330.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/BaseRecyclerViewAdapterHelper_2_9_34.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_AMap3DMap_6_0_1_AMapNavi_6_0_1_AMapLocation_3_8_0_20180309_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_AMap_Search_V6_1_0_20180330_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_Msc_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_SocialSDK_QQ_Simplify_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_SocialSDK_WeChat_Simplify_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_json_simple_1_1_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_libapshare20161108_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_libddshare_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_umeng_common_1_4_1_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_umeng_shareboard_widget_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_umeng_social_api_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_umeng_social_net_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_umeng_social_shareboard_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_umeng_social_shareview_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_umeng_social_tool_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_volley_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___E__workspace_android_SmartUrban_app_libs_wechat_sdk_android_with_mta_1_1_6_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_0_2_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_multidex_1_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_multidex_1_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_multidex_instrumentation_1_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_25_3_1_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_rules_1_0_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_blankj_utilcode_1_9_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_CymChad_BaseRecyclerViewAdapterHelper_2_9_34.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_addappcn_android_pickers_1_0_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_glide_3_7_0_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_6_2_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_8_5_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_annotations_8_5_1_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mylhyl_acp_1_1_7.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_scwang_smartrefresh_SmartRefreshLayout_1_0_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_logging_interceptor_3_1_2_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_2_0_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_6_0_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_adapter_rxjava_2_0_2_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_converter_gson_2_0_2_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_retrofit_2_0_2_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_tencent_bugly_crashreport_upgrade_1_3_4.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_tencent_bugly_nativecrashreport_3_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_youth_banner_banner_1_4_10.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_zhihu_android_matisse_0_4_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxandroid_1_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxjava_1_1_1_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__it_sephiroth_android_library_easing_library_1_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__it_sephiroth_android_library_imagezoom_library_1_0_4.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_loader_autohideime_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Msc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/SmartRefreshLayout_1_0_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/SocialSDK_QQ_Simplify.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/SocialSDK_WeChat_Simplify.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/acp_1_1_7.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/adapter_rxjava_2_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/android_pickers_1_0_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/autohideime_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/banner_1_4_10.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/butterknife_8_5_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/butterknife_annotations_8_5_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/constraint_layout_1_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/constraint_layout_solver_1_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/converter_gson_2_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/espresso_core_3_0_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/espresso_idling_resource_3_0_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/glide_3_7_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/gson_2_6_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/hamcrest_integration_1_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/hamcrest_library_1_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/javawriter_2_1_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/javax_inject_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/json_simple_1_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jsr305_2_0_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/kxml2_2_3_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/libapshare20161108.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/libddshare.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/library_1_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/library_1_0_4.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/logging_interceptor_3_1_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/matisse_0_4_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/multidex_1_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/multidex_1_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/multidex_instrumentation_1_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/okhttp_3_2_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/okio_1_6_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/retrofit_2_0_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/rules_1_0_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/runner_1_0_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/rxandroid_1_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/rxjava_1_1_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/support_compat_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/support_core_ui_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/support_core_utils_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/support_fragment_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/support_media_compat_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_25_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/umeng_common_1_4_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/umeng_shareboard_widget.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/umeng_social_api.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/umeng_social_net.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/umeng_social_shareboard.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/umeng_social_shareview.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/umeng_social_tool.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/utilcode_1_9_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/volley.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/wechat_sdk_android_with_mta_1_1_6.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/SmartUrban-master.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/RevolvingListBean.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/RevolvingListBean.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/HomeFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/HomeFragment.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/http/ApiStores.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/http/ApiStores.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/HomePresent.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/HomePresent.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/AlterPwdActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/AlterPwdActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/DynamicDetailsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/DynamicDetailsActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LocationActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LocationActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/RevolvingListAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/RevolvingListAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/GlideImageLoader.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/GlideImageLoader.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/view/IHomeView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/view/IHomeView.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_about_us.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_about_us.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_articles_published.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_articles_published.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_dynamic_details.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_dynamic_details.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_dynamic_list.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_dynamic_list.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
+      <change beforePath="$PROJECT_DIR$/SmartUrban.iml" afterPath="$PROJECT_DIR$/SmartUrban.iml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/CenterFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/CenterFragment.java" />
       <change beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
     </list>
+    <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -133,261 +164,23 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="SmartUrban" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
+        <projects_view />
       </state>
     </system>
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="SmartUrban-master" />
-  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ArticlesPublishedActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/ArticlesPublishedActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="117" column="55" lean-forward="false" selection-start-line="117" selection-start-column="55" selection-end-line="117" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeFragment.java" pinned="false" current-in-tab="false">
+    <leaf>
+      <file leaf-file-name="HomeFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/HomeFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
-              <folding>
-                <element signature="e#4596#5280#0" expanded="true" />
-                <element signature="e#5279#5280#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UrbanListAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/UrbanListAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="25">
+              <caret line="149" column="30" lean-forward="true" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DynamicDetailsActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/DynamicDetailsActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-27">
-              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BannerDynamicDetailsActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/BannerDynamicDetailsActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="59" column="46" lean-forward="false" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_dynamic_details.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dynamic_details.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="60" column="39" lean-forward="false" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApiStores.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/http/ApiStores.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding>
-                <element signature="e#2268#2286#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-          <provider editor-type-id="android-manifest">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BannerBean.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/BannerBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-              <folding>
-                <element signature="e#939#940#0" expanded="true" />
-                <element signature="e#971#972#0" expanded="true" />
-                <element signature="e#1019#1020#0" expanded="true" />
-                <element signature="e#1061#1062#0" expanded="true" />
-                <element signature="e#1099#1100#0" expanded="true" />
-                <element signature="e#1133#1134#0" expanded="true" />
-                <element signature="e#1187#1188#0" expanded="true" />
-                <element signature="e#1233#1234#0" expanded="true" />
-                <element signature="e#1268#1269#0" expanded="true" />
-                <element signature="e#1302#1303#0" expanded="true" />
-                <element signature="e#1353#1354#0" expanded="true" />
-                <element signature="e#1399#1400#0" expanded="true" />
-                <element signature="e#1431#1432#0" expanded="true" />
-                <element signature="e#1459#1460#0" expanded="true" />
-                <element signature="e#1501#1502#0" expanded="true" />
-                <element signature="e#1535#1536#0" expanded="true" />
-                <element signature="e#1572#1573#0" expanded="true" />
-                <element signature="e#1605#1606#0" expanded="true" />
-                <element signature="e#1657#1658#0" expanded="true" />
-                <element signature="e#1701#1702#0" expanded="true" />
-                <element signature="e#1736#1737#0" expanded="true" />
-                <element signature="e#1764#1765#0" expanded="true" />
-                <element signature="e#1809#1810#0" expanded="true" />
-                <element signature="e#1843#1844#0" expanded="true" />
-                <element signature="e#1882#1883#0" expanded="true" />
-                <element signature="e#1917#1918#0" expanded="true" />
-                <element signature="e#1973#1974#0" expanded="true" />
-                <element signature="e#2021#2022#0" expanded="true" />
-                <element signature="e#2060#2061#0" expanded="true" />
-                <element signature="e#2095#2096#0" expanded="true" />
-                <element signature="e#2151#2152#0" expanded="true" />
-                <element signature="e#2199#2200#0" expanded="true" />
-                <element signature="e#2236#2237#0" expanded="true" />
-                <element signature="e#2269#2270#0" expanded="true" />
-                <element signature="e#2321#2322#0" expanded="true" />
-                <element signature="e#2365#2366#0" expanded="true" />
-                <element signature="e#2404#2405#0" expanded="true" />
-                <element signature="e#2439#2440#0" expanded="true" />
-                <element signature="e#2495#2496#0" expanded="true" />
-                <element signature="e#2543#2544#0" expanded="true" />
-                <element signature="e#2580#2581#0" expanded="true" />
-                <element signature="e#2613#2614#0" expanded="true" />
-                <element signature="e#2665#2666#0" expanded="true" />
-                <element signature="e#2709#2710#0" expanded="true" />
-                <element signature="e#2736#2737#0" expanded="true" />
-                <element signature="e#2761#2762#0" expanded="true" />
-                <element signature="e#2795#2796#0" expanded="true" />
-                <element signature="e#2823#2824#0" expanded="true" />
-                <element signature="e#3258#3259#0" expanded="true" />
-                <element signature="e#3297#3298#0" expanded="true" />
-                <element signature="e#3347#3348#0" expanded="true" />
-                <element signature="e#3395#3396#0" expanded="true" />
-                <element signature="e#3428#3429#0" expanded="true" />
-                <element signature="e#3464#3465#0" expanded="true" />
-                <element signature="e#3507#3508#0" expanded="true" />
-                <element signature="e#3549#3550#0" expanded="true" />
-                <element signature="e#3587#3588#0" expanded="true" />
-                <element signature="e#3646#3647#0" expanded="true" />
-                <element signature="e#3696#3697#0" expanded="true" />
-                <element signature="e#3742#3743#0" expanded="true" />
-                <element signature="e#3773#3774#0" expanded="true" />
-                <element signature="e#3806#3807#0" expanded="true" />
-                <element signature="e#3844#3845#0" expanded="true" />
-                <element signature="e#3880#3881#0" expanded="true" />
-                <element signature="e#3915#3916#0" expanded="true" />
-                <element signature="e#3950#3951#0" expanded="true" />
-                <element signature="e#3994#3995#0" expanded="true" />
-                <element signature="e#4034#4035#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomePresent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/HomePresent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="59" column="52" lean-forward="false" selection-start-line="59" selection-start-column="52" selection-end-line="59" selection-end-column="52" />
-              <folding>
-                <element signature="e#2192#2193#0" expanded="true" />
-                <element signature="e#2259#2260#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="resourceFile" />
-        <option value="Class" />
-        <option value="layoutResourceFile" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>ACCESS_FINE_LOCATION</find>
-      <find>READ_PHONE_STATE</find>
-      <find>CHANGE_WIFI_STATE</find>
-      <find>ACCESS_WIFI_STATE</find>
-      <find>WAKE_LOCK</find>
-      <find>READ_EXTERNAL_STORAGE</find>
-      <find>Toast</find>
-      <find>ToastUtils</find>
-      <find>startNavi</find>
-      <find>aMap</find>
-      <find>getLocationSearch</find>
-      <find>centerMarker</find>
-      <find>setOnMapLoadedListener</find>
-      <find>UrbanListBean</find>
-      <find>getAddCommentMap</find>
-      <find>getGuideById</find>
-      <find>GuideDetailsActivity</find>
-      <find>guide/getById</find>
-      <find>cityApp/message/getById</find>
-      <find>/dynamic/getById</find>
-      <find>onFiled</find>
-      <find>cityApp/forum/getList</find>
-      <find>center_img</find>
-      <find>layout_root</find>
-      <find>setNestedScrollingEnabled</find>
-      <find>LostDetailsActivity</find>
-      <find>getDynamicList</find>
-      <find>getBannerList</find>
-      <find>cityApp/forum/getById</find>
-      <find>d1a08bd1cda5721718b4c1b196ea6393</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>String</replace>
-    </replaceStrings>
-  </component>
-  <component name="GenerateSignedApkSettings">
-    <option name="KEY_STORE_PATH" value="$PROJECT_DIR$/app/keystory/SmartUrban.jks" />
-    <option name="KEY_ALIAS" value="SmartUrban" />
-    <option name="REMEMBER_PASSWORDS" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -2271,63 +2064,6 @@
       </map>
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/GuideListBean.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_urban_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostDetailsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/CameraFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/LostFoundPresent.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostFoundActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/ArticlePresent.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/MyArticleActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_lost_details.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_lost_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_revolving.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_info.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_dynamic_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_guide.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/InfoFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_guide_details.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/GuideDetailsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/FullyLinearLayoutManager.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_dynamic_details_img.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_revolving_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_center.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/CenterFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_lost_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/LostListAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/DynamicActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostListActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/UrbanActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/base/MyApplication.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/RevolvingListBean.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/RevolvingListAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LocationActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/AlterPwdActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_dynamic_details.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/DynamicDetailsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_dynamic_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_articles_published.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_about_us.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/HomePresent.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/view/IHomeView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/GlideImageLoader.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_banner_details.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/BannerDetailActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/HomeFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/http/ApiStores.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/BannerDynamicDetailsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/BannerBean.java" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
@@ -2349,6 +2085,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2372,63 +2110,25 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="urban" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="fragment" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SmartUrban" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="urban" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="fragment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartUrban" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/keystory/SmartUrban.jks" />
-    <property name="device.picker.selection" value="8101b900" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi" />
-    <property name="DEBUGGABLE_DEVICE" value="samsung-sm_g5510-8101b900" />
-    <property name="DEBUGGABLE_PROCESS" value="com.smart.urban" />
-    <property name="SHOW_ALL_PROCESSES" value="false" />
-    <property name="DEBUGGER_ID" value="Auto" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="android.project.structure.last.selected" value="Project" />
-    <property name="android.project.structure.proportion" value="0.15" />
-    <property name="ExportApk.ApkPath" value="E:\workspace\android\SmartUrban\app" />
-    <property name="ExportApk.Flavors" value="" />
-    <property name="ExportApk.BuildType" value="release" />
-    <property name="ExportApk.SignV1" value="true" />
-    <property name="ExportApk.SignV2" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1524250604015" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.smart.urban.ui" />
-      <recent name="com.smart.urban.view" />
-      <recent name="com.smart.urban.present" />
-      <recent name="com.smart.urban.utils" />
-      <recent name="com.smart.urban.ui.adapter" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi" />
-    </key>
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -2452,7 +2152,7 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
@@ -2466,56 +2166,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Hybrid>
-      <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method>
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" />
-      </method>
-    </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -2560,54 +2211,6 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
     </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Hybrid>
-      <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-      </Profilers>
-      <method>
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -2620,18 +2223,6 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
-      <envs />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="SmartUrban-master" />
       <envs />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -2654,7 +2245,7 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
@@ -2677,81 +2268,11 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="VM_PARAMETERS" />
     </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
     <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SCRATCH_FILE_ID" value="0" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <envs />
-      <method />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
     </configuration>
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -2765,873 +2286,63 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="272097d7-2833-4029-a216-e7693ad8d4db" name="Default" comment="" />
-      <created>1522554399170</created>
+      <changelist id="8d2d5234-bcbe-467c-9fa0-6b7929a756f3" name="Default" comment="" />
+      <created>1524472836155</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1522554399170</updated>
+      <updated>1524472836155</updated>
     </task>
-    <task id="LOCAL-00001" summary="完善页面绘制">
-      <created>1522766866297</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1522766866297</updated>
-    </task>
-    <task id="LOCAL-00002" summary="添加图片查看详情">
-      <created>1523528093188</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1523528093188</updated>
-    </task>
-    <task id="LOCAL-00003" summary="添加评论接口">
-      <created>1523606980927</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1523606980927</updated>
-    </task>
-    <task id="LOCAL-00004" summary="细节优化">
-      <created>1523872572462</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1523872572462</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3789127" sideWeight="0.505295" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25037822" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61758476" sideWeight="0.49574468" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32784185" sideWeight="0.49574468" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.49462366" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26172465" sideWeight="0.49462366" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28336078" sideWeight="0.494705" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32829046" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20263591" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17978723" sideWeight="0.50537634" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20868644" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="完善页面绘制" />
-    <MESSAGE value="添加图片查看详情" />
-    <MESSAGE value="添加评论接口" />
-    <MESSAGE value="完善地图导航模块" />
-    <MESSAGE value="细节优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="细节优化" />
-  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/RegisterPresent.java</url>
-          <line>66</line>
-          <properties />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/AlterPwdActivity.java</url>
-          <line>77</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/PersonInformationPresent.java</url>
-          <line>96</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/CameraPresent.java</url>
-          <line>93</line>
-          <properties />
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/CameraPresent.java</url>
-          <line>82</line>
-          <properties />
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/MyArticleActivity.java</url>
-          <line>116</line>
-          <properties />
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/ArticlePresent.java</url>
-          <line>81</line>
-          <properties />
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/ArticlePresent.java</url>
-          <line>90</line>
-          <properties />
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/ArticlePresent.java</url>
-          <line>152</line>
-          <properties />
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/CameraPresent.java</url>
-          <line>117</line>
-          <properties />
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/config/Constants.java</url>
-          <line>54</line>
-          <properties />
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/config/Constants.java</url>
-          <line>60</line>
-          <properties />
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/CameraPresent.java</url>
-          <line>121</line>
-          <properties />
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/CameraPresent.java</url>
-          <line>159</line>
-          <properties />
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/PersonInformationPresent.java</url>
-          <line>120</line>
-          <properties />
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/widget/ShowImageWindow.java</url>
-          <line>47</line>
-          <properties />
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/CommentListActivity.java</url>
-          <line>67</line>
-          <properties />
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/LocationPresent.java</url>
-          <line>114</line>
-          <properties />
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/WalkRouteCalculateActivity.java</url>
-          <line>44</line>
-          <properties />
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/WalkRouteCalculateActivity.java</url>
-          <line>51</line>
-          <properties />
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/LocationPresent.java</url>
-          <line>221</line>
-          <properties />
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/HomeFragment.java</url>
-          <line>127</line>
-          <properties />
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/GuideDetailsActivity.java</url>
-          <line>86</line>
-          <properties />
-          <option name="timeStamp" value="64" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/InfoDetailsActivity.java</url>
-          <line>104</line>
-          <properties />
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/InfoDetailsActivity.java</url>
-          <line>90</line>
-          <properties />
-          <option name="timeStamp" value="67" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/ArticlePresent.java</url>
-          <line>206</line>
-          <properties />
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/CameraPresent.java</url>
-          <line>204</line>
-          <properties />
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/CameraPresent.java</url>
-          <line>198</line>
-          <properties />
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/HomeFragment.java</url>
-          <line>135</line>
-          <properties />
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/HomeFragment.java</url>
-          <line>147</line>
-          <properties />
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/BannerDynamicDetailsActivity.java</url>
-          <line>102</line>
-          <properties />
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/HomeFragment.java</url>
-          <line>153</line>
-          <properties />
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="79" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="42" column="25" lean-forward="false" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
-          <folding>
-            <element signature="e#2089#2090#0" expanded="false" />
-            <element signature="e#2116#2117#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostDetailsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="32" />
-          <folding>
-            <element signature="e#909#910#0" expanded="false" />
-            <element signature="e#962#963#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_lost_list.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_lost_list.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LostListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="59" column="26" lean-forward="false" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/UrbanActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="60" column="30" lean-forward="false" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/LostListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="46" column="41" lean-forward="false" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/base/MyApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/StartupPagePresent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/http/AppClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="62" column="39" lean-forward="true" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/DynamicActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="129" column="60" lean-forward="false" selection-start-line="129" selection-start-column="60" selection-end-line="129" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/RevolvingListBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2943">
-          <caret line="126" column="58" lean-forward="false" selection-start-line="126" selection-start-column="58" selection-end-line="126" selection-end-column="58" />
-          <folding>
-            <element signature="e#1291#1292#0" expanded="false" />
-            <element signature="e#1328#1329#0" expanded="false" />
-            <element signature="e#1388#1389#0" expanded="false" />
-            <element signature="e#1440#1441#0" expanded="false" />
-            <element signature="e#1475#1476#0" expanded="false" />
-            <element signature="e#1506#1507#0" expanded="false" />
-            <element signature="e#1554#1555#0" expanded="false" />
-            <element signature="e#1594#1595#0" expanded="false" />
-            <element signature="e#1626#1627#0" expanded="false" />
-            <element signature="e#1654#1655#0" expanded="false" />
-            <element signature="e#1696#1697#0" expanded="false" />
-            <element signature="e#1730#1731#0" expanded="false" />
-            <element signature="e#1764#1765#0" expanded="false" />
-            <element signature="e#1794#1795#0" expanded="false" />
-            <element signature="e#1840#1841#0" expanded="false" />
-            <element signature="e#1878#1879#0" expanded="false" />
-            <element signature="e#1915#1916#0" expanded="false" />
-            <element signature="e#1950#1951#0" expanded="false" />
-            <element signature="e#2004#2005#0" expanded="false" />
-            <element signature="e#2052#2053#0" expanded="false" />
-            <element signature="e#2091#2092#0" expanded="false" />
-            <element signature="e#2126#2127#0" expanded="false" />
-            <element signature="e#2182#2183#0" expanded="false" />
-            <element signature="e#2230#2231#0" expanded="false" />
-            <element signature="e#2265#2266#0" expanded="false" />
-            <element signature="e#2298#2299#0" expanded="false" />
-            <element signature="e#2348#2349#0" expanded="false" />
-            <element signature="e#2392#2393#0" expanded="false" />
-            <element signature="e#2431#2432#0" expanded="false" />
-            <element signature="e#2466#2467#0" expanded="false" />
-            <element signature="e#2522#2523#0" expanded="false" />
-            <element signature="e#2570#2571#0" expanded="false" />
-            <element signature="e#2605#2606#0" expanded="false" />
-            <element signature="e#2638#2639#0" expanded="false" />
-            <element signature="e#2688#2689#0" expanded="false" />
-            <element signature="e#2732#2733#0" expanded="false" />
-            <element signature="e#2759#2760#0" expanded="false" />
-            <element signature="e#2784#2785#0" expanded="false" />
-            <element signature="e#2818#2819#0" expanded="false" />
-            <element signature="e#2846#2847#0" expanded="false" />
-            <element signature="e#2889#2890#0" expanded="false" />
-            <element signature="e#2918#2919#0" expanded="false" />
-            <element signature="e#2972#2973#0" expanded="false" />
-            <element signature="e#3008#3009#0" expanded="false" />
-            <element signature="e#3467#3468#0" expanded="false" />
-            <element signature="e#3506#3507#0" expanded="false" />
-            <element signature="e#3556#3557#0" expanded="false" />
-            <element signature="e#3604#3605#0" expanded="false" />
-            <element signature="e#3637#3638#0" expanded="false" />
-            <element signature="e#3673#3674#0" expanded="false" />
-            <element signature="e#3716#3717#0" expanded="false" />
-            <element signature="e#3758#3759#0" expanded="false" />
-            <element signature="e#3796#3797#0" expanded="false" />
-            <element signature="e#3834#3835#0" expanded="false" />
-            <element signature="e#3884#3885#0" expanded="false" />
-            <element signature="e#3930#3931#0" expanded="false" />
-            <element signature="e#3961#3962#0" expanded="false" />
-            <element signature="e#3994#3995#0" expanded="false" />
-            <element signature="e#4032#4033#0" expanded="false" />
-            <element signature="e#4068#4069#0" expanded="false" />
-            <element signature="e#4103#4104#0" expanded="false" />
-            <element signature="e#4138#4139#0" expanded="false" />
-            <element signature="e#4182#4183#0" expanded="false" />
-            <element signature="e#4222#4223#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/LocationPresent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="80" column="48" lean-forward="false" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LocationActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#7348#7349#0" expanded="false" />
-            <element signature="e#7381#7382#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="79" column="83" lean-forward="false" selection-start-line="79" selection-start-column="75" selection-end-line="79" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/AlterPwdActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding>
-            <element signature="e#2848#2849#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/RevolvingListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_revolving_list.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="45" column="41" lean-forward="false" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/RevolvingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="102" column="51" lean-forward="false" selection-start-line="102" selection-start-column="51" selection-end-line="102" selection-end-column="51" />
-          <folding>
-            <element signature="e#2191#2192#0" expanded="false" />
-            <element signature="e#2240#2241#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/RevolvingDetailsListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="25" column="11" lean-forward="false" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/RevolvingDetailsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="39" column="45" lean-forward="false" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/DynamicListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-79">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/DynamicImgListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="32" column="1" lean-forward="false" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/CameraFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="143" column="12" lean-forward="false" selection-start-line="143" selection-start-column="12" selection-end-line="144" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/DynamicListBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1053">
-          <caret line="44" column="27" lean-forward="false" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_dynamic_details_img.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="43" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_dynamic_list.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_articles_published.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/AboutUsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_about_us.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/CenterFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="99" column="63" lean-forward="false" selection-start-line="99" selection-start-column="63" selection-end-line="99" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/GuideActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1860">
-          <caret line="37" column="27" lean-forward="false" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/view/IHomeView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/HomePresent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="59" column="52" lean-forward="false" selection-start-line="59" selection-start-column="52" selection-end-line="59" selection-end-column="52" />
-          <folding>
-            <element signature="e#2192#2193#0" expanded="true" />
-            <element signature="e#2259#2260#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/ArticlesPublishedActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="117" column="55" lean-forward="false" selection-start-line="117" selection-start-column="55" selection-end-line="117" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/utils/GlideImageLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_banner_details.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/UrbanDetailsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="68" column="44" lean-forward="true" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/BannerDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#543#544#0" expanded="false" />
-            <element signature="e#598#599#0" expanded="false" />
-            <element signature="e#1663#1664#0" expanded="false" />
-            <element signature="e#1690#1691#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/base/TitleActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="161" column="52" lean-forward="true" selection-start-line="161" selection-start-column="52" selection-end-line="161" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/UrbanListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/DynamicDetailsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/HomeFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
-          <folding>
-            <element signature="e#4596#5280#0" expanded="true" />
-            <element signature="e#5279#5280#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/http/ApiStores.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+        <state relative-caret-position="25">
+          <caret line="149" column="30" lean-forward="true" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dynamic_details.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="60" column="39" lean-forward="false" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/BannerDynamicDetailsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="59" column="46" lean-forward="false" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#2268#2286#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/BannerBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding>
-            <element signature="e#939#940#0" expanded="true" />
-            <element signature="e#971#972#0" expanded="true" />
-            <element signature="e#1019#1020#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#1099#1100#0" expanded="true" />
-            <element signature="e#1133#1134#0" expanded="true" />
-            <element signature="e#1187#1188#0" expanded="true" />
-            <element signature="e#1233#1234#0" expanded="true" />
-            <element signature="e#1268#1269#0" expanded="true" />
-            <element signature="e#1302#1303#0" expanded="true" />
-            <element signature="e#1353#1354#0" expanded="true" />
-            <element signature="e#1399#1400#0" expanded="true" />
-            <element signature="e#1431#1432#0" expanded="true" />
-            <element signature="e#1459#1460#0" expanded="true" />
-            <element signature="e#1501#1502#0" expanded="true" />
-            <element signature="e#1535#1536#0" expanded="true" />
-            <element signature="e#1572#1573#0" expanded="true" />
-            <element signature="e#1605#1606#0" expanded="true" />
-            <element signature="e#1657#1658#0" expanded="true" />
-            <element signature="e#1701#1702#0" expanded="true" />
-            <element signature="e#1736#1737#0" expanded="true" />
-            <element signature="e#1764#1765#0" expanded="true" />
-            <element signature="e#1809#1810#0" expanded="true" />
-            <element signature="e#1843#1844#0" expanded="true" />
-            <element signature="e#1882#1883#0" expanded="true" />
-            <element signature="e#1917#1918#0" expanded="true" />
-            <element signature="e#1973#1974#0" expanded="true" />
-            <element signature="e#2021#2022#0" expanded="true" />
-            <element signature="e#2060#2061#0" expanded="true" />
-            <element signature="e#2095#2096#0" expanded="true" />
-            <element signature="e#2151#2152#0" expanded="true" />
-            <element signature="e#2199#2200#0" expanded="true" />
-            <element signature="e#2236#2237#0" expanded="true" />
-            <element signature="e#2269#2270#0" expanded="true" />
-            <element signature="e#2321#2322#0" expanded="true" />
-            <element signature="e#2365#2366#0" expanded="true" />
-            <element signature="e#2404#2405#0" expanded="true" />
-            <element signature="e#2439#2440#0" expanded="true" />
-            <element signature="e#2495#2496#0" expanded="true" />
-            <element signature="e#2543#2544#0" expanded="true" />
-            <element signature="e#2580#2581#0" expanded="true" />
-            <element signature="e#2613#2614#0" expanded="true" />
-            <element signature="e#2665#2666#0" expanded="true" />
-            <element signature="e#2709#2710#0" expanded="true" />
-            <element signature="e#2736#2737#0" expanded="true" />
-            <element signature="e#2761#2762#0" expanded="true" />
-            <element signature="e#2795#2796#0" expanded="true" />
-            <element signature="e#2823#2824#0" expanded="true" />
-            <element signature="e#3258#3259#0" expanded="true" />
-            <element signature="e#3297#3298#0" expanded="true" />
-            <element signature="e#3347#3348#0" expanded="true" />
-            <element signature="e#3395#3396#0" expanded="true" />
-            <element signature="e#3428#3429#0" expanded="true" />
-            <element signature="e#3464#3465#0" expanded="true" />
-            <element signature="e#3507#3508#0" expanded="true" />
-            <element signature="e#3549#3550#0" expanded="true" />
-            <element signature="e#3587#3588#0" expanded="true" />
-            <element signature="e#3646#3647#0" expanded="true" />
-            <element signature="e#3696#3697#0" expanded="true" />
-            <element signature="e#3742#3743#0" expanded="true" />
-            <element signature="e#3773#3774#0" expanded="true" />
-            <element signature="e#3806#3807#0" expanded="true" />
-            <element signature="e#3844#3845#0" expanded="true" />
-            <element signature="e#3880#3881#0" expanded="true" />
-            <element signature="e#3915#3916#0" expanded="true" />
-            <element signature="e#3950#3951#0" expanded="true" />
-            <element signature="e#3994#3995#0" expanded="true" />
-            <element signature="e#4034#4035#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
