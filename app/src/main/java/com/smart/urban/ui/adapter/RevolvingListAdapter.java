@@ -40,22 +40,24 @@ public class RevolvingListAdapter extends CommonAdapter<RevolvingListBean> {
         if (bean.getImages() != null && bean.getImages().size() > 0) {
             Glide.with(context).load(bean.getImages().get(0).getAddress()).placeholder(R.drawable.icon_pic_empty).error(R.drawable.icon_pic_empty).into(img_revolving_head);
         }
-        switch (bean.getState()) {
-            case "1":
-                tv_revolving_state.setText("待审核");
-                tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.shape_my_revolving_review));
-                break;
+        if (bean.getState() != null) {
+            switch (bean.getState()) {
+                case "1":
+                    tv_revolving_state.setText("待审核");
+                    tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.shape_my_revolving_review));
+                    break;
 
-            case "2":
-                tv_revolving_state.setText("跟进中");
-                tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.shape_my_revolving_following_up));
-                break;
+                case "2":
+                    tv_revolving_state.setText("跟进中");
+                    tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.shape_my_revolving_following_up));
+                    break;
 
-            case "3":
-                tv_revolving_state.setText("处理完成");
-                tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.shape_my_revolving_finish));
-                break;
+                case "3":
+                    tv_revolving_state.setText("处理完成");
+                    tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.shape_my_revolving_finish));
+                    break;
+            }
+
         }
-
     }
 }

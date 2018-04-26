@@ -84,11 +84,13 @@ public class InfoDetailsActivity extends BaseActivity {
         finish();
     }
 
+    ShareWindow window;
+
     @Override
     protected void onForward(View forwardView) {
         super.onForward(forwardView);
-        ShareWindow window = new ShareWindow(this);
-        window.showWindow(forwardView);
+        window = new ShareWindow(this);
+        window.showWindow(layout_titleBar);
     }
 
     public void getMessageById() {

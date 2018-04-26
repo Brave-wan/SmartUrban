@@ -55,7 +55,7 @@ public class UrbanDetailsActivity extends BaseActivity<IUrbanDetailsView, UrbanD
     protected void initView(Bundle savedInstanceState) {
         setTitle("详情");
         layout_root.setStatus(LoadingLayout.Loading);
-        id =getIntent().getStringExtra("id");
+        id = getIntent().getStringExtra("id");
 
         initData();
         getDynamicById();
@@ -77,11 +77,14 @@ public class UrbanDetailsActivity extends BaseActivity<IUrbanDetailsView, UrbanD
         }
     }
 
+    ShareWindow window;
+
     @Override
     protected void onForward(View forwardView) {
         super.onForward(forwardView);
-        ShareWindow window = new ShareWindow(this);
-        window.showWindow(forwardView);
+        window = new ShareWindow(this);
+        window.showWindow(layout_titleBar);
+
     }
 
     @Override

@@ -25,37 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="22dp"
         android:layout_marginRight="22dp"
-        android:layout_marginTop="34dp">
-
-        <EditText
-            android:id="@+id/ed_register_pass"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:ellipsize="end"
-            android:hint="请输入新密码"
-            android:inputType="textPassword"
-            android:maxLines="1"
-            android:paddingLeft="10dp"
-            android:textColor="@color/black"
-            android:textColorHint="#BCBABA"
-            android:textSize="14sp" />
-
-        <ImageView
-            android:id="@+id/img_pwd_open"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
-            android:padding="5dp" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="22dp"
-        android:layout_marginRight="22dp"
-        android:layout_marginTop="34dp">
+        android:layout_marginTop="20dp">
 
         <EditText
             android:id="@+id/ed_register_code"
@@ -81,6 +51,53 @@
             android:textColor="@color/login_login_bt" />
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="15dp">
+
+        <EditText
+            android:id="@+id/ed_register_pass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ellipsize="end"
+            android:hint="请输入新密码"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="#BCBABA"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/img_pwd_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:padding="5dp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/ed_register_pass_sure"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:hint="请确认密码"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#BCBABA"
+        android:textSize="14sp" />
+
+
     <TextView
         android:id="@+id/tv_register"
         android:layout_width="match_parent"
@@ -105,7 +122,7 @@
         android:paddingBottom="10dp"
         android:paddingTop="10dp"
         android:text="我已有帐号"
-        android:visibility="gone"
-        android:textColor="@color/login_login_bt" />
+        android:textColor="@color/login_login_bt"
+        android:visibility="gone" />
 
 </LinearLayout>

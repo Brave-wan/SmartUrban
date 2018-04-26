@@ -39,8 +39,6 @@ public class BaseLocationActivity extends Activity implements AMapNaviListener, 
     protected AMapNaviView mAMapNaviView;
     protected AMapNavi mAMapNavi;
     protected TTSController mTtsManager;
-    protected NaviLatLng mEndLatlng = new NaviLatLng(40.084894, 116.603039);
-    protected NaviLatLng mStartLatlng = new NaviLatLng(39.825934, 116.342972);
     protected final List<NaviLatLng> sList = new ArrayList<NaviLatLng>();
     protected final List<NaviLatLng> eList = new ArrayList<NaviLatLng>();
     protected List<NaviLatLng> mWayPointList;
@@ -61,8 +59,6 @@ public class BaseLocationActivity extends Activity implements AMapNaviListener, 
 
         //设置模拟导航的行车速度
         mAMapNavi.setEmulatorNaviSpeed(75);
-        sList.add(mStartLatlng);
-        eList.add(mEndLatlng);
     }
 
     @Override

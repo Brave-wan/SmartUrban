@@ -127,7 +127,7 @@ public class MyArticleActivity extends BaseActivity<IArticleView, ArticlePresent
 
                 List<CameraPicBean> cameraPicBeans = adapter.dataList;
 
-                if (cameraPicBeans.size() < 1) {
+                if (cameraPicBeans.size() <= 1) {
                     ToastUtils.showShort("请添加图片描述!");
                     return;
                 }

@@ -14,6 +14,20 @@
         android:scaleType="fitXY" />
 
     <TextView
+        android:id="@+id/tx_dynamic_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_my_revolving_review"
+        android:paddingBottom="3dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="3dp"
+        android:text="审核中"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+
+    <TextView
         android:id="@+id/tv_lost_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

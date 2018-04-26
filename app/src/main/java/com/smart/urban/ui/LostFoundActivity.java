@@ -110,7 +110,7 @@ public class LostFoundActivity extends BaseActivity<ILostFoundView, LostFoundPre
 
         } else {
             ShowImageWindow window = new ShowImageWindow(this, bean.getPic());
-            window.showWindow(view);
+            window.showWindow(layout_titleBar);
         }
     }
 

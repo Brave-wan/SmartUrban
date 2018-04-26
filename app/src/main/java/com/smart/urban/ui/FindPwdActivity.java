@@ -37,6 +37,8 @@ public class FindPwdActivity extends BaseActivity<IRegisterView, RegisterPresent
     ImageView img_pwd_open;
     @BindView(R.id.tv_sms_code)
     TextView tv_sms_code;
+    @BindView(R.id.ed_register_pass_sure)
+    EditText ed_register_pass_sure;
 
     @Override
     protected int getContentViewId() {
@@ -76,6 +78,7 @@ public class FindPwdActivity extends BaseActivity<IRegisterView, RegisterPresent
                 }
                 Map<String, Object> map = new HashMap<>();
                 map.put("mobilePhone", ed_register_user.getText().toString().trim());
+                map.put("flag","2");
                 presenter.getCode(map);
                 //设置倒计时
                 new CountDownTimerUtils(this, tv_sms_code, 60000, 1000).start();
@@ -98,10 +101,16 @@ public class FindPwdActivity extends BaseActivity<IRegisterView, RegisterPresent
                     return;
                 }
 
+                if (!ed_register_pass_sure.getText().toString().trim().equals(ed_register_pass.getText().toString().trim())) {
+                    ToastUtils.showShort("两次密码输入不一致!");
+                    return;
+                }
+
                 if (StringUtils.isEmpty(ed_register_code.getText().toString().trim())) {
                     ToastUtils.showShort("请输入您的验证码!");
                     return;
                 }
+
                 Map<String, Object> register = new HashMap<>();
                 register.put("mobilePhone", ed_register_user.getText().toString().trim());
                 register.put("password", ed_register_pass.getText().toString().trim());
@@ -124,7 +133,7 @@ public class FindPwdActivity extends BaseActivity<IRegisterView, RegisterPresent
     @Override
     public void OnCaptchaCode(RegisterBean bean) {
         //显示获取到的验证码
-        ed_register_code.setText(bean.getCode());
+//        ed_register_code.setText(bean.getCode());
     }
 
     @Override

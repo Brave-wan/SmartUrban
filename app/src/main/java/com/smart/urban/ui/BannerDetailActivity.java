@@ -9,6 +9,7 @@ import android.webkit.WebView;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseActivity;
 import com.smart.urban.base.BasePresenter;
+import com.smart.urban.ui.dialog.ShareWindow;
 import com.smart.urban.utils.MyWebViewClient;
 
 import butterknife.BindView;
@@ -36,6 +37,20 @@ public class BannerDetailActivity extends BaseActivity {
     protected void onBackward(View backwardView) {
         super.onBackward(backwardView);
         finish();
+    }
+
+    ShareWindow window;
+
+    @Override
+    protected void onForward(View forwardView) {
+        super.onForward(forwardView);
+        if (window != null) {
+            window.dismissWindow();
+            window = null;
+        } else {
+            window = new ShareWindow(this);
+            window.showWindow(layout_titleBar);
+        }
     }
 
     private void initData() {

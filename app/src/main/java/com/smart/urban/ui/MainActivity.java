@@ -36,6 +36,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     InfoFragment infoFragment;
     CameraFragment cameraFragment;
     CenterFragment centerFragment;
+    public static MainActivity instance = null;
 
 
     @Override
@@ -48,6 +49,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         rg_main_bottom.setOnCheckedChangeListener(this);
         manager = getSupportFragmentManager();
         transaction = manager.beginTransaction();
+        instance = this;
         setDefaultFragment();
     }
 

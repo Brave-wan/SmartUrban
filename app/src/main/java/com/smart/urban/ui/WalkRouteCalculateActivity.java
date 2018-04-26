@@ -5,6 +5,7 @@ import android.os.Bundle;
 import com.amap.api.navi.AMapNaviView;
 import com.amap.api.navi.enums.NaviType;
 import com.amap.api.navi.model.NaviLatLng;
+import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseLocationActivity;
@@ -36,6 +37,7 @@ public class WalkRouteCalculateActivity extends BaseLocationActivity implements 
     @Override
     public void onInitNaviSuccess() {
         super.onInitNaviSuccess();
+        LogUtils.i("计算驾车规划路线");
         //起点
         NaviLatLng startLng = new NaviLatLng(Double.valueOf(SharedPreferencesUtils.init(this).getString("start_lat")),
                 Double.valueOf(SharedPreferencesUtils.init(this).getString("start_lon")));
@@ -50,6 +52,7 @@ public class WalkRouteCalculateActivity extends BaseLocationActivity implements 
     public void onCalculateRouteSuccess(int[] ids) {
         super.onCalculateRouteSuccess(ids);
         mAMapNavi.startNavi(NaviType.GPS);
+        LogUtils.i("显示路径或开启导航");
     }
 
     @Override

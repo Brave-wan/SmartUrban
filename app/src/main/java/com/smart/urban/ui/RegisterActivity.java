@@ -37,6 +37,8 @@ public class RegisterActivity extends BaseActivity<IRegisterView, RegisterPresen
     ImageView img_pwd_open;
     @BindView(R.id.tv_sms_code)
     TextView tv_sms_code;
+    @BindView(R.id.ed_register_pass_sure)
+    EditText ed_register_pass_sure;
 
     @Override
     protected int getContentViewId() {
@@ -76,6 +78,7 @@ public class RegisterActivity extends BaseActivity<IRegisterView, RegisterPresen
                 }
                 Map<String, Object> map = new HashMap<>();
                 map.put("mobilePhone", ed_register_user.getText().toString().trim());
+                map.put("flag", "1");
                 presenter.getCode(map);
                 //设置倒计时
                 new CountDownTimerUtils(this, tv_sms_code, 60000, 1000).start();
@@ -93,7 +96,12 @@ public class RegisterActivity extends BaseActivity<IRegisterView, RegisterPresen
                 }
 
                 if (ed_register_pass.getText().toString().length() < 6) {
-                    ToastUtils.showShort("注册密码输入不合法!");
+                    ToastUtils.showShort("密码输入不合法!");
+                    return;
+                }
+
+                if (!ed_register_pass_sure.getText().toString().trim().equals(ed_register_pass.getText().toString().trim())) {
+                    ToastUtils.showShort("两次密码输入不一致!");
                     return;
                 }
 
@@ -124,7 +132,7 @@ public class RegisterActivity extends BaseActivity<IRegisterView, RegisterPresen
     @Override
     public void OnCaptchaCode(RegisterBean bean) {
         //显示获取到的验证码
-        ed_register_code.setText(bean.getCode());
+//        ed_register_code.setText(bean.getCode());
     }
 
     @Override

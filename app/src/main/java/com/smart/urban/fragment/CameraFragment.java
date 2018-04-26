@@ -118,8 +118,8 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
 
                 List<CameraPicBean> cameraPicBeans = adapter.dataList;
 
-                if (cameraPicBeans.size() < 1) {
-                    ToastUtils.showShort("请添加图片描述!");
+                if (cameraPicBeans.size() <= 1) {
+                    ToastUtils.showShort("请至少添加一张图片");
                     return;
                 }
 

@@ -31,7 +31,7 @@ public class DynamicListBean implements Serializable {
      */
 
     private Object subtitle;
-    private Object isCheck;
+    private String isCheck;
     private String title;
     private int commentCount;
     private int viewCount;
@@ -52,11 +52,11 @@ public class DynamicListBean implements Serializable {
         this.subtitle = subtitle;
     }
 
-    public Object getIsCheck() {
+    public String getIsCheck() {
         return isCheck;
     }
 
-    public void setIsCheck(Object isCheck) {
+    public void setIsCheck(String isCheck) {
         this.isCheck = isCheck;
     }
 

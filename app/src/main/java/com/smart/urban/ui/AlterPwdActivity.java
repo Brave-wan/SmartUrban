@@ -1,5 +1,6 @@
 package com.smart.urban.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -99,7 +100,11 @@ public class AlterPwdActivity extends BaseActivity<IAlterPwdView, AlterPwdPresen
 
     @Override
     public void onSuccess() {
-        SharedPreferencesUtils.init(this).put("userPass", ed_sure_pwd.getText().toString());
-        finish();
+        if (MainActivity.instance != null) {
+            MainActivity.instance.finish();
+            SharedPreferencesUtils.init(this).put("userPass", "");
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+        }
     }
 }

@@ -75,10 +75,9 @@ public class LocationPresent implements GeoFenceListener,
     public LocationPresent(Context mContext, ILocationView mView) {
         this.mContext = mContext;
         this.mView = mView;
-        present = new DriveRoutePresent(mContext);
     }
 
-    public void initMap(AMapNaviView mMapView) {
+    public void initMap(MapView mMapView) {
 
         aMap = mMapView.getMap();
         aMap.setOnInfoWindowClickListener(this);
@@ -106,6 +105,30 @@ public class LocationPresent implements GeoFenceListener,
 //        addCenterMarker(latLng);
     }
 
+    public void initMap(AMapNaviView mMapView) {
+        aMap = mMapView.getMap();
+        aMap.setOnInfoWindowClickListener(this);
+        aMap.setOnMarkerClickListener(this);
+        //设置显示定位按钮 并且可以点击
+        UiSettings settings = aMap.getUiSettings();
+        //设置定位监听
+        aMap.setLocationSource(this);
+        // 是否显示定位按钮
+        settings.setMyLocationButtonEnabled(true);
+        // 自定义系统定位蓝点
+        MyLocationStyle myLocationStyle = new MyLocationStyle();
+        // 自定义定位蓝点图标
+        myLocationStyle.myLocationIcon(BitmapDescriptorFactory.fromResource(R.drawable.navi_map_gps_locked));
+        // 自定义精度范围的圆形边框颜色
+        myLocationStyle.strokeColor(Color.argb(5, 5, 5, 5));
+        // 自定义精度范围的圆形边框宽度
+        myLocationStyle.strokeWidth(55);
+        // 设置圆形的填充颜色
+        myLocationStyle.radiusFillColor(Color.argb(5, 5, 5, 5));
+        // 将自定义的 myLocationStyle 对象添加到地图上
+        aMap.setMyLocationStyle(myLocationStyle);
+        aMap.setMyLocationEnabled(true);// 设置为true表示显示定位层并可触发定位，false表示隐藏定位层并不可触发定位，默认是false
+    }
 
     boolean isShow = true;
 
@@ -247,9 +270,8 @@ public class LocationPresent implements GeoFenceListener,
             HttpManager.get().addSubscription(HttpManager.get().getApiStores().getLocationSearch(map), new ApiCallback<BaseResult<List<LocationListBean>>>() {
                 @Override
                 public void onSuccess(BaseResult<List<LocationListBean>> model) {
-                    if (!state) {
-                        addMarkersToMap(model.data);
-                    } else {
+                    addMarkersToMap(model.data);
+                    if (state) {
                         mView.onLocationList(model.data, state);
                     }
                 }

@@ -136,6 +136,7 @@ public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implement
         for (BannerBean bean : data) {
             list.add(bean.getImage().getAddress());
         }
+
         banner.setImages(list)
                 .setDelayTime(3000)
                 .setImageLoader(new GlideImageLoader())

@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseActivity;
 import com.smart.urban.bean.RegisterBean;
@@ -87,15 +88,18 @@ public class LoginActivity extends BaseActivity<ILoginView, LoginPresent> implem
         switch (view.getId()) {
             case R.id.tv_login_in:
 //                startActivity(new Intent(this, MainActivity.class));
+
                 presenter.getLogin(ed_login_user, ed_login_pass);
                 break;
 
             case R.id.img_login_wchat:
-                presenter.AuthLogin(SHARE_MEDIA.WEIXIN);
+                ToastUtils.showShort("暂未开放");
+//                presenter.AuthLogin(SHARE_MEDIA.WEIXIN);
                 break;
 
             case R.id.img_login_qq:
-                presenter.AuthLogin(SHARE_MEDIA.QQ);
+//                presenter.AuthLogin(SHARE_MEDIA.QQ);
+                ToastUtils.showShort("暂未开放");
                 break;
 
             case R.id.tv_login_find_pwd:

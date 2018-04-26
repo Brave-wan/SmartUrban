@@ -1,5 +1,6 @@
 package com.smart.urban.ui;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,6 +13,7 @@ import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.amap.api.maps.MapView;
 import com.amap.api.navi.AMapNavi;
 import com.amap.api.navi.AMapNaviView;
 import com.amap.api.navi.AMapNaviViewOptions;
@@ -35,8 +37,8 @@ import java.util.List;
  * Created by root on 18-3-28.
  */
 
-public class LocationActivity extends BaseLocationActivity implements ILocationView, View.OnClickListener,  AdapterView.OnItemClickListener {
-    AMapNavi mAMapNavi;
+public class LocationActivity extends Activity implements ILocationView, View.OnClickListener, AdapterView.OnItemClickListener {
+    //    AMapNavi mAMapNavi;
     LocationPresent presenter;
     ListView lv_location_list;
     EditText ed_location;
@@ -47,19 +49,22 @@ public class LocationActivity extends BaseLocationActivity implements ILocationV
     RelativeLayout rl_bottom, rl_transportation_state;
     ImageView img_location_back;
     private List<LocationListBean> list = new ArrayList<>();
+    MapView mAMapNaviView;
+
+    ImageView img_map_back;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
-        mAMapNaviView = (AMapNaviView) findViewById(R.id.mapView);
+        mAMapNaviView = (MapView) findViewById(R.id.map);
         mAMapNaviView.onCreate(savedInstanceState);// 此方法必须重写
         initView();
-
     }
 
     private void initView() {
         img_location_back = (ImageView) findViewById(R.id.img_location_back);
+        img_map_back = (ImageView) findViewById(R.id.img_map_back);
         rl_transportation_state = (RelativeLayout) findViewById(R.id.rl_transportation_state);
         rl_bottom = (RelativeLayout) findViewById(R.id.rl_bottom);
         sliding_layout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
@@ -73,15 +78,12 @@ public class LocationActivity extends BaseLocationActivity implements ILocationV
         rb_riding_btn.setOnClickListener(this);
         rb_car_btn.setOnClickListener(this);
         presenter = new LocationPresent(this, this);
-        mAMapNavi = AMapNavi.getInstance(getApplicationContext());
+//        mAMapNavi = AMapNavi.getInstance(getApplicationContext());
         presenter.initMap(mAMapNaviView);
-        mAMapNaviView.setAMapNaviViewListener(this);
-        AMapNaviViewOptions options = new AMapNaviViewOptions();
-        options.setTilt(0);
-        mAMapNaviView.setViewOptions(options);
         tv_map_search.setOnClickListener(this);
         rl_transportation_state.setOnClickListener(this);
         img_location_back.setOnClickListener(this);
+        img_map_back.setOnClickListener(this);
         initData();
     }
 
@@ -90,7 +92,6 @@ public class LocationActivity extends BaseLocationActivity implements ILocationV
         lv_location_list.setAdapter(adapter);
         lv_location_list.setOnItemClickListener(this);
         presenter.getLocationSearch("", false);
-
 
     }
 
@@ -135,6 +136,9 @@ public class LocationActivity extends BaseLocationActivity implements ILocationV
                 Intent car = new Intent(this, SingleRouteCalculateActivity.class);
                 startActivity(car);
                 presenter.onDestroy();
+                break;
+            case R.id.img_map_back:
+                finish();
                 break;
         }
     }
