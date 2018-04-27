@@ -1,6 +1,7 @@
 package com.smart.urban.utils;
 
 import android.annotation.SuppressLint;
+import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.Context;
 import android.database.Cursor;
@@ -51,9 +52,8 @@ public class PhotoUtils {
             if (isMediaDocument(uri)) { // MediaProvider
                 // 使用':'分割
                 String id = documentId.split(":")[1];
-
                 String selection = MediaStore.Images.Media._ID + "=?";
-                String[] selectionArgs = {id};
+                String[] selectionArgs = {id};//content://com.smart.urban.fileprovider/my_images/PEG_20180427_220927_.jpg
                 filePath = getDataColumn(context, MediaStore.Images.Media.EXTERNAL_CONTENT_URI, selection, selectionArgs);
             } else if (isDownloadsDocument(uri)) { // DownloadsProvider
                 Uri contentUri = ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), Long.valueOf(documentId));
@@ -76,20 +76,34 @@ public class PhotoUtils {
      */
     private static String getDataColumn(Context context, Uri uri, String selection, String[] selectionArgs) {
         String path = null;
-
-        String[] projection = new String[]{MediaStore.Images.Media.DATA};
-        Cursor cursor = null;
-        try {
-            cursor = context.getContentResolver().query(uri, projection, selection, selectionArgs, null);
-            if (cursor != null && cursor.moveToFirst()) {
-                int columnIndex = cursor.getColumnIndexOrThrow(projection[0]);
-                path = cursor.getString(columnIndex);
-            }
-        } catch (Exception e) {
+//        String[] projection = new String[]{MediaStore.Images.Media.DATA};
+//        Cursor cursor = null;
+//        try {
+//            cursor = context.getContentResolver().query(uri, projection, selection, selectionArgs, null);
+//            if (cursor != null && cursor.moveToFirst()) {
+//                int columnIndex = cursor.getColumnIndexOrThrow(projection[0]);
+//                path = cursor.getString(columnIndex);
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            if (cursor != null) {
+//                cursor.close();
+//            }
+//        }
+        if (ContentResolver.SCHEME_CONTENT.equals(uri.getScheme())) {
+            Cursor cursor = context.getContentResolver().query(uri, new String[]{MediaStore.Images.Media.DATA}, null, null, null);
             if (cursor != null) {
+                if (cursor.moveToFirst()) {
+                    int columnIndex = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+                    if (columnIndex > -1) {
+                        path = cursor.getString(columnIndex);
+                    }
+                }
                 cursor.close();
             }
+            return path;
         }
+
         return path;
     }
 

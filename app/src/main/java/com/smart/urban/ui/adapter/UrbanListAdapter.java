@@ -43,6 +43,8 @@ public class UrbanListAdapter extends CommonAdapter<UrbanListBean> {
                     .error(R.drawable.icon_pic_empty)
                     .placeholder(R.drawable.icon_pic_empty)
                     .into(img_info);
+        } else {
+            img_info.setBackground(context.getResources().getDrawable(R.drawable.icon_pic_empty));
         }
 
     }

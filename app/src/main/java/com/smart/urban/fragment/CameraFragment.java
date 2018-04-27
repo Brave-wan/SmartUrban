@@ -9,34 +9,26 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.GridView;
 
-import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.StringUtils;
 import com.blankj.utilcode.util.ToastUtils;
-import com.bumptech.glide.Glide;
-import com.google.gson.Gson;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseFragment;
-import com.smart.urban.base.BasePresenter;
 import com.smart.urban.bean.CameraPicBean;
 import com.smart.urban.config.Constants;
 import com.smart.urban.present.CameraPresent;
 import com.smart.urban.ui.MainActivity;
 import com.smart.urban.ui.adapter.CameraListAdapter;
-import com.smart.urban.ui.dialog.UpDynamicDialog;
+import com.smart.urban.ui.widget.LifePaymentWindow;
 import com.smart.urban.ui.widget.ShowImageWindow;
 import com.smart.urban.utils.PhotoUtils;
-import com.smart.urban.utils.SharedPreferencesUtils;
 import com.smart.urban.view.ICameraView;
 import com.zhihu.matisse.Matisse;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-import cn.addapp.pickers.common.AppConfig;
 import okhttp3.MultipartBody;
 
 import static android.app.Activity.RESULT_OK;
@@ -130,6 +122,8 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
         }
     }
 
+    LifePaymentWindow window;
+
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         CameraPicBean bean = (CameraPicBean) adapter.getItem(position);
@@ -153,4 +147,6 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
         adapter.setDataList(list);
         ed_camera_content.setText("");
     }
+
+
 }

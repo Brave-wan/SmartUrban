@@ -39,6 +39,8 @@ public class RevolvingListAdapter extends CommonAdapter<RevolvingListBean> {
         Log.i("wan", "type:" + bean.getState());
         if (bean.getImages() != null && bean.getImages().size() > 0) {
             Glide.with(context).load(bean.getImages().get(0).getAddress()).placeholder(R.drawable.icon_pic_empty).error(R.drawable.icon_pic_empty).into(img_revolving_head);
+        } else {
+            img_revolving_head.setBackground(context.getResources().getDrawable(R.drawable.icon_pic_empty));
         }
         if (bean.getState() != null) {
             switch (bean.getState()) {

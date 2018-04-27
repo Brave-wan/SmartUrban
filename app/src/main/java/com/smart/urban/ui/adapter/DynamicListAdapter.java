@@ -41,7 +41,10 @@ public class DynamicListAdapter extends CommonAdapter<DynamicListBean> {
             tx_dynamic_state.setText("审核不通过");
         }
 
-        if (bean.getImages().size() > 0)
+        if (bean.getImages().size() > 0) {
             Glide.with(context).load(bean.getImages().get(0).getAddress()).placeholder(R.drawable.icon_pic_empty).error(R.drawable.icon_pic_empty).into(img_lost_head);
+        } else {
+            img_lost_head.setBackground(context.getResources().getDrawable(R.drawable.icon_pic_empty));
+        }
     }
 }

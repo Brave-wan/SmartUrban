@@ -129,10 +129,10 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     public void getTakePhoto(int number) {
         Matisse.from(this)
                 .choose(MimeType.allOf()) // 选择 mime 的类型
-                .capture(true)
+                .capture(false)
                 .countable(true)//自动增长的数目
                 .maxSelectable(number) // 图片选择的最多数量
-                .captureStrategy(new CaptureStrategy(true, "com.szt.myapplicationee.fileprovider"))
+                .captureStrategy(new CaptureStrategy(true, "com.smart.urban.fileprovider"))
                 .gridExpectedSize(getResources().getDimensionPixelSize(R.dimen.base_dimen_240))
                 .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)
                 .thumbnailScale(0.85f) // 缩略图的比例

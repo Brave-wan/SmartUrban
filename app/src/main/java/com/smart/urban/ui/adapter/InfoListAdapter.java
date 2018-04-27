@@ -38,6 +38,8 @@ public class InfoListAdapter extends CommonAdapter<UrbanListBean> {
         tv_dynamic_title.setText(bean.getTitle());
         if (bean.getImages().size() > 0) {
             Glide.with(context).load(bean.getImages().get(0).getAddress()).error(R.drawable.icon_pic_empty).placeholder(R.drawable.icon_pic_empty).into(img_info);
+        }else {
+            img_info.setBackground(context.getResources().getDrawable(R.drawable.icon_pic_empty));
         }
 
     }

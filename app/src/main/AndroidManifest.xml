@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.smart.urban">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -110,7 +111,7 @@
             android:name="com.tencent.bugly.beta.ui.BetaActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|locale"
             android:theme="@android:style/Theme.Translucent" />
-        <!-- tencent -->
+         tencent
         <activity
             android:name="com.tencent.tauth.AuthActivity"
             android:launchMode="singleTask"
@@ -137,11 +138,32 @@
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.fileProvider"
             android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="name,authorities,exported,grantUriPermissions">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="name,resource" />
+        </provider>
+
+        <provider
+            android:name="com.smart.urban.utils.BuglyFileProvider"
+            android:authorities="com.smart.urban.fileprovider"
+            android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths" />
+                android:resource="@xml/file_paths_public" />
         </provider>
+        <!--<provider-->
+        <!--android:name=".utils.BuglyFileProvider"-->
+        <!--android:authorities="com.szt.myapplicationee.fileprovider"-->
+        <!--android:exported="false"-->
+        <!--android:grantUriPermissions="true">-->
+        <!--<meta-data-->
+        <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+        <!--android:resource="@xml/file_paths_public" />-->
+        <!--</provider>-->
 
         <meta-data
             android:name="com.amap.api.v2.apikey"

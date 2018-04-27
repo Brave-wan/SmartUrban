@@ -104,15 +104,16 @@
                 android:textColor="@color/home_txt" />
         </LinearLayout>
 
-        <TextView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:gravity="center"
-            android:paddingBottom="20dp"
-            android:paddingTop="15dp"
-            android:text="最新动态"
-            android:textSize="16sp" />
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/home_newest" />
+        </RelativeLayout>
 
         <com.smart.urban.widget.MyListView
             android:id="@+id/lv_main_list"
