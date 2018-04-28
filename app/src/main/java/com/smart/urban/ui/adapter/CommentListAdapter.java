@@ -31,17 +31,22 @@ public class CommentListAdapter extends CommonAdapter<CommentListBean> {
         ImageView img_comment_head = (ImageView) baseViewHolder.getViewByViewId(R.id.img_comment_head);
         TextView tv_comment_nam = (TextView) baseViewHolder.getViewByViewId(R.id.tv_comment_name);
         TextView tv_comment_content = (TextView) baseViewHolder.getViewByViewId(R.id.tv_comment_content);
-        if (bean.getUserInfo() != null && bean.getUserInfo().getAvatar().size() > 0) {
+        tv_comment_nam.setText(bean.getUserInfo().getNickName());
+        tv_comment_content.setText(bean.getContent());
 
+        if (bean.getUserInfo() != null && bean.getUserInfo().getAvatar().size() > 0) {
             Glide.with(context).load(bean.getUserInfo().getAvatar()
                     .get(0).getAddress())
                     .error(R.drawable.icon_my_portraits)
                     .placeholder(R.drawable.icon_my_portraits)
                     .bitmapTransform(new GlideCircleTransform(context))
                     .into(img_comment_head);
-            tv_comment_nam.setText(bean.getUserInfo().getNickName());
-            tv_comment_content.setText(bean.getContent());
-
+        } else {
+            Glide.with(context).load(R.drawable.icon_my_portraits)
+                    .error(R.drawable.icon_my_portraits)
+                    .placeholder(R.drawable.icon_my_portraits)
+                    .bitmapTransform(new GlideCircleTransform(context))
+                    .into(img_comment_head);
         }
     }
 }

@@ -143,9 +143,11 @@ public class MyArticleActivity extends BaseActivity<IArticleView, ArticlePresent
     public void onSuccess() {
         List<CameraPicBean> list = adapter.dataList;
         list.clear();
+        list.add(new CameraPicBean());
         adapter.setDataList(list);
         ed_article_title.setText("");
         ed_article_content.setText("");
-
+        startActivity(new Intent(this,ArticlesPublishedActivity.class));
+        finish();
     }
 }

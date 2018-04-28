@@ -26,7 +26,7 @@ public class HomePresent extends BasePresenter<IHomeView> {
 
     public HomePresent(Context mContext) {
         this.mContext = mContext;
-        getBannerList();
+
     }
 
 

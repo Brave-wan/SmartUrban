@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.AdapterView;
 
 import com.blankj.utilcode.util.ToastUtils;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
+import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseFragment;
 import com.smart.urban.base.BasePresenter;
@@ -47,11 +51,13 @@ import butterknife.OnClick;
  * Created by root on 18-3-29.
  */
 
-public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implements IHomeView, AdapterView.OnItemClickListener {
+public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implements IHomeView, OnLoadmoreListener, AdapterView.OnItemClickListener, OnRefreshListener {
     @BindView(R.id.banner)
     Banner banner;
     @BindView(R.id.lv_main_list)
     MyListView lv_main_list;
+    @BindView(R.id.smart_layout)
+    SmartRefreshLayout smart_layout;
     MainActivity mainActivity;
     List<UrbanListBean> listBeans = new ArrayList<>();
     private List<String> list = new ArrayList<>();
@@ -66,15 +72,16 @@ public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implement
     protected void initView(View view, Bundle savedInstanceState) {
         setTitle("智慧城管");
         initBanner();
+        presenter.getBannerList();
     }
 
     public void initBanner() {
-
-
         adapter = new UrbanListAdapter(getActivity(), R.layout.item_info_list, listBeans);
         lv_main_list.setAdapter(adapter);
         presenter.getForumList();
         lv_main_list.setOnItemClickListener(this);
+        smart_layout.setOnRefreshListener(this);
+        smart_layout.setOnLoadmoreListener(this);
     }
 
     @OnClick({R.id.tv_home_navigation, R.id.tv_home_guide, R.id.tv_home_lost_found,
@@ -134,7 +141,9 @@ public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implement
         list.clear();
 
         for (BannerBean bean : data) {
-            list.add(bean.getImage().getAddress());
+            if (bean.getImage() != null) {
+                list.add(bean.getImage().getAddress());
+            }
         }
 
         banner.setImages(list)
@@ -167,5 +176,20 @@ public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implement
         Intent intent = new Intent(getActivity(), UrbanDetailsActivity.class);
         intent.putExtra("id", bean.getId() + "");
         startActivity(intent);
+    }
+
+    @Override
+    public void onRefresh(RefreshLayout refreshlayout) {
+        smart_layout.finishRefresh(1000);
+        presenter.getBannerList();
+        presenter.getForumList();
+
+    }
+
+    @Override
+    public void onLoadmore(RefreshLayout refreshlayout) {
+        smart_layout.finishLoadmore(1000);
+        presenter.getBannerList();
+        presenter.getForumList();
     }
 }

@@ -1,22 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_version_layout_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical">
 
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/white"
-        android:lineSpacingExtra="3dp"
-        android:paddingBottom="20dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"
-        android:text="      本项目为河北省石家庄市桥西区城市管理局打造的智慧城管项目，智慧城管的建设将打破现有传统的城市管理模式，形成大城管格局，有效的改善投资环境和市民生活环境，使城市管理走向数字化。移动端涉及的功能有便民导航、随手拍等方便市民的功能，市民可以通过随手拍功能来上报城市里面出现的问题，通过个人中心可以查询上报的问题和问题处理的结果；也有像政策法规、城管动态等展现城管形象的功能，一方面拉近了政府和人民的关系，另一方面也使市民更好的了解和管理城市，从而实现了人人都可以为城市管理和改善做贡献。"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="50dp">
 
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@mipmap/ic_launcher_round"
+            android:paddingBottom="@dimen/base_dimen_80"
+            android:paddingTop="@dimen/base_dimen_80" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="@dimen/base_dimen_20"
+            android:text="桥西智慧城管"
+            android:textColor="@color/black"
+            android:textSize="@dimen/base_dimen_36" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/base_dimen_60"
+            android:paddingTop="@dimen/base_dimen_20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="@dimen/base_dimen_20"
+                android:text="当前版本:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/base_dimen_28" />
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="@dimen/base_dimen_20"
+                android:text="1.0.1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/base_dimen_28" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_dimen_2"
+            android:background="@color/gray_line" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_default">
+
+        <Button
+            android:id="@+id/btn_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_dimen_30"
+            android:layout_marginRight="@dimen/base_dimen_30"
+            android:layout_marginTop="@dimen/base_dimen_100"
+            android:background="@drawable/shape_login_btn"
+            android:text="检查更新"
+            android:textColor="@color/white"
+            android:textSize="@dimen/base_dimen_32" />
+    </LinearLayout>
 </LinearLayout>

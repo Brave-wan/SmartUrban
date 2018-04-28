@@ -37,6 +37,7 @@ public class MyNickActivity extends BaseActivity {
     @Override
     protected void initView(Bundle savedInstanceState) {
         setTitle("填写昵称");
+        ed_input_name.setHint(SharedPreferencesUtils.init(this).getString("center_name"));
     }
 
 

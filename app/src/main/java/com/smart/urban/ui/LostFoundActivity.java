@@ -104,7 +104,7 @@ public class LostFoundActivity extends BaseActivity<ILostFoundView, LostFoundPre
                 ToastUtils.showShort("最多只能上传三张图片!");
                 return;
             } else {
-                presenter.getTakePhoto(this,4 - list.size());
+                presenter.getTakePhoto(this, 4 - list.size());
             }
 
 
@@ -124,6 +124,7 @@ public class LostFoundActivity extends BaseActivity<ILostFoundView, LostFoundPre
                     ToastUtils.showShort("请输入物品丢失地点和物品描述!");
                     return;
                 }
+
                 List<CameraPicBean> cameraPicBeans = adapter.dataList;
                 if (cameraPicBeans.size() <= 1) {
                     ToastUtils.showShort("请添加丢失地点图片描述!");
@@ -145,8 +146,12 @@ public class LostFoundActivity extends BaseActivity<ILostFoundView, LostFoundPre
     @Override
     public void onUpSuccess() {
         List<CameraPicBean> cameraPicBeans = adapter.dataList;
+        cameraPicBeans.clear();
+        cameraPicBeans.add(new CameraPicBean());
         adapter.setDataList(cameraPicBeans);
         ed_lost_content.setText("");
         ed_lost_phone.setText("");
+        startActivity(new Intent(this, LostActivity.class));
+        finish();
     }
 }

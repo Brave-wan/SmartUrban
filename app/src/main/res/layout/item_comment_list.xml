@@ -17,8 +17,7 @@
             android:layout_width="62dp"
             android:layout_height="62dp"
             android:layout_centerVertical="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/icon_my_portraits" />
+            android:scaleType="fitXY" />
 
         <TextView
             android:id="@+id/tv_comment_name"

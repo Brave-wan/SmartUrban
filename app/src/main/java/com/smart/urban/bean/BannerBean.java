@@ -160,7 +160,7 @@ public class BannerBean {
         }
 
         public String getAddress() {
-            return Constants.BASE_URL + address;
+            return address;
         }
 
         public void setAddress(String address) {

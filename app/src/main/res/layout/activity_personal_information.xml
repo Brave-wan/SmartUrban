@@ -44,7 +44,7 @@
     <RelativeLayout
         android:id="@+id/rl_info_nick"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="48dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -81,12 +81,11 @@
         android:id="@+id/rl_info_sex"
         android:layout_marginTop="1dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="48dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:background="@color/white"
             android:paddingBottom="15dp"
             android:paddingLeft="15dp"
@@ -98,7 +97,7 @@
         <TextView
             android:id="@+id/tv_info_sex"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_alignParentRight="true"
             android:layout_marginTop="1dp"
             android:background="@color/white"

@@ -165,7 +165,7 @@ public class CameraPresent extends BasePresenter<ICameraView> {
                     UpDynamicDialog dynamicDialog = new UpDynamicDialog(mContext);
                     dynamicDialog.show();
                     dynamicDialog.setContent(mContext.getString(R.string.camera_up_dynamic));
-                    mView.onUpSuccess();
+                    mView.onUpSuccess(dynamicDialog);
                     break;
             }
         }

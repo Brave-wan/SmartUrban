@@ -38,7 +38,7 @@ public class DynamicListAdapter extends CommonAdapter<DynamicListBean> {
         tx_dynamic_state.setVisibility(bean.getIsCheck().equals("N") ? View.VISIBLE : View.GONE);
 
         if (bean.getIsCheck().equals("N")) {
-            tx_dynamic_state.setText("审核不通过");
+            tx_dynamic_state.setText("审核中");
         }
 
         if (bean.getImages().size() > 0) {

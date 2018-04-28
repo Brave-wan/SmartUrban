@@ -46,6 +46,7 @@
             android:layout_marginRight="15dp"
             android:horizontalSpacing="10dp"
             android:numColumns="3"
+            android:scrollbars="none"
             android:orientation="vertical"
             android:verticalSpacing="10dp" />
     </LinearLayout>

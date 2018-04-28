@@ -3,9 +3,12 @@ package com.smart.urban.ui;
 import android.os.Bundle;
 import android.view.View;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseActivity;
 import com.smart.urban.base.BasePresenter;
+
+import butterknife.OnClick;
 
 /**
  * Created by root on 03.04.18.
@@ -27,6 +30,15 @@ public class AboutUsActivity extends BaseActivity {
     protected void onBackward(View backwardView) {
         super.onBackward(backwardView);
         finish();
+    }
+
+    @OnClick({R.id.btn_version})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_version:
+                ToastUtils.showShort("已经是最新版本!");
+                break;
+        }
     }
 
     @Override

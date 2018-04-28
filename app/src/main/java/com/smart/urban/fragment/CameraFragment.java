@@ -17,7 +17,9 @@ import com.smart.urban.bean.CameraPicBean;
 import com.smart.urban.config.Constants;
 import com.smart.urban.present.CameraPresent;
 import com.smart.urban.ui.MainActivity;
+import com.smart.urban.ui.RevolvingActivity;
 import com.smart.urban.ui.adapter.CameraListAdapter;
+import com.smart.urban.ui.dialog.UpDynamicDialog;
 import com.smart.urban.ui.widget.LifePaymentWindow;
 import com.smart.urban.ui.widget.ShowImageWindow;
 import com.smart.urban.utils.PhotoUtils;
@@ -122,7 +124,6 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
         }
     }
 
-    LifePaymentWindow window;
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -141,11 +142,14 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
     }
 
     @Override
-    public void onUpSuccess() {
+    public void onUpSuccess(UpDynamicDialog dynamicDialog) {
         list = adapter.dataList;
         list.clear();
+        list.add(new CameraPicBean());
         adapter.setDataList(list);
         ed_camera_content.setText("");
+        startActivity(new Intent(getActivity(), RevolvingActivity.class));
+        dynamicDialog.dismiss();
     }
 
 

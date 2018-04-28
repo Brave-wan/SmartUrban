@@ -157,13 +157,13 @@ public class LocationActivity extends Activity implements ILocationView, View.On
                 ? "我的位置" : SharedPreferencesUtils.init(this).getString("address");
         tv_my_location.setText(myLocation);
         SharedPreferencesUtils.init(this).put("end_lat", bean.getLatitude()).put("end_lon", bean.getLongitude());
-
     }
 
     @Override
     public void onLocationList(List<LocationListBean> beans, boolean state) {
         //显示地图上搜索的坐标点
         if (state) {
+            list.clear();
             list.addAll(beans);
             adapter.setDataList(list);
             sliding_layout.setPanelHeight(600);
