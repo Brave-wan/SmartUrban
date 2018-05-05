@@ -79,7 +79,6 @@ public class DynamicActivity extends BaseActivity implements OnRefreshListener, 
     }
 
 
-
     @Override
     public BasePresenter initPresenter() {
         return null;
@@ -130,6 +129,5 @@ public class DynamicActivity extends BaseActivity implements OnRefreshListener, 
         Intent intent = new Intent(this, DynamicDetailsActivity.class);
         intent.putExtra("bean", bean);
         startActivity(intent);
-
     }
 }
