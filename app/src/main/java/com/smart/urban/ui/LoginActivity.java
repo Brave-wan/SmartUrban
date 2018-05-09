@@ -93,8 +93,8 @@ public class LoginActivity extends BaseActivity<ILoginView, LoginPresent> implem
                 break;
 
             case R.id.img_login_wchat:
-                ToastUtils.showShort("暂未开放");
-//                presenter.AuthLogin(SHARE_MEDIA.WEIXIN);
+//                ToastUtils.showShort("暂未开放");
+                presenter.AuthLogin(SHARE_MEDIA.WEIXIN);
                 break;
 
             case R.id.img_login_qq:

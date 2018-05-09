@@ -44,6 +44,7 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <!-- 3.2.0版本增加-->
     <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACTION_HANDLE_APP_REGISTER" />
 
     <application
         android:name=".base.MyApplication"
@@ -73,7 +74,10 @@
 
         <activity android:name=".ui.GeoFence_Round_Activity" />
         <activity android:name=".ui.LoginActivity" />
-        <activity android:name=".wxapi.WXEntryActivity" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity android:name=".ui.PersonInformationActivity" />
         <activity android:name=".ui.RegisterActivity" />
         <activity android:name=".ui.MySourceActivity" />
@@ -111,7 +115,7 @@
             android:name="com.tencent.bugly.beta.ui.BetaActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|locale"
             android:theme="@android:style/Theme.Translucent" />
-         tencent
+        tencent
         <activity
             android:name="com.tencent.tauth.AuthActivity"
             android:launchMode="singleTask"

@@ -4,19 +4,23 @@ import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.EditText;
 
 import com.blankj.utilcode.util.StringUtils;
 import com.blankj.utilcode.util.ToastUtils;
+import com.google.gson.Gson;
 import com.mylhyl.acp.Acp;
 import com.mylhyl.acp.AcpListener;
 import com.mylhyl.acp.AcpOptions;
 import com.smart.urban.base.BasePresenter;
 import com.smart.urban.bean.PersonalBean;
 import com.smart.urban.bean.RegisterBean;
+import com.smart.urban.bean.WxLoginBean;
 import com.smart.urban.http.ApiCallback;
 import com.smart.urban.http.BaseResult;
 import com.smart.urban.http.HttpManager;
+import com.smart.urban.utils.GsonUtil;
 import com.smart.urban.utils.SharedPreferencesUtils;
 import com.smart.urban.view.ILoginView;
 import com.umeng.socialize.UMAuthListener;
@@ -27,6 +31,7 @@ import com.umeng.socialize.utils.SocializeUtils;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by root on 18-3-30.
@@ -102,7 +107,16 @@ public class LoginPresent extends BasePresenter<ILoginView> implements UMAuthLis
 
     @Override
     public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
-        ToastUtils.showShort("onComplete");
+        switch (share_media.toSnsPlatform().mPlatform) {
+            case WEIXIN://微信登录
+                String json = new Gson().toJson(map);
+                Log.i("wan","json>>>"+json);
+                WxLoginBean bean = GsonUtil.GsonToBean(json, WxLoginBean.class);
+                ToastUtils.showShort(bean.getAccess_token());
+                break;
+            case QQ:
+                break;
+        }
     }
 
     @Override

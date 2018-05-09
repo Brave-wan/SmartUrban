@@ -20,6 +20,9 @@ import com.smart.urban.utils.LoadingLayout;
 import com.tencent.bugly.Bugly;
 import com.tencent.bugly.beta.Beta;
 import com.tencent.bugly.crashreport.CrashReport;
+import com.umeng.socialize.Config;
+import com.umeng.socialize.PlatformConfig;
+import com.umeng.socialize.UMShareAPI;
 
 /**
  * Created by root on 18-3-28.
@@ -35,7 +38,9 @@ public class MyApplication extends Application {
         Utils.init(this);
         initLayout();
         checkUpdate();
-
+        UMShareAPI.get(this);
+        Config.DEBUG = true;
+        PlatformConfig.setWeixin("wx17893857032ef728", "8558c99eb2c1ccb8a5704ec40d028572");
     }
 
     static {

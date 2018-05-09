@@ -123,8 +123,7 @@
             android:drawableTop="@drawable/icon_login_qq_btn"
             android:gravity="center"
             android:text="QQ登陆"
-            android:textColor="@color/login_txt_gray"
-            android:visibility="gone" />
+            android:textColor="@color/login_txt_gray" />
 
         <TextView
             android:id="@+id/img_login_wchat"
@@ -134,7 +133,6 @@
             android:drawablePadding="10dp"
             android:drawableTop="@drawable/icon_login_wechat"
             android:text="微信登陆"
-            android:textColor="@color/login_txt_gray"
-            android:visibility="gone" />
+            android:textColor="@color/login_txt_gray" />
     </LinearLayout>
 </RelativeLayout>
