@@ -51,21 +51,20 @@ public class LoginPresent extends BasePresenter<ILoginView> implements UMAuthLis
     public void getCameraPermission() {
         //获取相机权限
         Acp.getInstance(mContext).request(new AcpOptions.Builder()
-                        .setPermissions(Manifest.permission.CAMERA,
-                                Manifest.permission.READ_EXTERNAL_STORAGE,
-                                Manifest.permission.ACCESS_FINE_LOCATION,
-                                Manifest.permission.READ_PHONE_STATE)
-                        .build(),
-                new AcpListener() {
-                    @Override
-                    public void onGranted() {
-                    }
+                .setPermissions(Manifest.permission.CAMERA,
+                        Manifest.permission.READ_EXTERNAL_STORAGE,
+                        Manifest.permission.ACCESS_FINE_LOCATION,
+                        Manifest.permission.READ_PHONE_STATE)
+                .build(), new AcpListener() {
+            @Override
+            public void onGranted() {
+            }
 
-                    @Override
-                    public void onDenied(List<String> permissions) {
-                        ToastUtils.showShort(permissions.toString() + "权限拒绝");
-                    }
-                });
+            @Override
+            public void onDenied(List<String> permissions) {
+                ToastUtils.showShort(permissions.toString() + "权限拒绝");
+            }
+        });
     }
 
     public void AuthLogin(SHARE_MEDIA e) {
@@ -110,7 +109,7 @@ public class LoginPresent extends BasePresenter<ILoginView> implements UMAuthLis
         switch (share_media.toSnsPlatform().mPlatform) {
             case WEIXIN://微信登录
                 String json = new Gson().toJson(map);
-                Log.i("wan","json>>>"+json);
+                Log.i("wan", "json>>>" + json);
                 WxLoginBean bean = GsonUtil.GsonToBean(json, WxLoginBean.class);
                 ToastUtils.showShort(bean.getAccess_token());
                 break;
@@ -183,6 +182,7 @@ public class LoginPresent extends BasePresenter<ILoginView> implements UMAuthLis
                 @Override
                 public void onSuccess(BaseResult<PersonalBean> model) {
                     PersonalBean bean = model.data;
+                    //保存用户基本信息
                     SharedPreferencesUtils.init(mContext)
                             .put("center_sex", bean.getSex())
                             .put("center_name", bean.getNickName())

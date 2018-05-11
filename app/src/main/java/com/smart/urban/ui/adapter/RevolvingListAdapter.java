@@ -44,19 +44,28 @@ public class RevolvingListAdapter extends CommonAdapter<RevolvingListBean> {
         }
         if (bean.getState() != null) {
             switch (bean.getState()) {
-                case "1":
+                case "9":
                     tv_revolving_state.setText("待审核");
                     tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.shape_my_revolving_review));
                     break;
 
-                case "2":
+                case "10":
                     tv_revolving_state.setText("跟进中");
                     tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.shape_my_revolving_following_up));
                     break;
 
-                case "3":
+                case "11":
                     tv_revolving_state.setText("处理完成");
                     tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.shape_my_revolving_finish));
+                    break;
+
+                case "16":
+                    tv_revolving_state.setText("审核中");
+                    tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.shape_my_revolving_review));
+                    break;
+                case "17":
+                    tv_revolving_state.setText("审核未通过");
+                    tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.shape_my_revolving_following_up));
                     break;
             }
 

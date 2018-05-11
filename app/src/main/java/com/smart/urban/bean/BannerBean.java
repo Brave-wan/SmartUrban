@@ -1,7 +1,5 @@
 package com.smart.urban.bean;
 
-import com.smart.urban.config.Constants;
-
 public class BannerBean {
 
     /**
