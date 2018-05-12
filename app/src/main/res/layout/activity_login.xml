@@ -113,7 +113,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="30dp"
         android:gravity="center"
-        android:visibility="gone"
         android:orientation="horizontal">
 
         <TextView
@@ -124,13 +123,13 @@
             android:drawableTop="@drawable/icon_login_qq_btn"
             android:gravity="center"
             android:text="QQ登陆"
-            android:textColor="@color/login_txt_gray" />
+            android:textColor="@color/login_txt_gray"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/img_login_wchat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
             android:drawablePadding="10dp"
             android:drawableTop="@drawable/icon_login_wechat"
             android:text="微信登陆"

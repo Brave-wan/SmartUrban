@@ -37,13 +37,14 @@ import java.util.Set;
  * Created by root on 18-3-30.
  */
 
-public class LoginPresent extends BasePresenter<ILoginView> implements UMAuthListener {
+public class LoginPresent extends BasePresenter<ILoginView> {
     private Activity mContext;
     private ProgressDialog dialog;
 
     public LoginPresent(Activity mContext) {
         this.mContext = mContext;
         dialog = new ProgressDialog(mContext);
+        dialog.setMessage("正在获取授权...");
         getCameraPermission();
     }
 
@@ -69,7 +70,37 @@ public class LoginPresent extends BasePresenter<ILoginView> implements UMAuthLis
 
     public void AuthLogin(SHARE_MEDIA e) {
         //初始化shareApi
-        UMShareAPI.get(mContext).doOauthVerify(mContext, e, this);
+        UMShareAPI.get(mContext).getPlatformInfo(mContext, SHARE_MEDIA.WEIXIN, new UMAuthListener() {
+            @Override
+            public void onStart(SHARE_MEDIA share_media) {
+                SocializeUtils.safeShowDialog(dialog);
+            }
+
+            @Override
+            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
+                ToastUtils.showShort("onComplete");
+                switch (share_media.name()) {
+                    case "WEIXIN":
+                        String json = new Gson().toJson(map);
+                        Log.i("json", "json>>" + json);
+                        WxLoginBean bean = GsonUtil.GsonToBean(json, WxLoginBean.class);
+                        getOtherLogin(bean, 2);//1是qq登录，2是微信登录
+                        break;
+                }
+            }
+
+            @Override
+            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
+                ToastUtils.showShort("onError");
+                SocializeUtils.safeCloseDialog(dialog);
+            }
+
+            @Override
+            public void onCancel(SHARE_MEDIA share_media, int i) {
+                ToastUtils.showShort("onCancel");
+                SocializeUtils.safeCloseDialog(dialog);
+            }
+        });
     }
 
     public void fetchAuthResultWithBundle(Bundle savedInstanceState) {
@@ -80,9 +111,8 @@ public class LoginPresent extends BasePresenter<ILoginView> implements UMAuthLis
             }
 
             @Override
-            public void onComplete(SHARE_MEDIA platform, int action, Map<String, String> data) {
+            public void onComplete(SHARE_MEDIA platform, int action, Map<String, String> map) {
                 ToastUtils.showShort("onRestoreInstanceState Authorize succeed");
-                SocializeUtils.safeCloseDialog(dialog);
             }
 
             @Override
@@ -99,33 +129,35 @@ public class LoginPresent extends BasePresenter<ILoginView> implements UMAuthLis
         });
     }
 
-    @Override
-    public void onStart(SHARE_MEDIA share_media) {
-        ToastUtils.showShort("onStart");
-    }
+    /**
+     * 微信登录
+     *
+     * @param bean 微信实体
+     * @param type 登录方式
+     */
+    public void getOtherLogin(WxLoginBean bean, final int type) {
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("nickName", bean.getName());
+        map.put("sex", bean.getGender());
+        map.put("imgAdress", bean.getIconurl());
+        map.put("token", bean.getUid());
+        map.put("flag", type);
+        HttpManager.get().addSubscription(HttpManager.get().getApiStores().getOtherLogin(map), new ApiCallback<BaseResult<RegisterBean>>() {
+            @Override
+            public void onSuccess(BaseResult<RegisterBean> model) {
+                RegisterBean registerBean = model.getData();
+                SocializeUtils.safeCloseDialog(dialog);
+                SharedPreferencesUtils.init(mContext).put("type", 2 + "");
+                getMyDetails(registerBean.getToken(), registerBean.getUserId());
+                mView.OnLoginSuccess(registerBean);
+            }
 
-    @Override
-    public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
-        switch (share_media.toSnsPlatform().mPlatform) {
-            case WEIXIN://微信登录
-                String json = new Gson().toJson(map);
-                Log.i("wan", "json>>>" + json);
-                WxLoginBean bean = GsonUtil.GsonToBean(json, WxLoginBean.class);
-                ToastUtils.showShort(bean.getAccess_token());
-                break;
-            case QQ:
-                break;
-        }
-    }
-
-    @Override
-    public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
-        ToastUtils.showShort("onError");
-    }
-
-    @Override
-    public void onCancel(SHARE_MEDIA share_media, int i) {
-        ToastUtils.showShort("onCancel");
+            @Override
+            public void onFailure(BaseResult result) {
+                SocializeUtils.safeCloseDialog(dialog);
+                ToastUtils.showShort(result.errmsg);
+            }
+        });
     }
 
     /**

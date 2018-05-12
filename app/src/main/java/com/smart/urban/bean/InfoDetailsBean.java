@@ -107,7 +107,7 @@ public class InfoDetailsBean {
 
     public String getCreateTime() {
         Date date = new Date(createTime);
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         return format.format(date);
     }
 

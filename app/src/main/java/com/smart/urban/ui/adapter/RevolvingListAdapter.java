@@ -33,10 +33,12 @@ public class RevolvingListAdapter extends CommonAdapter<RevolvingListBean> {
         TextView tv_revolving_title = (TextView) baseViewHolder.getViewByViewId(R.id.tv_revolving_title);
         TextView tv_revolving_state = (TextView) baseViewHolder.getViewByViewId(R.id.tv_revolving_state);
         TextView tv_revolving_content = (TextView) baseViewHolder.getViewByViewId(R.id.tv_revolving_content);
+        TextView tv_mode_time = (TextView) baseViewHolder.getViewByViewId(R.id.tv_mode_time);
         tv_revolving_title.setText(bean.getContent());
-        tv_revolving_content.setText(bean.getContent());
+//        tv_revolving_content.setText(bean.getContent());
 
         Log.i("wan", "type:" + bean.getState());
+        tv_mode_time.setText("创建时间:" + bean.getCreateTime());
         if (bean.getImages() != null && bean.getImages().size() > 0) {
             Glide.with(context).load(bean.getImages().get(0).getAddress()).placeholder(R.drawable.icon_pic_empty).error(R.drawable.icon_pic_empty).into(img_revolving_head);
         } else {

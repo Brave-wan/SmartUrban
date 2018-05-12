@@ -124,6 +124,9 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         cameraFragment.onActivityResult(requestCode, resultCode, data);
+        if (centerFragment != null) {
+            cameraFragment.onActivityResult(requestCode, resultCode, data);
+        }
     }
 
     public void getTakePhoto(int number) {

@@ -23,6 +23,7 @@ import com.tencent.bugly.crashreport.CrashReport;
 import com.umeng.socialize.Config;
 import com.umeng.socialize.PlatformConfig;
 import com.umeng.socialize.UMShareAPI;
+import com.umeng.socialize.UMShareConfig;
 
 /**
  * Created by root on 18-3-28.
@@ -40,6 +41,9 @@ public class MyApplication extends Application {
         checkUpdate();
         UMShareAPI.get(this);
         Config.DEBUG = true;
+//        UMShareConfig config = new UMShareConfig();
+//        config.isNeedAuthOnGetUserInfo(true);
+//        UMShareAPI.get(this).setShareConfig(config);
         PlatformConfig.setWeixin("wx17893857032ef728", "8558c99eb2c1ccb8a5704ec40d028572");
     }
 

@@ -34,7 +34,7 @@ public class StartupPagePresent extends BasePresenter<IStartupPageView> {
         animation.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationEnd(Animation arg0) {
-                String userName = SharedPreferencesUtils.init(mContext).getString("userName");
+                String userName = SharedPreferencesUtils.init(mContext).getString("userId");
                 mContext.startActivity(new Intent(mContext, StringUtils.isEmpty(userName) ? LoginActivity.class : MainActivity.class));
                 mContext.finish();
             }

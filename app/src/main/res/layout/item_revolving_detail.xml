@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/img_revolving_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_revolving_detail" />
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_below="@+id/img_revolving_detail"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="6dp"
+            android:background="@color/gray_line" />
+
+        <TextView
+            android:id="@+id/tv_revolving_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_revolving_detail"
+            android:text="审核中" />
+
+        <TextView
+            android:id="@+id/tv_revolving_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="2018-04-08 22:22" />
+
+        <TextView
+            android:id="@+id/tv_revolving_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_revolving_name"
+            android:layout_below="@+id/tv_revolving_name"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="15dp"
+            android:text="hello word" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

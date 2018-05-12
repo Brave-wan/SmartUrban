@@ -14,9 +14,9 @@ import okhttp3.RequestBody;
  */
 
 public class Constants {
-//            public static final String BASE_URL = "http://111.231.222.163:8080/";
-    public static final String BASE_URL = "http://47.105.53.173:8080/";
-//        public static final String BASE_URL = "http://10.15.209.200:8080/city/";
+            public static final String BASE_URL = "http://111.231.222.163:8080/";
+//    public static final String BASE_URL = "http://47.105.53.173:8080/";
+//    public static final String BASE_URL = "http://10.15.209.200:8080/city/";
 //    public static final String BASE_URL = "http://10.15.208.136:8080/";
     //是否开启打印日志信息
     public static final boolean DEBUG = true;

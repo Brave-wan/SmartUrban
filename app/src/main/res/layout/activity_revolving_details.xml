@@ -32,4 +32,13 @@
         android:paddingTop="15dp"
         android:verticalSpacing="10dp" />
 
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lv_revolving_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingTop="10dp" />
+
 </LinearLayout>

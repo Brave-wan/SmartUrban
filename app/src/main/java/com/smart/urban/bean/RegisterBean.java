@@ -8,6 +8,7 @@ public class RegisterBean {
     private String code;
     private String token;
     private String userId;
+    private String type;
 
     public void setUserId(String userId) {
         this.userId = userId;
@@ -31,5 +32,13 @@ public class RegisterBean {
 
     public String getCode() {
         return code;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
     }
 }

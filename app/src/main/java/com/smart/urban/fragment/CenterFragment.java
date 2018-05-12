@@ -1,6 +1,7 @@
 package com.smart.urban.fragment;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,6 +24,12 @@ import com.smart.urban.ui.PersonInformationActivity;
 import com.smart.urban.ui.RevolvingActivity;
 import com.smart.urban.utils.GlideCircleTransform;
 import com.smart.urban.utils.SharedPreferencesUtils;
+import com.umeng.socialize.UMAuthListener;
+import com.umeng.socialize.UMShareAPI;
+import com.umeng.socialize.bean.SHARE_MEDIA;
+import com.umeng.socialize.utils.SocializeUtils;
+
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -49,6 +56,8 @@ public class CenterFragment extends BaseFragment {
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
         setTitle("我的");
+        progressDialog = new ProgressDialog(getActivity());
+        progressDialog.setMessage("正在获取授权...");
     }
 
     @Override
@@ -56,6 +65,7 @@ public class CenterFragment extends BaseFragment {
         return null;
     }
 
+    String url;
 
     @Override
     public void onResume() {
@@ -63,15 +73,23 @@ public class CenterFragment extends BaseFragment {
         String userName = SharedPreferencesUtils.init(getActivity()).getString("center_name");
         tv_center_name.setText("昵称:" + userName);
         tv_center_sex.setText("性别:" + SharedPreferencesUtils.init(getActivity()).getString("center_sex"));
-        String url = Constants.BASE_URL + SharedPreferencesUtils.init(getActivity()).getString("center_img");
+
         tv_center_name.setVisibility(StringUtils.isEmpty(userName) ? View.GONE : View.VISIBLE);
         tv_center_sex.setVisibility(StringUtils.isEmpty(userName) ? View.GONE : View.VISIBLE);
         tv_my_pr.setVisibility(StringUtils.isEmpty(userName) ? View.VISIBLE : View.GONE);
+        String type = SharedPreferencesUtils.init(getActivity()).getString("type");
+        if (!StringUtils.isEmpty(type)) {
+            url = SharedPreferencesUtils.init(getActivity()).getString("center_img");
+        } else {
+            url = Constants.BASE_URL + SharedPreferencesUtils.init(getActivity()).getString("center_img");
+        }
+
         Glide.with(getActivity()).load(url)
                 .error(R.drawable.icon_my_portraits)
                 .placeholder(R.drawable.icon_my_portraits)
                 .bitmapTransform(new GlideCircleTransform(getActivity()))
                 .into(img_center_head);
+
     }
 
     @OnClick({R.id.img_center_head, R.id.tv_my_alter_pwd, R.id.tv_my_lost,
@@ -102,6 +120,8 @@ public class CenterFragment extends BaseFragment {
         }
     }
 
+    private ProgressDialog progressDialog;
+
     public void getLogOut() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setMessage("你确定要退出当前账号？")
@@ -109,13 +129,43 @@ public class CenterFragment extends BaseFragment {
                 .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        SharedPreferencesUtils.init(getActivity()).clear();
-                        Intent intent = new Intent(getActivity(), LoginActivity.class);
-                        startActivity(intent);
-                        getActivity().finish();
+                        String type = SharedPreferencesUtils.init(getActivity()).getString("type");
+                        UMShareAPI.get(getActivity()).deleteOauth(getActivity(), type.equals("2") ? SHARE_MEDIA.WEIXIN : SHARE_MEDIA.QQ, new UMAuthListener() {
+                            @Override
+                            public void onStart(SHARE_MEDIA share_media) {
+                                SocializeUtils.safeShowDialog(progressDialog);
+                            }
+
+                            @Override
+                            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
+                                SocializeUtils.safeCloseDialog(progressDialog);
+                                SharedPreferencesUtils.init(getActivity()).clear();
+                                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                                startActivity(intent);
+                                getActivity().finish();
+                            }
+
+                            @Override
+                            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
+                                SocializeUtils.safeCloseDialog(progressDialog);
+                            }
+
+                            @Override
+                            public void onCancel(SHARE_MEDIA share_media, int i) {
+                                SocializeUtils.safeCloseDialog(progressDialog);
+                            }
+                        });
+
                     }
                 })
                 .setTitle("退出提示")
                 .show();
+    }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        UMShareAPI.get(getActivity()).onActivityResult(requestCode, resultCode, data);
     }
 }

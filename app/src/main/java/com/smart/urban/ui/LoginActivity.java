@@ -87,13 +87,10 @@ public class LoginActivity extends BaseActivity<ILoginView, LoginPresent> implem
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_login_in:
-//                startActivity(new Intent(this, MainActivity.class));
-
                 presenter.getLogin(ed_login_user, ed_login_pass);
                 break;
 
             case R.id.img_login_wchat:
-//                ToastUtils.showShort("暂未开放");
                 presenter.AuthLogin(SHARE_MEDIA.WEIXIN);
                 break;
 

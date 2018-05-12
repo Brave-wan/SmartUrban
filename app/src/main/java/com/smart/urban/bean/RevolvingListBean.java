@@ -3,6 +3,8 @@ package com.smart.urban.bean;
 import com.smart.urban.config.Constants;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -86,8 +88,10 @@ public class RevolvingListBean implements Serializable {
         this.recordStatus = recordStatus;
     }
 
-    public long getCreateTime() {
-        return createTime;
+    public String getCreateTime() {
+        Date date = new Date(createTime);
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        return format.format(date);
     }
 
     public void setCreateTime(long createTime) {
@@ -126,7 +130,7 @@ public class RevolvingListBean implements Serializable {
         this.images = images;
     }
 
-    public static class ImagesBean implements Serializable{
+    public static class ImagesBean implements Serializable {
         /**
          * belongId : 1524149457122
          * order : 1
@@ -158,7 +162,7 @@ public class RevolvingListBean implements Serializable {
         }
 
         public String getAddress() {
-            return Constants.BASE_URL+address;
+            return Constants.BASE_URL + address;
         }
 
         public void setAddress(String address) {

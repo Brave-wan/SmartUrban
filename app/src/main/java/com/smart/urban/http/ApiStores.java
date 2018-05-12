@@ -10,6 +10,7 @@ import com.smart.urban.bean.LocationListBean;
 import com.smart.urban.bean.LostBean;
 import com.smart.urban.bean.PersonalBean;
 import com.smart.urban.bean.RegisterBean;
+import com.smart.urban.bean.RevolvingDetailsBean;
 import com.smart.urban.bean.RevolvingListBean;
 import com.smart.urban.bean.UpFileBean;
 import com.smart.urban.bean.UrbanDetailsBean;
@@ -129,5 +130,8 @@ public interface ApiStores {
     Observable<BaseResult<List<BannerBean>>> getBannerList(@QueryMap Map<String, Object> map);
 
     @GET("cityApp/photo/getById")
-    Observable<BaseResult<List<BannerBean>>> getForumById(@QueryMap Map<String, Object> map);
+    Observable<BaseResult<RevolvingDetailsBean>> getForumById(@QueryMap Map<String, Object> map);
+    @FormUrlEncoded
+    @POST("cityApp/otherLogin")
+    Observable<BaseResult<RegisterBean>> getOtherLogin(@FieldMap Map<String, Object> map);
 }
