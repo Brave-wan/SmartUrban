@@ -31,7 +31,7 @@ public class RevolvingListAdapter extends CommonAdapter<RevolvingListBean> {
     protected void convert(BaseViewHolder baseViewHolder, RevolvingListBean bean, int position) {
         ImageView img_revolving_head = (ImageView) baseViewHolder.getViewByViewId(R.id.img_revolving_head);
         TextView tv_revolving_title = (TextView) baseViewHolder.getViewByViewId(R.id.tv_revolving_title);
-        TextView tv_revolving_state = (TextView) baseViewHolder.getViewByViewId(R.id.tv_revolving_state);
+        ImageView tv_revolving_state = (ImageView) baseViewHolder.getViewByViewId(R.id.tv_revolving_state);
         TextView tv_revolving_content = (TextView) baseViewHolder.getViewByViewId(R.id.tv_revolving_content);
         TextView tv_mode_time = (TextView) baseViewHolder.getViewByViewId(R.id.tv_mode_time);
         tv_revolving_title.setText(bean.getContent());
@@ -46,28 +46,25 @@ public class RevolvingListAdapter extends CommonAdapter<RevolvingListBean> {
         }
         if (bean.getState() != null) {
             switch (bean.getState()) {
+
                 case "9":
-                    tv_revolving_state.setText("待审核");
-                    tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.shape_my_revolving_review));
+                    tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.icon_dai_shen_he));
                     break;
 
                 case "10":
-                    tv_revolving_state.setText("跟进中");
-                    tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.shape_my_revolving_following_up));
+                    tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.icon_shen_he_zhong));
                     break;
 
                 case "11":
-                    tv_revolving_state.setText("处理完成");
-                    tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.shape_my_revolving_finish));
+                    tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.icon_wei_shen_he_tong_tong_guo));
                     break;
 
                 case "16":
-                    tv_revolving_state.setText("审核中");
-                    tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.shape_my_revolving_review));
+                    tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.icon_chu_li_zhong));
                     break;
+
                 case "17":
-                    tv_revolving_state.setText("审核未通过");
-                    tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.shape_my_revolving_following_up));
+                    tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.icon_chu_li_wan_cheng));
                     break;
             }
 

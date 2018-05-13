@@ -47,6 +47,8 @@ public class CenterFragment extends BaseFragment {
     TextView tv_center_sex;
     @BindView(R.id.tv_my_pr)
     TextView tv_my_pr;
+    @BindView(R.id.tv_my_alter_pwd)
+    TextView tv_my_alter_pwd;
 
     @Override
     protected int getLayoutId() {
@@ -77,12 +79,15 @@ public class CenterFragment extends BaseFragment {
         tv_center_name.setVisibility(StringUtils.isEmpty(userName) ? View.GONE : View.VISIBLE);
         tv_center_sex.setVisibility(StringUtils.isEmpty(userName) ? View.GONE : View.VISIBLE);
         tv_my_pr.setVisibility(StringUtils.isEmpty(userName) ? View.VISIBLE : View.GONE);
-        String type = SharedPreferencesUtils.init(getActivity()).getString("type");
-        if (!StringUtils.isEmpty(type)) {
-            url = SharedPreferencesUtils.init(getActivity()).getString("center_img");
-        } else {
+
+        url = SharedPreferencesUtils.init(getActivity()).getString("center_img");
+        if (url.indexOf("http") == -1) {
             url = Constants.BASE_URL + SharedPreferencesUtils.init(getActivity()).getString("center_img");
+        } else {
+            url = SharedPreferencesUtils.init(getActivity()).getString("center_img");
         }
+
+        tv_my_alter_pwd.setVisibility(StringUtils.isEmpty(SharedPreferencesUtils.init(getActivity()).getString("type")) ? View.VISIBLE : View.GONE);
 
         Glide.with(getActivity()).load(url)
                 .error(R.drawable.icon_my_portraits)

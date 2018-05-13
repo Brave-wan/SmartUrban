@@ -24,7 +24,7 @@ public class PhotoUtils {
             return getRealPathFromUriBelowAPI19(context, uri);
         }
     }
-
+//content://media/external/images/media/34835
     /**
      * 适配api19以下(不包括api19),根据uri获取图片的绝对路径
      *
@@ -52,8 +52,9 @@ public class PhotoUtils {
             if (isMediaDocument(uri)) { // MediaProvider
                 // 使用':'分割
                 String id = documentId.split(":")[1];
+
                 String selection = MediaStore.Images.Media._ID + "=?";
-                String[] selectionArgs = {id};//content://com.smart.urban.fileprovider/my_images/PEG_20180427_220927_.jpg
+                String[] selectionArgs = {id};
                 filePath = getDataColumn(context, MediaStore.Images.Media.EXTERNAL_CONTENT_URI, selection, selectionArgs);
             } else if (isDownloadsDocument(uri)) { // DownloadsProvider
                 Uri contentUri = ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), Long.valueOf(documentId));
@@ -76,34 +77,20 @@ public class PhotoUtils {
      */
     private static String getDataColumn(Context context, Uri uri, String selection, String[] selectionArgs) {
         String path = null;
-//        String[] projection = new String[]{MediaStore.Images.Media.DATA};
-//        Cursor cursor = null;
-//        try {
-//            cursor = context.getContentResolver().query(uri, projection, selection, selectionArgs, null);
-//            if (cursor != null && cursor.moveToFirst()) {
-//                int columnIndex = cursor.getColumnIndexOrThrow(projection[0]);
-//                path = cursor.getString(columnIndex);
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            if (cursor != null) {
-//                cursor.close();
-//            }
-//        }
-        if (ContentResolver.SCHEME_CONTENT.equals(uri.getScheme())) {
-            Cursor cursor = context.getContentResolver().query(uri, new String[]{MediaStore.Images.Media.DATA}, null, null, null);
+
+        String[] projection = new String[]{MediaStore.Images.Media.DATA};
+        Cursor cursor = null;
+        try {
+            cursor = context.getContentResolver().query(uri, projection, selection, selectionArgs, null);
+            if (cursor != null && cursor.moveToFirst()) {
+                int columnIndex = cursor.getColumnIndexOrThrow(projection[0]);
+                path = cursor.getString(columnIndex);
+            }
+        } catch (Exception e) {
             if (cursor != null) {
-                if (cursor.moveToFirst()) {
-                    int columnIndex = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-                    if (columnIndex > -1) {
-                        path = cursor.getString(columnIndex);
-                    }
-                }
                 cursor.close();
             }
-            return path;
         }
-
         return path;
     }
 
@@ -123,4 +110,3 @@ public class PhotoUtils {
         return "com.android.providers.downloads.documents".equals(uri.getAuthority());
     }
 }
-

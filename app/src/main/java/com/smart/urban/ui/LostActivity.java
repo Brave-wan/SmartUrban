@@ -88,11 +88,11 @@ public class LostActivity extends BaseActivity implements OnRefreshListener, OnL
 
     public void getLostList(int page) {
         Map<String, Object> map = new HashMap<>();
-        map.put("userId", SharedPreferencesUtils.init(this).getString("key"));
+        map.put("userId", SharedPreferencesUtils.init(this).getString("userId"));
         map.put("token", SharedPreferencesUtils.init(this).getString("token"));
         map.put("page", page);
         map.put("rows", 20);
-        map.put("createUserId", SharedPreferencesUtils.init(this).getString("key"));
+        map.put("createUserId", SharedPreferencesUtils.init(this).getString("userId"));
         HttpManager.get().addSubscription(HttpManager.get().getApiStores().getLostList(map), new ApiCallback<BaseResult<List<LostBean>>>() {
             @Override
             public void onSuccess(BaseResult<List<LostBean>> model) {

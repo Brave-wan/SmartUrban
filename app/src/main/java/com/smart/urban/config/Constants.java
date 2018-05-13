@@ -1,6 +1,22 @@
 package com.smart.urban.config;
 
+import android.app.Activity;
+import android.content.Context;
+import android.util.Log;
+
+import com.blankj.utilcode.util.ToastUtils;
+import com.smart.urban.R;
 import com.smart.urban.bean.CameraPicBean;
+import com.smart.urban.ui.MainActivity;
+import com.smart.urban.ui.UrbanDetailsActivity;
+import com.smart.urban.utils.GlideLoader;
+import com.umeng.socialize.ShareAction;
+import com.umeng.socialize.UMShareListener;
+import com.umeng.socialize.bean.SHARE_MEDIA;
+import com.umeng.socialize.media.UMImage;
+import com.umeng.socialize.media.UMWeb;
+import com.yancy.imageselector.ImageConfig;
+import com.yancy.imageselector.ImageSelector;
 
 import java.io.File;
 import java.util.List;
@@ -14,10 +30,11 @@ import okhttp3.RequestBody;
  */
 
 public class Constants {
-            public static final String BASE_URL = "http://111.231.222.163:8080/";
-//    public static final String BASE_URL = "http://47.105.53.173:8080/";
-//    public static final String BASE_URL = "http://10.15.209.200:8080/city/";
-//    public static final String BASE_URL = "http://10.15.208.136:8080/";
+    //http://111.231.222.163:8080/data/uploads/20180514/4e1eb6b26ded28b5763656ccb29aff77.html
+//    public static final String BASE_URL = "http://111.231.222.163:8080/";
+     public static final String BASE_URL = "http://47.105.53.173:8080/";
+    // public static final String BASE_URL = "http://10.15.209.200:8080/city/";
+    // public static final String BASE_URL = "http://10.15.208.136:8080/";
     //是否开启打印日志信息
     public static final boolean DEBUG = true;
 
@@ -59,5 +76,62 @@ public class Constants {
                 "<style>html{padding:15px;} body{word-wrap:break-word;font-size:13px;padding:0px;margin:0px} p{padding:0px;margin:0px;font-size:13px;color:#222222;line-height:1.3;} img{padding:0px,margin:0px;max-width:100%; width:auto; height:auto;}</style>" +
                 "</head>";
         return "<html>" + head + "<body>" + bodyHTML + "</body></html>";
+    }
+
+    /**
+     * 分享
+     *
+     * @param activity 　当前窗口
+     * @param title    　标题
+     * @param desc     　内容
+     * @param url      　分享链接
+     */
+    public static void getSharePlatform(Activity activity, String title, String desc, String url) {
+        UMWeb web = new UMWeb(url);
+        web.setTitle("石家庄桥西智慧城管");
+        web.setThumb(new UMImage(activity, R.mipmap.ic_launcher));
+        web.setDescription(desc);
+        new ShareAction(activity).withMedia(web)
+                .setPlatform(SHARE_MEDIA.WEIXIN)
+                .setCallback(new UMShareListener() {
+                    @Override
+                    public void onStart(SHARE_MEDIA share_media) {
+                        Log.i("wan", "onStart");
+                    }
+
+                    @Override
+                    public void onResult(SHARE_MEDIA share_media) {
+                        Log.i("wan", "onResult");
+                    }
+
+                    @Override
+                    public void onError(SHARE_MEDIA share_media, Throwable throwable) {
+                        Log.i("wan", "onError");
+                    }
+
+                    @Override
+                    public void onCancel(SHARE_MEDIA share_media) {
+                        Log.i("wan", "onCancel");
+                    }
+                }).share();
+    }
+
+
+    public static void takePhoto(Activity mContext, int number) {
+        ImageConfig imageConfig = new ImageConfig.Builder(new GlideLoader())
+                .steepToolBarColor(mContext.getResources().getColor(R.color.white))
+                .titleBgColor(mContext.getResources().getColor(R.color.white))
+                .titleSubmitTextColor(mContext.getResources().getColor(R.color.black))
+                .titleTextColor(mContext.getResources().getColor(R.color.black))
+                // 开启多选   （默认为多选）
+                .mutiSelect()
+                // 多选时的最大数量   （默认 9 张）
+                .mutiSelectMaxSize(number)
+                // 开启拍照功能 （默认关闭）
+                .showCamera()
+                // 拍照后存放的图片路径（默认 /temp/picture） （会自动创建）
+                .filePath("/ImageSelector/Pictures")
+                .build();
+        ImageSelector.open(mContext, imageConfig);
     }
 }

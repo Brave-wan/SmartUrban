@@ -1,6 +1,7 @@
 package com.smart.urban.ui;
 
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +23,12 @@ import com.smart.urban.utils.LoadingLayout;
 import com.smart.urban.utils.MyWebViewClient;
 import com.smart.urban.utils.SharedPreferencesUtils;
 import com.smart.urban.view.IUrbanDetailsView;
+import com.umeng.socialize.ShareAction;
+import com.umeng.socialize.UMShareListener;
+import com.umeng.socialize.bean.SHARE_MEDIA;
+import com.umeng.socialize.media.UMImage;
+import com.umeng.socialize.media.UMWeb;
+import com.umeng.socialize.shareboard.ShareBoardConfig;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -45,6 +52,7 @@ public class UrbanDetailsActivity extends BaseActivity<IUrbanDetailsView, UrbanD
     @BindView(R.id.layout_root)
     LoadingLayout layout_root;
     String id;
+    UrbanListBean bean = null;
 
     @Override
     protected int getContentViewId() {
@@ -56,7 +64,6 @@ public class UrbanDetailsActivity extends BaseActivity<IUrbanDetailsView, UrbanD
         setTitle("详情");
         layout_root.setStatus(LoadingLayout.Loading);
         id = getIntent().getStringExtra("id");
-
         initData();
         getDynamicById();
     }
@@ -77,13 +84,15 @@ public class UrbanDetailsActivity extends BaseActivity<IUrbanDetailsView, UrbanD
         }
     }
 
-    ShareWindow window;
-
     @Override
     protected void onForward(View forwardView) {
         super.onForward(forwardView);
-        window = new ShareWindow(this);
-        window.showWindow(layout_titleBar);
+        if (bean != null) {
+            String musicurl = bean.getH5url() != null ? Constants.BASE_URL + bean.getH5url() : "http://www.szseblog.cn";
+            String desc = bean.getTitle();
+            String title = "智慧城管";
+            Constants.getSharePlatform(this, title, desc, musicurl);
+        }
 
     }
 
@@ -107,6 +116,7 @@ public class UrbanDetailsActivity extends BaseActivity<IUrbanDetailsView, UrbanD
         HttpManager.get().addSubscription(HttpManager.get().getApiStores().getDynamicById(map), new ApiCallback<BaseResult<UrbanListBean>>() {
             @Override
             public void onSuccess(BaseResult<UrbanListBean> model) {
+                bean = model.getData();
                 layout_root.setStatus(LoadingLayout.Success);
                 tv_comment_number.setText(model.getData().getCommentCount() + "");
                 tv_see_number.setText(model.getData().getViewCount() + "");

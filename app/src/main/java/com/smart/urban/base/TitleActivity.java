@@ -16,7 +16,7 @@ public class TitleActivity extends FragmentActivity {
 
     private TextView textTitle;
     private TextView buttonBackward;
-//    private TextView buttonForward;
+    private TextView buttonForward;
     private TextView titleLine;
     public RelativeLayout layout_titleBar;
     private FrameLayout layoutContent;
@@ -35,7 +35,7 @@ public class TitleActivity extends FragmentActivity {
         layoutContent = (FrameLayout) findViewById(R.id.layout_content);
         buttonBackward = (TextView) findViewById(R.id.button_backward);
         layout_titleBar = (RelativeLayout) findViewById(R.id.layout_title_bar);
-//        buttonForward = (TextView) findViewById(R.id.button_forward);
+        buttonForward = (TextView) findViewById(R.id.button_forward);
 
         buttonBackward.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,12 +43,12 @@ public class TitleActivity extends FragmentActivity {
                 onBackward(v);
             }
         });
-//        buttonForward.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                onForward(v);
-//            }
-//        });
+        buttonForward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onForward(v);
+            }
+        });
     }
 
     /**
@@ -68,17 +68,17 @@ public class TitleActivity extends FragmentActivity {
     }
 
     protected void setRightText(String tx) {
-//        buttonForward.setText(tx);
-//        buttonForward.setVisibility(View.VISIBLE);
+        buttonForward.setText(tx);
+        buttonForward.setVisibility(View.VISIBLE);
     }
 
     protected void setRightImage(int res) {
-//        buttonForward.setText("");
-//        buttonForward.setVisibility(View.VISIBLE);
-//        Drawable drawable = getResources().getDrawable(res);
-//        /// 这一步必须要做,否则不会显示.
-//        drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
-//        buttonForward.setCompoundDrawables(drawable, null, null, null);
+        buttonForward.setText("");
+        buttonForward.setVisibility(View.VISIBLE);
+        Drawable drawable = getResources().getDrawable(res);
+        /// 这一步必须要做,否则不会显示.
+        drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
+        buttonForward.setCompoundDrawables(drawable, null, null, null);
     }
 
     /**
@@ -142,11 +142,11 @@ public class TitleActivity extends FragmentActivity {
      * @param forwardResId 文字
      */
     protected void showForwardView(int forwardResId) {
-//        if (buttonForward != null) {
-//            buttonForward.setVisibility(View.VISIBLE);
-//            buttonForward.setText(forwardResId);
-//
-//        }
+        if (buttonForward != null) {
+            buttonForward.setVisibility(View.VISIBLE);
+            buttonForward.setText(forwardResId);
+
+        }
     }
 
     /**
@@ -156,14 +156,14 @@ public class TitleActivity extends FragmentActivity {
      * @param show         true则显示
      */
     protected void showForwardView(String forwardResId, boolean show) {
-//        if (buttonForward != null) {
-//            if (show) {
-//                buttonForward.setVisibility(View.VISIBLE);
-//                buttonForward.setText(forwardResId);
-//            } else {
-//                buttonForward.setVisibility(View.INVISIBLE);
-//            }
-//        }
+        if (buttonForward != null) {
+            if (show) {
+                buttonForward.setVisibility(View.VISIBLE);
+                buttonForward.setText(forwardResId);
+            } else {
+                buttonForward.setVisibility(View.INVISIBLE);
+            }
+        }
     }
 
     /**
@@ -172,7 +172,7 @@ public class TitleActivity extends FragmentActivity {
      * @param viewColor
      */
     protected void showForwardViewColor(int viewColor) {
-//        buttonForward.setTextColor(viewColor);
+        buttonForward.setTextColor(viewColor);
     }
 
     /**

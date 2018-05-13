@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -15,6 +16,7 @@ import com.smart.urban.R;
 import com.smart.urban.base.BaseFragment;
 import com.smart.urban.bean.CameraPicBean;
 import com.smart.urban.config.Constants;
+import com.smart.urban.http.HttpManager;
 import com.smart.urban.present.CameraPresent;
 import com.smart.urban.ui.MainActivity;
 import com.smart.urban.ui.RevolvingActivity;
@@ -23,7 +25,11 @@ import com.smart.urban.ui.dialog.UpDynamicDialog;
 import com.smart.urban.ui.widget.LifePaymentWindow;
 import com.smart.urban.ui.widget.ShowImageWindow;
 import com.smart.urban.utils.PhotoUtils;
+import com.smart.urban.utils.impl.OnRemovePicListener;
 import com.smart.urban.view.ICameraView;
+import com.yancy.imageselector.ImageConfig;
+import com.yancy.imageselector.ImageSelector;
+import com.yancy.imageselector.ImageSelectorActivity;
 import com.zhihu.matisse.Matisse;
 
 import java.util.ArrayList;
@@ -41,15 +47,14 @@ import static com.smart.urban.present.CameraPresent.REQUEST_CODE_CHOOSE;
  */
 
 public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
-        implements AdapterView.OnItemClickListener, ICameraView {
+        implements AdapterView.OnItemClickListener, ICameraView, OnRemovePicListener {
 
     @BindView(R.id.gv_camera_list)
     GridView gv_camera_list;
     @BindView(R.id.ed_camera_content)
     EditText ed_camera_content;
-    private List<CameraPicBean> list = new ArrayList<>();
     private CameraListAdapter adapter;
-    private MainActivity mainActivity;
+    MainActivity mainActivity;
 
     @Override
     protected int getLayoutId() {
@@ -59,10 +64,9 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
         setTitle("随手拍");
-        list.clear();
-        list.add(new CameraPicBean());
-        adapter = new CameraListAdapter(getActivity(), R.layout.item_camera_list, list);
+        adapter = new CameraListAdapter(getActivity(), R.layout.item_camera_list, MainActivity.list);
         gv_camera_list.setAdapter(adapter);
+        adapter.setOnRemovePicListener(this);
         gv_camera_list.setOnItemClickListener(this);
     }
 
@@ -71,23 +75,20 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
         return new CameraPresent(getActivity());
     }
 
-    List<Uri> mSelected;
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_CODE_CHOOSE && resultCode == RESULT_OK) {
-            mSelected = Matisse.obtainResult(data);
-            if (mSelected != null && mSelected.size() > 0) {
-                for (Uri uri : mSelected) {
-                    String path = PhotoUtils.getRealPathFromUri(getActivity(), uri);
-                    CameraPicBean bean = new CameraPicBean();
-                    bean.setPic(path);
-                    list.add(0, bean);
-                }
-                adapter.setDataList(list);
+        if (requestCode == ImageSelector.IMAGE_REQUEST_CODE && resultCode == RESULT_OK && data != null) {
+            List<String> pathList = data.getStringArrayListExtra(ImageSelectorActivity.EXTRA_RESULT);
+            for (String path : pathList) {
+                CameraPicBean bean = new CameraPicBean();
+                bean.setPic(path);
+                MainActivity.list.add(0, bean);
             }
+            adapter.setDataList(MainActivity.list);
         }
+
     }
 
     @Override
@@ -124,33 +125,34 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
         }
     }
 
-
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         CameraPicBean bean = (CameraPicBean) adapter.getItem(position);
         if (bean.getPic() == null) {
-            if (list.size() >= 4) {
+            if (MainActivity.list.size() >= 4) {
                 ToastUtils.showShort("最多只能上传三张图片!");
                 return;
             } else {
-                mainActivity.getTakePhoto(4 - list.size());
+                Constants.takePhoto(getActivity(), 4 - MainActivity.list.size());
             }
-        } else {
-            ShowImageWindow window = new ShowImageWindow(getActivity(), bean.getPic());
-            window.showWindow(view);
         }
     }
 
     @Override
     public void onUpSuccess(UpDynamicDialog dynamicDialog) {
-        list = adapter.dataList;
-        list.clear();
-        list.add(new CameraPicBean());
-        adapter.setDataList(list);
+        MainActivity.list = adapter.dataList;
+        MainActivity.list.clear();
+        MainActivity.list.add(new CameraPicBean());
+        adapter.setDataList(MainActivity.list);
         ed_camera_content.setText("");
         startActivity(new Intent(getActivity(), RevolvingActivity.class));
         dynamicDialog.dismiss();
     }
 
 
+    @Override
+    public void removePic(CameraPicBean bean) {
+        MainActivity.list.remove(bean);
+        adapter.setDataList(MainActivity.list);
+    }
 }

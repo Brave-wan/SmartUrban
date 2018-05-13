@@ -39,11 +39,20 @@ public class UrbanListBean implements Serializable {
     private long createTime;
     private String modifyUserId;
     private long modifyTime;
+    private String h5url;
     private long id;
     private List<ImagesBean> images;
 
     public String getTitle() {
         return title;
+    }
+
+    public void setH5url(String h5url) {
+        this.h5url = h5url;
+    }
+
+    public String getH5url() {
+        return h5url;
     }
 
     public void setTitle(String title) {

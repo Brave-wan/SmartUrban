@@ -16,6 +16,7 @@ import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 import com.smart.urban.R;
 import com.smart.urban.ui.MainActivity;
+import com.smart.urban.utils.GlideLoader;
 import com.smart.urban.utils.LoadingLayout;
 import com.tencent.bugly.Bugly;
 import com.tencent.bugly.beta.Beta;
@@ -24,6 +25,7 @@ import com.umeng.socialize.Config;
 import com.umeng.socialize.PlatformConfig;
 import com.umeng.socialize.UMShareAPI;
 import com.umeng.socialize.UMShareConfig;
+import com.yancy.imageselector.ImageConfig;
 
 /**
  * Created by root on 18-3-28.
@@ -41,9 +43,6 @@ public class MyApplication extends Application {
         checkUpdate();
         UMShareAPI.get(this);
         Config.DEBUG = true;
-//        UMShareConfig config = new UMShareConfig();
-//        config.isNeedAuthOnGetUserInfo(true);
-//        UMShareAPI.get(this).setShareConfig(config);
         PlatformConfig.setWeixin("wx17893857032ef728", "8558c99eb2c1ccb8a5704ec40d028572");
     }
 

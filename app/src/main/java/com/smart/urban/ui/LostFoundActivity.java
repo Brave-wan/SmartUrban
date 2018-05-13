@@ -21,8 +21,11 @@ import com.smart.urban.present.LostFoundPresent;
 import com.smart.urban.ui.adapter.CameraListAdapter;
 import com.smart.urban.ui.widget.ShowImageWindow;
 import com.smart.urban.utils.PhotoUtils;
+import com.smart.urban.utils.impl.OnRemovePicListener;
 import com.smart.urban.view.ICameraView;
 import com.smart.urban.view.ILostFoundView;
+import com.yancy.imageselector.ImageSelector;
+import com.yancy.imageselector.ImageSelectorActivity;
 import com.zhihu.matisse.Matisse;
 
 import java.util.ArrayList;
@@ -38,7 +41,8 @@ import static com.smart.urban.present.CameraPresent.REQUEST_CODE_CHOOSE;
  * Created by root on 03.04.18.
  */
 
-public class LostFoundActivity extends BaseActivity<ILostFoundView, LostFoundPresent> implements ILostFoundView, AdapterView.OnItemClickListener {
+public class LostFoundActivity extends BaseActivity<ILostFoundView, LostFoundPresent> implements ILostFoundView,
+        AdapterView.OnItemClickListener, OnRemovePicListener {
     @BindView(R.id.gv_lost_found)
     GridView gv_lost_found;
     @BindView(R.id.ed_lost_content)
@@ -63,6 +67,7 @@ public class LostFoundActivity extends BaseActivity<ILostFoundView, LostFoundPre
         list.add(new CameraPicBean());
         adapter = new CameraListAdapter(this, R.layout.item_camera_list, list);
         gv_lost_found.setAdapter(adapter);
+        adapter.setOnRemovePicListener(this);
         gv_lost_found.setOnItemClickListener(this);
     }
 
@@ -77,22 +82,18 @@ public class LostFoundActivity extends BaseActivity<ILostFoundView, LostFoundPre
         return new LostFoundPresent(this);
     }
 
-    List<Uri> mSelected;
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_CODE_CHOOSE && resultCode == RESULT_OK) {
-            mSelected = Matisse.obtainResult(data);
-            if (mSelected != null && mSelected.size() > 0) {
-                for (Uri uri : mSelected) {
-                    String path = PhotoUtils.getRealPathFromUri(this, uri);
-                    CameraPicBean bean = new CameraPicBean();
-                    bean.setPic(path);
-                    list.add(0, bean);
-                }
-                adapter.setDataList(list);
+        if (requestCode == ImageSelector.IMAGE_REQUEST_CODE && resultCode == RESULT_OK && data != null) {
+            List<String> pathList = data.getStringArrayListExtra(ImageSelectorActivity.EXTRA_RESULT);
+            for (String path : pathList) {
+                CameraPicBean bean = new CameraPicBean();
+                bean.setPic(path);
+                list.add(0, bean);
             }
+            adapter.setDataList(list);
         }
     }
 
@@ -104,13 +105,8 @@ public class LostFoundActivity extends BaseActivity<ILostFoundView, LostFoundPre
                 ToastUtils.showShort("最多只能上传三张图片!");
                 return;
             } else {
-                presenter.getTakePhoto(this, 4 - list.size());
+                Constants.takePhoto(this, 4 - list.size());
             }
-
-
-        } else {
-            ShowImageWindow window = new ShowImageWindow(this, bean.getPic());
-            window.showWindow(layout_titleBar);
         }
     }
 
@@ -153,5 +149,12 @@ public class LostFoundActivity extends BaseActivity<ILostFoundView, LostFoundPre
         ed_lost_phone.setText("");
         startActivity(new Intent(this, LostActivity.class));
         finish();
+    }
+
+    @Override
+    public void removePic(CameraPicBean bean) {
+        list.remove(bean);
+        adapter.setDataList(list);
+
     }
 }

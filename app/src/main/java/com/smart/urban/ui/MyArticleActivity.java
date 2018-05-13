@@ -20,8 +20,11 @@ import com.smart.urban.present.CameraPresent;
 import com.smart.urban.ui.adapter.CameraListAdapter;
 import com.smart.urban.ui.widget.ShowImageWindow;
 import com.smart.urban.utils.PhotoUtils;
+import com.smart.urban.utils.impl.OnRemovePicListener;
 import com.smart.urban.view.IArticleView;
 import com.smart.urban.view.ICameraView;
+import com.yancy.imageselector.ImageSelector;
+import com.yancy.imageselector.ImageSelectorActivity;
 import com.zhihu.matisse.Matisse;
 
 import java.util.ArrayList;
@@ -38,7 +41,8 @@ import static com.smart.urban.present.CameraPresent.REQUEST_CODE_CHOOSE;
  * Created by root on 01.04.18.
  */
 
-public class MyArticleActivity extends BaseActivity<IArticleView, ArticlePresent> implements AdapterView.OnItemClickListener, IArticleView {
+public class MyArticleActivity extends BaseActivity<IArticleView, ArticlePresent> implements AdapterView.OnItemClickListener,
+        IArticleView, OnRemovePicListener {
     @BindView(R.id.gv_article_list)
     GridView gv_article_list;
     @BindView(R.id.ed_article_title)
@@ -60,6 +64,7 @@ public class MyArticleActivity extends BaseActivity<IArticleView, ArticlePresent
         list.add(new CameraPicBean());
         adapter = new CameraListAdapter(this, R.layout.item_camera_list, list);
         gv_article_list.setAdapter(adapter);
+        adapter.setOnRemovePicListener(this);
         gv_article_list.setOnItemClickListener(this);
     }
 
@@ -74,22 +79,17 @@ public class MyArticleActivity extends BaseActivity<IArticleView, ArticlePresent
         return new ArticlePresent(this);
     }
 
-    private List<Uri> mSelected;
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_CODE_CHOOSE && resultCode == RESULT_OK) {
-            mSelected = Matisse.obtainResult(data);
-            if (mSelected != null && mSelected.size() > 0) {
-                for (Uri uri : mSelected) {
-                    String path = PhotoUtils.getRealPathFromUri(this, uri);
-                    CameraPicBean bean = new CameraPicBean();
-                    bean.setPic(path);
-                    list.add(0, bean);
-                }
-                adapter.setDataList(list);
+        if (requestCode == ImageSelector.IMAGE_REQUEST_CODE && resultCode == RESULT_OK && data != null) {
+            List<String> pathList = data.getStringArrayListExtra(ImageSelectorActivity.EXTRA_RESULT);
+            for (String path : pathList) {
+                CameraPicBean bean = new CameraPicBean();
+                bean.setPic(path);
+                list.add(0, bean);
             }
+            adapter.setDataList(list);
         }
     }
 
@@ -101,11 +101,8 @@ public class MyArticleActivity extends BaseActivity<IArticleView, ArticlePresent
                 ToastUtils.showShort("最多只能上传三张图片!");
                 return;
             } else {
-                presenter.getTakePhoto(this, 4 - list.size());
+                Constants.takePhoto(this, 4 - list.size());
             }
-        } else {
-            ShowImageWindow window = new ShowImageWindow(this, bean.getPic());
-            window.showWindow(view);
         }
     }
 
@@ -120,6 +117,7 @@ public class MyArticleActivity extends BaseActivity<IArticleView, ArticlePresent
                     ToastUtils.showShort("请输入文章标题!");
                     return;
                 }
+
                 if (StringUtils.isEmpty(ed_article_content.getText().toString().trim())) {
                     ToastUtils.showShort("请输入文章内容!");
                     return;
@@ -147,7 +145,13 @@ public class MyArticleActivity extends BaseActivity<IArticleView, ArticlePresent
         adapter.setDataList(list);
         ed_article_title.setText("");
         ed_article_content.setText("");
-        startActivity(new Intent(this,ArticlesPublishedActivity.class));
+        startActivity(new Intent(this, ArticlesPublishedActivity.class));
         finish();
+    }
+
+    @Override
+    public void removePic(CameraPicBean bean) {
+        list.remove(bean);
+        adapter.setDataList(list);
     }
 }

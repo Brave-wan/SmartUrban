@@ -8,4 +8,6 @@ import com.smart.urban.base.IBaseView;
 
 public interface IPersonInformationView  extends IBaseView{
     void onSex(String sex);
+
+    void onHeadImage(String sex);
 }

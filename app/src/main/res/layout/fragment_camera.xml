@@ -18,7 +18,7 @@
 
     <GridView
         android:id="@+id/gv_camera_list"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
@@ -28,6 +28,7 @@
         android:listSelector="@android:color/transparent"
         android:numColumns="4"
         android:verticalSpacing="10dp" />
+
 
     <TextView
         android:id="@+id/tv_camera_submit"

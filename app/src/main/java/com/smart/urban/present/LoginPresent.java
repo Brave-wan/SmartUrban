@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 import com.blankj.utilcode.util.StringUtils;
 import com.blankj.utilcode.util.ToastUtils;
+import com.blankj.utilcode.util.Utils;
 import com.google.gson.Gson;
 import com.mylhyl.acp.Acp;
 import com.mylhyl.acp.AcpListener;
@@ -78,7 +79,6 @@ public class LoginPresent extends BasePresenter<ILoginView> {
 
             @Override
             public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
-                ToastUtils.showShort("onComplete");
                 switch (share_media.name()) {
                     case "WEIXIN":
                         String json = new Gson().toJson(map);
@@ -91,13 +91,11 @@ public class LoginPresent extends BasePresenter<ILoginView> {
 
             @Override
             public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
-                ToastUtils.showShort("onError");
                 SocializeUtils.safeCloseDialog(dialog);
             }
 
             @Override
             public void onCancel(SHARE_MEDIA share_media, int i) {
-                ToastUtils.showShort("onCancel");
                 SocializeUtils.safeCloseDialog(dialog);
             }
         });
@@ -112,18 +110,15 @@ public class LoginPresent extends BasePresenter<ILoginView> {
 
             @Override
             public void onComplete(SHARE_MEDIA platform, int action, Map<String, String> map) {
-                ToastUtils.showShort("onRestoreInstanceState Authorize succeed");
             }
 
             @Override
             public void onError(SHARE_MEDIA platform, int action, Throwable t) {
-                ToastUtils.showShort("onRestoreInstanceState Authorize onError");
                 SocializeUtils.safeCloseDialog(dialog);
             }
 
             @Override
             public void onCancel(SHARE_MEDIA platform, int action) {
-                ToastUtils.showShort("onRestoreInstanceState Authorize onCancel");
                 SocializeUtils.safeCloseDialog(dialog);
             }
         });

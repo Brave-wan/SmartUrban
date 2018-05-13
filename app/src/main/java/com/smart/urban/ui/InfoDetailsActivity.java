@@ -18,6 +18,7 @@ import com.smart.urban.http.ApiCallback;
 import com.smart.urban.http.BaseResult;
 import com.smart.urban.http.HttpManager;
 import com.smart.urban.ui.dialog.ShareWindow;
+import com.smart.urban.utils.Const;
 import com.smart.urban.utils.LoadingLayout;
 import com.smart.urban.utils.MyWebViewClient;
 import com.smart.urban.utils.SharedPreferencesUtils;
@@ -41,6 +42,7 @@ public class InfoDetailsActivity extends BaseActivity {
     TextView tv_see_number;
     @BindView(R.id.layout_root)
     LoadingLayout layout_root;
+    private InfoDetailsBean bean;
 
     @Override
     protected int getContentViewId() {
@@ -84,13 +86,16 @@ public class InfoDetailsActivity extends BaseActivity {
         finish();
     }
 
-    ShareWindow window;
 
     @Override
     protected void onForward(View forwardView) {
         super.onForward(forwardView);
-        window = new ShareWindow(this);
-        window.showWindow(layout_titleBar);
+        if (bean != null) {
+            String musicurl = bean.getH5url() != null ? Constants.BASE_URL + bean.getH5url() : "http://www.szseblog.cn";
+            String desc = bean.getTitle();
+            String title = "石家庄桥西智慧城管";
+            Constants.getSharePlatform(this, title, desc, musicurl);
+        }
     }
 
     public void getMessageById() {
@@ -98,9 +103,11 @@ public class InfoDetailsActivity extends BaseActivity {
         map.put("userId", SharedPreferencesUtils.init(this).getString("userId"));
         map.put("token", SharedPreferencesUtils.init(this).getString("token"));
         map.put("id", id);
+
         HttpManager.get().addSubscription(HttpManager.get().getApiStores().getMessageById(map), new ApiCallback<BaseResult<InfoDetailsBean>>() {
             @Override
             public void onSuccess(BaseResult<InfoDetailsBean> model) {
+                bean = model.getData();
                 layout_root.setStatus(LoadingLayout.Success);
                 tv_create_time.setText(model.getData().getCreateTime());
                 tv_see_number.setText(model.getData().getViewCount() + "");
@@ -114,4 +121,6 @@ public class InfoDetailsActivity extends BaseActivity {
             }
         });
     }
+
+
 }

@@ -39,7 +39,16 @@ public class InfoDetailsBean {
     private Object modifyUserId;
     private Object modifyTime;
     private long id;
+    private String h5url;
     private List<ImagesBean> images;
+
+    public void setH5url(String h5url) {
+        this.h5url = h5url;
+    }
+
+    public String getH5url() {
+        return h5url;
+    }
 
     public String getTitle() {
         return title;

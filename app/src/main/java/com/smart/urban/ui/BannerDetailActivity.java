@@ -9,6 +9,7 @@ import android.webkit.WebView;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseActivity;
 import com.smart.urban.base.BasePresenter;
+import com.smart.urban.config.Constants;
 import com.smart.urban.ui.dialog.ShareWindow;
 import com.smart.urban.utils.MyWebViewClient;
 
@@ -27,7 +28,7 @@ public class BannerDetailActivity extends BaseActivity {
     @Override
     protected void initView(Bundle savedInstanceState) {
         setTitle("详情");
-        showForwardView(null, false);
+//        showForwardView(null, false);
         url = getIntent().getStringExtra("url");
         initData();
 
@@ -39,18 +40,16 @@ public class BannerDetailActivity extends BaseActivity {
         finish();
     }
 
-    ShareWindow window;
 
     @Override
     protected void onForward(View forwardView) {
         super.onForward(forwardView);
-        if (window != null) {
-            window.dismissWindow();
-            window = null;
-        } else {
-            window = new ShareWindow(this);
-            window.showWindow(layout_titleBar);
-        }
+
+        String musicurl = "https://y.qq.com/n/yqq/song/108782194_num.html?ADTAG=h5_playsong&no_redirect=1";
+        String desc = "欢迎使用【友盟+】社会化组件U-Share，SDK包最小，集成成本最低，助力您的产品开发、运营与推广";
+        String title = "石家庄桥西智慧城管";
+        Constants.getSharePlatform(this, title, desc, musicurl);
+
     }
 
     private void initData() {

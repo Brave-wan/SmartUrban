@@ -14,14 +14,21 @@ import com.blankj.utilcode.util.ToastUtils;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseActivity;
 import com.smart.urban.base.BasePresenter;
+import com.smart.urban.bean.CameraPicBean;
 import com.smart.urban.fragment.CameraFragment;
 import com.smart.urban.fragment.CenterFragment;
 import com.smart.urban.fragment.HomeFragment;
 import com.smart.urban.fragment.InfoFragment;
+import com.smart.urban.utils.GlideLoader;
+import com.yancy.imageselector.ImageConfig;
+import com.yancy.imageselector.ImageSelector;
 import com.zhihu.matisse.Matisse;
 import com.zhihu.matisse.MimeType;
 import com.zhihu.matisse.engine.impl.GlideEngine;
 import com.zhihu.matisse.internal.entity.CaptureStrategy;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 
@@ -37,7 +44,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     CameraFragment cameraFragment;
     CenterFragment centerFragment;
     public static MainActivity instance = null;
-
+    public static List<CameraPicBean> list = new ArrayList<>();
 
     @Override
     protected int getContentViewId() {
@@ -47,6 +54,8 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     @Override
     protected void initView(Bundle savedInstanceState) {
         rg_main_bottom.setOnCheckedChangeListener(this);
+        list.clear();
+        list.add(new CameraPicBean());
         manager = getSupportFragmentManager();
         transaction = manager.beginTransaction();
         instance = this;
@@ -124,23 +133,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         cameraFragment.onActivityResult(requestCode, resultCode, data);
-        if (centerFragment != null) {
-            cameraFragment.onActivityResult(requestCode, resultCode, data);
-        }
-    }
-
-    public void getTakePhoto(int number) {
-        Matisse.from(this)
-                .choose(MimeType.allOf()) // 选择 mime 的类型
-                .capture(false)
-                .countable(true)//自动增长的数目
-                .maxSelectable(number) // 图片选择的最多数量
-                .captureStrategy(new CaptureStrategy(true, "com.smart.urban.fileprovider"))
-                .gridExpectedSize(getResources().getDimensionPixelSize(R.dimen.base_dimen_240))
-                .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)
-                .thumbnailScale(0.85f) // 缩略图的比例
-                .imageEngine(new GlideEngine()) // 使用的图片加载引擎
-                .forResult(REQUEST_CODE_CHOOSE); // 设置作为标记的请求码
     }
 
     private long mExitTime;

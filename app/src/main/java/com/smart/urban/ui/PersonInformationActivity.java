@@ -10,12 +10,15 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseActivity;
+import com.smart.urban.bean.CameraPicBean;
 import com.smart.urban.config.Constants;
 import com.smart.urban.present.PersonInformationPresent;
 import com.smart.urban.utils.GlideCircleTransform;
 import com.smart.urban.utils.PhotoUtils;
 import com.smart.urban.utils.SharedPreferencesUtils;
 import com.smart.urban.view.IPersonInformationView;
+import com.yancy.imageselector.ImageSelector;
+import com.yancy.imageselector.ImageSelectorActivity;
 import com.zhihu.matisse.Matisse;
 
 import java.util.List;
@@ -63,7 +66,7 @@ public class PersonInformationActivity extends BaseActivity<IPersonInformationVi
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.rl_up_head:
-                presenter.getTakePhoto(this);
+                Constants.takePhoto(PersonInformationActivity.this, 1);
                 break;
             case R.id.rl_info_sex:
                 presenter.onOptionPicker(this);
@@ -78,16 +81,13 @@ public class PersonInformationActivity extends BaseActivity<IPersonInformationVi
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_CODE_CHOOSE && resultCode == RESULT_OK) {
-            List<Uri> mSelected = Matisse.obtainResult(data);
-            if (mSelected != null && mSelected.size() > 0) {
-                String path = PhotoUtils.getRealPathFromUri(this, mSelected.get(0));
-                Glide.with(this).load(path).error(R.drawable.icon_my_portraits).bitmapTransform(new GlideCircleTransform(this)).into(img_my_info_head);
+        if (requestCode == ImageSelector.IMAGE_REQUEST_CODE && resultCode == RESULT_OK && data != null) {
+            List<String> pathList = data.getStringArrayListExtra(ImageSelectorActivity.EXTRA_RESULT);
+            if (pathList != null && pathList.size() > 0) {
+                String path = pathList.get(0);
                 MultipartBody.Part[] parts = new MultipartBody.Part[1];
                 parts[0] = Constants.prepareFilePart("files", path);
                 presenter.getUpFile(parts);
-
-
             }
         }
     }
@@ -98,8 +98,14 @@ public class PersonInformationActivity extends BaseActivity<IPersonInformationVi
         //加载本地缓存
         tv_info_nick.setText(SharedPreferencesUtils.init(this).getString("center_name"));
         tv_info_sex.setText(SharedPreferencesUtils.init(this).getString("center_sex"));
-        String img = SharedPreferencesUtils.init(this).getString("center_img");
-        Glide.with(this).load(Constants.BASE_URL + img)
+
+        String url = SharedPreferencesUtils.init(this).getString("center_img");
+        if (url.indexOf("http") == -1) {
+            url = Constants.BASE_URL + SharedPreferencesUtils.init(this).getString("center_img");
+        } else {
+            url = SharedPreferencesUtils.init(this).getString("center_img");
+        }
+        Glide.with(this).load(url)
                 .error(R.drawable.icon_my_portraits)
                 .placeholder(R.drawable.icon_my_portraits)
                 .bitmapTransform(new GlideCircleTransform(this))
@@ -109,6 +115,11 @@ public class PersonInformationActivity extends BaseActivity<IPersonInformationVi
     @Override
     public void onSex(String sex) {
         tv_info_sex.setText(sex);
+    }
+
+    @Override
+    public void onHeadImage(String sex) {
+        Glide.with(this).load(Constants.BASE_URL+sex).error(R.drawable.icon_my_portraits).bitmapTransform(new GlideCircleTransform(this)).into(img_my_info_head);
     }
 
     @Override
