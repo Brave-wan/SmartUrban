@@ -45,8 +45,8 @@ public class BannerDetailActivity extends BaseActivity {
     protected void onForward(View forwardView) {
         super.onForward(forwardView);
 
-        String musicurl = "https://y.qq.com/n/yqq/song/108782194_num.html?ADTAG=h5_playsong&no_redirect=1";
-        String desc = "欢迎使用【友盟+】社会化组件U-Share，SDK包最小，集成成本最低，助力您的产品开发、运营与推广";
+        String musicurl = url;
+        String desc = "城管动态等展现城管形象的功能，一方面拉近了政府和人民的关系，另一方面也使市民更好的了解和管理城市，从而实现了人人都可以为城市管理和改善做贡献";
         String title = "石家庄桥西智慧城管";
         Constants.getSharePlatform(this, title, desc, musicurl);
 
