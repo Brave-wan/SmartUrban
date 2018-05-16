@@ -2,6 +2,7 @@ package com.smart.urban.config;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.util.Log;
 
 import com.blankj.utilcode.util.ToastUtils;
@@ -17,6 +18,10 @@ import com.umeng.socialize.media.UMImage;
 import com.umeng.socialize.media.UMWeb;
 import com.yancy.imageselector.ImageConfig;
 import com.yancy.imageselector.ImageSelector;
+import com.zhihu.matisse.Matisse;
+import com.zhihu.matisse.MimeType;
+import com.zhihu.matisse.engine.impl.GlideEngine;
+import com.zhihu.matisse.internal.entity.CaptureStrategy;
 
 import java.io.File;
 import java.util.List;
@@ -25,15 +30,17 @@ import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 
+import static com.smart.urban.present.CameraPresent.REQUEST_CODE_CHOOSE;
+
 /**
  * Created by root on 18-3-28.
  */
 
 public class Constants {
-    //http://111.231.222.163:8080/data/uploads/20180514/4e1eb6b26ded28b5763656ccb29aff77.html
-//    public static final String BASE_URL = "http://111.231.222.163:8080/";
-     public static final String BASE_URL = "http://47.105.53.173:8080/";
-    // public static final String BASE_URL = "http://10.15.209.200:8080/city/";
+//    http://111.231.222.163:8080/data/uploads/20180514/4e1eb6b26ded28b5763656ccb29aff77.html
+    public static final String BASE_URL = "http://111.231.222.163:8080/";
+//     public static final String BASE_URL = "http://47.105.53.173:8080/";
+//     public static final String BASE_URL = "http://10.15.209.34:8080/city/";
     // public static final String BASE_URL = "http://10.15.208.136:8080/";
     //是否开启打印日志信息
     public static final boolean DEBUG = true;
@@ -98,7 +105,6 @@ public class Constants {
                     public void onStart(SHARE_MEDIA share_media) {
                         Log.i("wan", "onStart");
                     }
-
                     @Override
                     public void onResult(SHARE_MEDIA share_media) {
                         Log.i("wan", "onResult");
@@ -123,14 +129,14 @@ public class Constants {
                 .titleBgColor(mContext.getResources().getColor(R.color.white))
                 .titleSubmitTextColor(mContext.getResources().getColor(R.color.black))
                 .titleTextColor(mContext.getResources().getColor(R.color.black))
-                // 开启多选   （默认为多选）
+                // 开启多选（默认为多选）
                 .mutiSelect()
                 // 多选时的最大数量   （默认 9 张）
                 .mutiSelectMaxSize(number)
                 // 开启拍照功能 （默认关闭）
-                .showCamera()
+                .showCamera(false)
+                .selectType(true)//默认相册　true 为相机　false 相册
                 // 拍照后存放的图片路径（默认 /temp/picture） （会自动创建）
-                .filePath("/ImageSelector/Pictures")
                 .build();
         ImageSelector.open(mContext, imageConfig);
     }

@@ -51,4 +51,21 @@ public class RevolvingPresent extends BasePresenter<IRevolvingView> {
             });
         }
     }
+
+    public void getDelete(String id) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("id", id);
+        HttpManager.get().addSubscription(HttpManager.get().getApiStores().getRemoveDate(map), new ApiCallback() {
+            @Override
+            public void onSuccess(Object model) {
+
+            }
+
+            @Override
+            public void onFailure(BaseResult result) {
+
+            }
+        });
+
+    }
 }

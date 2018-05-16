@@ -46,7 +46,6 @@ public class RevolvingListAdapter extends CommonAdapter<RevolvingListBean> {
         }
         if (bean.getState() != null) {
             switch (bean.getState()) {
-
                 case "9":
                     tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.icon_dai_shen_he));
                     break;
@@ -67,7 +66,6 @@ public class RevolvingListAdapter extends CommonAdapter<RevolvingListBean> {
                     tv_revolving_state.setBackground(context.getResources().getDrawable(R.drawable.icon_chu_li_wan_cheng));
                     break;
             }
-
         }
     }
 }

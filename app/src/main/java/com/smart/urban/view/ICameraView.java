@@ -8,4 +8,5 @@ import com.smart.urban.ui.dialog.UpDynamicDialog;
 
 public interface ICameraView {
     void onUpSuccess(UpDynamicDialog dynamicDialog);
+
 }

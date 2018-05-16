@@ -150,12 +150,14 @@
 
         <provider
             android:name="com.smart.urban.utils.BuglyFileProvider"
-            android:authorities="com.smart.urban.fileprovider"
+            android:authorities="${applicationId}.fileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
+
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths_public" />
+
         </provider>
 
 

@@ -1,19 +1,20 @@
 package com.smart.urban.present;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.pm.ActivityInfo;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 
+import com.amap.api.location.AMapLocation;
+import com.amap.api.location.AMapLocationClient;
+import com.amap.api.location.AMapLocationClientOption;
+import com.amap.api.location.AMapLocationListener;
 import com.blankj.utilcode.util.ToastUtils;
 import com.google.gson.Gson;
 import com.smart.urban.R;
 import com.smart.urban.base.BasePresenter;
 import com.smart.urban.bean.ImagesBean;
-import com.smart.urban.bean.RevolvingBean;
 import com.smart.urban.bean.UpFileBean;
 import com.smart.urban.config.Constants;
 import com.smart.urban.http.ApiCallback;
@@ -22,15 +23,13 @@ import com.smart.urban.http.HttpManager;
 import com.smart.urban.ui.dialog.UpDynamicDialog;
 import com.smart.urban.utils.SharedPreferencesUtils;
 import com.smart.urban.view.ICameraView;
-import com.zhihu.matisse.Matisse;
-import com.zhihu.matisse.MimeType;
-import com.zhihu.matisse.engine.impl.GlideEngine;
-import com.zhihu.matisse.internal.entity.CaptureStrategy;
 
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,7 +38,6 @@ import java.util.concurrent.TimeUnit;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.FormBody;
-import okhttp3.Interceptor;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
@@ -51,7 +49,7 @@ import okhttp3.Response;
  * Created by root on 18-3-29.
  */
 
-public class CameraPresent extends BasePresenter<ICameraView> {
+public class CameraPresent extends BasePresenter<ICameraView> implements AMapLocationListener {
     public static int REQUEST_CODE_CHOOSE = 0x123;
     Context mContext;
 
@@ -99,7 +97,7 @@ public class CameraPresent extends BasePresenter<ICameraView> {
      */
     public void getUpFiles(MultipartBody.Part[] parts, String content) {
         this.content = content;
-        toast=mContext.getResources().getString(R.string.camera_up_dynamic);
+        toast = mContext.getResources().getString(R.string.camera_up_dynamic);
         if (mView != null) {
             HttpManager.get().addSubscription(HttpManager.get().getApiStores().getUpdateImage(parts), new ApiCallback<BaseResult<List<UpFileBean>>>() {
                 @Override
@@ -126,7 +124,6 @@ public class CameraPresent extends BasePresenter<ICameraView> {
     }
 
 
-
     public void getPicList() {
         list.clear();
     }
@@ -142,6 +139,7 @@ public class CameraPresent extends BasePresenter<ICameraView> {
                     map.put("token", SharedPreferencesUtils.init(mContext).getString("token"));
                     map.put("images", list);
                     map.put("content", content);
+                    map.put("addrName",address);
                     map.put("createUserId", SharedPreferencesUtils.init(mContext).getString("userId"));
                     getRevolving(map);
                     break;
@@ -206,6 +204,32 @@ public class CameraPresent extends BasePresenter<ICameraView> {
         }
     }
 
+    //声明mlocationClient对象
+    public AMapLocationClient mlocationClient;
+    public AMapLocationClientOption mLocationOption = null;
+
+    public void initLocation() {
+        mlocationClient = new AMapLocationClient(mContext);
+        mLocationOption = new AMapLocationClientOption();
+        mlocationClient.setLocationListener(this);
+        mLocationOption.setLocationMode(AMapLocationClientOption.AMapLocationMode.Hight_Accuracy);
+        //设置定位间隔,单位毫秒,默认为2000ms
+        mLocationOption.setInterval(2000);
+        mlocationClient.setLocationOption(mLocationOption);
+        // 此方法为每隔固定时间会发起一次定位请求，为了减少电量消耗或网络流量消耗，
+        // 注意设置合适的定位时间的间隔（最小间隔支持为1000ms），并且在合适时间调用stopLocation()方法来取消定位请求
+        // 在定位结束后，在合适的生命周期调用onDestroy()方法
+        // 在单次定位情况下，定位无论成功与否，都无需调用stopLocation()方法移除请求，定位sdk内部会移除
+        //启动定位
+        mlocationClient.startLocation();
+    }
+
+
+    public void stopLocation() {
+        if (mlocationClient != null) {
+            mlocationClient.stopLocation();
+        }
+    }
 
     public ProgressDialog progressDialog;
 
@@ -222,6 +246,29 @@ public class CameraPresent extends BasePresenter<ICameraView> {
         if (progressDialog != null && progressDialog.isShowing()) {
             // progressDialog.hide();会导致android.view.WindowLeaked
             progressDialog.dismiss();
+        }
+    }
+
+    String address = null;
+
+    @Override
+    public void onLocationChanged(AMapLocation amapLocation) {
+        if (amapLocation != null) {
+            if (amapLocation.getErrorCode() == 0) {
+                //定位成功回调信息，设置相关消息
+                amapLocation.getLocationType();//获取当前定位结果来源，如网络定位结果，详见定位类型表
+                amapLocation.getLatitude();//获取纬度
+                amapLocation.getLongitude();//获取经度
+                amapLocation.getAccuracy();//获取精度信息
+                SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                Date date = new Date(amapLocation.getTime());
+                df.format(date);//定位时间
+                address = amapLocation.getAddress();
+                Log.i("wan", "lont" + amapLocation.getAddress());
+            } else {
+                //显示错误信息ErrCode是错误码，errInfo是错误信息，详见错误码表。
+                Log.e("AmapError", "location Error, ErrCode:" + amapLocation.getErrorCode() + ", errInfo:" + amapLocation.getErrorInfo());
+            }
         }
     }
 }

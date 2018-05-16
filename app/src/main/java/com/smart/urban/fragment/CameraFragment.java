@@ -68,6 +68,7 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
         gv_camera_list.setAdapter(adapter);
         adapter.setOnRemovePicListener(this);
         gv_camera_list.setOnItemClickListener(this);
+        presenter.initLocation();//开启定位
     }
 
     @Override
@@ -88,7 +89,6 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
             }
             adapter.setDataList(MainActivity.list);
         }
-
     }
 
     @Override
@@ -112,7 +112,6 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
                 }
 
                 List<CameraPicBean> cameraPicBeans = adapter.dataList;
-
                 if (cameraPicBeans.size() <= 1) {
                     ToastUtils.showShort("请至少添加一张图片");
                     return;
@@ -150,9 +149,13 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
     }
 
 
+
+
     @Override
     public void removePic(CameraPicBean bean) {
         MainActivity.list.remove(bean);
         adapter.setDataList(MainActivity.list);
     }
+
+
 }

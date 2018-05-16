@@ -3,6 +3,7 @@ package com.smart.urban.base;
 import android.app.Application;
 import android.content.Context;
 import android.os.Environment;
+import android.os.StrictMode;
 import android.support.multidex.MultiDex;
 
 import com.blankj.utilcode.util.Utils;
@@ -16,7 +17,6 @@ import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 import com.smart.urban.R;
 import com.smart.urban.ui.MainActivity;
-import com.smart.urban.utils.GlideLoader;
 import com.smart.urban.utils.LoadingLayout;
 import com.tencent.bugly.Bugly;
 import com.tencent.bugly.beta.Beta;
@@ -24,8 +24,6 @@ import com.tencent.bugly.crashreport.CrashReport;
 import com.umeng.socialize.Config;
 import com.umeng.socialize.PlatformConfig;
 import com.umeng.socialize.UMShareAPI;
-import com.umeng.socialize.UMShareConfig;
-import com.yancy.imageselector.ImageConfig;
 
 /**
  * Created by root on 18-3-28.
@@ -44,6 +42,9 @@ public class MyApplication extends Application {
         UMShareAPI.get(this);
         Config.DEBUG = true;
         PlatformConfig.setWeixin("wx17893857032ef728", "8558c99eb2c1ccb8a5704ec40d028572");
+        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+        StrictMode.setVmPolicy(builder.build());
+        builder.detectFileUriExposure();
     }
 
     static {
@@ -160,7 +161,7 @@ public class MyApplication extends Application {
          * 如果想自定义策略，按照如下方式设置
          */
 
-        /***** 统一初始化Bugly产品，包含Beta *****/
+        /***** 统一初始化Bugly产品包含Beta *****/
         CrashReport.initCrashReport(getApplicationContext(), "38c0267351", true);
     }
 }
