@@ -32,8 +32,7 @@ public class RevolvingDetailsListAdapter extends CommonAdapter<RevolvingListBean
     protected void convert(BaseViewHolder baseViewHolder, final RevolvingListBean.ImagesBean bean, int position) {
         ImageView item_camera = (ImageView) baseViewHolder.getViewByViewId(R.id.item_camera);
         ImageView img_item_delete = (ImageView) baseViewHolder.getViewByViewId(R.id.img_item_delete);
-        img_item_delete.setVisibility(View.GONE);
         LogUtils.i("img" + bean.getAddress());
-        Glide.with(context).load(bean.getAddress()).placeholder(R.drawable.icon_pic_empty).error(R.drawable.icon_pic_empty).into(item_camera);
+        Glide.with(context).load(bean.getAddress() == null ? R.drawable.icon_up_loading_photo_btn : bean.getAddress()).placeholder(R.drawable.icon_pic_empty).error(R.drawable.icon_pic_empty).into(item_camera);
     }
 }

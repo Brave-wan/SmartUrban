@@ -139,7 +139,7 @@ public class CameraPresent extends BasePresenter<ICameraView> implements AMapLoc
                     map.put("token", SharedPreferencesUtils.init(mContext).getString("token"));
                     map.put("images", list);
                     map.put("content", content);
-                    map.put("addrName",address);
+                    map.put("addrName", address);
                     map.put("createUserId", SharedPreferencesUtils.init(mContext).getString("userId"));
                     getRevolving(map);
                     break;
@@ -263,6 +263,9 @@ public class CameraPresent extends BasePresenter<ICameraView> implements AMapLoc
                 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 Date date = new Date(amapLocation.getTime());
                 df.format(date);//定位时间
+
+                if (mView != null)
+                    mView.onLocationAddress(amapLocation.getAddress());
                 address = amapLocation.getAddress();
                 Log.i("wan", "lont" + amapLocation.getAddress());
             } else {

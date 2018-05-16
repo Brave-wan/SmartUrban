@@ -74,6 +74,7 @@
 
         <activity android:name=".ui.GeoFence_Round_Activity" />
         <activity android:name=".ui.LoginActivity" />
+        <activity android:name=".ui.SelectTypeActivity"/>
         <activity
             android:name=".wxapi.WXEntryActivity"
             android:exported="true"

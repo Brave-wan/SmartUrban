@@ -47,6 +47,7 @@ public class RevolvingDetailsActivity extends BaseActivity implements AdapterVie
     RevolvingDetailsListAdapter adapter;
     List<RevolvingDetailsBean.AllStateBean> list = new ArrayList<>();
     BaseQuickAdapter<RevolvingDetailsBean.AllStateBean, BaseViewHolder> baseQuickAdapter;
+    List<RevolvingListBean.ImagesBean> imagesBeans = new ArrayList<>();
 
     @Override
     protected int getContentViewId() {
@@ -59,7 +60,9 @@ public class RevolvingDetailsActivity extends BaseActivity implements AdapterVie
         bean = (RevolvingListBean) getIntent().getSerializableExtra("bean");
         tv_revolving_title.setText(bean.getContent());
         lv_revolving_comment.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new RevolvingDetailsListAdapter(this, R.layout.item_camera_list, bean.getImages());
+        imagesBeans = bean.getImages();
+        imagesBeans.add(new RevolvingListBean.ImagesBean());
+        adapter = new RevolvingDetailsListAdapter(this, R.layout.item_camera_list, imagesBeans);
         gv_revolving_details.setAdapter(adapter);
         gv_revolving_details.setOnItemClickListener(this);
         getForumById();
@@ -67,14 +70,12 @@ public class RevolvingDetailsActivity extends BaseActivity implements AdapterVie
         baseQuickAdapter = new BaseQuickAdapter<RevolvingDetailsBean.AllStateBean, BaseViewHolder>(R.layout.item_revolving_detail, list) {
             @Override
             protected void convert(BaseViewHolder helper, RevolvingDetailsBean.AllStateBean item) {
-
                 TextView tv_revolving_name = (TextView) helper.itemView.findViewById(R.id.tv_revolving_name);
                 TextView tv_revolving_content = (TextView) helper.itemView.findViewById(R.id.tv_revolving_content);
                 TextView tv_revolving_time = (TextView) helper.itemView.findViewById(R.id.tv_revolving_time);
-
                 tv_revolving_name.setText(StringUtils.isEmpty(item.getName()) ? "暂无" : item.getName());
                 tv_revolving_time.setText(item.getModifyTime());
-                tv_revolving_content.setText(item.getContent()+"");
+                tv_revolving_content.setText(item.getContent() + "");
             }
         };
 
@@ -112,6 +113,23 @@ public class RevolvingDetailsActivity extends BaseActivity implements AdapterVie
             @Override
             public void onFailure(BaseResult result) {
                 ToastUtils.showShort(result.errmsg);
+            }
+        });
+    }
+
+
+    public void getDelete(String id) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("id", id);
+        HttpManager.get().addSubscription(HttpManager.get().getApiStores().getRemoveDate(map), new ApiCallback() {
+            @Override
+            public void onSuccess(Object model) {
+
+            }
+
+            @Override
+            public void onFailure(BaseResult result) {
+
             }
         });
 

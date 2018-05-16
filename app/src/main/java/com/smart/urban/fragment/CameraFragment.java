@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.TextView;
 
 import com.blankj.utilcode.util.StringUtils;
 import com.blankj.utilcode.util.ToastUtils;
@@ -21,6 +22,7 @@ import com.smart.urban.http.HttpManager;
 import com.smart.urban.present.CameraPresent;
 import com.smart.urban.ui.MainActivity;
 import com.smart.urban.ui.RevolvingActivity;
+import com.smart.urban.ui.SelectTypeActivity;
 import com.smart.urban.ui.adapter.CameraListAdapter;
 import com.smart.urban.ui.dialog.SelectImageWindow;
 import com.smart.urban.ui.dialog.UpDynamicDialog;
@@ -56,6 +58,11 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
     GridView gv_camera_list;
     @BindView(R.id.ed_camera_content)
     EditText ed_camera_content;
+    @BindView(R.id.tx_type)
+    TextView tx_type;
+    @BindView(R.id.tx_camera_location)
+    TextView tx_camera_location;
+
     private CameraListAdapter adapter;
     MainActivity mainActivity;
 
@@ -102,7 +109,7 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
         }
     }
 
-    @OnClick({R.id.tv_camera_submit})
+    @OnClick({R.id.tv_camera_submit, R.id.tx_type})
     public void onClick(View view) {
         switch (view.getId()) {
             //提交随手拍
@@ -119,10 +126,13 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
                     ToastUtils.showShort("请至少添加一张图片");
                     return;
                 }
-
                 presenter.showProgressDialog();
                 MultipartBody.Part[] parts = Constants.getFileMaps(cameraPicBeans);
                 presenter.getUpFiles(parts, ed_camera_content.getText().toString().trim());
+                break;
+            //选择问题分类
+            case R.id.tx_type:
+                startActivity(new Intent(getActivity(), SelectTypeActivity.class));
                 break;
         }
     }
@@ -136,11 +146,6 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
                 return;
             } else {
                 Constants.takePhoto(getActivity(), layout_titlebar, 4 - MainActivity.list.size());
-
-//                CustomPopWindows windows = new CustomPopWindows(getActivity());
-//                windows.setContentView(View.inflate(getActivity(), R.layout.select_image_window, null));
-//                windows.showAtLocation(layout_titlebar, Gravity.CENTER, 0, 0);
-
             }
         }
     }
@@ -154,6 +159,11 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
         ed_camera_content.setText("");
         startActivity(new Intent(getActivity(), RevolvingActivity.class));
         dynamicDialog.dismiss();
+    }
+
+    @Override
+    public void onLocationAddress(String address) {
+        tx_camera_location.setText("当前位置:" + address);
     }
 
 

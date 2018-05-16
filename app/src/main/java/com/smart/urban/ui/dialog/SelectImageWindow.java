@@ -74,11 +74,13 @@ public class SelectImageWindow extends PopupWindow implements View.OnClickListen
                 if (listener != null) {
                     listener.onSelectType(1);
                 }
+
                 break;
             case R.id.tx_album:
                 if (listener != null) {
                     listener.onSelectType(0);
                 }
+
                 break;
             case R.id.tv_window_cancel:
                 dismissWindow();

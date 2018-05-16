@@ -24,12 +24,10 @@ public class RevolvingPresent extends BasePresenter<IRevolvingView> {
 
     public RevolvingPresent(Context mContext) {
         this.mContext = mContext;
-
     }
 
     public void getPhotoList(int page) {
         if (mView != null) {
-
             Map<String, Object> map = new HashMap<>();
             map.put("userId", SharedPreferencesUtils.init(mContext).getString("userId"));
             map.put("token", SharedPreferencesUtils.init(mContext).getString("token"));
@@ -52,20 +50,5 @@ public class RevolvingPresent extends BasePresenter<IRevolvingView> {
         }
     }
 
-    public void getDelete(String id) {
-        Map<String, Object> map = new HashMap<>();
-        map.put("id", id);
-        HttpManager.get().addSubscription(HttpManager.get().getApiStores().getRemoveDate(map), new ApiCallback() {
-            @Override
-            public void onSuccess(Object model) {
 
-            }
-
-            @Override
-            public void onFailure(BaseResult result) {
-
-            }
-        });
-
-    }
 }
