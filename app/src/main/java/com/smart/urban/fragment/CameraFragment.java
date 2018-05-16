@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -21,7 +22,9 @@ import com.smart.urban.present.CameraPresent;
 import com.smart.urban.ui.MainActivity;
 import com.smart.urban.ui.RevolvingActivity;
 import com.smart.urban.ui.adapter.CameraListAdapter;
+import com.smart.urban.ui.dialog.SelectImageWindow;
 import com.smart.urban.ui.dialog.UpDynamicDialog;
+import com.smart.urban.ui.widget.CustomPopWindows;
 import com.smart.urban.ui.widget.LifePaymentWindow;
 import com.smart.urban.ui.widget.ShowImageWindow;
 import com.smart.urban.utils.PhotoUtils;
@@ -132,7 +135,12 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
                 ToastUtils.showShort("最多只能上传三张图片!");
                 return;
             } else {
-                Constants.takePhoto(getActivity(), 4 - MainActivity.list.size());
+                Constants.takePhoto(getActivity(), layout_titlebar, 4 - MainActivity.list.size());
+
+//                CustomPopWindows windows = new CustomPopWindows(getActivity());
+//                windows.setContentView(View.inflate(getActivity(), R.layout.select_image_window, null));
+//                windows.showAtLocation(layout_titlebar, Gravity.CENTER, 0, 0);
+
             }
         }
     }
@@ -147,8 +155,6 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
         startActivity(new Intent(getActivity(), RevolvingActivity.class));
         dynamicDialog.dismiss();
     }
-
-
 
 
     @Override

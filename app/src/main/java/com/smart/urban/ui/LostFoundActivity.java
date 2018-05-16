@@ -105,7 +105,7 @@ public class LostFoundActivity extends BaseActivity<ILostFoundView, LostFoundPre
                 ToastUtils.showShort("最多只能上传三张图片!");
                 return;
             } else {
-                Constants.takePhoto(this, 4 - list.size());
+                Constants.takePhoto(this,layout_titleBar, 4 - list.size());
             }
         }
     }

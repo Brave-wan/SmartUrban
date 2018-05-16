@@ -28,7 +28,7 @@ public abstract class BaseFragment<V, T extends BasePresenter<V>> extends Fragme
     private TextView buttonBackward;
     private TextView buttonForward;
     private TextView titleLine;
-    private RelativeLayout layout_titlebar;
+    public RelativeLayout layout_titlebar;
 
 
     //获取布局文件ID

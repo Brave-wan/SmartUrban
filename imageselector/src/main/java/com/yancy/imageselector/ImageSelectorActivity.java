@@ -50,9 +50,7 @@ public class ImageSelectorActivity extends FragmentActivity implements ImageSele
         submitButton = super.findViewById(R.id.title_right);
         title_text = super.findViewById(R.id.title_text);
         imageselector_title_bar_layout = super.findViewById(R.id.imageselector_title_bar_layout);
-
         init();
-
     }
 
     private void init() {
