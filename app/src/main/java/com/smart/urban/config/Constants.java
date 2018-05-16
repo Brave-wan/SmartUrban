@@ -2,13 +2,17 @@ package com.smart.urban.config;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.util.Log;
+import android.view.View;
 
 import com.blankj.utilcode.util.ToastUtils;
 import com.smart.urban.R;
 import com.smart.urban.bean.CameraPicBean;
 import com.smart.urban.ui.MainActivity;
 import com.smart.urban.ui.UrbanDetailsActivity;
+import com.smart.urban.ui.dialog.SelectImageWindow;
+import com.smart.urban.ui.widget.CustomPopWindows;
 import com.smart.urban.utils.GlideLoader;
 import com.umeng.socialize.ShareAction;
 import com.umeng.socialize.UMShareListener;
@@ -17,6 +21,10 @@ import com.umeng.socialize.media.UMImage;
 import com.umeng.socialize.media.UMWeb;
 import com.yancy.imageselector.ImageConfig;
 import com.yancy.imageselector.ImageSelector;
+import com.zhihu.matisse.Matisse;
+import com.zhihu.matisse.MimeType;
+import com.zhihu.matisse.engine.impl.GlideEngine;
+import com.zhihu.matisse.internal.entity.CaptureStrategy;
 
 import java.io.File;
 import java.util.List;
@@ -25,15 +33,17 @@ import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 
+import static com.smart.urban.present.CameraPresent.REQUEST_CODE_CHOOSE;
+
 /**
  * Created by root on 18-3-28.
  */
 
 public class Constants {
-    //http://111.231.222.163:8080/data/uploads/20180514/4e1eb6b26ded28b5763656ccb29aff77.html
-//    public static final String BASE_URL = "http://111.231.222.163:8080/";
-     public static final String BASE_URL = "http://47.105.53.173:8080/";
-    // public static final String BASE_URL = "http://10.15.209.200:8080/city/";
+    //    http://111.231.222.163:8080/data/uploads/20180514/4e1eb6b26ded28b5763656ccb29aff77.html
+    public static final String BASE_URL = "http://111.231.222.163:8080/";
+    //     public static final String BASE_URL = "http://47.105.53.173:8080/";
+//     public static final String BASE_URL = "http://10.15.209.34:8080/city/";
     // public static final String BASE_URL = "http://10.15.208.136:8080/";
     //是否开启打印日志信息
     public static final boolean DEBUG = true;
@@ -117,21 +127,36 @@ public class Constants {
     }
 
 
-    public static void takePhoto(Activity mContext, int number) {
-        ImageConfig imageConfig = new ImageConfig.Builder(new GlideLoader())
-                .steepToolBarColor(mContext.getResources().getColor(R.color.white))
-                .titleBgColor(mContext.getResources().getColor(R.color.white))
-                .titleSubmitTextColor(mContext.getResources().getColor(R.color.black))
-                .titleTextColor(mContext.getResources().getColor(R.color.black))
-                // 开启多选   （默认为多选）
-                .mutiSelect()
-                // 多选时的最大数量   （默认 9 张）
-                .mutiSelectMaxSize(number)
-                // 开启拍照功能 （默认关闭）
-                .showCamera()
-                // 拍照后存放的图片路径（默认 /temp/picture） （会自动创建）
-                .filePath("/ImageSelector/Pictures")
-                .build();
-        ImageSelector.open(mContext, imageConfig);
+    /**
+     * @param mContext
+     * @param layout_title_bar
+     * @param number
+     */
+    public static void takePhoto(final Activity mContext, View layout_title_bar, final int number) {
+        final SelectImageWindow window = new SelectImageWindow(mContext);
+        window.showWindow(layout_title_bar);
+        window.setOnSelectImageListener(new SelectImageWindow.OnSelectImageListener() {
+            @Override
+            public void onSelectType(int type) {
+                ImageConfig imageConfig = new ImageConfig.Builder(new GlideLoader())
+                        .steepToolBarColor(mContext.getResources().getColor(R.color.white))
+                        .titleBgColor(mContext.getResources().getColor(R.color.white))
+                        .titleSubmitTextColor(mContext.getResources().getColor(R.color.black))
+                        .titleTextColor(mContext.getResources().getColor(R.color.black))
+                        // 开启多选（默认为多选）
+                        .mutiSelect()
+                        // 多选时的最大数量（默认 9 张）
+                        .mutiSelectMaxSize(number)
+                        // 开启拍照功能 （默认关闭）
+                        .showCamera(false)
+                        .selectType(type == 1 ? true : false)//默认相册　true 为相机　false 相册
+                        // 拍照后存放的图片路径（默认 /temp/picture） （会自动创建）
+                        .build();
+                ImageSelector.open(mContext, imageConfig);
+                window.dismissWindow();
+            }
+        });
+
+
     }
 }

@@ -101,7 +101,7 @@ public class MyArticleActivity extends BaseActivity<IArticleView, ArticlePresent
                 ToastUtils.showShort("最多只能上传三张图片!");
                 return;
             } else {
-                Constants.takePhoto(this, 4 - list.size());
+                Constants.takePhoto(this, layout_titleBar,4 - list.size());
             }
         }
     }
@@ -112,7 +112,6 @@ public class MyArticleActivity extends BaseActivity<IArticleView, ArticlePresent
         switch (view.getId()) {
             case R.id.tv_article_submit:
                 presenter.getPicList();
-
                 if (StringUtils.isEmpty(ed_article_title.getText().toString().trim())) {
                     ToastUtils.showShort("请输入文章标题!");
                     return;

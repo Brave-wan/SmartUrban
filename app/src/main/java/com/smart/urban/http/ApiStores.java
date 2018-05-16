@@ -131,7 +131,12 @@ public interface ApiStores {
 
     @GET("cityApp/photo/getById")
     Observable<BaseResult<RevolvingDetailsBean>> getForumById(@QueryMap Map<String, Object> map);
+
     @FormUrlEncoded
     @POST("cityApp/otherLogin")
     Observable<BaseResult<RegisterBean>> getOtherLogin(@FieldMap Map<String, Object> map);
+
+    @FormUrlEncoded
+    @POST("cityApp/photo/remove")
+    Observable<BaseResult<RegisterBean>> getRemoveDate(@FieldMap Map<String, Object> map);
 }

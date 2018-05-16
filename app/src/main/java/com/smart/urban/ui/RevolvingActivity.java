@@ -100,9 +100,12 @@ public class RevolvingActivity extends BaseActivity<IRevolvingView, RevolvingPre
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         RevolvingListBean bean = (RevolvingListBean) adapter.getItem(position);
-        Intent intent = new Intent(this, RevolvingDetailsActivity.class);
-        intent.putExtra("bean", bean);
-        startActivity(intent);
+//        Intent intent = new Intent(this, RevolvingDetailsActivity.class);
+//        intent.putExtra("bean", bean);
+//        startActivity(intent);
+        presenter.getDelete(bean.getId() + "");
+
+
     }
 
 }

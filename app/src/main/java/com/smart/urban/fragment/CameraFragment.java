@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -21,7 +22,9 @@ import com.smart.urban.present.CameraPresent;
 import com.smart.urban.ui.MainActivity;
 import com.smart.urban.ui.RevolvingActivity;
 import com.smart.urban.ui.adapter.CameraListAdapter;
+import com.smart.urban.ui.dialog.SelectImageWindow;
 import com.smart.urban.ui.dialog.UpDynamicDialog;
+import com.smart.urban.ui.widget.CustomPopWindows;
 import com.smart.urban.ui.widget.LifePaymentWindow;
 import com.smart.urban.ui.widget.ShowImageWindow;
 import com.smart.urban.utils.PhotoUtils;
@@ -68,6 +71,7 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
         gv_camera_list.setAdapter(adapter);
         adapter.setOnRemovePicListener(this);
         gv_camera_list.setOnItemClickListener(this);
+        presenter.initLocation();//开启定位
     }
 
     @Override
@@ -88,7 +92,6 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
             }
             adapter.setDataList(MainActivity.list);
         }
-
     }
 
     @Override
@@ -112,7 +115,6 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
                 }
 
                 List<CameraPicBean> cameraPicBeans = adapter.dataList;
-
                 if (cameraPicBeans.size() <= 1) {
                     ToastUtils.showShort("请至少添加一张图片");
                     return;
@@ -133,7 +135,12 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
                 ToastUtils.showShort("最多只能上传三张图片!");
                 return;
             } else {
-                Constants.takePhoto(getActivity(), 4 - MainActivity.list.size());
+                Constants.takePhoto(getActivity(), layout_titlebar, 4 - MainActivity.list.size());
+
+//                CustomPopWindows windows = new CustomPopWindows(getActivity());
+//                windows.setContentView(View.inflate(getActivity(), R.layout.select_image_window, null));
+//                windows.showAtLocation(layout_titlebar, Gravity.CENTER, 0, 0);
+
             }
         }
     }
@@ -155,4 +162,6 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
         MainActivity.list.remove(bean);
         adapter.setDataList(MainActivity.list);
     }
+
+
 }

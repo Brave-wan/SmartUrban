@@ -66,7 +66,7 @@ public class PersonInformationActivity extends BaseActivity<IPersonInformationVi
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.rl_up_head:
-                Constants.takePhoto(PersonInformationActivity.this, 1);
+                Constants.takePhoto(PersonInformationActivity.this,layout_titleBar, 1);
                 break;
             case R.id.rl_info_sex:
                 presenter.onOptionPicker(this);
