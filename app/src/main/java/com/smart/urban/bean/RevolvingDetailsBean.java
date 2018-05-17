@@ -230,7 +230,6 @@ public class RevolvingDetailsBean {
             if (StringUtils.isEmpty(content)) {
                 return "暂无";
             }
-
             return content;
         }
 

@@ -13,6 +13,7 @@ import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 import com.amap.api.maps.AMap;
+import com.amap.api.maps.AMapUtils;
 import com.amap.api.maps.LocationSource;
 import com.amap.api.maps.MapView;
 import com.amap.api.maps.UiSettings;
@@ -271,8 +272,10 @@ public class LocationPresent implements GeoFenceListener,
                 @Override
                 public void onSuccess(BaseResult<List<LocationListBean>> model) {
                     addMarkersToMap(model.data);
+                    calculate(model.data);
                     if (state) {
                         mView.onLocationList(model.data, state);
+
                     }
                 }
 
@@ -285,6 +288,20 @@ public class LocationPresent implements GeoFenceListener,
         }
     }
 
+    public void calculate(List<LocationListBean> listBeans) {
+        for (int i = 0; i < listBeans.size(); i++) {
+            LocationListBean bean = listBeans.get(i);
+            double start_lon = Double.valueOf(SharedPreferencesUtils.init(mContext).getString("start_lon"));
+            double start_lat = Double.valueOf(SharedPreferencesUtils.init(mContext).getString("start_lat"));
+            LatLng startLat = new LatLng(start_lat, start_lon);
+            double end_lat = Double.valueOf(bean.getLatitude());
+            double end_lon = Double.valueOf(bean.getLongitude());
+            LatLng endLat = new LatLng(end_lat, end_lon);
+            float distance = AMapUtils.calculateLineDistance(startLat, endLat);
+            Log.i("wan", "计算的距离：" + distance);
+        }
+
+    }
 
     public int setImageState(int type) {
         switch (type) {

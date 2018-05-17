@@ -12,6 +12,7 @@ import com.smart.urban.base.BaseViewHolder;
 import com.smart.urban.base.CommonAdapter;
 import com.smart.urban.bean.RevolvingBean;
 import com.smart.urban.bean.RevolvingListBean;
+import com.smart.urban.config.Constants;
 
 import java.util.List;
 
@@ -40,7 +41,7 @@ public class RevolvingListAdapter extends CommonAdapter<RevolvingListBean> {
         Log.i("wan", "type:" + bean.getState());
         tv_mode_time.setText("创建时间:" + bean.getCreateTime());
         if (bean.getImages() != null && bean.getImages().size() > 0) {
-            Glide.with(context).load(bean.getImages().get(0).getAddress()).placeholder(R.drawable.icon_pic_empty).error(R.drawable.icon_pic_empty).into(img_revolving_head);
+            Glide.with(context).load(Constants.BASE_URL + bean.getImages().get(0).getAddress()).placeholder(R.drawable.icon_pic_empty).error(R.drawable.icon_pic_empty).into(img_revolving_head);
         } else {
             img_revolving_head.setBackground(context.getResources().getDrawable(R.drawable.icon_pic_empty));
         }
