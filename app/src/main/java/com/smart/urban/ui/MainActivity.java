@@ -20,6 +20,7 @@ import com.smart.urban.fragment.CenterFragment;
 import com.smart.urban.fragment.HomeFragment;
 import com.smart.urban.fragment.InfoFragment;
 import com.smart.urban.utils.GlideLoader;
+import com.smart.urban.utils.SharedPreferencesUtils;
 import com.yancy.imageselector.ImageConfig;
 import com.yancy.imageselector.ImageSelector;
 import com.zhihu.matisse.Matisse;
@@ -133,6 +134,12 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         cameraFragment.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        SharedPreferencesUtils.init(this).put("type_name", "").put("type_id", "");
     }
 
     private long mExitTime;

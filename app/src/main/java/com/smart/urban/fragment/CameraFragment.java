@@ -30,6 +30,7 @@ import com.smart.urban.ui.widget.CustomPopWindows;
 import com.smart.urban.ui.widget.LifePaymentWindow;
 import com.smart.urban.ui.widget.ShowImageWindow;
 import com.smart.urban.utils.PhotoUtils;
+import com.smart.urban.utils.SharedPreferencesUtils;
 import com.smart.urban.utils.impl.OnRemovePicListener;
 import com.smart.urban.view.ICameraView;
 import com.yancy.imageselector.ImageConfig;
@@ -109,7 +110,7 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
         }
     }
 
-    @OnClick({R.id.tv_camera_submit, R.id.tx_type})
+    @OnClick({R.id.tv_camera_submit, R.id.rl_select_type})
     public void onClick(View view) {
         switch (view.getId()) {
             //提交随手拍
@@ -131,11 +132,20 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
                 presenter.getUpFiles(parts, ed_camera_content.getText().toString().trim());
                 break;
             //选择问题分类
-            case R.id.tx_type:
+            case R.id.rl_select_type:
                 startActivity(new Intent(getActivity(), SelectTypeActivity.class));
                 break;
         }
     }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        String name = SharedPreferencesUtils.init(getActivity()).getString("type_name");
+        tx_type.setText(StringUtils.isEmpty(name) ? "请选择" : name);
+    }
+
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -157,6 +167,7 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
         MainActivity.list.add(new CameraPicBean());
         adapter.setDataList(MainActivity.list);
         ed_camera_content.setText("");
+        SharedPreferencesUtils.init(getActivity()).put("type_name", "").put("type_id", "");
         startActivity(new Intent(getActivity(), RevolvingActivity.class));
         dynamicDialog.dismiss();
     }

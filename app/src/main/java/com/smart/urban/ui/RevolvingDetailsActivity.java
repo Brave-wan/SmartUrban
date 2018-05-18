@@ -25,8 +25,10 @@ import com.smart.urban.config.Constants;
 import com.smart.urban.http.ApiCallback;
 import com.smart.urban.http.BaseResult;
 import com.smart.urban.http.HttpManager;
+import com.smart.urban.present.RevolvingDetailsPresent;
 import com.smart.urban.ui.adapter.RevolvingDetailsListAdapter;
 import com.smart.urban.ui.widget.ShowImageWindow;
+import com.smart.urban.view.IRevolvingDetailsView;
 import com.yancy.imageselector.ImageSelector;
 import com.yancy.imageselector.ImageSelectorActivity;
 
@@ -41,7 +43,7 @@ import butterknife.BindView;
  * Created by root on 18-4-10.
  */
 
-public class RevolvingDetailsActivity extends BaseActivity implements AdapterView.OnItemClickListener, RevolvingDetailsListAdapter.OnRemoveImageListener {
+public class RevolvingDetailsActivity extends BaseActivity<IRevolvingDetailsView, RevolvingDetailsPresent> implements AdapterView.OnItemClickListener, IRevolvingDetailsView, RevolvingDetailsListAdapter.OnRemoveImageListener {
     RevolvingListBean bean;
     @BindView(R.id.gv_revolving_details)
     GridView gv_revolving_details;
@@ -49,6 +51,8 @@ public class RevolvingDetailsActivity extends BaseActivity implements AdapterVie
     TextView tv_revolving_title;
     @BindView(R.id.lv_revolving_comment)
     RecyclerView lv_revolving_comment;
+    @BindView(R.id.tx_revolving_delete)
+    TextView tx_revolving_delete;
     RevolvingDetailsListAdapter adapter;
     List<RevolvingDetailsBean.AllStateBean> list = new ArrayList<>();
     BaseQuickAdapter<RevolvingDetailsBean.AllStateBean, BaseViewHolder> baseQuickAdapter;
@@ -64,15 +68,22 @@ public class RevolvingDetailsActivity extends BaseActivity implements AdapterVie
         setTitle("详情");
         bean = (RevolvingListBean) getIntent().getSerializableExtra("bean");
         tv_revolving_title.setText(bean.getContent());
-        lv_revolving_comment.setLayoutManager(new LinearLayoutManager(this));
         imagesBeans = bean.getImages();
         imagesBeans.add(new RevolvingListBean.ImagesBean());
+
         adapter = new RevolvingDetailsListAdapter(this, R.layout.item_camera_list, imagesBeans);
         gv_revolving_details.setAdapter(adapter);
         gv_revolving_details.setOnItemClickListener(this);
         adapter.setOnRemoveImageListener(this);//监听图片删除
-        getForumById();
+        presenter.getForumById(bean.getId());
+        initAdapter();
 
+
+    }
+
+    private void initAdapter() {
+        tx_revolving_delete.setVisibility(bean.getState().equals("9") ? View.VISIBLE : View.GONE);
+        lv_revolving_comment.setLayoutManager(new LinearLayoutManager(this));
         baseQuickAdapter = new BaseQuickAdapter<RevolvingDetailsBean.AllStateBean, BaseViewHolder>(R.layout.item_revolving_detail, list) {
             @Override
             protected void convert(BaseViewHolder helper, RevolvingDetailsBean.AllStateBean item) {
@@ -84,6 +95,7 @@ public class RevolvingDetailsActivity extends BaseActivity implements AdapterVie
                 tv_revolving_content.setText(item.getContent() + "");
             }
         };
+
     }
 
 
@@ -96,7 +108,7 @@ public class RevolvingDetailsActivity extends BaseActivity implements AdapterVie
                 RevolvingListBean.ImagesBean bean = new RevolvingListBean.ImagesBean();
                 bean.setAdd(true);
                 bean.setAddress(path);
-                imagesBeans.add(0,bean);
+                imagesBeans.add(0, bean);
             }
             adapter.setDataList(imagesBeans);
         }
@@ -109,14 +121,13 @@ public class RevolvingDetailsActivity extends BaseActivity implements AdapterVie
     }
 
     @Override
-    public BasePresenter initPresenter() {
-        return null;
+    public RevolvingDetailsPresent initPresenter() {
+        return new RevolvingDetailsPresent(this);
     }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         RevolvingListBean.ImagesBean bean = (RevolvingListBean.ImagesBean) adapter.getItem(position);
-
         if (bean.getAddress() != null) {
             ShowImageWindow window = new ShowImageWindow(this, bean.getAddress());
             window.showWindow(layout_titleBar);
@@ -128,39 +139,6 @@ public class RevolvingDetailsActivity extends BaseActivity implements AdapterVie
             }
         }
 
-
-    }
-
-    public void getForumById() {
-        Map<String, Object> map = new HashMap<>();
-        map.put("id", bean.getId() + "");
-        HttpManager.get().addSubscription(HttpManager.get().getApiStores().getForumById(map), new ApiCallback<BaseResult<RevolvingDetailsBean>>() {
-            @Override
-            public void onSuccess(BaseResult<RevolvingDetailsBean> model) {
-                list.addAll(model.getData().getAllState());
-                lv_revolving_comment.setAdapter(baseQuickAdapter);
-            }
-
-            @Override
-            public void onFailure(BaseResult result) {
-                ToastUtils.showShort(result.errmsg);
-            }
-        });
-    }
-
-
-    public void getDelete(String id) {
-        Map<String, Object> map = new HashMap<>();
-        map.put("id", id);
-        HttpManager.get().addSubscription(HttpManager.get().getApiStores().getRemoveDate(map), new ApiCallback() {
-            @Override
-            public void onSuccess(Object model) {
-            }
-
-            @Override
-            public void onFailure(BaseResult result) {
-            }
-        });
 
     }
 
@@ -176,7 +154,11 @@ public class RevolvingDetailsActivity extends BaseActivity implements AdapterVie
             adapter.setDataList(imagesBeans);
 
         }
+    }
 
-
+    @Override
+    public void onRevolvingDetails(RevolvingDetailsBean bean) {
+        list.addAll(bean.getAllState());
+        lv_revolving_comment.setAdapter(baseQuickAdapter);
     }
 }

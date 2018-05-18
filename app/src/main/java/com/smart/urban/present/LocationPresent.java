@@ -271,7 +271,6 @@ public class LocationPresent implements GeoFenceListener,
             HttpManager.get().addSubscription(HttpManager.get().getApiStores().getLocationSearch(map), new ApiCallback<BaseResult<List<LocationListBean>>>() {
                 @Override
                 public void onSuccess(BaseResult<List<LocationListBean>> model) {
-                    addMarkersToMap(model.data);
                     calculate(model.data);
                     if (state) {
                         mView.onLocationList(model.data, state);
@@ -289,6 +288,7 @@ public class LocationPresent implements GeoFenceListener,
     }
 
     public void calculate(List<LocationListBean> listBeans) {
+        List<LocationListBean> list = new ArrayList<>();
         for (int i = 0; i < listBeans.size(); i++) {
             LocationListBean bean = listBeans.get(i);
             double start_lon = Double.valueOf(SharedPreferencesUtils.init(mContext).getString("start_lon"));
@@ -297,9 +297,14 @@ public class LocationPresent implements GeoFenceListener,
             double end_lat = Double.valueOf(bean.getLatitude());
             double end_lon = Double.valueOf(bean.getLongitude());
             LatLng endLat = new LatLng(end_lat, end_lon);
-            float distance = AMapUtils.calculateLineDistance(startLat, endLat);
+            float distance = AMapUtils.calculateLineDistance(startLat, endLat) / 1000;
             Log.i("wan", "计算的距离：" + distance);
+            //计算周边6千米的点位
+            if (distance <= 6) {
+                list.add(bean);
+            }
         }
+        addMarkersToMap(list);
 
     }
 

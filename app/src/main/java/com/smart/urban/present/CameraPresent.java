@@ -140,6 +140,7 @@ public class CameraPresent extends BasePresenter<ICameraView> implements AMapLoc
                     map.put("images", list);
                     map.put("content", content);
                     map.put("addrName", address);
+                    map.put("type", SharedPreferencesUtils.init(mContext).getString("type_id"));
                     map.put("createUserId", SharedPreferencesUtils.init(mContext).getString("userId"));
                     getRevolving(map);
                     break;

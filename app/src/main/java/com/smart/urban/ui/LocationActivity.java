@@ -38,7 +38,6 @@ import java.util.List;
  */
 
 public class LocationActivity extends Activity implements ILocationView, View.OnClickListener, AdapterView.OnItemClickListener {
-    //    AMapNavi mAMapNavi;
     LocationPresent presenter;
     ListView lv_location_list;
     EditText ed_location;

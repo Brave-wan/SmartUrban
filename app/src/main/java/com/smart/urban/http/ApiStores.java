@@ -12,6 +12,7 @@ import com.smart.urban.bean.PersonalBean;
 import com.smart.urban.bean.RegisterBean;
 import com.smart.urban.bean.RevolvingDetailsBean;
 import com.smart.urban.bean.RevolvingListBean;
+import com.smart.urban.bean.SelectTypeBean;
 import com.smart.urban.bean.UpFileBean;
 import com.smart.urban.bean.UrbanDetailsBean;
 import com.smart.urban.bean.UrbanListBean;
@@ -139,4 +140,8 @@ public interface ApiStores {
     @FormUrlEncoded
     @POST("cityApp/photo/remove")
     Observable<BaseResult<RegisterBean>> getRemoveDate(@FieldMap Map<String, Object> map);
+
+    @FormUrlEncoded
+    @POST("cityApp/photo/getTypeList")
+    Observable<BaseResult<List<SelectTypeBean>>> getTypeList(@FieldMap Map<String, Object> map);
 }
