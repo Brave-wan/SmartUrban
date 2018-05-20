@@ -55,6 +55,7 @@ public class RevolvingActivity extends BaseActivity<IRevolvingView, RevolvingPre
         adapter = new RevolvingListAdapter(this, R.layout.item_revolving_list, list);
         lv_revolving_list.setAdapter(adapter);
         smart_layout.setOnLoadmoreListener(this);
+
         smart_layout.setOnRefreshListener(this);
         lv_revolving_list.setOnItemClickListener(this);
     }
