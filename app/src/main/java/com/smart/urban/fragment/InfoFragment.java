@@ -61,6 +61,14 @@ public class InfoFragment extends BaseFragment implements OnLoadmoreListener, On
         adapter = new InfoListAdapter(getActivity(), R.layout.item_info_list_two, list);
         lv_info_list.setAdapter(adapter);
         lv_info_list.setOnItemClickListener(this);
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        page=1;
+        list.clear();
         getMessageList(page);
     }
 
@@ -74,7 +82,6 @@ public class InfoFragment extends BaseFragment implements OnLoadmoreListener, On
         smart_layout.finishLoadmore(1000);
         page++;
         getMessageList(page);
-
     }
 
     @Override

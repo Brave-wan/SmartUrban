@@ -39,6 +39,8 @@ import com.smart.urban.view.ILoginView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -243,7 +245,9 @@ public class LocationPresent implements GeoFenceListener,
      */
     private void addMarkersToMap(List<LocationListBean> model) {
         //绘制地图上面的mark
-        for (LocationListBean bean : model) {
+        ArrayList<MarkerOptions> markerOptions = new ArrayList<>();
+        for (int i = 0; i < model.size(); i++) {
+            LocationListBean bean = model.get(i);
             LatLng latLng = new LatLng(Double.valueOf(bean.getLatitude()), Double.valueOf(bean.getLongitude()));
             MarkerOptions options = new MarkerOptions().anchor(0.5f, 0.5f)
                     .position(latLng).title(bean.getName())
@@ -251,8 +255,10 @@ public class LocationPresent implements GeoFenceListener,
                     .draggable(true)
                     .period(10)
                     .setFlat(true);
-            Marker marker = aMap.addMarker(options);
+            markerOptions.add(options);
         }
+
+        aMap.addMarkers(markerOptions, true);
     }
 
     /**
@@ -272,10 +278,6 @@ public class LocationPresent implements GeoFenceListener,
                 @Override
                 public void onSuccess(BaseResult<List<LocationListBean>> model) {
                     calculate(model.data);
-                    if (state) {
-                        mView.onLocationList(model.data, state);
-
-                    }
                 }
 
                 @Override
@@ -286,6 +288,8 @@ public class LocationPresent implements GeoFenceListener,
 
         }
     }
+
+    int locationNumber = 8;
 
     public void calculate(List<LocationListBean> listBeans) {
         List<LocationListBean> list = new ArrayList<>();
@@ -299,14 +303,34 @@ public class LocationPresent implements GeoFenceListener,
             LatLng endLat = new LatLng(end_lat, end_lon);
             float distance = AMapUtils.calculateLineDistance(startLat, endLat) / 1000;
             Log.i("wan", "计算的距离：" + distance);
-            //计算周边6千米的点位
-            if (distance <= 6) {
-                list.add(bean);
+            bean.setCalculate(distance);//计算距离
+        }
+
+        Collections.sort(listBeans, new Comparator<LocationListBean>() {
+            @Override
+            public int compare(LocationListBean o1, LocationListBean o2) {
+                Log.i("location", "o1---" + o1.getCalculate());
+                Integer id1 = (int) o1.getCalculate();
+                Log.i("location", "o1---" + id1.intValue());
+                Integer id2 = (int) o2.getCalculate();
+                return id1.compareTo(id2);
+            }
+        });
+        //计算离自己最近的五个点
+        if (listBeans.size() <= locationNumber) {
+            list.addAll(listBeans);
+        } else {
+            for (int j = 0; j < locationNumber; j++) {
+                list.add(listBeans.get(j));
             }
         }
+
+        mView.onLocationList(list, true);
+        //计算距离排序
         addMarkersToMap(list);
 
     }
+
 
     public int setImageState(int type) {
         switch (type) {

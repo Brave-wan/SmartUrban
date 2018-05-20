@@ -120,7 +120,6 @@ public class CameraPresent extends BasePresenter<ICameraView> implements AMapLoc
                 }
             });
         }
-
     }
 
 

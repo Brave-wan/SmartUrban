@@ -90,7 +90,7 @@ public class LocationActivity extends Activity implements ILocationView, View.On
         adapter = new LocationListAdapter(this, R.layout.item_location_list, list);
         lv_location_list.setAdapter(adapter);
         lv_location_list.setOnItemClickListener(this);
-        presenter.getLocationSearch("", false);
+//        presenter.getLocationSearch("", false);
 
     }
 
@@ -169,6 +169,9 @@ public class LocationActivity extends Activity implements ILocationView, View.On
             KeyboardUtils.hideSoftInput(this);
         }
     }
+
+
+
 
     @Override
     public void onLocationView() {

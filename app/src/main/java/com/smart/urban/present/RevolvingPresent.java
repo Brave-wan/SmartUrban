@@ -43,7 +43,6 @@ public class RevolvingPresent extends BasePresenter<IRevolvingView> {
                 @Override
                 public void onFailure(BaseResult result) {
                     ToastUtils.showShort(result.errmsg);
-
                     mView.onFiled();
                 }
             });

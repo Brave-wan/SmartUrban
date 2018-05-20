@@ -38,7 +38,8 @@ public class RevolvingDetailsListAdapter extends CommonAdapter<RevolvingListBean
         LogUtils.i("img" + bean.getAddress());
         img_item_delete.setVisibility(bean.getAddress() == null ? View.GONE : View.VISIBLE);
 
-        if (!StringUtils.isEmpty(bean.getAddress())) {
+        if (bean.getAddress() != null) {
+            Log.i("adapter", "pic>>" + bean.getAddress());
             Glide.with(context)
                     .load(bean.isAdd() ? bean.getAddress() : Constants.BASE_URL + bean.getAddress())
                     .placeholder(R.drawable.icon_pic_empty)

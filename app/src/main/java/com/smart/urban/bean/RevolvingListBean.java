@@ -37,8 +37,26 @@ public class RevolvingListBean implements Serializable {
     private long createTime;
     private Object modifyUserId;
     private long modifyTime;
+    private String addrName;
     private long id;
     private List<ImagesBean> images;
+    private String typeName;
+
+    public void setAddrName(String addrName) {
+        this.addrName = addrName;
+    }
+
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
+    }
+
+    public String getAddrName() {
+        return addrName;
+    }
+
+    public String getTypeName() {
+        return typeName;
+    }
 
     public Object getCreateUserName() {
         return createUserName;
@@ -145,6 +163,15 @@ public class RevolvingListBean implements Serializable {
         private long id;
         private String type;
         private boolean isAdd;
+        private boolean isCamrea;
+
+        public void setCamrea(boolean camrea) {
+            isCamrea = camrea;
+        }
+
+        public boolean isCamrea() {
+            return isCamrea;
+        }
 
         public void setAdd(boolean add) {
             isAdd = add;

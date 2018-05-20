@@ -46,8 +46,10 @@ public class LoginActivity extends BaseActivity<ILoginView, LoginPresent> implem
     @Override
     protected void initView(Bundle savedInstanceState) {
         setTitle("登陆");
+        showBackwardView("",false);
         presenter.fetchAuthResultWithBundle(savedInstanceState);
         img_pwd_open.setBackground(getResources().getDrawable(R.drawable.icon_login_pwd_open));
+
     }
 
 

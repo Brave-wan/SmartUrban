@@ -13,18 +13,16 @@
         android:layout_height="80dp"
         android:scaleType="fitXY" />
 
-    <TextView
+    <ImageView
         android:id="@+id/tx_dynamic_state"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_my_revolving_review_red"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
         android:paddingBottom="3dp"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        android:paddingTop="3dp"
-        android:text="审核中"
-        android:textColor="@color/white"
-        android:textSize="10sp" />
+        android:paddingTop="3dp"/>
 
 
     <TextView
@@ -32,6 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/img_lost_head"
         android:ellipsize="end"
         android:maxLines="1"

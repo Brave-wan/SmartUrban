@@ -32,15 +32,29 @@ public class DynamicListAdapter extends CommonAdapter<DynamicListBean> {
         ImageView img_lost_head = (ImageView) baseViewHolder.getViewByViewId(R.id.img_lost_head);
         TextView tv_lost_title = (TextView) baseViewHolder.getViewByViewId(R.id.tv_lost_title);
         TextView tv_dynamic_content = (TextView) baseViewHolder.getViewByViewId(R.id.tv_dynamic_content);
-        TextView tx_dynamic_state = (TextView) baseViewHolder.getViewByViewId(R.id.tx_dynamic_state);
+        ImageView tx_dynamic_state = (ImageView) baseViewHolder.getViewByViewId(R.id.tx_dynamic_state);
         tv_dynamic_content.setText(bean.getContent());
         tv_lost_title.setText(bean.getTitle());
         tx_dynamic_state.setVisibility(bean.getIsCheck().equals("N") ? View.VISIBLE : View.GONE);
 
-        if (bean.getIsCheck().equals("N")) {
-            tx_dynamic_state.setText("审核中");
-        }
 
+//        switch (bean.getIsCheck()) {
+//            //审核通过
+//            case "Y":
+//                tx_dynamic_state.setBackground(context.getResources().getDrawable(R.drawable.icon_dynamic_shen_he_tong_guo));
+//                break;
+//            //审核未通过
+//            case "N":
+//                tx_dynamic_state.setBackground(context.getResources().getDrawable(R.drawable.icon_dynamic_shen_he_wei_tong_guo));
+//                break;
+//            //待审核
+//            case "D":
+//                tx_dynamic_state.setBackground(context.getResources().getDrawable(R.drawable.icon_dynamic_dai_shen_he));
+//                break;
+//        }
+        if (bean.getIsCheck().equals("D")){
+            tx_dynamic_state.setBackgroundColor(context.getResources().getColor(R.color.btn_cancel_color));
+        }
         if (bean.getImages().size() > 0) {
             Glide.with(context).load(bean.getImages().get(0).getAddress()).placeholder(R.drawable.icon_pic_empty).error(R.drawable.icon_pic_empty).into(img_lost_head);
         } else {

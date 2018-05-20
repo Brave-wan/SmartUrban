@@ -75,7 +75,6 @@ public class CenterFragment extends BaseFragment {
         String userName = SharedPreferencesUtils.init(getActivity()).getString("center_name");
         tv_center_name.setText("昵称:" + userName);
         tv_center_sex.setText("性别:" + SharedPreferencesUtils.init(getActivity()).getString("center_sex"));
-
         tv_center_name.setVisibility(StringUtils.isEmpty(userName) ? View.GONE : View.VISIBLE);
         tv_center_sex.setVisibility(StringUtils.isEmpty(userName) ? View.GONE : View.VISIBLE);
         tv_my_pr.setVisibility(StringUtils.isEmpty(userName) ? View.VISIBLE : View.GONE);

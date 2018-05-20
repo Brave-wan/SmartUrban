@@ -9,6 +9,7 @@ import android.view.View;
 import com.blankj.utilcode.util.ToastUtils;
 import com.smart.urban.R;
 import com.smart.urban.bean.CameraPicBean;
+import com.smart.urban.bean.RevolvingListBean;
 import com.smart.urban.ui.MainActivity;
 import com.smart.urban.ui.UrbanDetailsActivity;
 import com.smart.urban.ui.dialog.SelectImageWindow;
@@ -79,6 +80,16 @@ public class Constants {
         return pars;
     }
 
+    public static MultipartBody.Part[] getRevolvingMap(List<RevolvingListBean.ImagesBean> cameraPicBeans) {
+        MultipartBody.Part[] pars = new MultipartBody.Part[cameraPicBeans.size()];
+        for (int i = 0; i < cameraPicBeans.size(); i++) {
+            RevolvingListBean.ImagesBean bean = cameraPicBeans.get(i);
+            if (bean.getAddress() != null) {
+                pars[i] = prepareFilePart("files", bean.getAddress());
+            }
+        }
+        return pars;
+    }
 
     public static String getHtmlData(String bodyHTML) {
         String head = "<head>" +

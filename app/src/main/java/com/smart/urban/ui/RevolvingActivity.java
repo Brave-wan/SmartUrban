@@ -50,13 +50,20 @@ public class RevolvingActivity extends BaseActivity<IRevolvingView, RevolvingPre
     @Override
     protected void initView(Bundle savedInstanceState) {
         setTitle("我的随手拍");
-        presenter.getPhotoList(page);
         layout_content.setStatus(LoadingLayout.Loading);
+        presenter.getPhotoList(page);
         adapter = new RevolvingListAdapter(this, R.layout.item_revolving_list, list);
         lv_revolving_list.setAdapter(adapter);
         smart_layout.setOnLoadmoreListener(this);
         smart_layout.setOnRefreshListener(this);
         lv_revolving_list.setOnItemClickListener(this);
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        smart_layout.autoRefresh();
     }
 
     @Override

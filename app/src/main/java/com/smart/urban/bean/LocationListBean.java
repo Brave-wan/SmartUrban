@@ -32,6 +32,15 @@ public class LocationListBean {
     private Object modifyUserId;
     private Object modifyTime;
     private long id;
+    private float calculate;
+
+    public void setCalculate(float calculate) {
+        this.calculate = calculate;
+    }
+
+    public float getCalculate() {
+        return calculate;
+    }
 
     public String getLongitude() {
         return longitude;

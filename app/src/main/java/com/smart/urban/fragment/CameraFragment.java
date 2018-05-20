@@ -116,7 +116,6 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
             //提交随手拍
             case R.id.tv_camera_submit:
                 presenter.getPicList();
-
                 if (StringUtils.isEmpty(ed_camera_content.getText().toString().trim())) {
                     ToastUtils.showShort("请输入问题描述!");
                     return;
@@ -127,10 +126,16 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
                     ToastUtils.showShort("请至少添加一张图片");
                     return;
                 }
+
+                if (StringUtils.isEmpty(SharedPreferencesUtils.init(getActivity()).getString("type_id"))){
+                    ToastUtils.showShort("请选择问题类型!");
+                    return;
+                }
                 presenter.showProgressDialog();
                 MultipartBody.Part[] parts = Constants.getFileMaps(cameraPicBeans);
                 presenter.getUpFiles(parts, ed_camera_content.getText().toString().trim());
                 break;
+
             //选择问题分类
             case R.id.rl_select_type:
                 startActivity(new Intent(getActivity(), SelectTypeActivity.class));
