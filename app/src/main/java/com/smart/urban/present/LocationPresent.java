@@ -254,10 +254,10 @@ public class LocationPresent implements GeoFenceListener,
                     .icon(BitmapDescriptorFactory.fromBitmap(BitmapFactory.decodeResource(mContext.getResources(), setImageState(Integer.valueOf(bean.getType())))))
                     .draggable(true)
                     .period(10)
+                    .snippet("点击导航")
                     .setFlat(true);
             markerOptions.add(options);
         }
-
         aMap.addMarkers(markerOptions, true);
     }
 
@@ -324,7 +324,6 @@ public class LocationPresent implements GeoFenceListener,
                 list.add(listBeans.get(j));
             }
         }
-
         mView.onLocationList(list, true);
         //计算距离排序
         addMarkersToMap(list);

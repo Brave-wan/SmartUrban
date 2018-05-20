@@ -38,6 +38,7 @@ public class CameraListAdapter extends CommonAdapter<CameraPicBean> {
                 .load(bean.getPic() == null ? R.drawable.icon_up_loading_photo_btn : bean.getPic())
                 .error(R.drawable.icon_up_loading_photo_btn)
                 .into(item_camera);
+
         img_item_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

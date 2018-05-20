@@ -127,7 +127,7 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
                     return;
                 }
 
-                if (StringUtils.isEmpty(SharedPreferencesUtils.init(getActivity()).getString("type_id"))){
+                if (StringUtils.isEmpty(SharedPreferencesUtils.init(getActivity()).getString("type_id"))) {
                     ToastUtils.showShort("请选择问题类型!");
                     return;
                 }
@@ -185,8 +185,10 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
 
     @Override
     public void removePic(CameraPicBean bean) {
-        MainActivity.list.remove(bean);
-        adapter.setDataList(MainActivity.list);
+        if (bean.getPic() != null) {
+            MainActivity.list.remove(bean);
+            adapter.setDataList(MainActivity.list);
+        }
     }
 
 
