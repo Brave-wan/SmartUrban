@@ -14,12 +14,6 @@
     <list default="true" id="272097d7-2833-4029-a216-e7693ad8d4db" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/config/Constants.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/config/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/InfoFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/InfoFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/LocationPresent.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/LocationPresent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/RevolvingActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/RevolvingActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/RevolvingDetailsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/RevolvingDetailsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_revolving.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_revolving.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -135,29 +129,29 @@
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
-              <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+              <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
               <folding>
-                <element signature="e#1846#1902#2" expanded="true" />
-                <element signature="e#2785#2835#2" expanded="true" />
-                <element signature="e#2848#2881#2" expanded="true" />
-                <marker date="1526841515462" expanded="false" signature="1926:1944" ph="junit:junit:4.12 [2041] [+1 extra dependencies, check tooltip]" />
-                <marker date="1526841515462" expanded="false" signature="1975:2030" ph="com.android.support.test.espresso:espresso-core:3.0.1 [15677] [+12 extra dependencies, check tooltip]" />
-                <marker date="1526841515462" expanded="false" signature="2129:2168" ph="com.squareup.retrofit2:retrofit:2.0.2 [505] [+2 extra dependencies, check tooltip]" />
-                <marker date="1526841515462" expanded="false" signature="2181:2216" ph="com.squareup.okhttp3:okhttp:3.2.0 [2140] [+1 extra dependencies, check tooltip]" />
-                <marker date="1526841515462" expanded="false" signature="2229:2277" ph="com.squareup.okhttp3:logging-interceptor:3.1.2 [64] [+2 extra dependencies, check tooltip]" />
-                <marker date="1526841515462" expanded="false" signature="2290:2323" ph="com.google.code.gson:gson:2.6.2 [1329]" />
-                <marker date="1526841515462" expanded="false" signature="2336:2381" ph="com.squareup.retrofit2:converter-gson:2.0.2 [32] [+4 extra dependencies, check tooltip]" />
-                <marker date="1526841515462" expanded="false" signature="2394:2439" ph="com.squareup.retrofit2:adapter-rxjava:2.0.2 [115] [+4 extra dependencies, check tooltip]" />
-                <marker date="1526841515462" expanded="false" signature="2452:2482" ph="io.reactivex:rxandroid:1.1.0 [70] [+1 extra dependencies, check tooltip]" />
-                <marker date="1526841515462" expanded="false" signature="2495:2522" ph="io.reactivex:rxjava:1.1.0 [4605]" />
-                <marker date="1526841515462" expanded="false" signature="2535:2562" ph="com.blankj:utilcode:1.9.3 [2122]" />
-                <marker date="1526841515462" expanded="false" signature="2575:2603" ph="org.loader:autohideime:1.0 [37] [+5 extra dependencies, check tooltip]" />
-                <marker date="1526841515462" expanded="false" signature="2733:2772" ph="com.github.bumptech.glide:glide:3.7.0 [2879]" />
-                <marker date="1526841515462" expanded="false" signature="2894:2916" ph="com.mylhyl:acp:1.1.7 [143] [+5 extra dependencies, check tooltip]" />
-                <marker date="1526841515462" expanded="false" signature="2929:2961" ph="com.youth.banner:banner:1.4.10 [302]" />
-                <marker date="1526841515462" expanded="false" signature="2974:3017" ph="com.github.addappcn:android-pickers:1.0.3 [still calculating on server...]" />
-                <marker date="1526841515462" expanded="false" signature="3030:3087" ph="com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34 [607]" />
-                <marker date="1526841515462" expanded="false" signature="3100:3136" ph="com.android.support:multidex:1.0.0 [174]" />
+                <element signature="e#1855#1911#2" expanded="true" />
+                <element signature="e#2794#2844#2" expanded="true" />
+                <element signature="e#2857#2890#2" expanded="true" />
+                <marker date="1526915066559" expanded="false" signature="1935:1953" ph="junit:junit:4.12 [2041] [+1 extra dependencies, check tooltip]" />
+                <marker date="1526915066559" expanded="false" signature="1984:2039" ph="com.android.support.test.espresso:espresso-core:3.0.1 [15677] [+12 extra dependencies, check tooltip]" />
+                <marker date="1526915066559" expanded="false" signature="2138:2177" ph="com.squareup.retrofit2:retrofit:2.0.2 [505] [+2 extra dependencies, check tooltip]" />
+                <marker date="1526915066559" expanded="false" signature="2190:2225" ph="com.squareup.okhttp3:okhttp:3.2.0 [2140] [+1 extra dependencies, check tooltip]" />
+                <marker date="1526915066559" expanded="false" signature="2238:2286" ph="com.squareup.okhttp3:logging-interceptor:3.1.2 [64] [+2 extra dependencies, check tooltip]" />
+                <marker date="1526915066559" expanded="false" signature="2299:2332" ph="com.google.code.gson:gson:2.6.2 [1329]" />
+                <marker date="1526915066559" expanded="false" signature="2345:2390" ph="com.squareup.retrofit2:converter-gson:2.0.2 [32] [+4 extra dependencies, check tooltip]" />
+                <marker date="1526915066559" expanded="false" signature="2403:2448" ph="com.squareup.retrofit2:adapter-rxjava:2.0.2 [115] [+4 extra dependencies, check tooltip]" />
+                <marker date="1526915066559" expanded="false" signature="2461:2491" ph="io.reactivex:rxandroid:1.1.0 [70] [+1 extra dependencies, check tooltip]" />
+                <marker date="1526915066559" expanded="false" signature="2504:2531" ph="io.reactivex:rxjava:1.1.0 [4605]" />
+                <marker date="1526915066559" expanded="false" signature="2544:2571" ph="com.blankj:utilcode:1.9.3 [2122]" />
+                <marker date="1526915066559" expanded="false" signature="2584:2612" ph="org.loader:autohideime:1.0 [37] [+5 extra dependencies, check tooltip]" />
+                <marker date="1526915066559" expanded="false" signature="2742:2781" ph="com.github.bumptech.glide:glide:3.7.0 [2879]" />
+                <marker date="1526915066559" expanded="false" signature="2903:2925" ph="com.mylhyl:acp:1.1.7 [143] [+5 extra dependencies, check tooltip]" />
+                <marker date="1526915066559" expanded="false" signature="2938:2970" ph="com.youth.banner:banner:1.4.10 [302]" />
+                <marker date="1526915066559" expanded="false" signature="2983:3026" ph="com.github.addappcn:android-pickers:1.0.3 [still calculating on server...]" />
+                <marker date="1526915066559" expanded="false" signature="3039:3096" ph="com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34 [607]" />
+                <marker date="1526915066559" expanded="false" signature="3109:3145" ph="com.android.support:multidex:1.0.0 [174]" />
               </folding>
             </state>
           </provider>
@@ -3481,7 +3475,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526914906090" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526915066574" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -3528,7 +3522,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526914906090" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526915066574" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3873,7 +3867,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526818389428</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="更新地图上的坐标点">
+      <created>1526914916940</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1526914916941</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -4852,29 +4853,29 @@
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
           <folding>
-            <element signature="e#1846#1902#2" expanded="true" />
-            <element signature="e#2785#2835#2" expanded="true" />
-            <element signature="e#2848#2881#2" expanded="true" />
-            <marker date="1526841515462" expanded="false" signature="1926:1944" ph="junit:junit:4.12 [2041] [+1 extra dependencies, check tooltip]" />
-            <marker date="1526841515462" expanded="false" signature="1975:2030" ph="com.android.support.test.espresso:espresso-core:3.0.1 [15677] [+12 extra dependencies, check tooltip]" />
-            <marker date="1526841515462" expanded="false" signature="2129:2168" ph="com.squareup.retrofit2:retrofit:2.0.2 [505] [+2 extra dependencies, check tooltip]" />
-            <marker date="1526841515462" expanded="false" signature="2181:2216" ph="com.squareup.okhttp3:okhttp:3.2.0 [2140] [+1 extra dependencies, check tooltip]" />
-            <marker date="1526841515462" expanded="false" signature="2229:2277" ph="com.squareup.okhttp3:logging-interceptor:3.1.2 [64] [+2 extra dependencies, check tooltip]" />
-            <marker date="1526841515462" expanded="false" signature="2290:2323" ph="com.google.code.gson:gson:2.6.2 [1329]" />
-            <marker date="1526841515462" expanded="false" signature="2336:2381" ph="com.squareup.retrofit2:converter-gson:2.0.2 [32] [+4 extra dependencies, check tooltip]" />
-            <marker date="1526841515462" expanded="false" signature="2394:2439" ph="com.squareup.retrofit2:adapter-rxjava:2.0.2 [115] [+4 extra dependencies, check tooltip]" />
-            <marker date="1526841515462" expanded="false" signature="2452:2482" ph="io.reactivex:rxandroid:1.1.0 [70] [+1 extra dependencies, check tooltip]" />
-            <marker date="1526841515462" expanded="false" signature="2495:2522" ph="io.reactivex:rxjava:1.1.0 [4605]" />
-            <marker date="1526841515462" expanded="false" signature="2535:2562" ph="com.blankj:utilcode:1.9.3 [2122]" />
-            <marker date="1526841515462" expanded="false" signature="2575:2603" ph="org.loader:autohideime:1.0 [37] [+5 extra dependencies, check tooltip]" />
-            <marker date="1526841515462" expanded="false" signature="2733:2772" ph="com.github.bumptech.glide:glide:3.7.0 [2879]" />
-            <marker date="1526841515462" expanded="false" signature="2894:2916" ph="com.mylhyl:acp:1.1.7 [143] [+5 extra dependencies, check tooltip]" />
-            <marker date="1526841515462" expanded="false" signature="2929:2961" ph="com.youth.banner:banner:1.4.10 [302]" />
-            <marker date="1526841515462" expanded="false" signature="2974:3017" ph="com.github.addappcn:android-pickers:1.0.3 [still calculating on server...]" />
-            <marker date="1526841515462" expanded="false" signature="3030:3087" ph="com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34 [607]" />
-            <marker date="1526841515462" expanded="false" signature="3100:3136" ph="com.android.support:multidex:1.0.0 [174]" />
+            <element signature="e#1855#1911#2" expanded="true" />
+            <element signature="e#2794#2844#2" expanded="true" />
+            <element signature="e#2857#2890#2" expanded="true" />
+            <marker date="1526915066559" expanded="false" signature="1935:1953" ph="junit:junit:4.12 [2041] [+1 extra dependencies, check tooltip]" />
+            <marker date="1526915066559" expanded="false" signature="1984:2039" ph="com.android.support.test.espresso:espresso-core:3.0.1 [15677] [+12 extra dependencies, check tooltip]" />
+            <marker date="1526915066559" expanded="false" signature="2138:2177" ph="com.squareup.retrofit2:retrofit:2.0.2 [505] [+2 extra dependencies, check tooltip]" />
+            <marker date="1526915066559" expanded="false" signature="2190:2225" ph="com.squareup.okhttp3:okhttp:3.2.0 [2140] [+1 extra dependencies, check tooltip]" />
+            <marker date="1526915066559" expanded="false" signature="2238:2286" ph="com.squareup.okhttp3:logging-interceptor:3.1.2 [64] [+2 extra dependencies, check tooltip]" />
+            <marker date="1526915066559" expanded="false" signature="2299:2332" ph="com.google.code.gson:gson:2.6.2 [1329]" />
+            <marker date="1526915066559" expanded="false" signature="2345:2390" ph="com.squareup.retrofit2:converter-gson:2.0.2 [32] [+4 extra dependencies, check tooltip]" />
+            <marker date="1526915066559" expanded="false" signature="2403:2448" ph="com.squareup.retrofit2:adapter-rxjava:2.0.2 [115] [+4 extra dependencies, check tooltip]" />
+            <marker date="1526915066559" expanded="false" signature="2461:2491" ph="io.reactivex:rxandroid:1.1.0 [70] [+1 extra dependencies, check tooltip]" />
+            <marker date="1526915066559" expanded="false" signature="2504:2531" ph="io.reactivex:rxjava:1.1.0 [4605]" />
+            <marker date="1526915066559" expanded="false" signature="2544:2571" ph="com.blankj:utilcode:1.9.3 [2122]" />
+            <marker date="1526915066559" expanded="false" signature="2584:2612" ph="org.loader:autohideime:1.0 [37] [+5 extra dependencies, check tooltip]" />
+            <marker date="1526915066559" expanded="false" signature="2742:2781" ph="com.github.bumptech.glide:glide:3.7.0 [2879]" />
+            <marker date="1526915066559" expanded="false" signature="2903:2925" ph="com.mylhyl:acp:1.1.7 [143] [+5 extra dependencies, check tooltip]" />
+            <marker date="1526915066559" expanded="false" signature="2938:2970" ph="com.youth.banner:banner:1.4.10 [302]" />
+            <marker date="1526915066559" expanded="false" signature="2983:3026" ph="com.github.addappcn:android-pickers:1.0.3 [still calculating on server...]" />
+            <marker date="1526915066559" expanded="false" signature="3039:3096" ph="com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34 [607]" />
+            <marker date="1526915066559" expanded="false" signature="3109:3145" ph="com.android.support:multidex:1.0.0 [174]" />
           </folding>
         </state>
       </provider>
