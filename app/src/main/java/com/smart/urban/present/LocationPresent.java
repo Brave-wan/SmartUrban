@@ -244,6 +244,7 @@ public class LocationPresent implements GeoFenceListener,
      * 地图上绘制marks
      */
     private void addMarkersToMap(List<LocationListBean> model) {
+        aMap.clear();
         //绘制地图上面的mark
         ArrayList<MarkerOptions> markerOptions = new ArrayList<>();
         for (int i = 0; i < model.size(); i++) {

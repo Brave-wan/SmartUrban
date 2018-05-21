@@ -74,7 +74,6 @@ public class RevolvingDetailsActivity extends BaseActivity<IRevolvingDetailsView
         setTitle("详情");
         bean = (RevolvingListBean) getIntent().getSerializableExtra("bean");
         tv_revolving_title.setText(bean.getContent());
-
         imagesBeans = bean.getImages();
         picSize = imagesBeans.size();
         if (!bean.getState().equals("17")) {

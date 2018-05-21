@@ -55,21 +55,18 @@ public class InfoFragment extends BaseFragment implements OnLoadmoreListener, On
     protected void initView(View view, Bundle savedInstanceState) {
         setTitle("政策资讯");
         list.clear();
-        layout_root.setStatus(LoadingLayout.Loading);
         smart_layout.setOnLoadmoreListener(this);
         smart_layout.setOnRefreshListener(this);
         adapter = new InfoListAdapter(getActivity(), R.layout.item_info_list_two, list);
         lv_info_list.setAdapter(adapter);
         lv_info_list.setOnItemClickListener(this);
-
+        layout_root.setStatus(LoadingLayout.Loading);
+        getMessageList(page);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        page=1;
-        list.clear();
-        getMessageList(page);
     }
 
     @Override
