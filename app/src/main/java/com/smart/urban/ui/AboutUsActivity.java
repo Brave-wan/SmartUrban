@@ -39,6 +39,8 @@ public class AboutUsActivity extends BaseActivity {
     protected void onBackward(View backwardView) {
         super.onBackward(backwardView);
         finish();
+
+
     }
 
     @OnClick({R.id.btn_version})
