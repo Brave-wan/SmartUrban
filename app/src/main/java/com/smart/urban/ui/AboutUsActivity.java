@@ -2,12 +2,17 @@ package com.smart.urban.ui;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
+import com.blankj.utilcode.util.AppUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseActivity;
 import com.smart.urban.base.BasePresenter;
+import com.tencent.bugly.Bugly;
+import com.tencent.bugly.beta.Beta;
 
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -15,6 +20,9 @@ import butterknife.OnClick;
  */
 
 public class AboutUsActivity extends BaseActivity {
+    @BindView(R.id.tv_version)
+    TextView tv_version;
+
     @Override
     protected int getContentViewId() {
         return R.layout.activity_about_us;
@@ -23,7 +31,8 @@ public class AboutUsActivity extends BaseActivity {
     @Override
     protected void initView(Bundle savedInstanceState) {
         setTitle("关于我们");
-
+        AppUtils.AppInfo info = AppUtils.getAppInfo();
+        tv_version.setText(info.getVersionName());
     }
 
     @Override
@@ -36,7 +45,7 @@ public class AboutUsActivity extends BaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_version:
-                ToastUtils.showShort("已经是最新版本!");
+                Beta.checkUpgrade();
                 break;
         }
     }
