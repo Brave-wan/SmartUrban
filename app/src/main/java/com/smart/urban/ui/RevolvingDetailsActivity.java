@@ -104,7 +104,7 @@ public class RevolvingDetailsActivity extends BaseActivity<IRevolvingDetailsView
                 TextView tv_revolving_time = (TextView) helper.itemView.findViewById(R.id.tv_revolving_time);
                 tv_revolving_name.setText(item.getName());//修改的提示内容
                 tv_revolving_time.setText(item.getModifyTime());//修改名称
-                tv_revolving_content.setText(item.getContent() + "");
+                tv_revolving_content.setText(item.getContent());
             }
         };
         initPicAdapter();

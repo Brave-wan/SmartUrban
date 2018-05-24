@@ -290,7 +290,7 @@ public class SelectLocationPresent extends BasePresenter<ISelectLocationView> im
                     item = items.get(j);
                     SelectLocationBean selectLocationBean = new SelectLocationBean();
                     selectLocationBean.setTitle(item.getTitle());
-                    selectLocationBean.setCheck(j==0?true:false);
+                    selectLocationBean.setCheck(j == 0 ? true : false);
                     address.add(selectLocationBean);
                 }
             }

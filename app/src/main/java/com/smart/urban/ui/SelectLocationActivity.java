@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,6 +17,7 @@ import com.smart.urban.R;
 import com.smart.urban.base.BaseActivity;
 import com.smart.urban.bean.SelectLocationBean;
 import com.smart.urban.present.SelectLocationPresent;
+import com.smart.urban.utils.slidinguppanel.SlidingUpPanelLayout;
 import com.smart.urban.view.ISelectLocationView;
 
 import java.util.ArrayList;
@@ -36,7 +38,9 @@ public class SelectLocationActivity extends BaseActivity<ISelectLocationView, Se
     @BindView(R.id.lv_location_list)
     RecyclerView lv_location_list;
     @BindView(R.id.ed_location)
-    TextView ed_location;
+    EditText ed_location;
+    @BindView(R.id.sliding_layout)
+    SlidingUpPanelLayout sliding_layout;
 
     List<SelectLocationBean> list = new ArrayList<>();
     BaseQuickAdapter<SelectLocationBean, BaseViewHolder> adapter;
@@ -51,6 +55,7 @@ public class SelectLocationActivity extends BaseActivity<ISelectLocationView, Se
         setTitle("位置");
         mAMapNaviView = (MapView) findViewById(R.id.map);
         mAMapNaviView.onCreate(savedInstanceState);// 此方法必须重写
+        sliding_layout.setTouchEnabled(false);
         //初始化地图
         presenter.initMap(mAMapNaviView);
 

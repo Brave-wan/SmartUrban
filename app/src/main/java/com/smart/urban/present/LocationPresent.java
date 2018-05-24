@@ -282,6 +282,7 @@ public class LocationPresent implements GeoFenceListener,
                         calculate(model.data);
                     } else {
                         addMarkersToMap(model.data);
+                        mView.onLocationList(model.data, false);
                     }
                 }
 

@@ -223,6 +223,9 @@ public class RevolvingDetailsBean {
         }
 
         public String getContent() {
+            if (content == null || content.equals("null")) {
+                return "";
+            }
             return content;
         }
 

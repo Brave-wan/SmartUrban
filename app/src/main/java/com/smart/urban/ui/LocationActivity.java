@@ -79,7 +79,6 @@ public class LocationActivity extends Activity implements ILocationView, View.On
         rb_riding_btn.setOnClickListener(this);
         rb_car_btn.setOnClickListener(this);
         presenter = new LocationPresent(this, this);
-//        mAMapNavi = AMapNavi.getInstance(getApplicationContext());
         presenter.initMap(mAMapNaviView);
         tv_map_search.setOnClickListener(this);
         rl_transportation_state.setOnClickListener(this);
@@ -93,8 +92,6 @@ public class LocationActivity extends Activity implements ILocationView, View.On
         adapter = new LocationListAdapter(this, R.layout.item_location_list, list);
         lv_location_list.setAdapter(adapter);
         lv_location_list.setOnItemClickListener(this);
-//        presenter.getLocationSearch("", false);
-
     }
 
     @Override
@@ -158,7 +155,7 @@ public class LocationActivity extends Activity implements ILocationView, View.On
         rl_transportation_state.setVisibility(View.VISIBLE);
         lv_location_list.setVisibility(View.GONE);
         sliding_layout.setPanelHeight(rl_transportation_state.getLayoutParams().height);
-        sliding_layout.setTouchEnabled(false);
+        sliding_layout.setTouchEnabled(true);
         tv_location_name.setText("终点：" + bean.getName());
         String myLocation = StringUtils.isEmpty(SharedPreferencesUtils.init(this).getString("address"))
                 ? "我的位置" : SharedPreferencesUtils.init(this).getString("address");
@@ -169,13 +166,11 @@ public class LocationActivity extends Activity implements ILocationView, View.On
     @Override
     public void onLocationList(List<LocationListBean> beans, boolean state) {
         //显示地图上搜索的坐标点
-        if (state) {
-            list.clear();
-            list.addAll(beans);
-            adapter.setDataList(list);
-            sliding_layout.setPanelHeight(600);
-            KeyboardUtils.hideSoftInput(this);
-        }
+        list.clear();
+        list.addAll(beans);
+        adapter.setDataList(list);
+        sliding_layout.setPanelHeight(600);
+        KeyboardUtils.hideSoftInput(this);
     }
 
 

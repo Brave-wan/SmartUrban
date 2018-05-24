@@ -61,12 +61,21 @@
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/tx_curr"
                 android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/img_arrow_back"
                 android:layout_toRightOf="@+id/tx_curr"
                 android:ellipsize="middle"
                 android:singleLine="true"
                 android:text="河北省石家庄河北省石家庄河北省石家庄"
                 android:textColor="@color/text_gray"
                 android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/img_arrow_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_arrow_back" />
         </RelativeLayout>
 
 
