@@ -223,13 +223,6 @@ public class RevolvingDetailsBean {
         }
 
         public String getContent() {
-            if (content == null) {
-                return "暂无";
-            }
-
-            if (StringUtils.isEmpty(content)) {
-                return "暂无";
-            }
             return content;
         }
 

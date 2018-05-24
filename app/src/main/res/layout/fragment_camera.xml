@@ -37,16 +37,38 @@
                 android:text="请选择" />
         </RelativeLayout>
 
-
-        <TextView
-            android:id="@+id/tx_camera_location"
+        <RelativeLayout
+            android:id="@+id/tx_select_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@color/white"
-            android:padding="15dp"
-            android:text="但前位置:河北省石家庄"
-            android:textColor="@color/black" />
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/tx_curr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/icon_camera_location_"
+                android:gravity="center"
+                android:text="但前位置:"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tx_camera_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tx_curr"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tx_curr"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:text="河北省石家庄河北省石家庄河北省石家庄"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
 
         <TextView
             android:layout_width="match_parent"

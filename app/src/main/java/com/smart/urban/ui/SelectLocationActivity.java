@@ -51,6 +51,7 @@ public class SelectLocationActivity extends BaseActivity<ISelectLocationView, Se
         setTitle("位置");
         mAMapNaviView = (MapView) findViewById(R.id.map);
         mAMapNaviView.onCreate(savedInstanceState);// 此方法必须重写
+        //初始化地图
         presenter.initMap(mAMapNaviView);
 
     }
@@ -91,10 +92,12 @@ public class SelectLocationActivity extends BaseActivity<ISelectLocationView, Se
         }
     }
 
-
     @Override
     protected void onBackward(View backwardView) {
         super.onBackward(backwardView);
+        Intent intent = new Intent();
+        intent.putExtra("address", ed_location.getText().toString().trim());
+        setResult(requestCode, intent);
         finish();
     }
 

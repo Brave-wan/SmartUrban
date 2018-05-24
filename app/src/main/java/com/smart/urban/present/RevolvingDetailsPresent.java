@@ -274,8 +274,26 @@ public class RevolvingDetailsPresent extends BasePresenter<IRevolvingDetailsView
     }
 
     /**
+     * @param parts
+     * @param bean
+     * @param original
+     */
+    public void getUpLoading(final MultipartBody.Part[] parts, final RevolvingListBean bean, final List<RevolvingListBean.ImagesBean> original) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+        builder.setMessage("请确认是否要修改此条随手拍，提交后此随手拍会进入待审核状态！")
+                .setNegativeButton("取消", null)
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        getUpFiles(parts, bean, original);
+                    }
+                })
+                .setTitle("提示")
+                .show();
+    }
+
+    /**
      * 删除随手拍对话框
-     *
      */
     public void getDeletePicDialog(final RevolvingListBean.ImagesBean item) {
         if (mView != null) {

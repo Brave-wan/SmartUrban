@@ -102,8 +102,8 @@ public class RevolvingDetailsActivity extends BaseActivity<IRevolvingDetailsView
                 TextView tv_revolving_name = (TextView) helper.itemView.findViewById(R.id.tv_revolving_name);
                 TextView tv_revolving_content = (TextView) helper.itemView.findViewById(R.id.tv_revolving_content);
                 TextView tv_revolving_time = (TextView) helper.itemView.findViewById(R.id.tv_revolving_time);
-                tv_revolving_name.setText(StringUtils.isEmpty(item.getName()) ? "暂无" : item.getName());
-                tv_revolving_time.setText(item.getModifyTime());
+                tv_revolving_name.setText(item.getName());//修改的提示内容
+                tv_revolving_time.setText(item.getModifyTime());//修改名称
                 tv_revolving_content.setText(item.getContent() + "");
             }
         };
@@ -196,7 +196,9 @@ public class RevolvingDetailsActivity extends BaseActivity<IRevolvingDetailsView
                 break;
             case R.id.tx_submit:
                 List<RevolvingListBean.ImagesBean> list = picAdapter.getData();
+                //添加的图片
                 List<RevolvingListBean.ImagesBean> addList = new ArrayList<>();
+                //原来的图片
                 List<RevolvingListBean.ImagesBean> original = new ArrayList<>();
                 for (RevolvingListBean.ImagesBean imagesBean : list) {
                     if (imagesBean.isAdd()) {
@@ -205,16 +207,18 @@ public class RevolvingDetailsActivity extends BaseActivity<IRevolvingDetailsView
                         original.add(imagesBean);
                     }
                 }
+                //判断提交是否已经修改
                 if (picSize == original.size() && addList.size() <= 0) {
                     ToastUtils.showShort("您未有任何修改，请修改后再进行提交!");
                     return;
                 }
+
                 MultipartBody.Part[] parts = null;
                 if (addList.size() <= 0) {
-                    presenter.getUpFiles(parts, bean, original);
+                    presenter.getUpLoading(parts, bean, original);
                 } else {
                     parts = Constants.getRevolvingMap(addList);
-                    presenter.getUpFiles(parts, bean, original);
+                    presenter.getUpLoading(parts, bean, original);
                 }
 
                 break;

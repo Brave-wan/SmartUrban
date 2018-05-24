@@ -102,7 +102,7 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
             adapter.setDataList(MainActivity.list);
         } else if (requestCode == requestCode) {
             isBack = false;
-            tx_camera_location.setText("当前位置:" + data.getStringExtra("address"));
+            tx_camera_location.setText(data.getStringExtra("address"));
         }
     }
 
@@ -116,7 +116,7 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
 
     public static int requestCode = 0x111;
 
-    @OnClick({R.id.tv_camera_submit, R.id.rl_select_type, R.id.tx_camera_location})
+    @OnClick({R.id.tv_camera_submit, R.id.rl_select_type, R.id.tx_select_location})
     public void onClick(View view) {
         switch (view.getId()) {
             //提交随手拍
@@ -146,7 +146,7 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
             case R.id.rl_select_type:
                 startActivity(new Intent(getActivity(), SelectTypeActivity.class));
                 break;
-            case R.id.tx_camera_location:
+            case R.id.tx_select_location:
 //                startActivity(new Intent(getActivity(), SelectLocationActivity.class));
                 startActivityForResult(new Intent(getActivity(), SelectLocationActivity.class), requestCode);
                 break;
@@ -192,7 +192,7 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
     @Override
     public void onLocationAddress(String address) {
         if (isBack)
-            tx_camera_location.setText("当前位置:" + address);
+            tx_camera_location.setText(address);
     }
 
 
