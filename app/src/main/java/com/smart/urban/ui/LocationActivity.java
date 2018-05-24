@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -38,7 +39,7 @@ import java.util.List;
  */
 
 public class LocationActivity extends Activity implements ILocationView, View.OnClickListener, AdapterView.OnItemClickListener {
-    LocationPresent presenter;
+    private LocationPresent presenter;
     ListView lv_location_list;
     EditText ed_location;
     TextView tv_map_search, tv_my_location, tv_location_name;
@@ -49,7 +50,7 @@ public class LocationActivity extends Activity implements ILocationView, View.On
     ImageView img_location_back;
     private List<LocationListBean> list = new ArrayList<>();
     MapView mAMapNaviView;
-
+    Button btn_map_switch;
     ImageView img_map_back;
 
     @Override
@@ -64,6 +65,7 @@ public class LocationActivity extends Activity implements ILocationView, View.On
     private void initView() {
         img_location_back = (ImageView) findViewById(R.id.img_location_back);
         img_map_back = (ImageView) findViewById(R.id.img_map_back);
+        btn_map_switch = (Button) findViewById(R.id.btn_map_switch);
         rl_transportation_state = (RelativeLayout) findViewById(R.id.rl_transportation_state);
         rl_bottom = (RelativeLayout) findViewById(R.id.rl_bottom);
         sliding_layout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
@@ -83,6 +85,7 @@ public class LocationActivity extends Activity implements ILocationView, View.On
         rl_transportation_state.setOnClickListener(this);
         img_location_back.setOnClickListener(this);
         img_map_back.setOnClickListener(this);
+        btn_map_switch.setOnClickListener(this);
         initData();
     }
 
@@ -139,6 +142,11 @@ public class LocationActivity extends Activity implements ILocationView, View.On
             case R.id.img_map_back:
                 finish();
                 break;
+            //切换状态
+            case R.id.btn_map_switch:
+                btn_map_switch.setText(btn_map_switch.getText().toString().equals("全部") ? "附近" : "全部");
+                presenter.getLocationSearch("", btn_map_switch.getText().toString().equals("全部") ? false : true);
+                break;
         }
     }
 
@@ -169,8 +177,6 @@ public class LocationActivity extends Activity implements ILocationView, View.On
             KeyboardUtils.hideSoftInput(this);
         }
     }
-
-
 
 
     @Override

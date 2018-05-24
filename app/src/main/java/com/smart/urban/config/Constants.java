@@ -42,8 +42,8 @@ import static com.smart.urban.present.CameraPresent.REQUEST_CODE_CHOOSE;
 
 public class Constants {
     //    http://111.231.222.163:8080/data/uploads/20180514/4e1eb6b26ded28b5763656ccb29aff77.html
-//    public static final String BASE_URL = "http://111.231.222.163:8080/";
-         public static final String BASE_URL = "http://47.105.53.173:8080/";
+    public static final String BASE_URL = "http://111.231.222.163:8080/";
+//         public static final String BASE_URL = "http://47.105.53.173:8080/";
 //     public static final String BASE_URL = "http://10.15.209.34:8080/city/";
 //     public static final String BASE_URL = "http://qxzhcg.quanquanma.cn/";
     //是否开启打印日志信息

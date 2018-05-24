@@ -22,6 +22,7 @@ import com.smart.urban.http.HttpManager;
 import com.smart.urban.present.CameraPresent;
 import com.smart.urban.ui.MainActivity;
 import com.smart.urban.ui.RevolvingActivity;
+import com.smart.urban.ui.SelectLocationActivity;
 import com.smart.urban.ui.SelectTypeActivity;
 import com.smart.urban.ui.adapter.CameraListAdapter;
 import com.smart.urban.ui.dialog.SelectImageWindow;
@@ -99,6 +100,9 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
                 MainActivity.list.add(0, bean);
             }
             adapter.setDataList(MainActivity.list);
+        } else if (requestCode == requestCode) {
+            isBack = false;
+            tx_camera_location.setText("当前位置:" + data.getStringExtra("address"));
         }
     }
 
@@ -110,7 +114,9 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
         }
     }
 
-    @OnClick({R.id.tv_camera_submit, R.id.rl_select_type})
+    public static int requestCode = 0x111;
+
+    @OnClick({R.id.tv_camera_submit, R.id.rl_select_type, R.id.tx_camera_location})
     public void onClick(View view) {
         switch (view.getId()) {
             //提交随手拍
@@ -139,6 +145,10 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
             //选择问题分类
             case R.id.rl_select_type:
                 startActivity(new Intent(getActivity(), SelectTypeActivity.class));
+                break;
+            case R.id.tx_camera_location:
+//                startActivity(new Intent(getActivity(), SelectLocationActivity.class));
+                startActivityForResult(new Intent(getActivity(), SelectLocationActivity.class), requestCode);
                 break;
         }
     }
@@ -177,9 +187,12 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
         dynamicDialog.dismiss();
     }
 
+    private boolean isBack = true;
+
     @Override
     public void onLocationAddress(String address) {
-        tx_camera_location.setText("当前位置:" + address);
+        if (isBack)
+            tx_camera_location.setText("当前位置:" + address);
     }
 
 

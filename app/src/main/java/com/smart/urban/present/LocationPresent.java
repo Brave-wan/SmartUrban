@@ -90,7 +90,7 @@ public class LocationPresent implements GeoFenceListener,
         //设置定位监听
         aMap.setLocationSource(this);
         // 是否显示定位按钮
-        settings.setMyLocationButtonEnabled(true);
+        settings.setMyLocationButtonEnabled(false);
         // 自定义系统定位蓝点
         MyLocationStyle myLocationStyle = new MyLocationStyle();
         // 自定义定位蓝点图标
@@ -278,7 +278,11 @@ public class LocationPresent implements GeoFenceListener,
             HttpManager.get().addSubscription(HttpManager.get().getApiStores().getLocationSearch(map), new ApiCallback<BaseResult<List<LocationListBean>>>() {
                 @Override
                 public void onSuccess(BaseResult<List<LocationListBean>> model) {
-                    calculate(model.data);
+                    if (state) {
+                        calculate(model.data);
+                    } else {
+                        addMarkersToMap(model.data);
+                    }
                 }
 
                 @Override

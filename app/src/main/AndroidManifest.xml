@@ -71,10 +71,14 @@
             android:name=".ui.LocationActivity"
             android:windowSoftInputMode="stateHidden" />
 
+        <activity
+            android:name=".ui.SelectLocationActivity"
+            android:windowSoftInputMode="stateHidden" />
+
 
         <activity android:name=".ui.GeoFence_Round_Activity" />
         <activity android:name=".ui.LoginActivity" />
-        <activity android:name=".ui.SelectTypeActivity"/>
+        <activity android:name=".ui.SelectTypeActivity" />
         <activity
             android:name=".wxapi.WXEntryActivity"
             android:exported="true"
@@ -122,8 +126,10 @@
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="tencent100424468" />
             </intent-filter>
         </activity>

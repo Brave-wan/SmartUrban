@@ -31,13 +31,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/shape_map_back"
                 android:paddingBottom="12dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:paddingTop="12dp"
                 android:src="@drawable/icon_back" />
+
+
+            <Button
+                android:id="@+id/btn_map_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_alignBottom="@+id/img_map_back"
+                android:text="全部" />
         </RelativeLayout>
     </FrameLayout>
 
