@@ -14,6 +14,7 @@ import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 import com.amap.api.maps.AMap;
 import com.amap.api.maps.AMapUtils;
+import com.amap.api.maps.CameraUpdateFactory;
 import com.amap.api.maps.LocationSource;
 import com.amap.api.maps.MapView;
 import com.amap.api.maps.UiSettings;
@@ -104,8 +105,8 @@ public class LocationPresent implements GeoFenceListener,
         // 将自定义的 myLocationStyle 对象添加到地图上
         aMap.setMyLocationStyle(myLocationStyle);
         aMap.setMyLocationEnabled(true);// 设置为true表示显示定位层并可触发定位，false表示隐藏定位层并不可触发定位，默认是false
-//        LatLng latLng = new LatLng(106.572016, 29.539337);
-//        addCenterMarker(latLng);
+        //放大地图倍数
+        aMap.moveCamera(CameraUpdateFactory.zoomTo(17));
     }
 
     public void initMap(AMapNaviView mMapView) {
@@ -131,14 +132,18 @@ public class LocationPresent implements GeoFenceListener,
         // 将自定义的 myLocationStyle 对象添加到地图上
         aMap.setMyLocationStyle(myLocationStyle);
         aMap.setMyLocationEnabled(true);// 设置为true表示显示定位层并可触发定位，false表示隐藏定位层并不可触发定位，默认是false
+        //放大倍数
+        aMap.moveCamera(CameraUpdateFactory.zoomTo(17));
     }
 
     boolean isShow = true;
+    AMapLocation amapLocation;
 
     @Override
     public void onLocationChanged(AMapLocation amapLocation) {
         if (mListener != null && amapLocation != null) {
             if (amapLocation.getErrorCode() == 0) {
+                this.amapLocation = amapLocation;
                 //定位成功回调信息，设置相关消息
                 amapLocation.getLocationType();//获取当前定位结果来源，如网络定位结果，详见定位类型表
                 amapLocation.getLatitude();//获取纬度
@@ -153,10 +158,10 @@ public class LocationPresent implements GeoFenceListener,
                 Date date = new Date(amapLocation.getTime());
                 df.format(date);//定位时间
                 Log.e("wan", "location:" + amapLocation.getLatitude());
-                if (isShow) {
-                    mListener.onLocationChanged(amapLocation);// 显示系统小蓝点
-                    isShow = false;
-                }
+//                if (isShow) {
+                mListener.onLocationChanged(amapLocation);// 显示系统小蓝点
+//                    isShow = false;
+//                }
             } else {
                 //显示错误信息ErrCode是错误码，errInfo是错误信息，详见错误码表。
                 Log.e("wan", "location Error, ErrCode:" + amapLocation.getErrorCode() + ", errInfo:" + amapLocation.getErrorInfo());
@@ -260,6 +265,10 @@ public class LocationPresent implements GeoFenceListener,
             markerOptions.add(options);
         }
         aMap.addMarkers(markerOptions, true);
+
+        if (mListener != null && amapLocation != null) {
+            mListener.onLocationChanged(amapLocation);
+        }
     }
 
     /**

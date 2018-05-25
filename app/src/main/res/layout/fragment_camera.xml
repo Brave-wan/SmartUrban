@@ -53,6 +53,7 @@
                 android:drawableLeft="@drawable/icon_camera_location_"
                 android:gravity="center"
                 android:text="但前位置:"
+                android:drawablePadding="5dp"
                 android:textColor="@color/black" />
 
             <TextView

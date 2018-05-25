@@ -4,15 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.amap.api.maps.MapView;
+import com.blankj.utilcode.util.ToastUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
-import com.iflytek.cloud.thirdparty.V;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseActivity;
 import com.smart.urban.bean.SelectLocationBean;
@@ -52,7 +53,10 @@ public class SelectLocationActivity extends BaseActivity<ISelectLocationView, Se
 
     @Override
     protected void initView(Bundle savedInstanceState) {
-        setTitle("位置");
+//        setTitle("位置");
+        showBackwardView("", false);
+        //初始值
+        ed_location.setText(getIntent().getStringExtra("address"));
         mAMapNaviView = (MapView) findViewById(R.id.map);
         mAMapNaviView.onCreate(savedInstanceState);// 此方法必须重写
         sliding_layout.setTouchEnabled(false);
@@ -85,7 +89,7 @@ public class SelectLocationActivity extends BaseActivity<ISelectLocationView, Se
     }
 
 
-    @OnClick({R.id.tv_map_search})
+    @OnClick({R.id.tv_map_search, R.id.img_map_back})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_map_search:
@@ -94,16 +98,28 @@ public class SelectLocationActivity extends BaseActivity<ISelectLocationView, Se
                 setResult(requestCode, intent);
                 finish();
                 break;
+            //返回
+            case R.id.img_map_back:
+                Intent intent1 = new Intent();
+                intent1.putExtra("address", ed_location.getText().toString().trim());
+                setResult(requestCode, intent1);
+                finish();
+                break;
         }
     }
 
+
     @Override
-    protected void onBackward(View backwardView) {
-        super.onBackward(backwardView);
-        Intent intent = new Intent();
-        intent.putExtra("address", ed_location.getText().toString().trim());
-        setResult(requestCode, intent);
-        finish();
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        //监听返回按钮
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Intent intent1 = new Intent();
+            intent1.putExtra("address", ed_location.getText().toString().trim());
+            setResult(requestCode, intent1);
+            finish();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     @Override

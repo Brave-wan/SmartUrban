@@ -40,14 +40,14 @@
                 android:src="@drawable/icon_back" />
 
 
-            <Button
+            <ImageView
                 android:id="@+id/btn_map_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/img_map_back"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="20dp"
-                android:text="全部" />
+                 />
         </RelativeLayout>
     </FrameLayout>
 

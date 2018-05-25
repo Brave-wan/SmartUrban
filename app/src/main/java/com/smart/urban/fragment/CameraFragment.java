@@ -148,7 +148,9 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
                 break;
             case R.id.tx_select_location:
 //                startActivity(new Intent(getActivity(), SelectLocationActivity.class));
-                startActivityForResult(new Intent(getActivity(), SelectLocationActivity.class), requestCode);
+                Intent intent = new Intent(getActivity(), SelectLocationActivity.class);
+                intent.putExtra("address", tx_camera_location.getText().toString());
+                startActivityForResult(intent, requestCode);
                 break;
         }
     }

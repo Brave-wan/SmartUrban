@@ -17,12 +17,28 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
-        <com.amap.api.maps.MapView
-            android:id="@+id/map"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
 
+            <com.amap.api.maps.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/img_map_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_map_back"
+                android:paddingBottom="12dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="12dp"
+                android:src="@drawable/icon_back" />
+        </RelativeLayout>
     </FrameLayout>
 
     <LinearLayout
@@ -63,13 +79,14 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/shape_comment_add"
+                android:background="@drawable/shape_login_btn"
                 android:gravity="center"
                 android:paddingBottom="8dp"
                 android:paddingLeft="18dp"
                 android:paddingRight="18dp"
                 android:paddingTop="8dp"
-                android:text="确定" />
+                android:text="确定"
+                android:textColor="@color/white" />
 
         </RelativeLayout>
 

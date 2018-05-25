@@ -15,6 +15,7 @@ import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 import com.amap.api.maps.AMap;
+import com.amap.api.maps.CameraUpdateFactory;
 import com.amap.api.maps.LocationSource;
 import com.amap.api.maps.MapView;
 import com.amap.api.maps.UiSettings;
@@ -96,6 +97,7 @@ public class SelectLocationPresent extends BasePresenter<ISelectLocationView> im
         aMap.setOnMapTouchListener(this);// 对amap添加触摸地图事件监听器
         aMap.setOnMarkerDragListener(this);
         aMap.setMyLocationEnabled(true);// 设置为true表示显示定位层并可触发定位，false表示隐藏定位层并不可触发定位，默认是false
+        aMap.moveCamera(CameraUpdateFactory.zoomTo(17));
     }
 
     @Override

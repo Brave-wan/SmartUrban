@@ -50,8 +50,9 @@ public class LocationActivity extends Activity implements ILocationView, View.On
     ImageView img_location_back;
     private List<LocationListBean> list = new ArrayList<>();
     MapView mAMapNaviView;
-    Button btn_map_switch;
+    ImageView btn_map_switch;
     ImageView img_map_back;
+    private boolean isAll = false;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -65,7 +66,7 @@ public class LocationActivity extends Activity implements ILocationView, View.On
     private void initView() {
         img_location_back = (ImageView) findViewById(R.id.img_location_back);
         img_map_back = (ImageView) findViewById(R.id.img_map_back);
-        btn_map_switch = (Button) findViewById(R.id.btn_map_switch);
+        btn_map_switch = (ImageView) findViewById(R.id.btn_map_switch);
         rl_transportation_state = (RelativeLayout) findViewById(R.id.rl_transportation_state);
         rl_bottom = (RelativeLayout) findViewById(R.id.rl_bottom);
         sliding_layout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
@@ -89,6 +90,7 @@ public class LocationActivity extends Activity implements ILocationView, View.On
     }
 
     private void initData() {
+        btn_map_switch.setBackgroundResource(!isAll ? R.drawable.icon_map_location_nearby : R.drawable.icon_map_location_all);
         adapter = new LocationListAdapter(this, R.layout.item_location_list, list);
         lv_location_list.setAdapter(adapter);
         lv_location_list.setOnItemClickListener(this);
@@ -141,8 +143,9 @@ public class LocationActivity extends Activity implements ILocationView, View.On
                 break;
             //切换状态
             case R.id.btn_map_switch:
-                btn_map_switch.setText(btn_map_switch.getText().toString().equals("全部") ? "附近" : "全部");
-                presenter.getLocationSearch("", btn_map_switch.getText().toString().equals("全部") ? false : true);
+                btn_map_switch.setBackgroundResource(isAll ? R.drawable.icon_map_location_nearby : R.drawable.icon_map_location_all);
+                presenter.getLocationSearch("", isAll ? false : true);
+                isAll = isAll ? false : true;
                 break;
         }
     }
