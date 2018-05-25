@@ -87,7 +87,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                 if (homeFragment == null) {
                     homeFragment = new HomeFragment();
                 }
-                transaction.replace(R.id.main_layout, homeFragment);
+                transaction.replace(R.id.main_layout, homeFragment, "homeFragment");
                 transaction.commit();
                 break;
             //咨询
@@ -95,7 +95,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                 if (infoFragment == null) {
                     infoFragment = new InfoFragment();
                 }
-                transaction.replace(R.id.main_layout, infoFragment);
+                transaction.replace(R.id.main_layout, infoFragment, "infoFragment");
                 transaction.commit();
                 break;
             //相机
@@ -103,7 +103,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                 if (cameraFragment == null) {
                     cameraFragment = new CameraFragment();
                 }
-                transaction.replace(R.id.main_layout, cameraFragment);
+                transaction.replace(R.id.main_layout, cameraFragment, "cameraFragment");
                 transaction.commit();
                 break;
             //个人中心
@@ -111,7 +111,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                 if (centerFragment == null) {
                     centerFragment = new CenterFragment();
                 }
-                transaction.replace(R.id.main_layout, centerFragment);
+                transaction.replace(R.id.main_layout, centerFragment, "centerFragment");
                 transaction.commit();
                 break;
         }
