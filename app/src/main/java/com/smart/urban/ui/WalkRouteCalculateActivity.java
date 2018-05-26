@@ -66,7 +66,7 @@ public class WalkRouteCalculateActivity extends BaseLocationActivity implements 
     }
 
     @Override
-    public void onLocationList(List<LocationListBean> beans, boolean state) {
+    public void onLocationList(List<LocationListBean> beans, List<LocationListBean> position, boolean state) {
 
     }
 

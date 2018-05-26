@@ -112,7 +112,10 @@ public class LocationActivity extends Activity implements ILocationView, View.On
                     ToastUtils.showShort("请输入你想搜索的关键字!");
                     return;
                 }
-                presenter.getLocationSearch(ed_location.getText().toString().trim(), true);
+                positionList.clear();
+                isAll = true;
+                btn_map_switch.setBackgroundResource(!isAll ? R.drawable.icon_map_location_nearby : R.drawable.icon_map_location_all);
+                presenter.getLocationSearch(ed_location.getText().toString().trim(), true, positionList);
                 break;
             case R.id.rl_transportation_state:
                 break;
@@ -138,13 +141,16 @@ public class LocationActivity extends Activity implements ILocationView, View.On
                 startActivity(car);
                 presenter.onDestroy();
                 break;
+
             case R.id.img_map_back:
                 finish();
                 break;
+
             //切换状态
             case R.id.btn_map_switch:
+                //如果positionList为空则搜索全部
                 btn_map_switch.setBackgroundResource(isAll ? R.drawable.icon_map_location_nearby : R.drawable.icon_map_location_all);
-                presenter.getLocationSearch("", isAll ? false : true);
+                presenter.getLocationSearch("", isAll ? false : true, positionList);
                 isAll = isAll ? false : true;
                 break;
         }
@@ -166,9 +172,12 @@ public class LocationActivity extends Activity implements ILocationView, View.On
         SharedPreferencesUtils.init(this).put("end_lat", bean.getLatitude()).put("end_lon", bean.getLongitude());
     }
 
+    List<LocationListBean> positionList = new ArrayList<>();
+
     @Override
-    public void onLocationList(List<LocationListBean> beans, boolean state) {
+    public void onLocationList(List<LocationListBean> beans, List<LocationListBean> listBeans, boolean state) {
         //显示地图上搜索的坐标点
+        this.positionList = listBeans;
         list.clear();
         list.addAll(beans);
         adapter.setDataList(list);
@@ -188,7 +197,6 @@ public class LocationActivity extends Activity implements ILocationView, View.On
         String myLocation = StringUtils.isEmpty(SharedPreferencesUtils.init(this).getString("address"))
                 ? "我的位置" : SharedPreferencesUtils.init(this).getString("address");
         tv_my_location.setText(myLocation);
-
     }
 
     @Override

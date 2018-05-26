@@ -9,7 +9,7 @@ import java.util.List;
  */
 
 public interface ILocationView {
-    void onLocationList(List<LocationListBean> beans,boolean state);
+    void onLocationList(List<LocationListBean> beans,List<LocationListBean> listBeans,boolean state);
 
     void onLocationView();
 }

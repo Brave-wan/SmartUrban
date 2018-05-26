@@ -90,9 +90,9 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
 
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == ImageSelector.IMAGE_REQUEST_CODE && resultCode == RESULT_OK && data != null) {
+    public void onActivityResult(int request, int resultCode, Intent data) {
+        super.onActivityResult(request, resultCode, data);
+        if (request == ImageSelector.IMAGE_REQUEST_CODE && resultCode == RESULT_OK && data != null) {
             List<String> pathList = data.getStringArrayListExtra(ImageSelectorActivity.EXTRA_RESULT);
             for (String path : pathList) {
                 CameraPicBean bean = new CameraPicBean();
@@ -100,7 +100,7 @@ public class CameraFragment extends BaseFragment<ICameraView, CameraPresent>
                 MainActivity.list.add(0, bean);
             }
             adapter.setDataList(MainActivity.list);
-        } else if (requestCode == requestCode) {
+        } else if (requestCode == request) {
             isBack = false;
             tx_camera_location.setText(data.getStringExtra("address"));
         }

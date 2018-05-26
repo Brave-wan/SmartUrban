@@ -121,7 +121,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/home_newest" />
+                    android:background="@drawable/icon_home_dymicn" />
             </RelativeLayout>
 
             <com.smart.urban.widget.MyListView

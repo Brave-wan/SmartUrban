@@ -62,6 +62,7 @@ public class SelectLocationActivity extends BaseActivity<ISelectLocationView, Se
         sliding_layout.setTouchEnabled(false);
         //初始化地图
         presenter.initMap(mAMapNaviView);
+        ed_location.setSelection(ed_location.getText().toString().trim().length());
 
     }
 
@@ -122,9 +123,11 @@ public class SelectLocationActivity extends BaseActivity<ISelectLocationView, Se
         return super.onKeyDown(keyCode, event);
     }
 
+
     @Override
     public void onMobileLocation(String s) {
         ed_location.setText(s);
+        ed_location.setSelection(ed_location.getText().toString().trim().length());
     }
 
     @Override

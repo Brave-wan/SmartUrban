@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tx_map_province"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="河北省"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            android:id="@+id/tx_map_address"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:text="石家庄"
+            android:textColor="@color/text_black" />
+    </LinearLayout>
+
+</RelativeLayout>

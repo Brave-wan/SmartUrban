@@ -49,7 +49,6 @@ public class LoginActivity extends BaseActivity<ILoginView, LoginPresent> implem
         showBackwardView("",false);
         presenter.fetchAuthResultWithBundle(savedInstanceState);
         img_pwd_open.setBackground(getResources().getDrawable(R.drawable.icon_login_pwd_open));
-
     }
 
 
@@ -97,7 +96,6 @@ public class LoginActivity extends BaseActivity<ILoginView, LoginPresent> implem
                 break;
 
             case R.id.img_login_qq:
-//                presenter.AuthLogin(SHARE_MEDIA.QQ);
                 ToastUtils.showShort("暂未开放");
                 break;
 

@@ -7,14 +7,18 @@ import android.graphics.Color;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 import com.amap.api.maps.AMap;
+import com.amap.api.maps.AMapUtils;
 import com.amap.api.maps.CameraUpdateFactory;
 import com.amap.api.maps.LocationSource;
 import com.amap.api.maps.MapView;
@@ -47,6 +51,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import static com.umeng.socialize.utils.DeviceConfig.context;
+
 /**
  * Created by root on 18-5-23.
  */
@@ -58,18 +64,21 @@ public class SelectLocationPresent extends BasePresenter<ISelectLocationView> im
         PoiSearch.OnPoiSearchListener,
         AMap.OnMarkerDragListener,
         AMap.OnMarkerClickListener,
+        AMap.InfoWindowAdapter,
         GeocodeSearch.OnGeocodeSearchListener,
         AMap.OnMapTouchListener {
     private OnLocationChangedListener mListener;
     private Activity mContext;
     public AMapLocationClient mLocationClient;
     public AMapLocationClientOption mLocationOption = null;
-    AMap aMap;
+    public AMap aMap;
+    private LayoutInflater inflater;
     private MapView mMapView;
 
 
     public SelectLocationPresent(Activity mContext) {
         this.mContext = mContext;
+        inflater = LayoutInflater.from(mContext);
     }
 
     public void initMap(MapView mMapView) {
@@ -98,6 +107,8 @@ public class SelectLocationPresent extends BasePresenter<ISelectLocationView> im
         aMap.setOnMarkerDragListener(this);
         aMap.setMyLocationEnabled(true);// 设置为true表示显示定位层并可触发定位，false表示隐藏定位层并不可触发定位，默认是false
         aMap.moveCamera(CameraUpdateFactory.zoomTo(17));
+        aMap.setInfoWindowAdapter(this);// 显示window
+        aMap.setOnMarkerClickListener(this);//显示mark
     }
 
     @Override
@@ -319,7 +330,7 @@ public class SelectLocationPresent extends BasePresenter<ISelectLocationView> im
         mGPSMarker = aMap.addMarker(markOptions);
         //设置marker在屏幕的像素坐标
         mGPSMarker.setPosition(latLng);
-//        mGPSMarker.setTitle(title);
+        mGPSMarker.setTitle(title);
         mGPSMarker.setSnippet(content);
         //设置像素坐标
         mGPSMarker.setPositionByPixels(width, height);
@@ -328,6 +339,7 @@ public class SelectLocationPresent extends BasePresenter<ISelectLocationView> im
         }
         mMapView.invalidate();
     }
+
 
     @Override
     public void onPoiItemSearched(PoiItem poiItem, int i) {
@@ -343,6 +355,7 @@ public class SelectLocationPresent extends BasePresenter<ISelectLocationView> im
 
     @Override
     public boolean onMarkerClick(Marker marker) {
+        marker.showInfoWindow();
         return false;
     }
 
@@ -360,5 +373,20 @@ public class SelectLocationPresent extends BasePresenter<ISelectLocationView> im
     @Override
     public void onGeocodeSearched(GeocodeResult geocodeResult, int i) {
 
+    }
+
+    @Override
+    public View getInfoWindow(Marker marker) {
+        View infoWindow = inflater.inflate(R.layout.window_map_location, null);//display为自定义layout文件
+        TextView name = (TextView) infoWindow.findViewById(R.id.tx_map_province);
+        name.setText(marker.getTitle());
+        TextView tx_map_address = (TextView) infoWindow.findViewById(R.id.tx_map_address);
+        tx_map_address.setText(marker.getSnippet());
+        return infoWindow;
+    }
+
+    @Override
+    public View getInfoContents(Marker marker) {
+        return null;
     }
 }

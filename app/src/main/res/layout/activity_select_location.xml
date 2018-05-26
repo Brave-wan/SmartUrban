@@ -59,7 +59,7 @@
             <EditText
                 android:id="@+id/ed_location"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="10dp"
@@ -67,10 +67,14 @@
                 android:background="@drawable/shape_map_search_bg"
                 android:drawablePadding="10dp"
                 android:ellipsize="end"
+                android:gravity="center|left"
                 android:maxLines="2"
+                android:paddingBottom="10dp"
                 android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/tv_map_search"

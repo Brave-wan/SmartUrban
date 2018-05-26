@@ -251,7 +251,6 @@ public class LocationPresent implements GeoFenceListener,
     private void addMarkersToMap(List<LocationListBean> model) {
         aMap.clear();
         //绘制地图上面的mark
-        ArrayList<MarkerOptions> markerOptions = new ArrayList<>();
         for (int i = 0; i < model.size(); i++) {
             LocationListBean bean = model.get(i);
             LatLng latLng = new LatLng(Double.valueOf(bean.getLatitude()), Double.valueOf(bean.getLongitude()));
@@ -262,22 +261,32 @@ public class LocationPresent implements GeoFenceListener,
                     .period(10)
                     .snippet("点击导航")
                     .setFlat(true);
-            markerOptions.add(options);
+            aMap.addMarker(options);
         }
-        aMap.addMarkers(markerOptions, true);
 
         if (mListener != null && amapLocation != null) {
             mListener.onLocationChanged(amapLocation);
         }
     }
 
+    List<LocationListBean> positionList = new ArrayList<>();
+
     /**
      * 根据关键字搜索地图坐标点
      *
      * @param tx
      */
-    public void getLocationSearch(String tx, final boolean state) {
-        if (mView != null) {
+    public void getLocationSearch(String tx, final boolean state, final List<LocationListBean> positionList) {
+        this.positionList = positionList;
+        //如果positionList为空则根据条件搜索坐标点，反之则从现有的坐标点进行显示排序
+        if (positionList.size() > 0) {
+            if (state) {////附近的坐标点
+                calculate(positionList);
+            } else {//显示全部的坐标点
+                addMarkersToMap(positionList);
+                mView.onLocationList(positionList, positionList, false);
+            }
+        } else if (mView != null) {
             Map<String, Object> map = new HashMap<>();
             map.put("userId", SharedPreferencesUtils.init(mContext).getString("userId"));
             map.put("token", SharedPreferencesUtils.init(mContext).getString("token"));
@@ -287,11 +296,11 @@ public class LocationPresent implements GeoFenceListener,
             HttpManager.get().addSubscription(HttpManager.get().getApiStores().getLocationSearch(map), new ApiCallback<BaseResult<List<LocationListBean>>>() {
                 @Override
                 public void onSuccess(BaseResult<List<LocationListBean>> model) {
-                    if (state) {
+                    if (state) {//附近的坐标点
                         calculate(model.data);
-                    } else {
+                    } else {//显示全部的坐标点
                         addMarkersToMap(model.data);
-                        mView.onLocationList(model.data, false);
+                        mView.onLocationList(model.data, positionList, false);
                     }
                 }
 
@@ -339,7 +348,7 @@ public class LocationPresent implements GeoFenceListener,
                 list.add(listBeans.get(j));
             }
         }
-        mView.onLocationList(list, true);
+        mView.onLocationList(list, listBeans, true);
         //计算距离排序
         addMarkersToMap(list);
 
