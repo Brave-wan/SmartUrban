@@ -2,18 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout_title_bar"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/base_dimen_100"
+    android:layout_height="50dp"
     android:background="@color/white"
     android:visibility="gone">
 
     <TextView
         android:id="@+id/text_title"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/button_backward"
         android:layout_alignBottom="@+id/button_backward"
-        android:layout_toLeftOf="@+id/button_forward"
-        android:layout_toRightOf="@+id/button_backward"
+        android:layout_centerInParent="true"
         android:ellipsize="end"
         android:gravity="center_horizontal|center"
         android:lines="1"
