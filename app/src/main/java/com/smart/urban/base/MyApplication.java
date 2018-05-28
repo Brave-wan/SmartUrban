@@ -107,8 +107,7 @@ public class MyApplication extends Application {
          * true表示初始化时自动检查升级
          * false表示不会自动检查升级，需要手动调用Beta.checkUpgrade()方法
          */
-        Beta.autoCheckUpgrade = true;
-
+        Beta.autoCheckUpgrade = false;
         /**
          * 设置升级周期为60s（默认检查周期为0s），60s内SDK不重复向后天请求策略
          */
@@ -148,6 +147,7 @@ public class MyApplication extends Application {
          */
         Beta.canShowUpgradeActs.add(MainActivity.class);
 
+        Beta.enableNotification = true;
         /**
          * 已经接入Bugly用户改用上面的初始化方法,不影响原有的crash上报功能;
          * init方法会自动检测更新，不需要再手动调用Beta.checkUpdate(),如需增加自动检查时机可以使用Beta.checkUpdate(false,false);

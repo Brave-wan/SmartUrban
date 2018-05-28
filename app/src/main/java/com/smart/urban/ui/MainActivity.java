@@ -1,11 +1,14 @@
 package com.smart.urban.ui;
 
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -15,12 +18,19 @@ import com.smart.urban.R;
 import com.smart.urban.base.BaseActivity;
 import com.smart.urban.base.BasePresenter;
 import com.smart.urban.bean.CameraPicBean;
+import com.smart.urban.config.Constants;
 import com.smart.urban.fragment.CameraFragment;
 import com.smart.urban.fragment.CenterFragment;
 import com.smart.urban.fragment.HomeFragment;
 import com.smart.urban.fragment.InfoFragment;
 import com.smart.urban.utils.GlideLoader;
 import com.smart.urban.utils.SharedPreferencesUtils;
+import com.tencent.bugly.beta.Beta;
+import com.tencent.bugly.beta.UpgradeInfo;
+import com.umeng.socialize.UMAuthListener;
+import com.umeng.socialize.UMShareAPI;
+import com.umeng.socialize.bean.SHARE_MEDIA;
+import com.umeng.socialize.utils.SocializeUtils;
 import com.yancy.imageselector.ImageConfig;
 import com.yancy.imageselector.ImageSelector;
 import com.zhihu.matisse.Matisse;
@@ -30,6 +40,7 @@ import com.zhihu.matisse.internal.entity.CaptureStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.BindView;
 
@@ -70,6 +81,12 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         transaction.replace(R.id.main_layout, homeFragment);
         transaction.commit();
         rg_main_bottom.check(R.id.radio_main_home);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadUpgradeInfo();
     }
 
     @Override
@@ -156,6 +173,76 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    private void loadUpgradeInfo() {
+
+        /***** 获取升级信息 *****/
+        UpgradeInfo upgradeInfo = Beta.getUpgradeInfo();
+        if (upgradeInfo == null) {
+            return;
+        }
+
+
+        StringBuilder info = new StringBuilder();
+        info.append("id: ").append(upgradeInfo.id).append("\n");
+        info.append("标题: ").append(upgradeInfo.title).append("\n");
+        info.append("升级说明: ").append(upgradeInfo.newFeature).append("\n");
+        info.append("versionCode: ").append(upgradeInfo.versionCode).append("\n");
+        info.append("versionName: ").append(upgradeInfo.versionName).append("\n");
+        info.append("发布时间: ").append(upgradeInfo.publishTime).append("\n");
+        info.append("安装包Md5: ").append(upgradeInfo.apkMd5).append("\n");
+        info.append("安装包下载地址: ").append(upgradeInfo.apkUrl).append("\n");
+        info.append("安装包大小: ").append(upgradeInfo.fileSize).append("\n");
+        info.append("弹窗间隔（ms）: ").append(upgradeInfo.popInterval).append("\n");
+        info.append("弹窗次数: ").append(upgradeInfo.popTimes).append("\n");
+        info.append("发布类型（0:测试 1:正式）: ").append(upgradeInfo.publishType).append("\n");
+        info.append("弹窗类型（1:建议 2:强制 3:手工）: ").append(upgradeInfo.upgradeType).append("\n");
+        info.append("图片地址：").append(upgradeInfo.imageUrl);
+        if (Constants.isUpDate) {
+
+            switch (upgradeInfo.upgradeType) {
+                //建议
+                case 1:
+//                ToastUtils.showShort("提示用户去往相应的应用市场！");
+                    upVersion();
+                    break;
+                //强制
+                case 2:
+                    Beta.checkUpgrade();
+                    break;
+                //手工
+                case 3:
+                    Beta.checkUpgrade();
+                    break;
+            }
+            Log.i("wan", "更新日志:" + info.toString());
+        }
+    }
+
+    public void upVersion() {
+        //更新提醒
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("有新的版本升级更新,请前往我的-关于我们点击更新")
+                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Constants.isUpDate = false;
+                        dialog.dismiss();
+                    }
+                })
+
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(MainActivity.this, AboutUsActivity.class));
+                        dialog.dismiss();
+                    }
+                })
+                //点击取消
+                .setTitle("更新提醒")
+                .setCancelable(true)
+                .show();
     }
 
 }
