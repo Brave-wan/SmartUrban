@@ -23,6 +23,7 @@ import com.smart.urban.fragment.CameraFragment;
 import com.smart.urban.fragment.CenterFragment;
 import com.smart.urban.fragment.HomeFragment;
 import com.smart.urban.fragment.InfoFragment;
+import com.smart.urban.utils.Const;
 import com.smart.urban.utils.GlideLoader;
 import com.smart.urban.utils.SharedPreferencesUtils;
 import com.tencent.bugly.beta.Beta;
@@ -176,6 +177,9 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     }
 
     private void loadUpgradeInfo() {
+        if (Constants.isUpDate) {
+            Beta.checkUpgrade();
+        }
 
         /***** 获取升级信息 *****/
         UpgradeInfo upgradeInfo = Beta.getUpgradeInfo();
@@ -183,6 +187,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
             return;
         }
 
+        Beta.checkUpgrade(false, true);
 
         StringBuilder info = new StringBuilder();
         info.append("id: ").append(upgradeInfo.id).append("\n");
@@ -199,25 +204,25 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         info.append("发布类型（0:测试 1:正式）: ").append(upgradeInfo.publishType).append("\n");
         info.append("弹窗类型（1:建议 2:强制 3:手工）: ").append(upgradeInfo.upgradeType).append("\n");
         info.append("图片地址：").append(upgradeInfo.imageUrl);
-        if (Constants.isUpDate) {
+        Log.i("update", "更新方式:" + upgradeInfo.upgradeType);
 
-            switch (upgradeInfo.upgradeType) {
-                //建议
-                case 1:
-//                ToastUtils.showShort("提示用户去往相应的应用市场！");
+        switch (upgradeInfo.upgradeType) {
+            //建议
+            case 1:
+                if (Constants.isUpDate) {
                     upVersion();
-                    break;
-                //强制
-                case 2:
-                    Beta.checkUpgrade();
-                    break;
-                //手工
-                case 3:
-                    Beta.checkUpgrade();
-                    break;
-            }
-            Log.i("wan", "更新日志:" + info.toString());
+                }
+                break;
+            //强制
+            case 2:
+                Beta.checkUpgrade();
+                break;
+            //手工
+            case 3:
+                Beta.checkUpgrade();
+                break;
         }
+
     }
 
     public void upVersion() {
