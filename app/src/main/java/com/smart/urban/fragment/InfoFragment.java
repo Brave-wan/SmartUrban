@@ -8,6 +8,8 @@ import android.widget.ListView;
 
 import com.autonavi.rtbt.IFrameForRTBT;
 import com.blankj.utilcode.util.ToastUtils;
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.BaseViewHolder;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
@@ -44,6 +46,7 @@ public class InfoFragment extends BaseFragment implements OnLoadmoreListener, On
     LoadingLayout layout_root;
     InfoListAdapter adapter;
     private List<UrbanListBean> list = new ArrayList<>();
+    BaseQuickAdapter<UrbanListBean,BaseViewHolder> baseQuickAdapter;
     private int page = 1;
 
     @Override

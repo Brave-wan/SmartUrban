@@ -52,13 +52,13 @@ public class DynamicListAdapter extends CommonAdapter<DynamicListBean> {
 //                tx_dynamic_state.setBackground(context.getResources().getDrawable(R.drawable.icon_dynamic_dai_shen_he));
 //                break;
 //        }
-        if (bean.getIsCheck().equals("D")){
+        if (bean.getIsCheck().equals("D")) {
             tx_dynamic_state.setBackgroundColor(context.getResources().getColor(R.color.btn_cancel_color));
         }
         if (bean.getImages().size() > 0) {
             Glide.with(context).load(bean.getImages().get(0).getAddress()).placeholder(R.drawable.icon_pic_empty).error(R.drawable.icon_pic_empty).into(img_lost_head);
         } else {
-            img_lost_head.setBackground(context.getResources().getDrawable(R.drawable.icon_pic_empty));
+            Glide.with(context).load("").placeholder(R.drawable.icon_pic_empty).error(R.drawable.icon_pic_empty).into(img_lost_head);
         }
     }
 }

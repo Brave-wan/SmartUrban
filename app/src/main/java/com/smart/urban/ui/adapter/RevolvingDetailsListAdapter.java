@@ -46,7 +46,11 @@ public class RevolvingDetailsListAdapter extends CommonAdapter<RevolvingListBean
                     .error(R.drawable.icon_pic_empty)
                     .into(item_camera);
         } else {
-            item_camera.setBackground(context.getResources().getDrawable(R.drawable.icon_up_loading_photo_btn));
+            Glide.with(context)
+                    .load(R.drawable.icon_up_loading_photo_btn)
+                    .placeholder(R.drawable.icon_pic_empty)
+                    .error(R.drawable.icon_pic_empty)
+                    .into(item_camera);
         }
 
         img_item_delete.setOnClickListener(new View.OnClickListener() {

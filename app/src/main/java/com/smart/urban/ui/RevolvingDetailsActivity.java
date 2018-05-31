@@ -25,6 +25,7 @@ import com.smart.urban.bean.RevolvingListBean;
 import com.smart.urban.config.Constants;
 import com.smart.urban.present.RevolvingDetailsPresent;
 import com.smart.urban.ui.adapter.RevolvingDetailsListAdapter;
+import com.smart.urban.ui.widget.RecycleViewDivider;
 import com.smart.urban.ui.widget.ShowImageWindow;
 import com.smart.urban.view.IRevolvingDetailsView;
 import com.yancy.imageselector.ImageSelector;
@@ -76,6 +77,7 @@ public class RevolvingDetailsActivity extends BaseActivity<IRevolvingDetailsView
         tv_revolving_title.setText(bean.getContent());
         imagesBeans = bean.getImages();
         picSize = imagesBeans.size();
+
         if (!bean.getState().equals("17")) {
             RevolvingListBean.ImagesBean imagesBean = new RevolvingListBean.ImagesBean();
             imagesBean.setCamrea(true);
@@ -88,8 +90,6 @@ public class RevolvingDetailsActivity extends BaseActivity<IRevolvingDetailsView
         tx_address.setText("问题位置:" + address);
         presenter.getForumById(bean.getId());
         initAdapter();
-
-
     }
 
     private void initAdapter() {

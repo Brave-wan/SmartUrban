@@ -162,6 +162,6 @@ public class MyApplication extends Application {
          */
 
         /***** 统一初始化Bugly产品包含Beta *****/
-        CrashReport.initCrashReport(getApplicationContext(), "38c0267351", true);
+        CrashReport.initCrashReport(getApplicationContext(), "38c0267351", false);
     }
 }

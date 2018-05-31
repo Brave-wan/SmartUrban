@@ -103,7 +103,6 @@ public class HomeFragment extends BaseFragment<IHomeView, HomePresent> implement
             case R.id.tv_home_camera:
                 mainActivity.getCamera();
                 break;
-
             //失物招领
             case R.id.tv_home_lost_found:
                 startActivity(new Intent(getActivity(), LostListActivity.class));

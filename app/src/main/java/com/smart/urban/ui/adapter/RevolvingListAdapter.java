@@ -43,7 +43,7 @@ public class RevolvingListAdapter extends CommonAdapter<RevolvingListBean> {
         if (bean.getImages() != null && bean.getImages().size() > 0) {
             Glide.with(context).load(Constants.BASE_URL + bean.getImages().get(0).getAddress()).placeholder(R.drawable.icon_pic_empty).error(R.drawable.icon_pic_empty).into(img_revolving_head);
         } else {
-            img_revolving_head.setBackground(context.getResources().getDrawable(R.drawable.icon_pic_empty));
+            Glide.with(context).load("").placeholder(R.drawable.icon_pic_empty).error(R.drawable.icon_pic_empty).into(img_revolving_head);
         }
         if (bean.getState() != null) {
             switch (bean.getState()) {

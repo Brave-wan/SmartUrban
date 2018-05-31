@@ -26,6 +26,7 @@ import com.smart.urban.http.ApiCallback;
 import com.smart.urban.http.BaseResult;
 import com.smart.urban.http.HttpManager;
 import com.smart.urban.ui.adapter.DynamicListAdapter;
+import com.smart.urban.ui.widget.RecycleViewDivider;
 import com.smart.urban.utils.LoadingLayout;
 import com.smart.urban.utils.SharedPreferencesUtils;
 
@@ -72,6 +73,8 @@ public class ArticlesPublishedActivity extends BaseActivity implements OnLoadmor
 
     private void initAdapter() {
         lv_articles_list.setLayoutManager(new LinearLayoutManager(this));
+        lv_articles_list.addItemDecoration(new RecycleViewDivider(this, LinearLayoutManager.HORIZONTAL, 2, getResources().getColor(R.color.gray_line)));
+
         adapter = new BaseQuickAdapter<DynamicListBean, BaseViewHolder>(R.layout.item_dynamic_list, list) {
             @Override
             protected void convert(BaseViewHolder helper, DynamicListBean item) {

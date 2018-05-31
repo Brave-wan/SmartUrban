@@ -25,6 +25,7 @@ import com.smart.urban.bean.RevolvingListBean;
 import com.smart.urban.config.Constants;
 import com.smart.urban.present.RevolvingPresent;
 import com.smart.urban.ui.adapter.RevolvingListAdapter;
+import com.smart.urban.ui.widget.RecycleViewDivider;
 import com.smart.urban.utils.LoadingLayout;
 import com.smart.urban.view.IRevolvingView;
 
@@ -68,6 +69,7 @@ public class RevolvingActivity extends BaseActivity<IRevolvingView, RevolvingPre
 
     private void initAdapter() {
         lv_revolving_list.setLayoutManager(new LinearLayoutManager(this));
+        lv_revolving_list.addItemDecoration(new RecycleViewDivider(this, LinearLayoutManager.HORIZONTAL, 2, getResources().getColor(R.color.gray_line)));
         baseQuickAdapter = new BaseQuickAdapter<RevolvingListBean, BaseViewHolder>(R.layout.item_revolving_list, list) {
             @Override
             protected void convert(BaseViewHolder helper, RevolvingListBean bean) {
@@ -120,7 +122,7 @@ public class RevolvingActivity extends BaseActivity<IRevolvingView, RevolvingPre
         super.onResume();
         layout_content.setStatus(LoadingLayout.Loading);
         list.clear();
-        page=1;
+        page = 1;
         presenter.getPhotoList(page);
 
     }

@@ -2,6 +2,7 @@ package com.smart.urban.ui.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -38,8 +39,8 @@ public class InfoListAdapter extends CommonAdapter<UrbanListBean> {
         tv_dynamic_title.setText(bean.getTitle());
         if (bean.getImages().size() > 0) {//bean.getImages().get(0).getAddress()
             Glide.with(context).load(bean.getImages().get(0).getAddress()).error(R.drawable.icon_info_list_empty).placeholder(R.drawable.icon_info_list_empty).into(img_info);
-        }else {
-            img_info.setBackground(context.getResources().getDrawable(R.drawable.icon_info_list_empty));
+        } else {
+            Glide.with(context).load("").error(R.drawable.icon_info_list_empty).placeholder(R.drawable.icon_info_list_empty).into(img_info);
         }
 
     }

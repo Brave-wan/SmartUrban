@@ -41,7 +41,7 @@ public class LostListAdapter extends CommonAdapter<LostBean> {
         if (bean.getImages().size() > 0) {
             Glide.with(context).load(bean.getImages().get(0).getAddress()).error(R.drawable.icon_pic_empty).placeholder(R.drawable.icon_pic_empty).into(img_lost_head);
         } else {
-            img_lost_head.setBackground(context.getResources().getDrawable(R.drawable.icon_pic_empty));
+            Glide.with(context).load("").error(R.drawable.icon_pic_empty).placeholder(R.drawable.icon_pic_empty).into(img_lost_head);
         }
 
         relativeLayout.setOnClickListener(new View.OnClickListener() {
