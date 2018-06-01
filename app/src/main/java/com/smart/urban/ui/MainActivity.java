@@ -179,6 +179,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     private void loadUpgradeInfo() {
         if (Constants.isUpDate) {
             Beta.checkUpgrade();
+//            Beta.checkUpgrade(true, false);
         }
 
         /***** 获取升级信息 *****/

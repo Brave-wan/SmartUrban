@@ -85,6 +85,7 @@ public class RevolvingDetailsActivity extends BaseActivity<IRevolvingDetailsView
             imagesBean.setBelongId(System.currentTimeMillis());
             imagesBeans.add(imagesBean);
         }
+
         tx_details_type.setText(bean.getTypeName());
         String address = StringUtils.isEmpty(bean.getAddrName()) ? "暂无" : bean.getAddrName();
         tx_address.setText("问题位置:" + address);
@@ -242,7 +243,7 @@ public class RevolvingDetailsActivity extends BaseActivity<IRevolvingDetailsView
     public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
         RevolvingListBean.ImagesBean bean = (RevolvingListBean.ImagesBean) picAdapter.getItem(position);
         if (bean.getAddress() != null) {
-            ShowImageWindow window = new ShowImageWindow(this, bean.getAddress());
+            ShowImageWindow window = new ShowImageWindow(this, Constants.BASE_URL + bean.getAddress());
             window.showWindow(layout_titleBar);
         } else {
             if (imagesBeans.size() >= 7) {
