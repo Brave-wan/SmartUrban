@@ -37,7 +37,7 @@ public class UrbanListAdapter extends CommonAdapter<UrbanListBean> {
         tv_dynamic_title.setText(bean.getTitle());
         tv_see_number.setText(bean.getViewCount() + "");
         tv_info_time.setText(bean.getCreateTime());
-        if (bean.getImages().size() > 0) {//bean.getImages().get(0).getAddress()
+        if (bean.getImages().size() > 0) {
             Glide.with(context)
                     .load(bean.getImages().get(0).getAddress())
                     .error(R.drawable.icon_cheng_guan_empty)

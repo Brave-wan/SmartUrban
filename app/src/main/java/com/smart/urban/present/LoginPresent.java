@@ -136,6 +136,7 @@ public class LoginPresent extends BasePresenter<ILoginView> {
         map.put("sex", bean.getGender());
         map.put("imgAdress", bean.getIconurl());
         map.put("token", bean.getUid());
+        map.put("openId", bean.getOpenid());
         map.put("flag", type);
         HttpManager.get().addSubscription(HttpManager.get().getApiStores().getOtherLogin(map), new ApiCallback<BaseResult<RegisterBean>>() {
             @Override
@@ -165,8 +166,8 @@ public class LoginPresent extends BasePresenter<ILoginView> {
         if (mView != null) {
 
             Map<String, Object> map = new HashMap<>();
-            if (userName.getText().toString().trim().length() != 11) {
-                ToastUtils.showShort("手机号输入不合法,请重新输入");
+            if (StringUtils.isEmpty(userName.getText().toString().trim())) {
+                ToastUtils.showShort("帐号输入不合法,请重新输入");
                 return;
             }
             if (StringUtils.isEmpty(pass.getText().toString().trim())) {

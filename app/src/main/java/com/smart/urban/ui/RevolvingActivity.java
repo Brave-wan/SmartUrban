@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -26,6 +27,7 @@ import com.smart.urban.config.Constants;
 import com.smart.urban.present.RevolvingPresent;
 import com.smart.urban.ui.adapter.RevolvingListAdapter;
 import com.smart.urban.ui.widget.RecycleViewDivider;
+import com.smart.urban.ui.widget.RecyclerManagerView;
 import com.smart.urban.utils.LoadingLayout;
 import com.smart.urban.view.IRevolvingView;
 
@@ -68,7 +70,7 @@ public class RevolvingActivity extends BaseActivity<IRevolvingView, RevolvingPre
     }
 
     private void initAdapter() {
-        lv_revolving_list.setLayoutManager(new LinearLayoutManager(this));
+        lv_revolving_list.setLayoutManager(new RecyclerManagerView(this));
         lv_revolving_list.addItemDecoration(new RecycleViewDivider(this, LinearLayoutManager.HORIZONTAL, 2, getResources().getColor(R.color.gray_line)));
         baseQuickAdapter = new BaseQuickAdapter<RevolvingListBean, BaseViewHolder>(R.layout.item_revolving_list, list) {
             @Override
@@ -114,13 +116,30 @@ public class RevolvingActivity extends BaseActivity<IRevolvingView, RevolvingPre
         };
         lv_revolving_list.setAdapter(baseQuickAdapter);
         baseQuickAdapter.setOnItemClickListener(this);
+
+
+        lv_revolving_list.setOnTouchListener(
+                new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+                        if (mIsRefreshing) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    }
+                }
+        );
     }
+
+    private boolean mIsRefreshing = false;//在刷新的时候禁止滑动
 
 
     @Override
     protected void onResume() {
         super.onResume();
-        layout_content.setStatus(LoadingLayout.Loading);
+//        layout_content.setStatus(LoadingLayout.Loading);
+        smart_layout.autoRefresh();
         list.clear();
         page = 1;
         presenter.getPhotoList(page);
@@ -140,6 +159,7 @@ public class RevolvingActivity extends BaseActivity<IRevolvingView, RevolvingPre
 
     @Override
     public void onRevolvingList(List<RevolvingListBean> listBeans) {
+        mIsRefreshing = false;//
         list.addAll(listBeans);
         baseQuickAdapter.notifyDataSetChanged();
         layout_content.setStatus(list.size() > 0 ? LoadingLayout.Success : LoadingLayout.Empty);
@@ -159,6 +179,7 @@ public class RevolvingActivity extends BaseActivity<IRevolvingView, RevolvingPre
 
     @Override
     public void onRefresh(RefreshLayout refreshlayout) {
+        mIsRefreshing = true;
         smart_layout.finishRefresh(1000);
         list.clear();
         page = 1;

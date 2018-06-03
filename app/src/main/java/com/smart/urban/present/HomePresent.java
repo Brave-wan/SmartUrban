@@ -39,7 +39,9 @@ public class HomePresent extends BasePresenter<IHomeView> {
         HttpManager.get().addSubscription(HttpManager.get().getApiStores().getDynameicList(map), new ApiCallback<BaseResult<List<UrbanListBean>>>() {
             @Override
             public void onSuccess(BaseResult<List<UrbanListBean>> model) {
-                mView.onDynamicList(model.getData());
+                if (model.getData() != null) {
+                    mView.onDynamicList(model.getData());
+                }
             }
 
             @Override

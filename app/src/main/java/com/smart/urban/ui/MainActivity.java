@@ -177,53 +177,52 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     }
 
     private void loadUpgradeInfo() {
+//        Beta.checkUpgrade();
         if (Constants.isUpDate) {
-            Beta.checkUpgrade();
-//            Beta.checkUpgrade(true, false);
+            Beta.checkUpgrade(false, false);
+
+            /***** 获取升级信息 *****/
+            UpgradeInfo upgradeInfo = Beta.getUpgradeInfo();
+            if (upgradeInfo == null) {
+                return;
+            }
+
+            Beta.checkUpgrade(false, true);
+
+            StringBuilder info = new StringBuilder();
+            info.append("id: ").append(upgradeInfo.id).append("\n");
+            info.append("标题: ").append(upgradeInfo.title).append("\n");
+            info.append("升级说明: ").append(upgradeInfo.newFeature).append("\n");
+            info.append("versionCode: ").append(upgradeInfo.versionCode).append("\n");
+            info.append("versionName: ").append(upgradeInfo.versionName).append("\n");
+            info.append("发布时间: ").append(upgradeInfo.publishTime).append("\n");
+            info.append("安装包Md5: ").append(upgradeInfo.apkMd5).append("\n");
+            info.append("安装包下载地址: ").append(upgradeInfo.apkUrl).append("\n");
+            info.append("安装包大小: ").append(upgradeInfo.fileSize).append("\n");
+            info.append("弹窗间隔（ms）: ").append(upgradeInfo.popInterval).append("\n");
+            info.append("弹窗次数: ").append(upgradeInfo.popTimes).append("\n");
+            info.append("发布类型（0:测试 1:正式）: ").append(upgradeInfo.publishType).append("\n");
+            info.append("弹窗类型（1:建议 2:强制 3:手工）: ").append(upgradeInfo.upgradeType).append("\n");
+            info.append("图片地址：").append(upgradeInfo.imageUrl);
+            Log.i("update", "更新方式:" + upgradeInfo.upgradeType);
+
+            switch (upgradeInfo.upgradeType) {
+                //建议
+                case 1:
+                    if (Constants.isUpDate) {
+                        upVersion();
+                    }
+                    break;
+                //强制
+                case 2:
+                    Beta.checkUpgrade();
+                    break;
+                //手工
+                case 3:
+                    Beta.checkUpgrade();
+                    break;
+            }
         }
-
-        /***** 获取升级信息 *****/
-        UpgradeInfo upgradeInfo = Beta.getUpgradeInfo();
-        if (upgradeInfo == null) {
-            return;
-        }
-
-        Beta.checkUpgrade(false, true);
-
-        StringBuilder info = new StringBuilder();
-        info.append("id: ").append(upgradeInfo.id).append("\n");
-        info.append("标题: ").append(upgradeInfo.title).append("\n");
-        info.append("升级说明: ").append(upgradeInfo.newFeature).append("\n");
-        info.append("versionCode: ").append(upgradeInfo.versionCode).append("\n");
-        info.append("versionName: ").append(upgradeInfo.versionName).append("\n");
-        info.append("发布时间: ").append(upgradeInfo.publishTime).append("\n");
-        info.append("安装包Md5: ").append(upgradeInfo.apkMd5).append("\n");
-        info.append("安装包下载地址: ").append(upgradeInfo.apkUrl).append("\n");
-        info.append("安装包大小: ").append(upgradeInfo.fileSize).append("\n");
-        info.append("弹窗间隔（ms）: ").append(upgradeInfo.popInterval).append("\n");
-        info.append("弹窗次数: ").append(upgradeInfo.popTimes).append("\n");
-        info.append("发布类型（0:测试 1:正式）: ").append(upgradeInfo.publishType).append("\n");
-        info.append("弹窗类型（1:建议 2:强制 3:手工）: ").append(upgradeInfo.upgradeType).append("\n");
-        info.append("图片地址：").append(upgradeInfo.imageUrl);
-        Log.i("update", "更新方式:" + upgradeInfo.upgradeType);
-
-        switch (upgradeInfo.upgradeType) {
-            //建议
-            case 1:
-                if (Constants.isUpDate) {
-                    upVersion();
-                }
-                break;
-            //强制
-            case 2:
-                Beta.checkUpgrade();
-                break;
-            //手工
-            case 3:
-                Beta.checkUpgrade();
-                break;
-        }
-
     }
 
     public void upVersion() {
@@ -237,10 +236,10 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                         dialog.dismiss();
                     }
                 })
-
                 .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        Constants.isUpDate = false;
                         startActivity(new Intent(MainActivity.this, AboutUsActivity.class));
                         dialog.dismiss();
                     }

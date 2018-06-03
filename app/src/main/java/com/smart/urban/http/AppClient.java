@@ -6,6 +6,7 @@ import android.util.Log;
 import com.smart.urban.config.Constants;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
@@ -43,13 +44,6 @@ public class AppClient {
                 // Log信息拦截器
                 HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
                 loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-                //添加头文件
-//                builder.addInterceptor(chain -> {
-//                    Request request = chain.request().newBuilder()
-//                            .addHeader("appid", "78022410")
-//                            .addHeader("appsecret", "yLUdxzgzBNiDCtrPPDoralkuSuoHRGPG").build();
-//                    return chain.proceed(request);
-//                });
                 builder.addInterceptor(new Interceptor() {
                     @Override
                     public Response intercept(Chain chain) throws IOException {
@@ -64,6 +58,9 @@ public class AppClient {
                 //设置 Debug Log 模式
                 builder.addInterceptor(loggingInterceptor);
                 builder.addInterceptor(new LogInterceptor());
+                builder.writeTimeout(2000, TimeUnit.SECONDS);
+                builder.connectTimeout(2000, TimeUnit.SECONDS);
+                builder.readTimeout(2000, TimeUnit.SECONDS);
             }
             okHttpClient = builder.build();
         }
