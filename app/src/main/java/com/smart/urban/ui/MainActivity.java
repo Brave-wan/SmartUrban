@@ -205,7 +205,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
             info.append("弹窗类型（1:建议 2:强制 3:手工）: ").append(upgradeInfo.upgradeType).append("\n");
             info.append("图片地址：").append(upgradeInfo.imageUrl);
             Log.i("update", "更新方式:" + upgradeInfo.upgradeType);
-
             switch (upgradeInfo.upgradeType) {
                 //建议
                 case 1:

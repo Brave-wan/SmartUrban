@@ -44,7 +44,10 @@ public class UrbanListAdapter extends CommonAdapter<UrbanListBean> {
                     .placeholder(R.drawable.icon_cheng_guan_empty)
                     .into(img_info);
         } else {
-            Glide.with(context).load("").error(R.drawable.icon_cheng_guan_empty).placeholder(R.drawable.icon_info_list_empty).into(img_info);
+            Glide.with(context).load("")
+                    .error(R.drawable.icon_cheng_guan_empty)
+                    .placeholder(R.drawable.icon_info_list_empty)
+                    .into(img_info);
         }
     }
 }

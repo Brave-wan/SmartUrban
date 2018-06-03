@@ -6,109 +6,27 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="wan" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="272097d7-2833-4029-a216-e7693ad8d4db" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/widget/RecyclerManagerView.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/AMap3DMap_6_0_1_AMapNavi_6_0_1_AMapLocation_3_8_0_20180309.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/AMap_Search_V6_1_0_20180330.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/BaseRecyclerViewAdapterHelper_2_9_34.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Msc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SmartRefreshLayout_1_0_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SocialSDK_QQ_Simplify.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SocialSDK_WeChat_Simplify.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/acp_1_1_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/adapter_rxjava_2_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/android_pickers_1_0_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/autohideime_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/banner_1_4_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/butterknife_8_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/butterknife_annotations_8_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/constraint_layout_1_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/constraint_layout_solver_1_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/converter_gson_2_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/crashreport_upgrade_1_3_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/espresso_core_3_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/espresso_idling_resource_3_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/glide_3_7_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/gson_2_6_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/hamcrest_integration_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/hamcrest_library_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/javawriter_2_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/javax_inject_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/json_simple_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/jsr305_2_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/kxml2_2_3_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/libapshare20161108.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/libddshare.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/library_1_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/library_1_0_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/logging_interceptor_3_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/matisse_0_4_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/multidex_1_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/multidex_1_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/multidex_instrumentation_1_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/nativecrashreport_3_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/okhttp_3_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/okio_1_6_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/retrofit_2_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/rules_1_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/runner_1_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/rxandroid_1_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/rxjava_1_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_compat_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_core_ui_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_core_utils_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_fragment_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_media_compat_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/umeng_common_1_4_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/umeng_shareboard_widget.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/umeng_social_api.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/umeng_social_net.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/umeng_social_shareboard.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/umeng_social_shareview.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/umeng_social_tool.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/utilcode_1_9_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/volley.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/wechat_sdk_android_with_mta_1_1_6.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/release/app-release.apk" afterPath="$PROJECT_DIR$/app/release/app-release.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/release/output.json" afterPath="$PROJECT_DIR$/app/release/output.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/base/MyApplication.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/base/MyApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/config/Constants.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/config/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/InfoFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/InfoFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/http/AppClient.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/http/AppClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/HomePresent.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/HomePresent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/LoginPresent.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/LoginPresent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/RevolvingActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/RevolvingActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/UrbanListAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/UrbanListAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_info.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_info.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imageselector/imageselector.iml" afterPath="$PROJECT_DIR$/imageselector/imageselector.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_camera.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_camera.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -148,34 +66,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="activity_urban_details.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_urban_details.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/config/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
-              <caret line="46" column="71" lean-forward="false" selection-start-line="46" selection-start-column="71" selection-end-line="46" selection-end-column="71" />
+              <caret line="46" column="82" lean-forward="false" selection-start-line="46" selection-start-column="82" selection-end-line="46" selection-end-column="82" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LoginActivity.java">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="94" column="32" lean-forward="false" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
+            <state relative-caret-position="92">
+              <caret line="191" column="53" lean-forward="true" selection-start-line="191" selection-start-column="53" selection-end-line="191" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -194,27 +99,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CenterFragment.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CenterFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/CenterFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="103" column="63" lean-forward="false" selection-start-line="103" selection-start-column="63" selection-end-line="103" selection-end-column="63" />
+            <state relative-caret-position="420">
+              <caret line="79" column="89" lean-forward="false" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="89" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RevolvingActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/RevolvingActivity.java">
+      <file leaf-file-name="CameraFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/CameraFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="134" column="54" lean-forward="false" selection-start-line="134" selection-start-column="54" selection-end-line="134" selection-end-column="54" />
-              <folding>
-                <element signature="e#5389#5746#0" expanded="true" />
-                <element signature="e#5745#5746#0" expanded="true" />
-                <element signature="e#6263#6264#0" expanded="true" />
-                <element signature="e#6312#6313#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="315">
+              <caret line="82" column="25" lean-forward="false" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CameraPresent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/CameraPresent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="251" column="26" lean-forward="false" selection-start-line="251" selection-start-column="26" selection-end-line="251" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_camera.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_camera.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -222,68 +145,52 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            <state relative-caret-position="353">
+              <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding>
                 <element signature="e#1845#1901#2" expanded="true" />
                 <element signature="e#2784#2834#2" expanded="true" />
                 <element signature="e#2847#2880#2" expanded="true" />
                 <element signature="e#3148#3202#2" expanded="true" />
                 <element signature="e#3265#3317#2" expanded="true" />
-                <marker date="1528035134268" expanded="false" signature="1925:1943" ph="junit:junit:4.12 [2041] [+1 extra dependencies, check tooltip]" />
-                <marker date="1528035134268" expanded="false" signature="1974:2029" ph="com.android.support.test.espresso:espresso-core:3.0.1 [15677] [+12 extra dependencies, check tooltip]" />
-                <marker date="1528035134268" expanded="false" signature="2128:2167" ph="com.squareup.retrofit2:retrofit:2.0.2 [505] [+2 extra dependencies, check tooltip]" />
-                <marker date="1528035134268" expanded="false" signature="2180:2215" ph="com.squareup.okhttp3:okhttp:3.2.0 [2140] [+1 extra dependencies, check tooltip]" />
-                <marker date="1528035134268" expanded="false" signature="2228:2276" ph="com.squareup.okhttp3:logging-interceptor:3.1.2 [64] [+2 extra dependencies, check tooltip]" />
-                <marker date="1528035134268" expanded="false" signature="2289:2322" ph="com.google.code.gson:gson:2.6.2 [1329]" />
-                <marker date="1528035134268" expanded="false" signature="2335:2380" ph="com.squareup.retrofit2:converter-gson:2.0.2 [32] [+4 extra dependencies, check tooltip]" />
-                <marker date="1528035134268" expanded="false" signature="2393:2438" ph="com.squareup.retrofit2:adapter-rxjava:2.0.2 [115] [+4 extra dependencies, check tooltip]" />
-                <marker date="1528035134268" expanded="false" signature="2451:2481" ph="io.reactivex:rxandroid:1.1.0 [70] [+1 extra dependencies, check tooltip]" />
-                <marker date="1528035134268" expanded="false" signature="2494:2521" ph="io.reactivex:rxjava:1.1.0 [4605]" />
-                <marker date="1528035134268" expanded="false" signature="2534:2561" ph="com.blankj:utilcode:1.9.3 [2122]" />
-                <marker date="1528035134268" expanded="false" signature="2574:2602" ph="org.loader:autohideime:1.0 [37] [+5 extra dependencies, check tooltip]" />
-                <marker date="1528035134268" expanded="false" signature="2732:2771" ph="com.github.bumptech.glide:glide:3.7.0 [2879]" />
-                <marker date="1528035134268" expanded="false" signature="2893:2915" ph="com.mylhyl:acp:1.1.7 [143] [+5 extra dependencies, check tooltip]" />
-                <marker date="1528035134268" expanded="false" signature="2928:2960" ph="com.youth.banner:banner:1.4.10 [302]" />
-                <marker date="1528035134268" expanded="false" signature="2973:3016" ph="com.github.addappcn:android-pickers:1.0.3 [still calculating on server...]" />
-                <marker date="1528035134268" expanded="false" signature="3029:3086" ph="com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34 [607]" />
-                <marker date="1528035134268" expanded="false" signature="3099:3135" ph="com.android.support:multidex:1.0.0 [174]" />
+                <marker date="1528043638016" expanded="false" signature="1925:1943" ph="junit:junit:4.12 [2041] [+1 extra dependencies, check tooltip]" />
+                <marker date="1528043638016" expanded="false" signature="1974:2029" ph="com.android.support.test.espresso:espresso-core:3.0.1 [15677] [+12 extra dependencies, check tooltip]" />
+                <marker date="1528043638016" expanded="false" signature="2128:2167" ph="com.squareup.retrofit2:retrofit:2.0.2 [505] [+2 extra dependencies, check tooltip]" />
+                <marker date="1528043638016" expanded="false" signature="2180:2215" ph="com.squareup.okhttp3:okhttp:3.2.0 [2140] [+1 extra dependencies, check tooltip]" />
+                <marker date="1528043638016" expanded="false" signature="2228:2276" ph="com.squareup.okhttp3:logging-interceptor:3.1.2 [64] [+2 extra dependencies, check tooltip]" />
+                <marker date="1528043638016" expanded="false" signature="2289:2322" ph="com.google.code.gson:gson:2.6.2 [1329]" />
+                <marker date="1528043638016" expanded="false" signature="2335:2380" ph="com.squareup.retrofit2:converter-gson:2.0.2 [32] [+4 extra dependencies, check tooltip]" />
+                <marker date="1528043638016" expanded="false" signature="2393:2438" ph="com.squareup.retrofit2:adapter-rxjava:2.0.2 [115] [+4 extra dependencies, check tooltip]" />
+                <marker date="1528043638016" expanded="false" signature="2451:2481" ph="io.reactivex:rxandroid:1.1.0 [70] [+1 extra dependencies, check tooltip]" />
+                <marker date="1528043638016" expanded="false" signature="2494:2521" ph="io.reactivex:rxjava:1.1.0 [4605]" />
+                <marker date="1528043638016" expanded="false" signature="2534:2561" ph="com.blankj:utilcode:1.9.3 [2122]" />
+                <marker date="1528043638016" expanded="false" signature="2574:2602" ph="org.loader:autohideime:1.0 [37] [+5 extra dependencies, check tooltip]" />
+                <marker date="1528043638016" expanded="false" signature="2732:2771" ph="com.github.bumptech.glide:glide:3.7.0 [2879]" />
+                <marker date="1528043638016" expanded="false" signature="2893:2915" ph="com.mylhyl:acp:1.1.7 [143] [+5 extra dependencies, check tooltip]" />
+                <marker date="1528043638016" expanded="false" signature="2928:2960" ph="com.youth.banner:banner:1.4.10 [302]" />
+                <marker date="1528043638016" expanded="false" signature="2973:3016" ph="com.github.addappcn:android-pickers:1.0.3 [still calculating on server...]" />
+                <marker date="1528043638016" expanded="false" signature="3029:3086" ph="com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34 [607]" />
+                <marker date="1528043638016" expanded="false" signature="3099:3135" ph="com.android.support:multidex:1.0.0 [174]" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecyclerManagerView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/widget/RecyclerManagerView.java">
+      <file leaf-file-name="HomeFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/HomeFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding>
-                <element signature="e#356#357#0" expanded="true" />
-                <element signature="e#386#387#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StartupPageActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/StartupPageActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+            <state relative-caret-position="278">
+              <caret line="78" column="33" lean-forward="false" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_startup_pagee.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_startup_pagee.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
+      <file leaf-file-name="UrbanListAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/UrbanListAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="43" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="43" />
+            <state relative-caret-position="248">
+              <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -3037,7 +2944,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_dynamic_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/ArticlesPublishedActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_camera.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/bean/LocationListBean.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/CameraListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_revolving.xml" />
@@ -3063,13 +2969,14 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/widget/RecyclerManagerView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/InfoFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/HomePresent.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/UrbanListAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/LoginPresent.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/RevolvingActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/UrbanListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/config/Constants.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_camera.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -3330,20 +3237,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartUrban" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -3930,7 +3823,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1528035538322" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1528045275869" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -3977,7 +3870,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1528035538322" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1528045275869" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -4364,7 +4257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527437858186</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="修改版本更新问题">
+      <created>1528035571185</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1528035571185</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -4373,7 +4273,7 @@
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21186441" sideWeight="0.5042553" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.49574468" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32944915" sideWeight="0.49574468" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -4390,7 +4290,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30720338" sideWeight="0.49574468" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.49462366" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27021277" sideWeight="0.49462366" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27021277" sideWeight="0.49462366" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10744681" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -4444,7 +4344,6 @@
     <MESSAGE value="添加图片查看详情" />
     <MESSAGE value="添加评论接口" />
     <MESSAGE value="完善地图导航模块" />
-    <MESSAGE value="细节优化" />
     <MESSAGE value="完善注册短信验证" />
     <MESSAGE value="测试版本" />
     <MESSAGE value="测试版本 屏蔽微信登录" />
@@ -4458,7 +4357,9 @@
     <MESSAGE value="修改文档bug" />
     <MESSAGE value="地图修改" />
     <MESSAGE value="礼拜天上传正式版本" />
-    <option name="LAST_COMMIT_MESSAGE" value="礼拜天上传正式版本" />
+    <MESSAGE value="修改版本更新问题" />
+    <MESSAGE value="细节优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="细节优化" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -4912,20 +4813,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/app/libs/AMap3DMap_6.0.1_AMapNavi_6.0.1_AMapLocation_3.8.0_20180309.jar!/com/amap/api/maps/AMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="212" column="5" lean-forward="false" selection-start-line="212" selection-start-column="5" selection-end-line="212" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/SelectTypeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/app/libs/AMap3DMap_6.0.1_AMapNavi_6.0.1_AMapLocation_3.8.0_20180309.jar!/com/amap/api/maps/model/Marker.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -5244,46 +5131,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/UrbanListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="39" column="42" lean-forward="false" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/CameraFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/LoginPresent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="89" column="13" lean-forward="false" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="105" column="48" lean-forward="false" selection-start-line="105" selection-start-column="48" selection-end-line="105" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/HomeFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="174" column="65" lean-forward="false" selection-start-line="174" selection-start-column="65" selection-end-line="174" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/UrbanDetailsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -5322,10 +5169,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/RevolvingActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="134" column="54" lean-forward="false" selection-start-line="134" selection-start-column="54" selection-end-line="134" selection-end-column="54" />
+          <folding>
+            <element signature="e#5389#5746#0" expanded="true" />
+            <element signature="e#5745#5746#0" expanded="true" />
+            <element signature="e#6263#6264#0" expanded="true" />
+            <element signature="e#6312#6313#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/widget/RecyclerManagerView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="411">
-          <caret line="94" column="32" lean-forward="false" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
+          <caret line="94" column="28" lean-forward="false" selection-start-line="94" selection-start-column="28" selection-end-line="94" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/LoginPresent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="114" column="21" lean-forward="false" selection-start-line="114" selection-start-column="21" selection-end-line="114" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="78" column="33" lean-forward="false" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/adapter/UrbanListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/CenterFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="79" column="89" lean-forward="false" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_camera.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/CameraFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="82" column="25" lean-forward="false" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/present/CameraPresent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="251" column="26" lean-forward="false" selection-start-line="251" selection-start-column="26" selection-end-line="251" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/config/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="46" column="82" lean-forward="false" selection-start-line="46" selection-start-column="82" selection-end-line="46" selection-end-column="82" />
           <folding />
         </state>
       </provider>
@@ -5341,74 +5279,42 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/RevolvingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="134" column="54" lean-forward="false" selection-start-line="134" selection-start-column="54" selection-end-line="134" selection-end-column="54" />
-          <folding>
-            <element signature="e#5389#5746#0" expanded="true" />
-            <element signature="e#5745#5746#0" expanded="true" />
-            <element signature="e#6263#6264#0" expanded="true" />
-            <element signature="e#6312#6313#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/config/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="46" column="71" lean-forward="false" selection-start-line="46" selection-start-column="71" selection-end-line="46" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/widget/RecyclerManagerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="353">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding>
             <element signature="e#1845#1901#2" expanded="true" />
             <element signature="e#2784#2834#2" expanded="true" />
             <element signature="e#2847#2880#2" expanded="true" />
             <element signature="e#3148#3202#2" expanded="true" />
             <element signature="e#3265#3317#2" expanded="true" />
-            <marker date="1528035134268" expanded="false" signature="1925:1943" ph="junit:junit:4.12 [2041] [+1 extra dependencies, check tooltip]" />
-            <marker date="1528035134268" expanded="false" signature="1974:2029" ph="com.android.support.test.espresso:espresso-core:3.0.1 [15677] [+12 extra dependencies, check tooltip]" />
-            <marker date="1528035134268" expanded="false" signature="2128:2167" ph="com.squareup.retrofit2:retrofit:2.0.2 [505] [+2 extra dependencies, check tooltip]" />
-            <marker date="1528035134268" expanded="false" signature="2180:2215" ph="com.squareup.okhttp3:okhttp:3.2.0 [2140] [+1 extra dependencies, check tooltip]" />
-            <marker date="1528035134268" expanded="false" signature="2228:2276" ph="com.squareup.okhttp3:logging-interceptor:3.1.2 [64] [+2 extra dependencies, check tooltip]" />
-            <marker date="1528035134268" expanded="false" signature="2289:2322" ph="com.google.code.gson:gson:2.6.2 [1329]" />
-            <marker date="1528035134268" expanded="false" signature="2335:2380" ph="com.squareup.retrofit2:converter-gson:2.0.2 [32] [+4 extra dependencies, check tooltip]" />
-            <marker date="1528035134268" expanded="false" signature="2393:2438" ph="com.squareup.retrofit2:adapter-rxjava:2.0.2 [115] [+4 extra dependencies, check tooltip]" />
-            <marker date="1528035134268" expanded="false" signature="2451:2481" ph="io.reactivex:rxandroid:1.1.0 [70] [+1 extra dependencies, check tooltip]" />
-            <marker date="1528035134268" expanded="false" signature="2494:2521" ph="io.reactivex:rxjava:1.1.0 [4605]" />
-            <marker date="1528035134268" expanded="false" signature="2534:2561" ph="com.blankj:utilcode:1.9.3 [2122]" />
-            <marker date="1528035134268" expanded="false" signature="2574:2602" ph="org.loader:autohideime:1.0 [37] [+5 extra dependencies, check tooltip]" />
-            <marker date="1528035134268" expanded="false" signature="2732:2771" ph="com.github.bumptech.glide:glide:3.7.0 [2879]" />
-            <marker date="1528035134268" expanded="false" signature="2893:2915" ph="com.mylhyl:acp:1.1.7 [143] [+5 extra dependencies, check tooltip]" />
-            <marker date="1528035134268" expanded="false" signature="2928:2960" ph="com.youth.banner:banner:1.4.10 [302]" />
-            <marker date="1528035134268" expanded="false" signature="2973:3016" ph="com.github.addappcn:android-pickers:1.0.3 [still calculating on server...]" />
-            <marker date="1528035134268" expanded="false" signature="3029:3086" ph="com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34 [607]" />
-            <marker date="1528035134268" expanded="false" signature="3099:3135" ph="com.android.support:multidex:1.0.0 [174]" />
+            <marker date="1528043638016" expanded="false" signature="1925:1943" ph="junit:junit:4.12 [2041] [+1 extra dependencies, check tooltip]" />
+            <marker date="1528043638016" expanded="false" signature="1974:2029" ph="com.android.support.test.espresso:espresso-core:3.0.1 [15677] [+12 extra dependencies, check tooltip]" />
+            <marker date="1528043638016" expanded="false" signature="2128:2167" ph="com.squareup.retrofit2:retrofit:2.0.2 [505] [+2 extra dependencies, check tooltip]" />
+            <marker date="1528043638016" expanded="false" signature="2180:2215" ph="com.squareup.okhttp3:okhttp:3.2.0 [2140] [+1 extra dependencies, check tooltip]" />
+            <marker date="1528043638016" expanded="false" signature="2228:2276" ph="com.squareup.okhttp3:logging-interceptor:3.1.2 [64] [+2 extra dependencies, check tooltip]" />
+            <marker date="1528043638016" expanded="false" signature="2289:2322" ph="com.google.code.gson:gson:2.6.2 [1329]" />
+            <marker date="1528043638016" expanded="false" signature="2335:2380" ph="com.squareup.retrofit2:converter-gson:2.0.2 [32] [+4 extra dependencies, check tooltip]" />
+            <marker date="1528043638016" expanded="false" signature="2393:2438" ph="com.squareup.retrofit2:adapter-rxjava:2.0.2 [115] [+4 extra dependencies, check tooltip]" />
+            <marker date="1528043638016" expanded="false" signature="2451:2481" ph="io.reactivex:rxandroid:1.1.0 [70] [+1 extra dependencies, check tooltip]" />
+            <marker date="1528043638016" expanded="false" signature="2494:2521" ph="io.reactivex:rxjava:1.1.0 [4605]" />
+            <marker date="1528043638016" expanded="false" signature="2534:2561" ph="com.blankj:utilcode:1.9.3 [2122]" />
+            <marker date="1528043638016" expanded="false" signature="2574:2602" ph="org.loader:autohideime:1.0 [37] [+5 extra dependencies, check tooltip]" />
+            <marker date="1528043638016" expanded="false" signature="2732:2771" ph="com.github.bumptech.glide:glide:3.7.0 [2879]" />
+            <marker date="1528043638016" expanded="false" signature="2893:2915" ph="com.mylhyl:acp:1.1.7 [143] [+5 extra dependencies, check tooltip]" />
+            <marker date="1528043638016" expanded="false" signature="2928:2960" ph="com.youth.banner:banner:1.4.10 [302]" />
+            <marker date="1528043638016" expanded="false" signature="2973:3016" ph="com.github.addappcn:android-pickers:1.0.3 [still calculating on server...]" />
+            <marker date="1528043638016" expanded="false" signature="3029:3086" ph="com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34 [607]" />
+            <marker date="1528043638016" expanded="false" signature="3099:3135" ph="com.android.support:multidex:1.0.0 [174]" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/fragment/CenterFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/smart/urban/ui/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="103" column="63" lean-forward="false" selection-start-line="103" selection-start-column="63" selection-end-line="103" selection-end-column="63" />
+        <state relative-caret-position="92">
+          <caret line="191" column="53" lean-forward="true" selection-start-line="191" selection-start-column="53" selection-end-line="191" selection-end-column="53" />
           <folding />
         </state>
       </provider>
