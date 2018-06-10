@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.blankj.utilcode.util.ToastUtils;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
@@ -42,6 +43,7 @@ public class UrbanActivity extends BaseActivity implements OnRefreshListener, On
     ListView lv_urban_list;
     @BindView(R.id.layout_root)
     LoadingLayout layout_root;
+
     private UrbanListAdapter adapter;
     private List<UrbanListBean> list = new ArrayList<>();
 

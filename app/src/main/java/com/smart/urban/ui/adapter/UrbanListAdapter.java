@@ -2,9 +2,11 @@ package com.smart.urban.ui.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.blankj.utilcode.util.StringUtils;
 import com.bumptech.glide.Glide;
 import com.smart.urban.R;
 import com.smart.urban.base.BaseViewHolder;
@@ -33,10 +35,17 @@ public class UrbanListAdapter extends CommonAdapter<UrbanListBean> {
         TextView tv_see_number = (TextView) baseViewHolder.getViewByViewId(R.id.tv_see_number);
         TextView tv_info_time = (TextView) baseViewHolder.getViewByViewId(R.id.tv_info_time);
         TextView tv_dynamic_title = (TextView) baseViewHolder.getViewByViewId(R.id.tv_dynamic_title);
+        TextView tx_dynamic_subject = (TextView) baseViewHolder.getViewByViewId(R.id.tx_dynamic_subject);
         tv_comment_number.setText(bean.getCommentCount() + "");
         tv_dynamic_title.setText(bean.getTitle());
         tv_see_number.setText(bean.getViewCount() + "");
         tv_info_time.setText(bean.getCreateTime());
+        //
+        if (!StringUtils.isEmpty(bean.getSubtitle())) {
+            tx_dynamic_subject.setVisibility(View.VISIBLE);
+            tx_dynamic_subject.setText(bean.getSubtitle());
+        }
+
         if (bean.getImages().size() > 0) {
             Glide.with(context)
                     .load(bean.getImages().get(0).getAddress())

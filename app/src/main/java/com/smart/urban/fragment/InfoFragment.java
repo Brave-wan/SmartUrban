@@ -11,6 +11,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.autonavi.rtbt.IFrameForRTBT;
+import com.blankj.utilcode.util.StringUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -85,7 +86,13 @@ public class InfoFragment extends BaseFragment implements OnLoadmoreListener, On
                 TextView tv_dynamic_title = (TextView) helper.itemView.findViewById(R.id.tv_dynamic_title);
                 TextView tv_comment_number = (TextView) helper.itemView.findViewById(R.id.tv_comment_number);
                 TextView tv_info_time = (TextView) helper.itemView.findViewById(R.id.tv_info_time);
+                TextView tx_dynamic_subject = (TextView) helper.itemView.findViewById(R.id.tx_dynamic_subject);
                 tv_info_time.setText(bean.getCreateTime());
+                if (!StringUtils.isEmpty(bean.getSubtitle())) {
+                    tx_dynamic_subject.setVisibility(View.VISIBLE);
+                    tx_dynamic_subject.setText(bean.getSubtitle());
+                }
+
                 tv_comment_number.setText(bean.getViewCount() + "");
                 tv_dynamic_title.setText(bean.getTitle());
                 if (bean.getImages().size() > 0) {//bean.getImages().get(0).getAddress()
