@@ -42,7 +42,7 @@ public class UrbanListAdapter extends CommonAdapter<UrbanListBean> {
         tv_info_time.setText(bean.getCreateTime());
         //
         if (!StringUtils.isEmpty(bean.getSubtitle())) {
-            tx_dynamic_subject.setVisibility(View.VISIBLE);
+//            tx_dynamic_subject.setVisibility(View.VISIBLE);
             tx_dynamic_subject.setText(bean.getSubtitle());
         }
 

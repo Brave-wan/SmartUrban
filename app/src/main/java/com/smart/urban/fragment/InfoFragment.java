@@ -91,7 +91,7 @@ public class InfoFragment extends BaseFragment implements OnLoadmoreListener, On
 
 
                 if (!StringUtils.isEmpty(bean.getSubtitle())) {
-                    tx_dynamic_subject.setVisibility(View.VISIBLE);
+//                    tx_dynamic_subject.setVisibility(View.VISIBLE);
                     tx_dynamic_subject.setText(bean.getSubtitle());
                 }
 

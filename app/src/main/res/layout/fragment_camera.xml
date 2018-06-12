@@ -51,9 +51,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:drawableLeft="@drawable/icon_camera_location_"
-                android:gravity="center"
-                android:text="但前位置:"
                 android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="当前位置:"
                 android:textColor="@color/black" />
 
             <TextView
